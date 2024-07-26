@@ -126,7 +126,7 @@ const Navbar = () => {
                                 </Dropdown>
                             </li>
                             <li className="nav-item px-4">
-                                <NavLink className="nav-link fs-14 text-white" href="#categories">Speakers</NavLink>
+                                <NavLink className="nav-link fs-14 text-white" href="/speakers">Speakers</NavLink>
                             </li>
                             {/*<li className="nav-item px-4">
                                 <NavLink className="nav-link fs-14 text-white" to="/about" activeClassName="active" tag={RRNavLink}>About</NavLink>

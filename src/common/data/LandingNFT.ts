@@ -233,6 +233,41 @@ const speakersData = [
     },
 ]
 
+const speakersFullData = [
+    {
+        id: 1,
+        img: speaker1,
+        name: "Boye Ademola",
+        title: "Creative Filtered Portrait",
+        tags: ["ai-finances", "financial-automation", "big-data", "blockchain", "cybersecurity", "fintech-inclusion"],
+        credentials: "Co-Founder, Bazara",
+    },
+    {
+        id: 2,
+        img: speaker2,
+        name: "Abubakar Suleiman",
+        title: "Creative Filtered Portrait",
+        tags: ["open-banking", "digital-banking", "cross-border", "decentralized-finance", "cybersecurity"],
+        credentials: "CEO, Sterling Bank",
+    },
+    {
+        id: 3,
+        img: speaker3,
+        name: "Bayo Adekanmbi",
+        title: "Creative Filtered Portrait",
+        tags: ["financial-automation", "wealth-management", "ai-finances", "decentralized-finance"],
+        credentials: "Founder/CEO, DSNai",
+    },
+    {
+        id: 4,
+        img: speaker4,
+        name: "Iyinoluwa Aboyeji",
+        title: "Creative Filtered Portrait",
+        tags: ["emerging-technologies", "big-data", "cybersecurity", "startup-incubators", "ai-finance"],
+        credentials: "Founding Partner, Future Africa",
+    },
+]
+
 const faqData = [
     {
         id: "1",
@@ -426,4 +461,4 @@ const topCreatorData = [
     },
 ];
 
-export {connectData, discoverItemsData, featuresData, speakersData, productData, topCreatorData, whatIsData, numbersData, partnerImgsData, latestData, faqData, faqFullData}
+export {connectData, discoverItemsData, featuresData, speakersData, productData, topCreatorData, whatIsData, numbersData, partnerImgsData, latestData, faqData, faqFullData, speakersFullData}

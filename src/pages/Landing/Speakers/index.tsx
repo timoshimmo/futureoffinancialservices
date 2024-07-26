@@ -1,9 +1,8 @@
 import React from 'react';
 import Navbar from '../Common/Navbar';
 import Banner from "./Banner";
-import ContactUsForm from './ContactUsForm';
+import SpeakersList from './SpeakersList';
 import Footer from '../Common/footer';
-import Contact from './Contact';
 
 const index = () => {
     document.title = " FFS | Future of Financial Services Summit";
@@ -34,8 +33,7 @@ const index = () => {
             <div className="layout-wrapper landing body-bg-dark">
                 <Navbar />
                 <Banner />
-                <ContactUsForm />
-                <Contact />
+                <SpeakersList />
                 <Footer />
             </div>
         </React.Fragment>
