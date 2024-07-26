@@ -41,45 +41,19 @@ const SpeakersList = () => {
                                     <NavLink type="button" onClick={() => setNav("All")} className={nav === "All" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>All</NavLink>
                                 </NavItem>
                                 <NavItem role="presentation">
-                                    <NavLink type="button" onClick={() => setNav("emerging-technologies")} className={nav === "emerging-technologies" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>Emerging Technologies</NavLink>
+                                    <NavLink type="button" onClick={() => setNav("digital-business-models")} className={nav === "digital-business-models" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>Digital Business Models</NavLink>
                                 </NavItem>
                                 <NavItem role="presentation">
-                                    <NavLink type="button" onClick={() => setNav("open-banking")} className={nav === "open-banking" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>Open Banking</NavLink>
+                                    <NavLink type="button" onClick={() => setNav("distribution-models")} className={nav === "distribution-models" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>Distribution Models</NavLink>
                                 </NavItem>
                                 <NavItem role="presentation">
-                                    <NavLink type="button" onClick={() => setNav("ai-finances")} className={nav === "ai-finances" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>AI Finances</NavLink>
+                                    <NavLink type="button" onClick={() => setNav("customer-experience")} className={nav === "customer-experience" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>Customer Experience</NavLink>
                                 </NavItem>
                                 <NavItem role="presentation">
-                                    <NavLink type="button" onClick={() => setNav("fintech-inclusion")} className={nav === "fintech-inclusion" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>Fintech Inclusion</NavLink>
+                                    <NavLink type="button" onClick={() => setNav("artificial-intelligence")} className={nav === "artificial-intelligence" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>Artificial Intelligence</NavLink>
                                 </NavItem>
                                 <NavItem role="presentation">
-                                    <NavLink type="button" onClick={() => setNav("digital-banking")} className={nav === "digital-banking" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>Digital Banking</NavLink>
-                                </NavItem>
-
-                                <NavItem role="presentation">
-                                    <NavLink type="button" onClick={() => setNav("wealth-management")} className={nav === "wealth-management" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>Wealth Management</NavLink>
-                                </NavItem>
-                                <NavItem role="presentation">
-                                    <NavLink type="button" onClick={() => setNav("cross-border")} className={nav === "cross-border" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>Cross-Border Payments</NavLink>
-                                </NavItem>
-                                <NavItem role="presentation">
-                                    <NavLink type="button" onClick={() => setNav("financial-automation")} className={nav === "financial-automation" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>Financial Automation</NavLink>
-                                </NavItem>
-                                <NavItem role="presentation">
-                                    <NavLink type="button" onClick={() => setNav("startup-incubators")} className={nav === "startup-incubators" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>Startup Incubators</NavLink>
-                                </NavItem>
-                                <NavItem role="presentation">
-                                    <NavLink type="button" onClick={() => setNav("blockchain")} className={nav === "blockchain" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>Blockchain Implementation</NavLink>
-                                </NavItem>
-                                <NavItem role="presentation">
-                                    <NavLink type="button" onClick={() => setNav("big-data")} className={nav === "big-data" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>Big Data</NavLink>
-                                </NavItem>
-
-                                <NavItem role="presentation">
-                                    <NavLink type="button" onClick={() => setNav("decentralized-finance")} className={nav === "decentralized-finance" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>Decentralized Finance</NavLink>
-                                </NavItem>
-                                <NavItem role="presentation">
-                                    <NavLink type="button" onClick={() => setNav("cybersecurity")} className={nav === "cybersecurity" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>Cybersecurity Solutions</NavLink>
+                                    <NavLink type="button" onClick={() => setNav("fintech")} className={nav === "fintech" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>Financial Technology</NavLink>
                                 </NavItem>
                             </Nav>
                         </Col>

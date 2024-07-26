@@ -114,6 +114,9 @@ const Navbar = () => {
                                 <NavLink className="nav-link fs-14 text-white" to="/home" activeClassName="active" tag={RRNavLink}>Home</NavLink>
                             </li>
                             <li className="nav-item px-4">
+                                <NavLink className="nav-link fs-14 text-white" href="/speakers">Agenda</NavLink>
+                            </li>
+                            {/*<li className="nav-item px-4">
                                 <Dropdown isOpen={openEvents} toggle={toggleEvents}>
                                     <DropdownToggle caret tag="button" className="nav-link fs-14">
                                         Event
@@ -124,7 +127,7 @@ const Navbar = () => {
                                         <DropdownItem className="fs-14 fw-light" style={{ color: '#E1E7EC' }}>2024 Speakers</DropdownItem>
                                     </DropdownMenu>
                                 </Dropdown>
-                            </li>
+                        </li>*/}
                             <li className="nav-item px-4">
                                 <NavLink className="nav-link fs-14 text-white" href="/speakers">Speakers</NavLink>
                             </li>

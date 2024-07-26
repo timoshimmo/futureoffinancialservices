@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const CTA = () => {
     return (
         <React.Fragment>
-            <section className="py-5 position-absolute bg-white border rounded-5 mx-5 web-cta-home">
+            <section className="py-5 position-absolute bg-white border rounded-5 web-cta-home">
                 <div className="bg-overlay bg-overlay-pattern opacity-50"></div>
                 <Container>
                     <Row className="justify-content-center align-items-center gy-4">

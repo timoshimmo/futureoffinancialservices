@@ -239,7 +239,7 @@ const speakersFullData = [
         img: speaker1,
         name: "Boye Ademola",
         title: "Creative Filtered Portrait",
-        tags: ["ai-finances", "financial-automation", "big-data", "blockchain", "cybersecurity", "fintech-inclusion"],
+        tags: ["distribution-models", "digital-business-models"],
         credentials: "Co-Founder, Bazara",
     },
     {
@@ -247,7 +247,7 @@ const speakersFullData = [
         img: speaker2,
         name: "Abubakar Suleiman",
         title: "Creative Filtered Portrait",
-        tags: ["open-banking", "digital-banking", "cross-border", "decentralized-finance", "cybersecurity"],
+        tags: ["fintech", "customer-experience", "distribution-models"],
         credentials: "CEO, Sterling Bank",
     },
     {
@@ -255,7 +255,7 @@ const speakersFullData = [
         img: speaker3,
         name: "Bayo Adekanmbi",
         title: "Creative Filtered Portrait",
-        tags: ["financial-automation", "wealth-management", "ai-finances", "decentralized-finance"],
+        tags: ["artificial-intelligence"],
         credentials: "Founder/CEO, DSNai",
     },
     {
@@ -263,7 +263,7 @@ const speakersFullData = [
         img: speaker4,
         name: "Iyinoluwa Aboyeji",
         title: "Creative Filtered Portrait",
-        tags: ["emerging-technologies", "big-data", "cybersecurity", "startup-incubators", "ai-finance"],
+        tags: ["digital-business-models", "fintech"],
         credentials: "Founding Partner, Future Africa",
     },
 ]
