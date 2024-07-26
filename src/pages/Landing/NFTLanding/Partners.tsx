@@ -31,7 +31,7 @@ const Partners = () => {
                  ))}                                   
                 </Row>
                 <Row className="justify-content-center mt-5">
-                    <Link to="/nft-explore" className="btn btn-primary btn-partner">Become a Partner</Link>
+                    <Link to="/partners" className="btn btn-primary btn-partner">Become a Partner</Link>
                 </Row>
             </Container>
         </section>

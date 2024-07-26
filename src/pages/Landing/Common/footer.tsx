@@ -8,14 +8,13 @@ import logolight from "../../../assets/images/ffs_top_logo_light.png";
 const Footer = () => {
     return (
         <React.Fragment>
-            <footer className="custom-footer bg-dark pb-5 position-relative" style={{ paddingTop: '170px' }}>
+            <footer className="custom-footer bg-dark pb-5 position-relative footer-style">
                 <Container>
                     <Row>
                         <Col lg={5} className="mt-4">
                             <div>
                                 <div className='mb-5'>
-                                    <img src={logolight} alt="logo light" height="70" />
-
+                                    <img src={logolight} alt="logo light" className="footer-logo" />
                                 </div>
                                 <div className="mt-4 fs-13">
                                     <ul className="list-inline mb-0 footer-social-link">
@@ -59,8 +58,8 @@ const Footer = () => {
                             </div>
                         </Col>
                         <Col lg={5} className="ms-lg-auto">
-                            <Row className='justify-content-end'>
-                                <Col sm={4} className="mt-4">
+                            <Row className='row-footer'>
+                                <Col sm={4} xs={6} className="mt-4">
                                     <h5 className="text-primary mb-0" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>About Us</h5>
                                     <div className="text-white mt-3">
                                         <ul className="list-unstyled ff-secondary footer-list">
@@ -70,7 +69,7 @@ const Footer = () => {
                                         </ul>
                                     </div>
                                 </Col>
-                                <Col sm={4} className="mt-4">
+                                <Col sm={4} xs={6} className="mt-4">
                                     <h5 className="text-primary mb-0" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>Get Involved</h5>
                                     <div className="text-white mt-3">
                                         <ul className="list-unstyled ff-secondary footer-list">
@@ -81,7 +80,7 @@ const Footer = () => {
                                         </ul>
                                     </div>
                                 </Col>
-                                <Col sm={4} className="mt-4">
+                                <Col sm={4} xs={6} className="mt-4">
                                     <h5 className="text-primary mb-0">Resources</h5>
                                     <div className="text-white  mt-3">
                                         <ul className="list-unstyled ff-secondary footer-list">
@@ -104,7 +103,7 @@ const Footer = () => {
                             </div>
                         </Col>
                         <Col sm={6}>
-                            <div className="text-sm-end">
+                            <div className="text-sm-end mobile-copyright-area">
                                 <ul className="list-inline mb-0 footer-social-link">
                                         <li className="list-inline-item px-2">
                                             <Link to="#" className="d-block">

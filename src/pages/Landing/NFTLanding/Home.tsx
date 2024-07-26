@@ -16,7 +16,7 @@ const Home = () => {
                             <p className="h4 text-white mb-4 py-2 caption" style={{ fontWeight: 300 }}>Innovating the Next Generation of Finance</p>
 
                             <div className="hstack gap-3 justify-content-center">
-                                <Link to="/nft-explore" className="btn btn-primary btn-banner">Register</Link>
+                                <Link to="/register" className="btn btn-primary btn-banner">Register</Link>
                                 <NavLink href="#speakers" className="btn btn-outline-secondary border border-secondary border-2 btn-banner btn-banner-secondary">See More</NavLink>
                             </div>
                             

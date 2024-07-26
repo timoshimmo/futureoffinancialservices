@@ -21,7 +21,7 @@ const Sponsor = () => {
                             <div className="w-100 sponsor-right">
                                 <h3 className="mb-3 fs-50 text-white">Together, We Do More</h3>
                                 <p className="mb-4 fw-light text-white fs-15" >This is not your average branding exercise. This is your chance to be part of fintech’s beating heart. Being part of the show doesn’t just guarantee you eou exposure, connections and growth, it makes you an integral part of the frontiers of fintech. This is your unfair advantage.</p>
-                                <Link to="/nft-explore" className="btn btn-primary btn-partner mt-2">Become a Sponsor</Link>
+                                <Link to="/sponsors" className="btn btn-primary btn-partner mt-2">Become a Sponsor</Link>
                             </div>
                         </Col>
                     </Row>

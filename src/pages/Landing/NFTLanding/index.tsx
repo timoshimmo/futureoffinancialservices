@@ -56,8 +56,8 @@ const index = () => {
             <div className="layout-wrapper landing body-bg-dark">
                 <Navbar />
                 <Home />
-                <WhatIs />
                 <Speakers />
+                <WhatIs />
                 <Connect />
                 <Numbers />
                 <Partners />

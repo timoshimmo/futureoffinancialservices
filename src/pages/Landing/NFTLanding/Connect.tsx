@@ -8,7 +8,7 @@ const Connect = () => {
     
     return (
         <React.Fragment>
-            <section className="section body-bg-dark" id="wallet">
+            <section className="section body-bg-dark pb-custom" id="wallet">
                 <Container>
                     <Row className="justify-content-center">
                         <Col lg={8} sm={12}>
@@ -21,7 +21,7 @@ const Connect = () => {
                     <Row className="g-4 mt-1">
                         {connectData.map((item, key) => (
                             <Col key={key} lg={3} sm={12}>
-                                <Card className="border-2 border-primary rounded-4 shadow-none card-possibilities">
+                                <Card className="border-2 rounded-4 shadow-none card-possibilities">
                                     <CardBody className="p-2">
                                         <img src={item.img} alt="" className="mb-3 pb-2 w-100 rounded-2" />
                                         <div className='hstack w-100 justify-content-between align-items-start pb-2'>

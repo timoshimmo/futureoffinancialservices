@@ -8,7 +8,7 @@ const Speakers = () => {
     
     return (
         <React.Fragment>
-            <section className="section" id="speakers">
+            <section className="section pb-custom" id="speakers">
             <Container>
                 <Row className="justify-content-center">
                     <Col lg={8}>

@@ -9,7 +9,7 @@ const Numbers = () => {
 
     return (
         <React.Fragment>
-            <section className="section body-bg-dark pb-3" id="marketplace" style={{ backgroundColor: "#141413" }}>
+            <section className="section body-bg-dark pb-3 numbers-section" id="marketplace" style={{ backgroundColor: "#141413" }}>
                 <Container>
                     <Row className="justify-content-center">
                         <Col lg={8} sm={12}>
