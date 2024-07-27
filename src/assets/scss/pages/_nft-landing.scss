@@ -526,6 +526,17 @@
     
 }
 
+.profile-modal {
+    width: 35% !important;
+}
+
+@media (max-width: 767.98px) { 
+    .profile-modal {
+        width: 80% !important;
+    }
+
+}
+
 .form-container {
     background-image: url('../../images/form_bg_pattern.png');
     background-size: 80% auto;

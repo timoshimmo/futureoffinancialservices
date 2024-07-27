@@ -238,33 +238,73 @@ const speakersFullData = [
         id: 1,
         img: speaker1,
         name: "Boye Ademola",
-        title: "Creative Filtered Portrait",
         tags: ["distribution-models", "digital-business-models"],
         credentials: "Co-Founder, Bazara",
+        courses: [
+            {
+                title: "The Impact of Quantum Computing on Fianancial Services", 
+                date: "Tuesday 14 October 2024",
+                time: "13:00 - 15:30"
+            },
+            {
+                title: "The Impact of AI on Ditribution Models", 
+                date: "Tuesday 14 October 2024",
+                time: "16:00 - 17:00"
+            }
+            
+        ],
+        bio: "is a visionary leader and the CEO of Zenith Innovations, a cutting-edge technology firm revolutionizing the financial services industry in Nigeria and beyond. With over 15 years of experience in the fintech sector, Jimmy has a proven track record of driving digital transformation and fostering innovation. Under his leadership, Zenith Innovations has developed several groundbreaking solutions that streamline financial operations and enhance customer experiences. Jimmy is known for his strategic thinking, exceptional management skills, and commitment to leveraging technology to solve complex financial challenges. He holds a Master's degree in Business Administration from Lagos Business School and a Bachelor's degree in Computer Science from Obafemi Awolowo University, Ile-Ife. Jimmy is a frequent speaker at industry conferences and a passionate advocate for the role of technology in financial inclusion."
     },
     {
         id: 2,
         img: speaker2,
         name: "Abubakar Suleiman",
-        title: "Creative Filtered Portrait",
         tags: ["fintech", "customer-experience", "distribution-models"],
         credentials: "CEO, Sterling Bank",
+        courses: [
+            {
+                title: "Customer Experience Through Leadership", 
+                date: "Tuesday 14 October 2024",
+                time: "15:35 - 16:00"
+            },
+            
+        ],
+        bio: "is a visionary leader and the CEO of Zenith Innovations, a cutting-edge technology firm revolutionizing the financial services industry in Nigeria and beyond. With over 15 years of experience in the fintech sector, Jimmy has a proven track record of driving digital transformation and fostering innovation. Under his leadership, Zenith Innovations has developed several groundbreaking solutions that streamline financial operations and enhance customer experiences. Jimmy is known for his strategic thinking, exceptional management skills, and commitment to leveraging technology to solve complex financial challenges. He holds a Master's degree in Business Administration from Lagos Business School and a Bachelor's degree in Computer Science from Obafemi Awolowo University, Ile-Ife. Jimmy is a frequent speaker at industry conferences and a passionate advocate for the role of technology in financial inclusion."
+
     },
     {
         id: 3,
         img: speaker3,
         name: "Bayo Adekanmbi",
-        title: "Creative Filtered Portrait",
         tags: ["artificial-intelligence"],
         credentials: "Founder/CEO, DSNai",
+        courses: [
+            {
+                title: "Insights From The Artificial Intelligence TL", 
+                date: "Wednesday 15 October 2024",
+                time: "11:00 - 11:55"
+            },
+            
+        ],
+        bio: "is a visionary leader and the CEO of Zenith Innovations, a cutting-edge technology firm revolutionizing the financial services industry in Nigeria and beyond. With over 15 years of experience in the fintech sector, Jimmy has a proven track record of driving digital transformation and fostering innovation. Under his leadership, Zenith Innovations has developed several groundbreaking solutions that streamline financial operations and enhance customer experiences. Jimmy is known for his strategic thinking, exceptional management skills, and commitment to leveraging technology to solve complex financial challenges. He holds a Master's degree in Business Administration from Lagos Business School and a Bachelor's degree in Computer Science from Obafemi Awolowo University, Ile-Ife. Jimmy is a frequent speaker at industry conferences and a passionate advocate for the role of technology in financial inclusion."
+
     },
     {
         id: 4,
         img: speaker4,
         name: "Iyinoluwa Aboyeji",
-        title: "Creative Filtered Portrait",
         tags: ["digital-business-models", "fintech"],
         credentials: "Founding Partner, Future Africa",
+        courses: [
+            {
+                title: "Technologies Powering Financial Services", 
+                date: "Wednesday 15 October 2024",
+                time: "13:00 - 13:45"
+            },
+            
+        ],
+        bio: "is a visionary leader and the CEO of Zenith Innovations, a cutting-edge technology firm revolutionizing the financial services industry in Nigeria and beyond. With over 15 years of experience in the fintech sector, Jimmy has a proven track record of driving digital transformation and fostering innovation. Under his leadership, Zenith Innovations has developed several groundbreaking solutions that streamline financial operations and enhance customer experiences. Jimmy is known for his strategic thinking, exceptional management skills, and commitment to leveraging technology to solve complex financial challenges. He holds a Master's degree in Business Administration from Lagos Business School and a Bachelor's degree in Computer Science from Obafemi Awolowo University, Ile-Ife. Jimmy is a frequent speaker at industry conferences and a passionate advocate for the role of technology in financial inclusion."
+
     },
 ]
 

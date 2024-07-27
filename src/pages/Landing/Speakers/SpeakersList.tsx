@@ -1,12 +1,48 @@
 import React, { useState } from 'react';
-import { Container, Row, Col, Card, CardBody, Nav, NavItem, NavLink } from 'reactstrap';
+import { Container, 
+    Row, 
+    Col, 
+    Card, 
+    CardBody, 
+    Nav, 
+    NavItem, 
+    NavLink,
+    Offcanvas,
+    OffcanvasHeader,
+    OffcanvasBody,
+    Collapse } from 'reactstrap';
+
 import { Link } from 'react-router-dom';
 import { speakersFullData } from '../../../common/data';
 import ic_search from '../../../assets/images/icons/ic_search.png';
 
+interface IProfile {
+    id: Number,
+    img: string,
+    name: string,
+    tags: any,
+    credentials: string,
+    courses: any,
+    bio: string
+  }
+
 const SpeakersList = () => {
 
     const [nav, setNav] = useState("All");
+    const [open, setOpen] = useState(false);
+    const [currentData, setCurrentData] = useState<IProfile>();
+
+    const toggleLeftCanvas = () => {
+        setOpen(!open);
+    };
+
+    const passData = (item: any) => {
+        console.log("ITEM: ", item)
+        
+        setCurrentData(item);
+        setOpen(!open);
+    }
+
 
     return (
         <React.Fragment>
@@ -17,7 +53,7 @@ const SpeakersList = () => {
                             <Row>
                                 {speakersFullData.filter(data => data.tags.includes(nav) || nav === 'All').map((item) => (
                                     <Col key={item.id} lg={6} sm={12}>
-                                        <Card className="shadow-none rounded-0 speakers-card mb-2 text-white" style={{ cursor: "pointer" }}>
+                                        <Card onClick={()=>passData(item)} className="shadow-none rounded-0 speakers-card mb-2 text-white" style={{ cursor: "pointer" }}>
                                             <CardBody className='p-0'>
                                                 <img src={item.img} alt="" className="avatar-speaker"/>
                                                 <div className='w-100 mt-2 px-2'>
@@ -60,6 +96,35 @@ const SpeakersList = () => {
                     </Row>
                 </Container>
             </section>
+            <div>
+                {/* profile-modal */}
+                <Offcanvas isOpen={open} toggle={toggleLeftCanvas} direction="end" className="offcanvas-end border-0 profile-modal">
+                    <OffcanvasBody className="p-0">
+                       
+                       <div className='w-100 p-4'>
+                            <p className='text-primary fs-18 fw-medium'>{currentData?.name} <span className='text-white fs-14 fw-light'>will be speaking on</span></p>
+                            <p className='text-primary fs-18 fw-semibold lhbase'>{currentData?.courses[0].title}</p>
+                            <p className='text-secondary fs-13'>{currentData?.courses[0].date}, {currentData?.courses[0].time}</p>
+                            <div className='w-100 mt-4 p-4 border border-primary rounded-3'>
+                                <img src={currentData?.img}/>
+                                <p className='mt-4 text-white fs-13'><span className='text-primary fw-semibold'>{currentData?.name}</span> {currentData?.bio}</p>
+                            </div>
+                            <h2 className='my-4 text-primary fs-20' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>Topics</h2>
+                            <Nav pills className="nav-pills filter-btns gap-2" role="tablist">
+                                {
+                                    currentData?.tags.map((row: string) => (
+                                        <NavItem role="presentation">
+                                            <NavLink type="button" onClick={() => setNav(row)} className={nav === row ? " fw-medium text-capitalize fs-12 active" : "fw-medium fs-12 text-capitalize border border-white rounded-2"}>{row.replace(/-/g, ' ')}</NavLink>
+                                        </NavItem>
+                                
+                                    ))
+                                }
+                            </Nav>
+                       </div>
+                       
+                    </OffcanvasBody>
+                </Offcanvas>
+            </div>
         </React.Fragment>
     );
 }
