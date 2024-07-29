@@ -13,7 +13,7 @@ import { Container,
     Collapse } from 'reactstrap';
 
 import { Link } from 'react-router-dom';
-import { speakersFullData } from '../../../common/data';
+import { agendaData } from '../../../common/data';
 import ic_search from '../../../assets/images/icons/ic_search.png';
 
 interface IProfile {
@@ -99,19 +99,23 @@ const AgendaList = () => {
                         <Col lg={7} sm={12}>
                             <Row>
                                
-                                { /* speakersFullData.filter(data => data.tags.includes(nav) || nav === 'All').map((item) => (
-                                    <Col key={item.id} lg={6} sm={12}>
-                                        <Card onClick={()=>passData(item)} className="shadow-none rounded-0 speakers-card mb-2 text-white" style={{ cursor: "pointer" }}>
+                                {agendaData.filter(data => data.dateCode === dateNav || dateNav === 'All').map((item) => (
+                                    <Col key={item.id} lg={12} sm={12}>
+                                        <Card className="shadow-none border-top border-bottom border-white rounded-3 mb-4 p-4 text-white">
                                             <CardBody className='p-0'>
-                                                <img src={item.img} alt="" className="avatar-speaker"/>
-                                                <div className='w-100 mt-2 px-2'>
-                                                    <h5 className="text-white fs-14" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>{item.name}</h5>
-                                                    <p className="text-white fs-11 fw-light">{item.credentials}</p>
+                                                <div className='d-flex gap-2 align-items-center mb-2'><span className='text-white fs-20'>{item.date}</span> | <span className='text-white fs-20'>{item.time}</span></div>
+                                                <h6 className='text-white fw-semibold fs-20'>{item.topic}</h6>
+                                                <div className='d-flex gap-2 mt-4'>
+                                                    <img src={item.speaker[0].pic} alt="" height="90" />
+                                                    <div className='px-2'>
+                                                        <h5 className="text-primary fs-14">{item.speaker[0].name}</h5>
+                                                        <p className="text-white fs-11 fw-light">{item.speaker[0].credentials}</p>
+                                                    </div>
                                                 </div>
                                             </CardBody>
                                         </Card>
                                     </Col>
-                                )) */}
+                                ))}
                             </Row>
                         </Col>
                     </Row>

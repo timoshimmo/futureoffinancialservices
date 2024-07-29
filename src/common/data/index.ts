@@ -82,7 +82,7 @@ import {
   popularCreatorsNFT, marketPlacewidget
 } from "./NFTMarketplace";
 
-import { connectData, discoverItemsData, featuresData, productData, topCreatorData, whatIsData, speakersData, numbersData, partnerImgsData, latestData, faqData, faqFullData, speakersFullData } from "./LandingNFT";
+import { connectData, discoverItemsData, featuresData, productData, topCreatorData, whatIsData, speakersData, numbersData, partnerImgsData, latestData, faqData, faqFullData, speakersFullData, agendaData } from "./LandingNFT";
 
 import { recentFile, folderList } from "./fileManager";
 
@@ -189,5 +189,6 @@ export {
   latestData,
   faqData,
   faqFullData,
-  speakersFullData
+  speakersFullData,
+  agendaData
 };

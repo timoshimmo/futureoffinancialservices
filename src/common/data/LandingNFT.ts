@@ -315,6 +315,238 @@ const speakersFullData = [
     },
 ]
 
+const agendaData = [
+    {
+        id: 1,
+        date: "Tue, 08 Oct",
+        time: "8:00AM",
+        dateCode: "Tue",
+        duration: "60",
+        topic: "Registration and Welcome Address",
+        theme: null,
+        speaker: [
+            {
+                name: "Boye Ademola",
+                img: speaker1,
+                pic: profile_boye,
+                credentials: "Co-Founder, Bazara",
+                tags: ["distribution-models", "digital-business-models"],
+            }
+           
+        ]
+    },
+    {
+        id: 2,
+        date: "Tue, 08 Oct",
+        time: "9:00AM",
+        dateCode: "Tue",
+        duration: "20",
+        topic: "Welcome Address/Opening Remarks",
+        theme: null,
+        speaker: [
+            {
+                name: "Boye Ademola",
+                img: speaker1,
+                pic: profile_boye,
+                credentials: "Co-Founder, Bazara",
+                tags: ["distribution-models", "digital-business-models"],
+            }
+           
+        ]
+    },
+    {
+        id: 3,
+        date: "Tue, 08 Oct",
+        time: "9:20AM",
+        dateCode: "Tue",
+        duration: "30",
+        topic: "Keynote Presentation on Digital Business Models",
+        theme:  "digital-business-models",
+        speaker: [
+            {
+                name: "Boye Ademola",
+                img: speaker1,
+                pic: profile_boye,
+                credentials: "Co-Founder, Bazara",
+                tags: ["distribution-models", "digital-business-models"],
+            }
+           
+        ]
+    },
+    {
+        id: 4,
+        date: "Tue, 08 Oct",
+        time: "9:55AM",
+        dateCode: "Tue",
+        duration: "50",
+        topic: "Panel Session on Digital Business Models",
+        theme:  "digital-business-models",
+        speaker: [
+            {
+                name: "Boye Ademola",
+                img: speaker1,
+                pic: profile_boye,
+                credentials: "Co-Founder, Bazara",
+                tags: ["distribution-models", "digital-business-models"],
+            }
+           
+        ]
+    },
+    {
+        id: 5,
+        date: "Tue, 08 Oct",
+        time: "10:50AM",
+        dateCode: "Tue",
+        duration: "30",
+        topic: "Keynote Presentation on Distribution Models",
+        theme:  "distribution-models",
+        speaker: [
+            {
+                name: "Boye Ademola",
+                img: speaker1,
+                pic: profile_boye,
+                credentials: "Co-Founder, Bazara",
+                tags: ["distribution-models", "digital-business-models"],
+            }
+           
+        ]
+    },
+    {
+        id: 6,
+        date: "Tue, 08 Oct",
+        time: "11:25AM",
+        dateCode: "Tue",
+        duration: "20",
+        topic: "Fire Chat on Distribution Models",
+        theme:  "distribution-models",
+        speaker: [
+            {
+                name: "Boye Ademola",
+                img: speaker1,
+                pic: profile_boye,
+                credentials: "Co-Founder, Bazara",
+                tags: ["distribution-models", "digital-business-models"],
+            }
+           
+        ]
+    },
+    {
+        id: 7,
+        date: "Tue, 08 Oct",
+        time: "1:10PM",
+        dateCode: "Tue",
+        duration: "30",
+        topic: "Keynote Presentation on Customer Experience",
+        theme:  "customer-experience",
+        speaker: [
+            {
+                img: speaker2,
+                pic: speaker2,
+                name: "Abubakar Suleiman",
+                tags: ["fintech", "customer-experience", "distribution-models"],
+                credentials: "CEO, Sterling Bank",
+            }
+           
+        ]
+    },
+    {
+        id: 8,
+        date: "Tue, 08 Oct",
+        time: "2:30PM",
+        dateCode: "Tue",
+        duration: "50",
+        topic: "Panel Session on Customer Experience",
+        theme:  "customer-experience",
+        speaker: [
+            {
+                img: speaker2,
+                pic: speaker2,
+                name: "Abubakar Suleiman",
+                tags: ["fintech", "customer-experience", "distribution-models"],
+                credentials: "CEO, Sterling Bank",
+            }
+           
+        ]
+    },
+    {
+        id: 9,
+        date: "Wed, 09 Oct",
+        time: "8:00AM",
+        dateCode: "Wed",
+        duration: "60",
+        topic: "Breakfast Networking",
+        theme: null,
+        speaker: [
+            {
+                name: "Boye Ademola",
+                img: speaker1,
+                pic: profile_boye,
+                credentials: "Co-Founder, Bazara",
+                tags: ["distribution-models", "digital-business-models"],
+            }
+           
+        ]
+    },
+    {
+        id: 10,
+        date: "Wed, 09 Oct",
+        time: "9:00AM",
+        dateCode: "Wed",
+        duration: "60",
+        topic: "Keynote Presentation on Artificial Intelligence",
+        theme: "artificial-intelligence",
+        speaker: [
+            {
+                img: speaker3,
+                pic: speaker3,
+                name: "Bayo Adekanmbi",
+                tags: ["artificial-intelligence"],
+                credentials: "Founder/CEO, DSNai",
+            }
+           
+        ]
+    },
+    {
+        id: 11,
+        date: "Wed, 09 Oct",
+        time: "10:50AM",
+        dateCode: "Wed",
+        duration: "10",
+        topic: "Lauch of Artificial Intelligence Thought Leadership",
+        theme: "artificial-intelligence",
+        speaker: [
+            {
+                img: speaker3,
+                pic: speaker3,
+                name: "Bayo Adekanmbi",
+                tags: ["artificial-intelligence"],
+                credentials: "Founder/CEO, DSNai",
+            }
+           
+        ]
+    },
+    {
+        id: 12,
+        date: "Wed, 09 Oct",
+        time: "3:15PM",
+        dateCode: "Wed",
+        duration: "60",
+        topic: "Keynote Presentation on Technologies Powering Financial Services",
+        theme: "fintech",
+        speaker: [
+            {
+                img: speaker4,
+                pic: speaker4,
+                name: "Iyinoluwa Aboyeji",
+                tags: ["digital-business-models", "fintech"],
+                credentials: "Founding Partner, Future Africa",
+            }
+           
+        ]
+    },
+
+]
+
 const faqData = [
     {
         id: "1",
@@ -508,4 +740,4 @@ const topCreatorData = [
     },
 ];
 
-export {connectData, discoverItemsData, featuresData, speakersData, productData, topCreatorData, whatIsData, numbersData, partnerImgsData, latestData, faqData, faqFullData, speakersFullData}
+export {connectData, discoverItemsData, featuresData, speakersData, productData, topCreatorData, whatIsData, numbersData, partnerImgsData, latestData, faqData, faqFullData, speakersFullData, agendaData}
