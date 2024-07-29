@@ -7,7 +7,7 @@ const Banner = () => {
         <React.Fragment>
             <section className="section speakers-banner">
                 {/*<div className="bg-overlay"></div>*/}
-                <Row>
+                <Row className='w-100'>
                     <Col lg={12}>
                         <h2 className="fw-bold lh-base text-primary display-4 px-5" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>2024 Speakers</h2>
                     </Col>
