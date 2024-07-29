@@ -12,7 +12,6 @@ const Banner = () => {
                         <h2 className="w-100 text-center fw-bold lh-base text-primary display-5 px-5" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>FFS 2024 Agenda</h2>
                     </Col>
                 </Row>
-                
             </section>
         </React.Fragment>
     );
