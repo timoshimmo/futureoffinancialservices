@@ -18,20 +18,20 @@ const Footer = () => {
                                 </div>
                                 <div className="mt-4 fs-13">
                                     <ul className="list-inline mb-0 footer-social-link">
-                                        <li className="list-inline-item">
+                                        {/*<li className="list-inline-item">
                                             <Link to="#" className="avatar-xs d-block">
                                                 <div className="avatar-title rounded-circle">
                                                     <i className="ri-facebook-fill"></i>
                                                 </div>
                                             </Link>
-                                        </li>
+                                        </li> 
                                         <li className="list-inline-item">
                                             <Link to="#" className="avatar-xs d-block">
                                                 <div className="avatar-title rounded-circle">
                                                     <i className="ri-instagram-fill"></i>
                                                 </div>
                                             </Link>
-                                        </li>
+                                        </li>*/}
                                         <li className="list-inline-item">
                                             <Link to="#" className="avatar-xs d-block">
                                                 <div className="avatar-title rounded-circle">
@@ -43,6 +43,13 @@ const Footer = () => {
                                             <Link to="#" className="avatar-xs d-block">
                                                 <div className="avatar-title rounded-circle">
                                                     <i className="ri-twitter-x-fill"></i>
+                                                </div>
+                                            </Link>
+                                        </li>
+                                        <li className="list-inline-item">
+                                            <Link to="#" className="avatar-xs d-block">
+                                                <div className="avatar-title rounded-circle">
+                                                    <i className="ri-youtube-fill"></i>
                                                 </div>
                                             </Link>
                                         </li>

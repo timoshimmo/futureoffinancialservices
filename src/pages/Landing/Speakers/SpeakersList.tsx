@@ -19,6 +19,7 @@ import ic_search from '../../../assets/images/icons/ic_search.png';
 interface IProfile {
     id: Number,
     img: string,
+    pic: string,
     name: string,
     tags: any,
     credentials: string,
@@ -102,11 +103,22 @@ const SpeakersList = () => {
                     <OffcanvasBody className="p-0">
                        
                        <div className='w-100 p-4'>
-                            <p className='text-primary fs-18 fw-medium'>{currentData?.name} <span className='text-white fs-14 fw-light'>will be speaking on</span></p>
-                            <p className='text-primary fs-18 fw-semibold lhbase'>{currentData?.courses[0].title}</p>
-                            <p className='text-secondary fs-13'>{currentData?.courses[0].date}, {currentData?.courses[0].time}</p>
+                            
                             <div className='w-100 mt-4 p-4 border border-primary rounded-3'>
-                                <img src={currentData?.img}/>
+                                <Row>
+                                    <Col lg={6}>
+                                        <img src={currentData?.pic} className='w-100 border rounded-3'/>
+                                    </Col>
+                                    <Col lg={6}>
+                                        <div className='w-100'>
+                                            <p className='text-primary fs-18 fw-medium mb-2 lh-sm'>{currentData?.name}</p>
+                                            <p className="text-white fs-11 fw-light">{currentData?.credentials}</p>
+                                            {/*<span className='text-white fs-14 fw-light'>will be speaking on</span>*/}
+                                        </div>
+                                    </Col>
+                                </Row>
+                               {/*  <p className='text-primary fs-18 fw-semibold lhbase'>{currentData?.courses[0].title}</p>
+                                <p className='text-secondary fs-13'>{currentData?.courses[0].date}, {currentData?.courses[0].time}</p> */}
                                 <p className='mt-4 text-white fs-13'><span className='text-primary fw-semibold'>{currentData?.name}</span> {currentData?.bio}</p>
                             </div>
                             <h2 className='my-4 text-primary fs-20' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>Topics</h2>

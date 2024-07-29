@@ -47,6 +47,9 @@ import partner2 from "../../assets/images/home/partner2.png";
 import partner3 from "../../assets/images/home/partner3.png";
 import partner4 from "../../assets/images/home/partner4.png";
 
+//Profile
+import profile_boye from '../../assets/images/profile/img_profile_boye.png';
+
 // import img04 from "../../assets/images/nft/gif/img-4.gif";
 // import gifImg01 from "../../assets/images/nft/gif/img-1.gif";
 
@@ -237,6 +240,7 @@ const speakersFullData = [
     {
         id: 1,
         img: speaker1,
+        pic: profile_boye,
         name: "Boye Ademola",
         tags: ["distribution-models", "digital-business-models"],
         credentials: "Co-Founder, Bazara",
@@ -258,6 +262,7 @@ const speakersFullData = [
     {
         id: 2,
         img: speaker2,
+        pic: speaker2,
         name: "Abubakar Suleiman",
         tags: ["fintech", "customer-experience", "distribution-models"],
         credentials: "CEO, Sterling Bank",
@@ -275,6 +280,7 @@ const speakersFullData = [
     {
         id: 3,
         img: speaker3,
+        pic: speaker3,
         name: "Bayo Adekanmbi",
         tags: ["artificial-intelligence"],
         credentials: "Founder/CEO, DSNai",
@@ -292,6 +298,7 @@ const speakersFullData = [
     {
         id: 4,
         img: speaker4,
+        pic: speaker4,
         name: "Iyinoluwa Aboyeji",
         tags: ["digital-business-models", "fintech"],
         credentials: "Founding Partner, Future Africa",

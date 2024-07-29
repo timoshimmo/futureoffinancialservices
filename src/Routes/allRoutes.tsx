@@ -35,6 +35,7 @@ import Partner from '../pages/Landing/Partner';
 import Sponsors from '../pages/Landing/Sponsors';
 import ContactUs from '../pages/Landing/ContactUs';
 import Speakers from '../pages/Landing/Speakers';
+import Agenda from '../pages/Landing/Agenda';
 
 
 const authProtectedRoutes = [
@@ -77,6 +78,7 @@ const publicRoutes : any= [
   {path: "/sponsors", component: <Sponsors />},
   {path: "/contact-us", component: <ContactUs />},
   {path: "/speakers", component: <Speakers />},
+  {path: "/agenda", component: <Agenda />},
   
   {
     path: "/",
