@@ -156,15 +156,15 @@ const numbersData = [
     },
 ];
 
-
-const partnerImgsData = [
-
-    {
+  /* {
         img: partner1,
     },
     {
         img: partner4,
     },
+    */
+
+const partnerImgsData = [
     {
         img: partner2,
     },
