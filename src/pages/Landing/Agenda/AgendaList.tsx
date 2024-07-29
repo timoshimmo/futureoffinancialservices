@@ -7,10 +7,7 @@ import { Container,
     Nav, 
     NavItem, 
     NavLink,
-    Offcanvas,
-    OffcanvasHeader,
-    OffcanvasBody,
-    Collapse } from 'reactstrap';
+    } from 'reactstrap';
 
 import { Link } from 'react-router-dom';
 import { agendaData } from '../../../common/data';
