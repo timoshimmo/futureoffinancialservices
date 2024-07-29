@@ -17,21 +17,21 @@ const Connect = () => {
                                 <h2 className="mb-4 fw-semibold lh-base text-secondary">One Summit, <br /><span className='text-primary'>Unlimited Possibilities</span></h2>
                             </div>
                         </Col>
-                        <Col lg={6} sm={12} className='px-5'>
+                        <Col lg={7} sm={12} className='px-5'>
                             <Row className="justify-content-center mx-auto">
                                 {connectData.map((item, key) => (
-                                    <Col key={key} lg={12} sm={12} className={item.rowType === 0 ?'border-start border-2 border-primary py-2' : 'border-start border-2 border-white py-3'}>
-                                        <div className="shadow-none">
+                                    <Col key={key} lg={12} sm={12} className={item.rowType === 0 ?'border-start border-2 border-primary py-4' : 'border-start border-2 border-white py-3'}>
+                                        <div className="shadow-none px-3 py-2">
                                             <div className='w-100 justify-content-between align-items-start'>
                                                 <h5 className={item.rowType === 0 ? 'text-primary fs-18 mb-0' : 'text-white'} style={{ fontFamily: 'Georgia' }}>{item.title}</h5>
                                             </div>                       
-                                            <p className="fs-12 text-muted mb-0">{item.textContent}</p>
+                                            <p className="fs-12 text-white fw-light mb-0">{item.textContent}</p>
                                         </div>
                                     </Col>
                                 ))}
                             </Row>
                         </Col>
-                        <Col lg={6} sm={12} className="mx-auto">
+                        <Col lg={5} sm={12} className="mx-auto">
                             <div className='sponsor-left'>
                                 <img src={home_submit_right} alt="" className="img-fluid mx-auto border border-0 rounded-4" />
                             </div>
