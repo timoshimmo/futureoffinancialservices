@@ -45,7 +45,6 @@ const AgendaList = () => {
         setOpen(!open);
     }
 
-
     return (
         <React.Fragment>
             <section className="section">
@@ -104,6 +103,7 @@ const AgendaList = () => {
                                             <CardBody className='p-0'>
                                                 <div className='d-flex gap-2 align-items-center mb-2'><span className='text-white fs-20'>{item.date}</span> | <span className='text-white fs-20'>{item.time}</span></div>
                                                 <h6 className='text-white fw-semibold fs-20'>{item.topic}</h6>
+                                                <p className='text-secondary fs-13'>{item.type}</p>
                                                 <div className='d-flex gap-2 mt-4'>
                                                     <img src={item.speaker[0].pic} alt="" height="90" />
                                                     <div className='px-2'>
@@ -120,35 +120,7 @@ const AgendaList = () => {
                     </Row>
                 </Container>
             </section>
-            <div>
-                {/* profile-modal */}
-                <Offcanvas isOpen={open} toggle={toggleLeftCanvas} direction="end" className="offcanvas-end border-0 profile-modal">
-                    <OffcanvasBody className="p-0">
-                       
-                       <div className='w-100 p-4'>
-                            <p className='text-primary fs-18 fw-medium'>{currentData?.name} <span className='text-white fs-14 fw-light'>will be speaking on</span></p>
-                            <p className='text-primary fs-18 fw-semibold lhbase'>{currentData?.courses[0].title}</p>
-                            <p className='text-secondary fs-13'>{currentData?.courses[0].date}, {currentData?.courses[0].time}</p>
-                            <div className='w-100 mt-4 p-4 border border-primary rounded-3'>
-                                <img src={currentData?.img}/>
-                                <p className='mt-4 text-white fs-13'><span className='text-primary fw-semibold'>{currentData?.name}</span> {currentData?.bio}</p>
-                            </div>
-                            <h2 className='my-4 text-primary fs-20' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>Topics</h2>
-                            <Nav pills className="nav-pills filter-btns gap-2" role="tablist">
-                                {
-                                    currentData?.tags.map((row: string) => (
-                                        <NavItem role="presentation">
-                                            <NavLink type="button" onClick={() => setNav(row)} className={nav === row ? " fw-medium text-capitalize fs-12 active" : "fw-medium fs-12 text-capitalize border border-white rounded-2"}>{row.replace(/-/g, ' ')}</NavLink>
-                                        </NavItem>
-                                
-                                    ))
-                                }
-                            </Nav>
-                       </div>
-                       
-                    </OffcanvasBody>
-                </Offcanvas>
-            </div>
+            
         </React.Fragment>
     );
 }

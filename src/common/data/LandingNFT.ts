@@ -329,6 +329,7 @@ const agendaData = [
         duration: "60",
         topic: "Registration and Welcome Address",
         theme: null,
+        type: "Welcome Address",
         speaker: [
             {
                 name: "Boye Ademola",
@@ -348,6 +349,7 @@ const agendaData = [
         duration: "20",
         topic: "Welcome Address/Opening Remarks",
         theme: null,
+        type: "Welcome Address",
         speaker: [
             {
                 name: "Boye Ademola",
@@ -367,6 +369,7 @@ const agendaData = [
         duration: "30",
         topic: "Keynote Presentation on Digital Business Models",
         theme:  "digital-business-models",
+        type: "Keynote Presetation",
         speaker: [
             {
                 name: "Boye Ademola",
@@ -386,6 +389,7 @@ const agendaData = [
         duration: "50",
         topic: "Panel Session on Digital Business Models",
         theme:  "digital-business-models",
+        type: "Panel Session",
         speaker: [
             {
                 name: "Boye Ademola",
@@ -405,6 +409,7 @@ const agendaData = [
         duration: "30",
         topic: "Keynote Presentation on Distribution Models",
         theme:  "distribution-models",
+        type: "Keynote Presentation",
         speaker: [
             {
                 name: "Boye Ademola",
@@ -424,6 +429,7 @@ const agendaData = [
         duration: "20",
         topic: "Fire Chat on Distribution Models",
         theme:  "distribution-models",
+        type: "Chat",
         speaker: [
             {
                 name: "Boye Ademola",
@@ -443,6 +449,7 @@ const agendaData = [
         duration: "30",
         topic: "Keynote Presentation on Customer Experience",
         theme:  "customer-experience",
+        type: "Keynote Presentation",
         speaker: [
             {
                 img: speaker2,
@@ -462,6 +469,7 @@ const agendaData = [
         duration: "50",
         topic: "Panel Session on Customer Experience",
         theme:  "customer-experience",
+        type: "Panel Session",
         speaker: [
             {
                 img: speaker2,
@@ -481,6 +489,7 @@ const agendaData = [
         duration: "60",
         topic: "Breakfast Networking",
         theme: null,
+        type: "Networking",
         speaker: [
             {
                 name: "Boye Ademola",
@@ -500,6 +509,7 @@ const agendaData = [
         duration: "60",
         topic: "Keynote Presentation on Artificial Intelligence",
         theme: "artificial-intelligence",
+        type: "Keynote Presetation",
         speaker: [
             {
                 img: speaker3,
@@ -517,8 +527,9 @@ const agendaData = [
         time: "10:50AM",
         dateCode: "Wed",
         duration: "10",
-        topic: "Lauch of Artificial Intelligence Thought Leadership",
+        topic: "Launch of Artificial Intelligence Thought Leadership",
         theme: "artificial-intelligence",
+        type: "Session",
         speaker: [
             {
                 img: speaker3,
@@ -538,6 +549,7 @@ const agendaData = [
         duration: "60",
         topic: "Keynote Presentation on Technologies Powering Financial Services",
         theme: "fintech",
+        type: "Keynote Presentation",
         speaker: [
             {
                 img: speaker4,
