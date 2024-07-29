@@ -151,7 +151,7 @@ const Navbar = () => {
                             </li>
                         </Scrollspy>
 
-                        <div>
+                        <div className='ms-4'>
                             <Link to="/register" className="btn btn-success btn-banner">Register </Link>
                         </div>
                     </Collapse>

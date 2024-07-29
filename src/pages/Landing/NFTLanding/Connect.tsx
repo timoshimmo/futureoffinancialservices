@@ -3,37 +3,42 @@ import { Container, Row, Col, Card, CardBody } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import { connectData } from '../../../common/data';
 import arrow_link from "../../../assets/images/home/img_link_arrow.png";
+import home_submit_right from "../../../assets/images/home/img_home_summit_right.png";
 
 const Connect = () => {
     
     return (
         <React.Fragment>
-            <section className="section body-bg-dark pb-custom" id="wallet">
+            <section className="section body-bg-dark px-4" id="features" style={{ backgroundColor: "#141413" }}>
                 <Container>
-                    <Row className="justify-content-center">
-                        <Col lg={8} sm={12}>
-                            <div className="text-center mb-4">
-                                <h2 className="mb-3 fw-semibold lh-base text-secondary">One Summit <span className='text-primary'>Unlimited Possibilities</span></h2>
+                    <Row className="gy-4">
+                        <Col lg={12} className='px-5'>
+                            <div className="w-100">
+                                <h2 className="mb-4 fw-semibold lh-base text-secondary">One Summit, <br /><span className='text-primary'>Unlimited Possibilities</span></h2>
                             </div>
                         </Col>
+                        <Col lg={6} sm={12} className='px-5'>
+                            <Row className="justify-content-center mx-auto">
+                                {connectData.map((item, key) => (
+                                    <Col key={key} lg={12} sm={12} className={item.rowType === 0 ?'border-start border-2 border-primary py-2' : 'border-start border-2 border-white py-3'}>
+                                        <div className="shadow-none">
+                                            <div className='w-100 justify-content-between align-items-start'>
+                                                <h5 className={item.rowType === 0 ? 'text-primary fs-18 mb-0' : 'text-white'} style={{ fontFamily: 'Georgia' }}>{item.title}</h5>
+                                            </div>                       
+                                            <p className="fs-12 text-muted mb-0">{item.textContent}</p>
+                                        </div>
+                                    </Col>
+                                ))}
+                            </Row>
+                        </Col>
+                        <Col lg={6} sm={12} className="mx-auto">
+                            <div className='sponsor-left'>
+                                <img src={home_submit_right} alt="" className="img-fluid mx-auto border border-0 rounded-4" />
+                            </div>
+                        </Col>
+                       
                     </Row>
-
-                    <Row className="g-4 mt-1">
-                        {connectData.map((item, key) => (
-                            <Col key={key} lg={3} sm={12}>
-                                <Card className="border-2 rounded-4 shadow-none card-possibilities">
-                                    <CardBody className="p-2">
-                                        <img src={item.img} alt="" className="mb-3 pb-2 w-100 rounded-2" />
-                                        <div className='hstack w-100 justify-content-between align-items-start pb-2'>
-                                            <h5 className='text-primary fs-18 mb-0' style={{ fontFamily: 'Georgia' }}>{item.title}</h5>
-                                            <img height={23} src={arrow_link}/>
-                                        </div>                       
-                                        <p className="pb-3 fs-12">{item.textContent}</p>
-                                    </CardBody>
-                                </Card>
-                            </Col>
-                        ))}
-                    </Row>
+                    
                 </Container>
             </section>
         </React.Fragment>

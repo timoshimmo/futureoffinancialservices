@@ -58,21 +58,25 @@ const connectData = [
         img: summit1,
         title: "Expand Your Network",
         textContent: "Maximize your conference experience by connecting with industry leaders, innovators, and peers.",
+        rowType: 0
     },
     {
         img: summit2,
         title: "Build Partnerships",
         textContent: "Forge meaningful partnerships that can drive your business forward.",
+        rowType: 1
     },
     {
         img: summit3,
         title: "Collaborate for the Future",
         textContent: "Join forces with innovators, leaders, and visionaries to shape the future of financial services.",
+        rowType: 1
     },
     {
         img: summit4,
         title: "Explore New Technologies",
         textContent: "Discover the latest advancements in financial technology and learn how they can transform your business.",
+        rowType: 1
     },
 ];
 
@@ -151,6 +155,7 @@ const numbersData = [
         color: "#7500BC",
     },
 ];
+
 
 const partnerImgsData = [
 
