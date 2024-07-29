@@ -14,7 +14,7 @@ const Connect = () => {
                     <Row className="gy-4">
                         <Col lg={12} className='px-5'>
                             <div className="w-100">
-                                <h2 className="mb-4 fw-semibold lh-base text-secondary">One Summit, <br /><span className='text-primary'>Unlimited Possibilities</span></h2>
+                                <h2 className="mb-4 fw-semibold lh-base text-secondary" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>One Summit, <br /><span className='text-primary'>Unlimited Possibilities</span></h2>
                             </div>
                         </Col>
                         <Col lg={7} sm={12} className='px-5'>

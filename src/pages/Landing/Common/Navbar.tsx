@@ -82,11 +82,10 @@ const Navbar = () => {
         <React.Fragment>
             <nav className={"navbar navbar-expand-lg navbar-landing fixed-top " + navClass} id="navbar">
                 <Container>
-                    <Link className="navbar-brand" to="/index">
+                    <Link className="navbar-brand" to="/home">
                         <img src={ffsLogoDark} className="card-logo card-logo-dark" alt="logo dark" height="50" />
                         <img src={ffsLogoLight1} className="card-logo card-logo-light" alt="logo light" height="50" />
                     </Link>
-
                     <NavbarToggler className="navbar-toggler py-0 fs-20 text-body" onClick={toggle} type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
