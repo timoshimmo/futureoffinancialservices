@@ -59,8 +59,8 @@ const index = () => {
                 <Connect />
                 <Speakers />
                 <WhatIs />
-                <Numbers />
                 <Partners />
+                <Numbers />
                 <Sponsor />
                 <Latest />
                 <Faq />
