@@ -32,7 +32,7 @@ const index = () => {
         <React.Fragment>
             <div className="layout-wrapper landing body-bg-dark">
                 <Navbar />
-                <Banner />
+                {/* <Banner /> */}
                 <RegisterForm />
                 <Footer />
             </div>

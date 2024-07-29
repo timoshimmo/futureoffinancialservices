@@ -52,7 +52,7 @@ const AgendaList = () => {
                 <Container>
                     <Row className='justify-content-end mb-5'>
                         <Col lg={7}>
-                            <Nav pills className="nav-pills filter-btns gap-3 ms-4" role="tablist">
+                            <Nav pills className="nav-pills filter-btns gap-3" role="tablist">
                                 <NavItem role="presentation">
                                     <NavLink type="button" onClick={() => setDateNav("All")} className={dateNav === "All" ? " fw-medium fs-13 text-primary border border-white rounded-2 bg-white active" : "fw-medium fs-13 nav-tab-custom"}>All</NavLink>
                                 </NavItem>
@@ -97,8 +97,7 @@ const AgendaList = () => {
                             
                         </Col>
                         <Col lg={7} sm={12}>
-                            <Row>
-                               
+                            <Row> 
                                 {agendaData.filter(data => data.dateCode === dateNav || dateNav === 'All').map((item) => (
                                     <Col key={item.id} lg={12} sm={12}>
                                         <Card className="shadow-none border-top border-bottom border-white rounded-3 mb-4 p-4 text-white">

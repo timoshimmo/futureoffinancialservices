@@ -88,7 +88,7 @@ const Footer = () => {
                                     </div>
                                 </Col>
                                 <Col sm={4} xs={6} className="mt-4">
-                                    <h5 className="text-primary mb-0">Resources</h5>
+                                    <h5 className="text-primary mb-0" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>Resources</h5>
                                     <div className="text-white  mt-3">
                                         <ul className="list-unstyled ff-secondary footer-list">
                                             <li><Link to="/pages-faqs" className="text-white fs-14">Insights</Link></li>
