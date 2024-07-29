@@ -21,18 +21,17 @@ const Partners = () => {
                         </div>
                     </Col>
                     <Col lg={6}>
-                    <Row className='justify-content-center partners-row mx-auto'>
-                        {partnerImgsData.map((item, key) => (
-                            <Col key={key} lg={6} sm={6} xs={6} className='d-flex gap-2 justify-content-center'>
-                                <Card className="bg-white w-100 partner-card">
-                                    <CardBody className='p-0 d-flex justify-content-center align-items-center'>
-                                        <img src={item.img} alt="" />
-                                    </CardBody>
-                                </Card>
-                            </Col>
-                        ))}                       
-                    </Row>
-                       
+                        <Row className='justify-content-center partners-row mx-auto'>
+                            {partnerImgsData.map((item, key) => (
+                                <Col key={key} lg={6} sm={6} xs={6} className='d-flex gap-2 justify-content-center'>
+                                    <Card className="bg-white w-100 partner-card">
+                                        <CardBody className='p-0 d-flex justify-content-center align-items-center'>
+                                            <img src={item.img} alt="" />
+                                        </CardBody>
+                                    </Card>
+                                </Col>
+                            ))}                       
+                        </Row>
                     </Col>
                 </Row>
                 
