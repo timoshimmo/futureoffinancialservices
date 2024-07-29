@@ -4,11 +4,12 @@ import { Link, NavLink as RRNavLink } from 'react-router-dom';
 import Scrollspy from "react-scrollspy";
 
 //import Images
-import logodark from "../../../assets/images/logo-dark.png";
+
+/*import logodark from "../../../assets/images/logo-dark.png";
 import logolight from "../../../assets/images/logo-light.png";
 import ffsLogoLight from "../../../assets/images/ffs_top_logo_light.png";
+*/
 import ffsLogoDark from "../../../assets/images/ffs_top_logo_dark.png";
-
 import ffsLogoLight1 from "../../../assets/images/FFS_logo_nav.png";
 
 const Navbar = () => {
@@ -91,7 +92,6 @@ const Navbar = () => {
                         aria-expanded="false" aria-label="Toggle navigation">
                         <i className="mdi mdi-menu"></i>
                     </NavbarToggler>
-
                     <Collapse
                         className="navbar-collapse"
                         id="navbarSupportedContent"
@@ -115,25 +115,9 @@ const Navbar = () => {
                             <li className="nav-item px-4">
                                 <NavLink className="nav-link fs-14 text-white" href="/agenda">Agenda</NavLink>
                             </li>
-                            {/*<li className="nav-item px-4">
-                                <Dropdown isOpen={openEvents} toggle={toggleEvents}>
-                                    <DropdownToggle caret tag="button" className="nav-link fs-14">
-                                        Event
-                                    </DropdownToggle>
-                                    <DropdownMenu className='px-2'>
-                                        <DropdownItem className="fs-14 fw-light" style={{ color: '#E1E7EC' }}>2024 Agenda</DropdownItem>
-                                        <DropdownItem divider style={{ borderColor: '#E1E7EC' }}/>
-                                        <DropdownItem className="fs-14 fw-light" style={{ color: '#E1E7EC' }}>2024 Speakers</DropdownItem>
-                                    </DropdownMenu>
-                                </Dropdown>
-                        </li>*/}
                             <li className="nav-item px-4">
                                 <NavLink className="nav-link fs-14 text-white" href="/speakers">Speakers</NavLink>
                             </li>
-                            {/*<li className="nav-item px-4">
-                                <NavLink className="nav-link fs-14 text-white" to="/about" activeClassName="active" tag={RRNavLink}>About</NavLink>
-                            </li>
-                            */}
                             <li className="nav-item px-4">
                                 <Dropdown isOpen={openInvolved} toggle={toggleInvolved}>
                                     <DropdownToggle caret tag="button" className="nav-link fs-14">
@@ -149,7 +133,6 @@ const Navbar = () => {
                                 </Dropdown>
                             </li>
                         </Scrollspy>
-
                         <div className='ms-4'>
                             <Link to="/register" className="btn btn-success btn-banner">Register </Link>
                         </div>
