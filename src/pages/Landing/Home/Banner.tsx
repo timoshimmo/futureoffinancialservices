@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Row, Col, NavLink } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
-const Home = () => {
+const Banner = () => {
     return (
         <React.Fragment>
             <section className="section nft-hero" id="hero">
@@ -29,4 +29,4 @@ const Home = () => {
     );
 }
 
-export default Home;
+export default Banner;

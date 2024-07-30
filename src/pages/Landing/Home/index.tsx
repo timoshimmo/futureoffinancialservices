@@ -1,20 +1,14 @@
 import React from 'react';
 import Navbar from "../Common/Navbar";
-import Home from "./Home";
-import About from "./About";
+import Banner from "./Banner";
 import WhatIs from './WhatIs';
 import Connect from './Connect';
-import Products from "./Products";
-import Features from './Features';
 import Speakers from './Speakers';
 import Numbers from './Numbers';
 import Partners from './Partners';
 import Sponsor from './Sponsor';
 import Latest from './Latest';
 import Faq from './Faq';
-import Trending from "./Trending ";
-import DiscoverItems from "./DiscoverItems";
-import TopCreator from "./TopCreator ";
 import CTA from './CTA';
 import Footer from "../Common/footer";
 
@@ -55,7 +49,7 @@ const index = () => {
         <React.Fragment>
             <div className="layout-wrapper landing body-bg-dark">
                 <Navbar />
-                <Home />
+                <Banner />
                 <Connect />
                 <Speakers />
                 <WhatIs />
