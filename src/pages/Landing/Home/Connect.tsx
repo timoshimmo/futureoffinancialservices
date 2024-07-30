@@ -9,7 +9,7 @@ const Connect = () => {
     
     return (
         <React.Fragment>
-            <section className="section body-bg-dark px-4" id="features" style={{ backgroundColor: "#141413" }}>
+            <section className="submit-section body-bg-dark px-4" style={{ backgroundColor: "#141413" }}>
                 <Container>
                     <Row className="gy-4">
                         <Col lg={12} className='px-5'>

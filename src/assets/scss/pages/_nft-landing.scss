@@ -270,7 +270,7 @@
 }
 
 .partners-section {
-    padding: 140px 0;
+    padding: 170px 0;
 }
 
 .what-left-title {
@@ -376,6 +376,15 @@
     max-width: 800px;
 }
 
+.submit-section {
+    padding-bottom: 120px;
+}
+
+.vl {
+    height: 70px;
+    border: 1px solid gray;
+}
+
 @media (max-width: 767.98px) { 
     .numbers-item {
         width: 100%;
@@ -418,19 +427,17 @@
 }
 
 .card-latest {
-    
+    height: 390px;
     border-color: #33CC99;
 }
 
-/*
+
 @media (max-width: 767.98px) { 
     .card-latest {
         height: 420px;
     }
     
 }
-
-*/
 
 .card-latest:hover {
     background-color: #FFFFFF;
