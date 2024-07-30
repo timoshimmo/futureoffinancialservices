@@ -1,8 +1,3 @@
-//import Images
-import metamask from "../../assets/images/nft/wallet/metamask.png";
-import coinbase from "../../assets/images/nft/wallet/coinbase.png";
-import binance from "../../assets/images/nft/wallet/binance.png";
-
 import wallet from "../../assets/images/nft/wallet.png";
 import money from "../../assets/images/nft/money.png";
 import add from "../../assets/images/nft/add.png";
@@ -19,9 +14,6 @@ import img02 from "../../assets/images/nft/img-02.jpg";
 import img03 from "../../assets/images/nft/img-03.jpg";
 import img05 from "../../assets/images/nft/img-05.jpg";
 import img06 from "../../assets/images/nft/img-06.jpg";
-
-
-import placeholder_possibilities from "../../assets/images/home/img_summit1.png";
 
 import summit1 from "../../assets/images/home/img_summit1.png";
 import summit2 from "../../assets/images/home/img_summit2.png";
@@ -42,13 +34,13 @@ import speaker5 from "../../assets/images/home/speaker5.png";
 import speaker6 from "../../assets/images/home/speaker6.png";
 
 //Partners
-import partner1 from "../../assets/images/home/partner1.png";
+//import partner1 from "../../assets/images/home/partner1.png";
 import partner2 from "../../assets/images/home/partner2.png";
 import partner3 from "../../assets/images/home/partner3.png";
-import partner4 from "../../assets/images/home/partner4.png";
+//import partner4 from "../../assets/images/home/partner4.png";
 
 //Profile
-import profile_boye from '../../assets/images/profile/img_profile_boye.png';
+//import profile_boye from '../../assets/images/profile/img_profile_boye.png';
 
 // import img04 from "../../assets/images/nft/gif/img-4.gif";
 // import gifImg01 from "../../assets/images/nft/gif/img-1.gif";
@@ -135,11 +127,6 @@ const numbersData = [
         color: "#990001",
     },
     {
-        value: "75",
-        caption: "Partners",
-        color: "#6C6CFB",
-    },
-    {
         value: "62",
         caption: "Pitches",
         color: "#66FFCC",
@@ -148,11 +135,6 @@ const numbersData = [
         value: "8",
         caption: "Countries",
         color: "#34CC33",
-    },
-    {
-        value: "38",
-        caption: "Regulatory & Government Organizations",
-        color: "#7500BC",
     },
 ];
 
