@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Row, Col, Card, CardBody } from 'reactstrap';
 import Marquee from "react-fast-marquee";
 import 'keen-slider/keen-slider.min.css';
@@ -7,20 +7,26 @@ import { speakersData } from '../../../common/data';
 
 const Speakers = () => {
 
+    const [currentSlide, setCurrentSlide] = React.useState(0)
+    const [loaded, setLoaded] = useState(false)
+    const animation = { duration: 20000, easing: (t: number) => t }
 
-    const animation = { duration: 5000, easing: (t: number) => t }
-
-    const [sliderRef] = useKeenSlider<HTMLDivElement>({
+    const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
         loop: true,
         renderMode: "performance",
+        initial: 0,
         slides: {
             origin: "center",
-            perView: 3,
+            perView: 1,
             spacing: 10,
         },
         drag: false,
+        slideChanged(slider) {
+            setCurrentSlide(slider.track.details.rel)
+        },
         created(s) {
           s.moveToIdx(5, true, animation)
+          setLoaded(true)
         },
         updated(s) {
           s.moveToIdx(s.track.details.abs + 5, true, animation)
@@ -28,6 +34,7 @@ const Speakers = () => {
         animationEnded(s) {
           s.moveToIdx(s.track.details.abs + 5, true, animation)
         },
+        
     })
 
 
@@ -43,6 +50,16 @@ const Speakers = () => {
                         </div>
                     </Col>
                 </Row>
+                {/*<Row>
+                    <div ref={sliderRef} className="keen-slider">
+                        <div className="keen-slider__slide number-slide1">1</div>
+                        <div className="keen-slider__slide number-slide2">2</div>
+                        <div className="keen-slider__slide number-slide3">3</div>
+                        <div className="keen-slider__slide number-slide4">4</div>
+                        <div className="keen-slider__slide number-slide5">5</div>
+                        <div className="keen-slider__slide number-slide6">6</div>
+                    </div>
+    </Row>*/}
                 <Row className='web-featured-speakers'>
                     <Marquee
                         pauseOnClick={true}>
