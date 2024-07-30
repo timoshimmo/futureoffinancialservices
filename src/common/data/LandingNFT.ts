@@ -245,7 +245,7 @@ const speakersFullData = [
     {
         id: 1,
         img: speaker1,
-        pic: profile_boye,
+        pic: speaker1,
         name: "Boye Ademola",
         tags: ["distribution-models", "digital-business-models"],
         credentials: "Co-Founder",
@@ -263,7 +263,7 @@ const speakersFullData = [
             }
             
         ],
-        bio: "is the Founder/CEO of Bazara Technologies Inc., a software engineering & systems integration firm carving a niche for taking on audacious innovation projects in the B2B space. \nBazara is reimagining and re-engineering core banking systems leveraging UI/UX, Microservices, APIs, AI & the cloud. Prior to Bazara, Boye was Partner and Head of Digital Transformation at KPMG in Africa, where he led digital strategy, AI implementation and cloud transformation projects for large corporates. He served on KPMG’s Global Digital Transformation Leadership, Global Fintech Leadership and is an adviser to banks, Fintechs, FS players and regulators on the future of financial services."
+        bio: "is the Founder/CEO of Bazara Technologies Inc., a software engineering & systems integration firm carving a niche for taking on audacious innovation projects in the B2B space. \nBazara is reimagining and re-engineering core banking systems leveraging UI/UX, Microservices, APIs, AI & the cloud. \n\nPrior to Bazara, Boye was Partner and Head of Digital Transformation at KPMG in Africa, where he led digital strategy, AI implementation and cloud transformation projects for large corporates. \nHe served on KPMG’s Global Digital Transformation Leadership, Global Fintech Leadership and is an adviser to banks, Fintechs, FS players and regulators on the future of financial services."
     },
     {
         id: 2,
@@ -281,7 +281,7 @@ const speakersFullData = [
             },
             
         ],
-        bio: "Abubakar Suleiman is an economist and banker with over 20 years of experience in consulting and financial services. As CEO of Sterling Bank Plc, he focuses on optimizing financial intermediation in key sectors: Health, Education, Agriculture, Renewable Energy, and Transportation (H.E.A.R.T). \nPreviously, he served as Executive Director and CFO of Sterling Bank and led its non-interest banking business. Abubakar holds a B.Sc. in Economics from the University of Abuja and an M.Sc. in Major Programme Management from the University of Oxford. He has also worked in tax advisory at Arthur Andersen and financial markets at Citibank Nigeria. Abubakar serves on the boards of Noor Takaful and the Nigerian Economic Summit Group (NESG)."
+        bio: "Abubakar Suleiman is an economist and banker with over 20 years of experience in consulting and financial services. As CEO of Sterling Bank Plc, he focuses on optimizing financial intermediation in key sectors: Health, Education, Agriculture, Renewable Energy, and Transportation (H.E.A.R.T). \nPreviously, he served as Executive Director and CFO of Sterling Bank and led its non-interest banking business. \n\nAbubakar holds a B.Sc. in Economics from the University of Abuja and an M.Sc. in Major Programme Management from the University of Oxford. He has also worked in tax advisory at Arthur Andersen and financial markets at Citibank Nigeria. Abubakar serves on the boards of Noor Takaful and the Nigerian Economic Summit Group (NESG)."
 
     },
     {

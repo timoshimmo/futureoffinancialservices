@@ -18,7 +18,6 @@ const Speakers = () => {
                         </div>
                     </Col>
                 </Row>
-                
                 <Row className='web-featured-speakers'>
                     <Marquee
                         pauseOnClick={true}>
@@ -27,7 +26,7 @@ const Speakers = () => {
                                     <Card className="shadow-none rounded-0 speakers-card mx-2 text-white" style={{ cursor: "pointer" }}>
                                         <CardBody className='p-0'>
                                             <img src={item.img} alt="" className="avatar-speaker"/>
-                                            <div className='w-100 mt-2 px-2'>
+                                            <div className='w-100 mt-2 px-2' >
                                                 <h5 className="text-white fs-14" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>{item.name}</h5>
                                                 <p className="text-white fs-11 fw-light">{item.credentials}</p>
                                             </div>

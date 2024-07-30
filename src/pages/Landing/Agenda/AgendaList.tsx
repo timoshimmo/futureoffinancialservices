@@ -48,7 +48,7 @@ const AgendaList = () => {
                 <Container>
                     
                     <Row className='justify-content-between'>
-                        <Col lg={4} sm={12}>
+                        <Col lg={4} sm={12} className='position-sticky'>
                             <div className='border p-4 border-white rounded-3 mb-4'>
                                 <div className='w-100 hstack py-2 gap-2 search-box'>
                                     <img src={ic_search} height={15} />
@@ -129,7 +129,7 @@ const AgendaList = () => {
                                     <Col key={item.id} lg={12} sm={12}>
                                         <Card className="shadow-none border-top border-bottom border-white rounded-3 mb-4 p-4 text-white">
                                             <CardBody className='p-0'>
-                                                <div className='d-flex gap-2 align-items-center mb-2'><span className='text-white fs-18'>{item.date}</span> | <span className='text-white fs-18'>{item.time}</span></div>
+                                                <div className='d-flex gap-2 align-items-center mb-2'><span className='text-white fs-16'>{item.date}</span> | <span className='text-white fs-16'>{item.time}</span></div>
                                                 <h6 className='text-white fw-semibold fs-20'>{item.topic}</h6>
                                                 <p className='text-secondary fs-13'>{item.type}</p>
                                                 <div className='d-flex gap-2 mt-4'>

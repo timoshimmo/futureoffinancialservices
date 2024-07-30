@@ -28,7 +28,7 @@ const Latest = () => {
                                             <img height={23} src={arrow_link} />
                                         </div>                       
                                         <p className="pb-2 mb-0 fs-12">{item.textContent}</p>
-                                        <a className='fs-12 text-secondary fw-semi-bold' href="#">Learn more</a>
+                                        {/* <a className='fs-12 text-secondary fw-semi-bold' href="#">Learn more</a> */}
                                     </CardBody>
                                 </Card>
                             </Col>

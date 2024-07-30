@@ -579,8 +579,27 @@
 
 .canvas-style {
     background-color: #0a0a0a;
+    width: 40% !important;
+}
+
+.canvas-body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.canvas-body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+@media (max-width: 767.98px) { 
+    .canvas-style {
+        width: 80% !important;
+    }
+
 }
 
 .bio-style {
     white-space: pre-wrap;
 }
+
