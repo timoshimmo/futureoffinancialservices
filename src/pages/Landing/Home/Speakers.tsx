@@ -5,11 +5,24 @@ import 'keen-slider/keen-slider.min.css';
 import { useKeenSlider, KeenSliderPlugin } from 'keen-slider/react';
 import { speakersData } from '../../../common/data';
 
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+//import { useSwiper } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import 'swiper/css/autoplay';
+
+// import required modules
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+
 const Speakers = () => {
 
     const [currentSlide, setCurrentSlide] = React.useState(0)
     const [loaded, setLoaded] = useState(false)
-    const animation = { duration: 20000, easing: (t: number) => t }
+    const animation = { duration: 30000, easing: (t: number) => t }
 
     const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
         loop: true,
@@ -18,7 +31,7 @@ const Speakers = () => {
         slides: {
             origin: "center",
             perView: 4,
-            spacing: 10,
+            spacing: 30,
         },
         drag: false,
         slideChanged(slider) {
@@ -37,6 +50,20 @@ const Speakers = () => {
         
     })
 
+    /*
+ <Card className="w-100 shadow-none rounded-0 speakers-card mx-3 text-white" style={{ cursor: "pointer" }}>
+                                    <CardBody className='p-0'>
+                                        <img src={item.img} alt="" className="avatar-speaker"/>
+                                        <div className='w-100 mt-3 px-2' >
+                                            <h5 className="text-white fs-14 mb-0" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>{item.name}</h5>
+                                            <p className="text-white fs-11 fw-light">{item.credentials}</p>
+                                        </div>
+                                        
+                                    </CardBody>
+                                </Card>
+
+    */
+
 
     return (
         <React.Fragment>
@@ -51,17 +78,53 @@ const Speakers = () => {
                         </div>
                     </Col>
                 </Row>
-                {/*<Row>
-                    <div ref={sliderRef} className="keen-slider">
-                        <div className="keen-slider__slide number-slide1">1</div>
-                        <div className="keen-slider__slide number-slide2">2</div>
-                        <div className="keen-slider__slide number-slide3">3</div>
-                        <div className="keen-slider__slide number-slide4">4</div>
-                        <div className="keen-slider__slide number-slide5">5</div>
-                        <div className="keen-slider__slide number-slide6">6</div>
-                    </div>
-    </Row>*/}
-                <Row className='web-featured-speakers'>
+
+                {/*<Row className="justify-content-center" style={{ height: '400px' }}>
+                    <Col lg={12}>
+                        <Swiper
+                            spaceBetween={30}
+                            centeredSlides={true}
+                            autoplay={{
+                            delay: 25000,
+                            disableOnInteraction: false,
+                            }}
+                            pagination={{
+                            clickable: true,
+                            }}
+                            navigation={true}
+                            modules={[Autoplay, Pagination, Navigation]}
+                            className="mySwiper"
+                        >
+                            <SwiperSlide>Slide 1</SwiperSlide>
+                            <SwiperSlide>Slide 2</SwiperSlide>
+                            <SwiperSlide>Slide 3</SwiperSlide>
+                            <SwiperSlide>Slide 4</SwiperSlide>
+                            <SwiperSlide>Slide 5</SwiperSlide>
+                            <SwiperSlide>Slide 6</SwiperSlide>
+                            <SwiperSlide>Slide 7</SwiperSlide>
+                            <SwiperSlide>Slide 8</SwiperSlide>
+                            <SwiperSlide>Slide 9</SwiperSlide>
+                        </Swiper>
+
+                    </Col>
+                </Row>
+*/}
+                <Row>
+                    <Col>
+                        <div ref={sliderRef} className="keen-slider">
+                            {speakersData.map((item, key) => (
+                                <div className="keen-slider__slide">
+                                    <img src={item.img} alt="" className="avatar-speaker"/>
+                                    <div className='w-100 mt-3 px-2' >
+                                        <h5 className="text-white fs-14 mb-0" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>{item.name}</h5>
+                                        <p className="text-white fs-11 fw-light">{item.credentials}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </Col>
+                </Row>
+               {/* <Row className='web-featured-speakers'>
                     <Marquee
                         pauseOnClick={true}>
                             {speakersData.map((item, key) => (
@@ -80,7 +143,7 @@ const Speakers = () => {
                             ))}   
                     </Marquee>
                                                   
-                </Row>
+                            </Row> */}
                 <Row className='mobile-featured-speakers'>
                     {speakersData.map((item, key) => (
                         <Col key={key} sm={12}>

@@ -9,7 +9,7 @@ const Sponsor = () => {
     return (
         <React.Fragment>
 
-            <section className="section body-bg-dark px-4" id="features" style={{ backgroundColor: "#141413", marginBottom: '50px' }}>
+            <section className="body-bg-dark px-4" id="features" style={{ backgroundColor: "#141413", marginBottom: '50px' }}>
                 <Container>
                     <Row className="align-items-center gy-4">
                         <Col lg={6} sm={12} className="mx-auto">

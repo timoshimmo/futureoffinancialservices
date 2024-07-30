@@ -52,9 +52,9 @@ const index = () => {
                 <Banner />
                 <Speakers />
                 <Connect />
-                <WhatIs />
-                <Partners />
+                {/* <WhatIs /> */}
                 <Numbers />
+                <Partners />
                 <Sponsor />
                 <Latest />
                 <Faq />
