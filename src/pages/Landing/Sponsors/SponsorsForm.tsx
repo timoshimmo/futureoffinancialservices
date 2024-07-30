@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const PartnerForm = () => {
     return (
         <React.Fragment>
-            <section className="section form-container">
+            <section className="section form-container-sponsor">
                 <Container>
                     <Row className="justify-content-end">
                         <Col lg={7} sm={12} className='px-3'>

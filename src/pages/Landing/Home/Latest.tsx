@@ -21,9 +21,9 @@ const Latest = () => {
                         {latestData.map((item, key) => (
                             <Col key={key} lg={3} sm={12}>
                                 <Card className="border-2 rounded-4 shadow-none card-latest">
-                                    <CardBody className="p-2">
-                                        <img src={item.img} alt="" className="mb-3 pb-2 w-100 rounded-2" />
-                                        <div className='hstack w-100 justify-content-between item-center pb-2'>
+                                    <CardBody className="px-2 py-2 pb-3">
+                                        <img src={item.img} alt="" className="mb-4 pb-2 w-100 rounded-2" />
+                                        <div className='hstack w-100 justify-content-between item-center pb-3'>
                                             <h5 className='text-primary fs-18 mb-0' style={{ fontFamily: 'Georgia' }}>{item.title}</h5>
                                             <img height={23} src={arrow_link} />
                                         </div>                       
