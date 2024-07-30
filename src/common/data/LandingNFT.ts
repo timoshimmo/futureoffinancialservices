@@ -248,7 +248,8 @@ const speakersFullData = [
         pic: profile_boye,
         name: "Boye Ademola",
         tags: ["distribution-models", "digital-business-models"],
-        credentials: "Co-Founder, Bazara",
+        credentials: "Co-Founder",
+        company: "Bazara",
         courses: [
             {
                 title: "The Impact of Quantum Computing on Fianancial Services", 
@@ -262,7 +263,7 @@ const speakersFullData = [
             }
             
         ],
-        bio: "is a visionary leader and the CEO of Zenith Innovations, a cutting-edge technology firm revolutionizing the financial services industry in Nigeria and beyond. With over 15 years of experience in the fintech sector, Jimmy has a proven track record of driving digital transformation and fostering innovation. Under his leadership, Zenith Innovations has developed several groundbreaking solutions that streamline financial operations and enhance customer experiences. Jimmy is known for his strategic thinking, exceptional management skills, and commitment to leveraging technology to solve complex financial challenges. He holds a Master's degree in Business Administration from Lagos Business School and a Bachelor's degree in Computer Science from Obafemi Awolowo University, Ile-Ife. Jimmy is a frequent speaker at industry conferences and a passionate advocate for the role of technology in financial inclusion."
+        bio: "is the Founder/CEO of Bazara Technologies Inc., a software engineering & systems integration firm carving a niche for taking on audacious innovation projects in the B2B space. \nBazara is reimagining and re-engineering core banking systems leveraging UI/UX, Microservices, APIs, AI & the cloud. Prior to Bazara, Boye was Partner and Head of Digital Transformation at KPMG in Africa, where he led digital strategy, AI implementation and cloud transformation projects for large corporates. He served on KPMG’s Global Digital Transformation Leadership, Global Fintech Leadership and is an adviser to banks, Fintechs, FS players and regulators on the future of financial services."
     },
     {
         id: 2,
@@ -270,7 +271,8 @@ const speakersFullData = [
         pic: speaker2,
         name: "Abubakar Suleiman",
         tags: ["fintech", "customer-experience", "distribution-models"],
-        credentials: "CEO, Sterling Bank",
+        credentials: "CEO",
+        company: "Sterling Bank",
         courses: [
             {
                 title: "Customer Experience Through Leadership", 
@@ -279,7 +281,7 @@ const speakersFullData = [
             },
             
         ],
-        bio: "is a visionary leader and the CEO of Zenith Innovations, a cutting-edge technology firm revolutionizing the financial services industry in Nigeria and beyond. With over 15 years of experience in the fintech sector, Jimmy has a proven track record of driving digital transformation and fostering innovation. Under his leadership, Zenith Innovations has developed several groundbreaking solutions that streamline financial operations and enhance customer experiences. Jimmy is known for his strategic thinking, exceptional management skills, and commitment to leveraging technology to solve complex financial challenges. He holds a Master's degree in Business Administration from Lagos Business School and a Bachelor's degree in Computer Science from Obafemi Awolowo University, Ile-Ife. Jimmy is a frequent speaker at industry conferences and a passionate advocate for the role of technology in financial inclusion."
+        bio: "Abubakar Suleiman is an economist and banker with over 20 years of experience in consulting and financial services. As CEO of Sterling Bank Plc, he focuses on optimizing financial intermediation in key sectors: Health, Education, Agriculture, Renewable Energy, and Transportation (H.E.A.R.T). \nPreviously, he served as Executive Director and CFO of Sterling Bank and led its non-interest banking business. Abubakar holds a B.Sc. in Economics from the University of Abuja and an M.Sc. in Major Programme Management from the University of Oxford. He has also worked in tax advisory at Arthur Andersen and financial markets at Citibank Nigeria. Abubakar serves on the boards of Noor Takaful and the Nigerian Economic Summit Group (NESG)."
 
     },
     {
@@ -288,7 +290,8 @@ const speakersFullData = [
         pic: speaker3,
         name: "Bayo Adekanmbi",
         tags: ["artificial-intelligence"],
-        credentials: "Founder/CEO, DSNai",
+        credentials: "Founder/CEO",
+        company: "DSNai",
         courses: [
             {
                 title: "Insights From The Artificial Intelligence TL", 
@@ -306,7 +309,8 @@ const speakersFullData = [
         pic: speaker4,
         name: "Iyinoluwa Aboyeji",
         tags: ["digital-business-models", "fintech"],
-        credentials: "Founding Partner, Future Africa",
+        credentials: "Founding Partner",
+        company: "Future Africa",
         courses: [
             {
                 title: "Technologies Powering Financial Services", 
@@ -335,7 +339,8 @@ const agendaData = [
                 name: "Boye Ademola",
                 img: speaker1,
                 pic: profile_boye,
-                credentials: "Co-Founder, Bazara",
+                credentials: "Co-Founder",
+                company: "Bazara",
                 tags: ["distribution-models", "digital-business-models"],
             }
            
@@ -355,7 +360,8 @@ const agendaData = [
                 name: "Boye Ademola",
                 img: speaker1,
                 pic: profile_boye,
-                credentials: "Co-Founder, Bazara",
+                credentials: "Co-Founder",
+                company: "Bazara",
                 tags: ["distribution-models", "digital-business-models"],
             }
            
@@ -375,7 +381,8 @@ const agendaData = [
                 name: "Boye Ademola",
                 img: speaker1,
                 pic: profile_boye,
-                credentials: "Co-Founder, Bazara",
+                credentials: "Co-Founder",
+                company: "Bazara",
                 tags: ["distribution-models", "digital-business-models"],
             }
            
@@ -395,7 +402,8 @@ const agendaData = [
                 name: "Boye Ademola",
                 img: speaker1,
                 pic: profile_boye,
-                credentials: "Co-Founder, Bazara",
+                credentials: "Co-Founder",
+                company: "Bazara",
                 tags: ["distribution-models", "digital-business-models"],
             }
            
@@ -415,7 +423,8 @@ const agendaData = [
                 name: "Boye Ademola",
                 img: speaker1,
                 pic: profile_boye,
-                credentials: "Co-Founder, Bazara",
+                credentials: "Co-Founder",
+                company: "Bazara",
                 tags: ["distribution-models", "digital-business-models"],
             }
            
@@ -435,7 +444,8 @@ const agendaData = [
                 name: "Boye Ademola",
                 img: speaker1,
                 pic: profile_boye,
-                credentials: "Co-Founder, Bazara",
+                credentials: "Co-Founder",
+                company: "Bazara",
                 tags: ["distribution-models", "digital-business-models"],
             }
            
@@ -456,7 +466,8 @@ const agendaData = [
                 pic: speaker2,
                 name: "Abubakar Suleiman",
                 tags: ["fintech", "customer-experience", "distribution-models"],
-                credentials: "CEO, Sterling Bank",
+                credentials: "CEO",
+                company: " Sterling Bank",
             }
            
         ]
@@ -476,7 +487,8 @@ const agendaData = [
                 pic: speaker2,
                 name: "Abubakar Suleiman",
                 tags: ["fintech", "customer-experience", "distribution-models"],
-                credentials: "CEO, Sterling Bank",
+                credentials: "CEO",
+                company: " Sterling Bank",
             }
            
         ]
@@ -495,7 +507,8 @@ const agendaData = [
                 name: "Boye Ademola",
                 img: speaker1,
                 pic: profile_boye,
-                credentials: "Co-Founder, Bazara",
+                credentials: "Co-Founder",
+                company: "Bazara",
                 tags: ["distribution-models", "digital-business-models"],
             }
            
@@ -516,7 +529,8 @@ const agendaData = [
                 pic: speaker3,
                 name: "Bayo Adekanmbi",
                 tags: ["artificial-intelligence"],
-                credentials: "Founder/CEO, DSNai",
+                credentials: "Founder/CEO",
+                company: "DSNai",
             }
            
         ]
@@ -536,7 +550,8 @@ const agendaData = [
                 pic: speaker3,
                 name: "Bayo Adekanmbi",
                 tags: ["artificial-intelligence"],
-                credentials: "Founder/CEO, DSNai",
+                credentials: "Founder/CEO",
+                company: "DSNai",
             }
            
         ]
@@ -556,7 +571,8 @@ const agendaData = [
                 pic: speaker4,
                 name: "Iyinoluwa Aboyeji",
                 tags: ["digital-business-models", "fintech"],
-                credentials: "Founding Partner, Future Africa",
+                credentials: "Founding Partner",
+                company: "Future Africa",
             }
            
         ]

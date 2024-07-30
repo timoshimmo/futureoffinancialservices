@@ -23,6 +23,7 @@ interface IProfile {
     name: string,
     tags: any,
     credentials: string,
+    company: string,
     courses: any,
     bio: string
   }
@@ -38,7 +39,7 @@ const SpeakersList = () => {
     };
 
     const passData = (item: any) => {
-        console.log("ITEM: ", item)
+        //console.log("ITEM: ", item)
         
         setCurrentData(item);
         setOpen(!open);
@@ -59,7 +60,7 @@ const SpeakersList = () => {
                                                 <img src={item.img} alt="" className="avatar-speaker"/>
                                                 <div className='w-100 mt-2 px-2'>
                                                     <h5 className="text-white fs-14" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>{item.name}</h5>
-                                                    <p className="text-white fs-11 fw-light">{item.credentials}</p>
+                                                    <p className="text-white fs-11 fw-light">{item.credentials}, {item.company}</p>
                                                 </div>
                                             </CardBody>
                                         </Card>
@@ -98,28 +99,29 @@ const SpeakersList = () => {
                 </Container>
             </section>
             <div>
-                {/* profile-modal */}
-                <Offcanvas isOpen={open} toggle={toggleLeftCanvas} direction="end" className="offcanvas-end border-0 profile-modal">
+                {/* profile-modal profile-modal */}
+                <Offcanvas isOpen={open} toggle={toggleLeftCanvas} direction="end" className="offcanvas-end border-0 canvas-style">
                     <OffcanvasBody className="p-0">
                        
                        <div className='w-100 p-4'>
-                            
+                            <Row>
+                                <Col lg={6}>
+                                    <img src={currentData?.pic} className='w-100 border-0 rounded-3'/>
+                                </Col>
+                                <Col lg={6}>
+                                    <div className='w-100'>
+                                        <p className='text-primary fs-20 fw-medium mb-2 lh-sm'>{currentData?.name}</p>
+                                        <p className="text-white fs-16 fw-light mb-0">{currentData?.credentials}</p>
+                                        <p className="text-white fs-13 fw-light">{currentData?.company}</p>
+                                        {/*<span className='text-white fs-14 fw-light'>will be speaking on</span>*/}
+                                    </div>
+                                </Col>
+                            </Row>
                             <div className='w-100 mt-4 p-4 border border-primary rounded-3'>
-                                <Row>
-                                    <Col lg={6}>
-                                        <img src={currentData?.pic} className='w-100 border rounded-3'/>
-                                    </Col>
-                                    <Col lg={6}>
-                                        <div className='w-100'>
-                                            <p className='text-primary fs-18 fw-medium mb-2 lh-sm'>{currentData?.name}</p>
-                                            <p className="text-white fs-11 fw-light">{currentData?.credentials}</p>
-                                            {/*<span className='text-white fs-14 fw-light'>will be speaking on</span>*/}
-                                        </div>
-                                    </Col>
-                                </Row>
+                                
                                {/*  <p className='text-primary fs-18 fw-semibold lhbase'>{currentData?.courses[0].title}</p>
                                 <p className='text-secondary fs-13'>{currentData?.courses[0].date}, {currentData?.courses[0].time}</p> */}
-                                <p className='mt-4 text-white fs-13'><span className='text-primary fw-semibold'>{currentData?.name}</span> {currentData?.bio}</p>
+                                <p className='text-white fs-13 bio-style'><span className='text-primary fw-semibold'>{currentData?.name}</span> {currentData?.bio}</p>
                             </div>
                             <h2 className='my-4 text-primary fs-20' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>Topics</h2>
                             <Nav pills className="nav-pills filter-btns gap-2" role="tablist">

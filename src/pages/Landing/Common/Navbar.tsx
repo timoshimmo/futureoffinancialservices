@@ -70,10 +70,10 @@ const Navbar = () => {
     useEffect(() => {
         var navbar: any = document.getElementById("navbar");
         if (windowSize >= 992) {
-            navbar.classList.add("navbar-light")
+            navbar.classList.add("navbar-light");
         }
         else {
-            navbar.classList.remove("navbar-light")
+            navbar.classList.remove("navbar-light");
         }
     }, [windowSize]);
 
@@ -92,6 +92,7 @@ const Navbar = () => {
                         aria-expanded="false" aria-label="Toggle navigation">
                         <i className="mdi mdi-menu"></i>
                     </NavbarToggler>
+                   
                     <Collapse
                         className="navbar-collapse"
                         id="navbarSupportedContent"
@@ -100,10 +101,9 @@ const Navbar = () => {
                             offset={-18}
                             items={[
                                 "home",
-                                "about",
-                                "event",
-                                "get-involved",
+                                "agenda",
                                 "speakers",
+                                "get-involved",
                             ]}
                             currentClassName="active"
                             className="navbar-nav ms-auto mt-2 mt-lg-0"
@@ -113,10 +113,10 @@ const Navbar = () => {
                                 <NavLink className="nav-link fs-14 text-white" to="/home" activeClassName="active" tag={RRNavLink}>Home</NavLink>
                             </li>
                             <li className="nav-item px-4">
-                                <NavLink className="nav-link fs-14 text-white" href="/agenda">Agenda</NavLink>
+                                <NavLink className="nav-link fs-14 text-white" to="/agenda" activeClassName="active" tag={RRNavLink}>Agenda</NavLink>
                             </li>
                             <li className="nav-item px-4">
-                                <NavLink className="nav-link fs-14 text-white" href="/speakers">Speakers</NavLink>
+                                <NavLink className="nav-link fs-14 text-white" to="/speakers" activeClassName="active" tag={RRNavLink}>Speakers</NavLink>
                             </li>
                             <li className="nav-item px-4">
                                 <Dropdown isOpen={openInvolved} toggle={toggleInvolved}>

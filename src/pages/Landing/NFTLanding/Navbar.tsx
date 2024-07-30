@@ -101,10 +101,9 @@ const Navbar = () => {
                             offset={-18}
                             items={[
                                 "home",
-                                "about",
-                                "event",
-                                "get-involved",
+                                "agenda",
                                 "speakers",
+                                "get-involved",
                             ]}
                             currentClassName="active"
                             className="navbar-nav mx-auto mt-2 mt-lg-0"

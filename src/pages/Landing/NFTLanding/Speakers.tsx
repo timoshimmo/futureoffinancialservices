@@ -13,7 +13,8 @@ const Speakers = () => {
                 <Row className="justify-content-center">
                     <Col lg={8}>
                         <div className="text-center mb-5">
-                            <h2 className="mb-3 fw-semibold lh-base text-primary" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>Featured Speakers</h2>
+                            <h2 className="mb-2 fw-semibold lh-base text-primary" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>Featured Speakers</h2>
+                            <p className="mb-3 fs-13 text-white">Our Esteemed Panel of Influential Experts Sharing Their Wisdom, Experience, and Innovative Ideas</p>
                         </div>
                     </Col>
                 </Row>
@@ -48,7 +49,6 @@ const Speakers = () => {
                                         <h5 className="text-white fs-14" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>{item.name}</h5>
                                         <p className="text-white fs-11 fw-light">{item.credentials}</p>
                                     </div>
-                                    
                                 </CardBody>
                             </Card>
                         </Col>
