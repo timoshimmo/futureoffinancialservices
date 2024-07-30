@@ -11,7 +11,7 @@ const Banner = () => {
                     <Col lg={12}>
                         <h2 className="w-100 text-center fw-bold lh-base text-primary display-4 px-5" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>FFS 2024 Agenda</h2>
                     </Col>
-                    <Col lg={6}>
+                    <Col lg={7}>
                         <p className="w-70 mb-3 fs-15 text-white text-center">Explore the Day's Tech-Focused Discussions and Interactive Sessions. Detailed Schedule of Tech Talks, Demos, and Networking Opportunities</p>
                     </Col>
                 </Row>

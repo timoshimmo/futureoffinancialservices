@@ -10,7 +10,8 @@ import logolight from "../../../assets/images/logo-light.png";
 import ffsLogoLight from "../../../assets/images/ffs_top_logo_light.png";
 */
 import ffsLogoDark from "../../../assets/images/ffs_top_logo_dark.png";
-import ffsLogoLight1 from "../../../assets/images/FFS_logo_nav.png";
+import ffsLogoLight1 from "../../../assets/images/ffs_top_logo_light2.png";
+
 
 const Navbar = () => {
     const [isOpenMenu, setisOpenMenu] = useState(false);
@@ -84,8 +85,8 @@ const Navbar = () => {
             <nav className={"navbar navbar-expand-lg navbar-landing fixed-top " + navClass} id="navbar">
                 <Container>
                     <Link className="navbar-brand" to="/home">
-                        <img src={ffsLogoDark} className="card-logo card-logo-dark" alt="logo dark" height="50" />
-                        <img src={ffsLogoLight1} className="card-logo card-logo-light" alt="logo light" height="50" />
+                        <img src={ffsLogoDark} className="card-logo card-logo-dark" alt="logo dark" height="40" />
+                        <img src={ffsLogoLight1} className="card-logo card-logo-light" alt="logo light" height="40" />
                     </Link>
                     <NavbarToggler className="navbar-toggler py-0 fs-20 text-body" onClick={toggle} type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"

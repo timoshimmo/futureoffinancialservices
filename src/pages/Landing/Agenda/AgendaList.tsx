@@ -47,7 +47,7 @@ const AgendaList = () => {
             <section className="section">
                 <Container>
                     
-                    <Row className='justify-content-between mt-4'>
+                    <Row className='justify-content-between'>
                         <Col lg={4} sm={12}>
                             <div className='sticky-top'>
                                 <div className='border p-4 border-white rounded-3 mb-4'>

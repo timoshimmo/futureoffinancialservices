@@ -100,15 +100,15 @@ const SpeakersList = () => {
             </section>
             <div>
                 {/* profile-modal profile-modal */}
-                <Offcanvas isOpen={open} toggle={toggleLeftCanvas} direction="end" className="offcanvas-end border-0 canvas-style me-5">
+                <Offcanvas isOpen={open} toggle={toggleLeftCanvas} direction="end" className="offcanvas-end border-0 canvas-style">
                     <OffcanvasBody className="p-0 canvas-body">
                        
                        <div className='w-100 p-4'>
                             <Row>
-                                <Col lg={6}>
+                                <Col lg={5}>
                                     <img src={currentData?.pic} className='w-100 border-0 rounded-3'/>
                                 </Col>
-                                <Col lg={6} className='vstack justify-content-center align-items-center'>
+                                <Col lg={7} className='vstack justify-content-center align-items-center'>
                                     <div className='w-100'>
                                         <p className='text-primary h3 fw-bold mb-2 lh-sm'>{currentData?.name}</p>
                                         <p className="text-white fs-15 fw-light mb-0">{currentData?.credentials}</p>

@@ -3,12 +3,10 @@ import { Link } from 'react-router-dom';
 import { Col, Container, Row } from 'reactstrap';
 
 // Import Images
-import img1 from "../../../assets/images/home/img_about_summit.png";
 import ic_youtube from "../../../assets/images/home/ic_youtube.png";
 import ic_linkedin from "../../../assets/images/home/ic_linkedin.png";
 import ic_x from "../../../assets/images/home/ic_x.png";
 import ic_instagram from "../../../assets/images/home/ic_instagram.png";
-//import Marquee from "react-simple-marquee";
 import { whatIsData } from '../../../common/data';
 import 'keen-slider/keen-slider.min.css';
 import { useKeenSlider, KeenSliderPlugin } from 'keen-slider/react';

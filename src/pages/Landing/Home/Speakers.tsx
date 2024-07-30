@@ -17,7 +17,7 @@ const Speakers = () => {
         initial: 0,
         slides: {
             origin: "center",
-            perView: 1,
+            perView: 4,
             spacing: 10,
         },
         drag: false,
@@ -46,7 +46,8 @@ const Speakers = () => {
                     <Col lg={8}>
                         <div className="text-center mb-5">
                             <h2 className="mb-2 fw-semibold lh-base text-primary" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>Featured Speakers</h2>
-                            <p className="mb-3 fs-13 text-white">Our Esteemed Panel of Influential Experts Sharing Their Wisdom, Experience, and Innovative Ideas</p>
+                            <p className="w-70 mb-5 fs-14 text-white text-center">Discover the Voices Behind the Most Impactful Ideas and Transformative Solutions. Engage with Our Diverse Speakers Who Bring Knowledge, Passion, and Insight</p>
+                            {/* <p className="mb-3 fs-13 text-white">Our Esteemed Panel of Influential Experts Sharing Their Wisdom, Experience, and Innovative Ideas</p> */}
                         </div>
                     </Col>
                 </Row>
@@ -61,6 +62,14 @@ const Speakers = () => {
                     </div>
     </Row>*/}
                 <Row className='web-featured-speakers'>
+                <div ref={sliderRef} className="keen-slider">
+                        <div className="keen-slider__slide number-slide1">1</div>
+                        <div className="keen-slider__slide number-slide2">2</div>
+                        <div className="keen-slider__slide number-slide3">3</div>
+                        <div className="keen-slider__slide number-slide4">4</div>
+                        <div className="keen-slider__slide number-slide5">5</div>
+                        <div className="keen-slider__slide number-slide6">6</div>
+                    </div>
                     <Marquee
                         pauseOnClick={true}>
                             {speakersData.map((item, key) => (

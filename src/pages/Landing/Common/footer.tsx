@@ -8,7 +8,7 @@ import logolight from "../../../assets/images/ffs_top_logo_light.png";
 const Footer = () => {
     return (
         <React.Fragment>
-            <footer className="custom-footer bg-dark pb-5 position-relative footer-style">
+            <footer className="bg-dark pb-5 position-relative footer-style">
                 <Container>
                     <hr className='mb-4'/>
                     <Row>
@@ -19,20 +19,6 @@ const Footer = () => {
                                 </div>
                                 <div className="mt-4 fs-13">
                                     <ul className="list-inline mb-0 footer-social-link">
-                                        {/*<li className="list-inline-item">
-                                            <Link to="#" className="avatar-xs d-block">
-                                                <div className="avatar-title rounded-circle">
-                                                    <i className="ri-facebook-fill"></i>
-                                                </div>
-                                            </Link>
-                                        </li> 
-                                        <li className="list-inline-item">
-                                            <Link to="#" className="avatar-xs d-block">
-                                                <div className="avatar-title rounded-circle">
-                                                    <i className="ri-instagram-fill"></i>
-                                                </div>
-                                            </Link>
-                                        </li>*/}
                                         <li className="list-inline-item">
                                             <Link to="#" className="avatar-xs d-block">
                                                 <div className="avatar-title rounded-circle">
@@ -54,13 +40,6 @@ const Footer = () => {
                                                 </div>
                                             </Link>
                                         </li>
-                                        {/*<li className="list-inline-item">
-                                            <Link to="#" className="avatar-xs d-block">
-                                                <div className="avatar-title rounded-circle">
-                                                    <i className="ri-dribbble-line"></i>
-                                                </div>
-                                            </Link>
-                                    </li> */}
                                     </ul>
                                 </div>
                             </div>
@@ -99,10 +78,9 @@ const Footer = () => {
                                 </Col>
                             </Row>
                         </Col>
-
                     </Row>
                     <hr />
-                    <Row className="text-center text-sm-start align-items-center mt-5">
+                    <Row className="text-center text-sm-start align-items-center mt-3">
                         <Col sm={6}>
                             <div>
                                 <p className="copy-rights mb-0 fs-14">
@@ -113,22 +91,22 @@ const Footer = () => {
                         <Col sm={6}>
                             <div className="text-sm-end mobile-copyright-area">
                                 <ul className="list-inline mb-0 footer-social-link">
-                                        <li className="list-inline-item px-2">
-                                            <Link to="#" className="d-block">
-                                                <span className="text-muted fs-14">Terms</span>
-                                            </Link>
-                                        </li>
-                                        <li className="list-inline-item px-2">
-                                            <Link to="#" className="d-block">
-                                                <span className="text-muted fs-14">Privacy</span>
-                                            </Link>
-                                        </li>
-                                        <li className="list-inline-item px-2">
-                                            <Link to="#" className="d-block">
-                                                <span className="text-muted fs-14">Cookies</span>
-                                            </Link>
-                                        </li>
-                                    </ul>
+                                    <li className="list-inline-item px-2">
+                                        <Link to="#" className="d-block">
+                                            <span className="text-muted fs-14">Terms</span>
+                                        </Link>
+                                    </li>
+                                    <li className="list-inline-item px-2">
+                                        <Link to="#" className="d-block">
+                                            <span className="text-muted fs-14">Privacy</span>
+                                        </Link>
+                                    </li>
+                                    <li className="list-inline-item px-2">
+                                        <Link to="#" className="d-block">
+                                            <span className="text-muted fs-14">Cookies</span>
+                                        </Link>
+                                    </li>
+                                </ul>
                             </div>
                         </Col>
                     </Row>

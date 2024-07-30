@@ -11,8 +11,8 @@ const Banner = () => {
                     <Col lg={12}>
                         <h2 className="w-100 text-center fw-bold lh-base text-primary display-4 px-5" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>Speaker Lineup</h2>
                     </Col>
-                    <Col lg={6}>
-                        <p className="w-70 mb-3 fs-15 text-white text-center">Discover the Voices Behind the Most Impactful Ideas and Transformative Solutions. Engage with Our Diverse Speakers Who Bring Knowledge, Passion, and Insight</p>
+                    <Col lg={7}>
+                        <p className="w-70 mb-3 fs-15 text-white text-center">Uncover brilliant minds and groundbreaking, transformative ideas. Connect with speakers who bring unparalleled knowledge, passion, and insight.</p>
                     </Col>
                 </Row>
             </section>

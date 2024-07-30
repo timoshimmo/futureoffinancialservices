@@ -448,7 +448,8 @@
 }
 
 .footer-style {
-    padding-top: 170px;
+    padding-top: 120px;
+    color: #9ba7b3;
 }
 
 @media (max-width: 767.98px) { 
@@ -523,15 +524,16 @@
 
 .web-cta {
     position: absolute;
-    bottom: 12%;
+    bottom: 13%;
     left: 0;
     right: 0;
     z-index: 1000;
+    max-width: 900px;
 }
 
 .web-cta-home {
     position: absolute;
-    bottom: 8%;
+    bottom: 7%;
     left: 0;
     right: 0;
     z-index: 1000;
@@ -603,7 +605,9 @@
 
 .canvas-style {
     background-color: #0a0a0a;
-    width: 40% !important;
+    width: 38% !important;
+    margin-top: 75px;
+    margin-right: 60px;
 }
 
 .canvas-body::-webkit-scrollbar {
