@@ -338,7 +338,7 @@ const agendaData = [
             {
                 name: "Boye Ademola",
                 img: speaker1,
-                pic: profile_boye,
+                pic: speaker1,
                 credentials: "Co-Founder",
                 company: "Bazara",
                 tags: ["distribution-models", "digital-business-models"],
@@ -359,7 +359,7 @@ const agendaData = [
             {
                 name: "Boye Ademola",
                 img: speaker1,
-                pic: profile_boye,
+                pic: speaker1,
                 credentials: "Co-Founder",
                 company: "Bazara",
                 tags: ["distribution-models", "digital-business-models"],
@@ -380,7 +380,7 @@ const agendaData = [
             {
                 name: "Boye Ademola",
                 img: speaker1,
-                pic: profile_boye,
+                pic: speaker1,
                 credentials: "Co-Founder",
                 company: "Bazara",
                 tags: ["distribution-models", "digital-business-models"],
@@ -401,7 +401,7 @@ const agendaData = [
             {
                 name: "Boye Ademola",
                 img: speaker1,
-                pic: profile_boye,
+                pic: speaker1,
                 credentials: "Co-Founder",
                 company: "Bazara",
                 tags: ["distribution-models", "digital-business-models"],
@@ -422,7 +422,7 @@ const agendaData = [
             {
                 name: "Boye Ademola",
                 img: speaker1,
-                pic: profile_boye,
+                pic: speaker1,
                 credentials: "Co-Founder",
                 company: "Bazara",
                 tags: ["distribution-models", "digital-business-models"],
@@ -443,7 +443,7 @@ const agendaData = [
             {
                 name: "Boye Ademola",
                 img: speaker1,
-                pic: profile_boye,
+                pic: speaker1,
                 credentials: "Co-Founder",
                 company: "Bazara",
                 tags: ["distribution-models", "digital-business-models"],
@@ -506,7 +506,7 @@ const agendaData = [
             {
                 name: "Boye Ademola",
                 img: speaker1,
-                pic: profile_boye,
+                pic: speaker1,
                 credentials: "Co-Founder",
                 company: "Bazara",
                 tags: ["distribution-models", "digital-business-models"],
