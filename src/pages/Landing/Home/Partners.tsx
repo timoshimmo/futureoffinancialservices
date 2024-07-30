@@ -8,7 +8,7 @@ const Partners = () => {
     
     return (
         <React.Fragment>
-            <section className="section partners-section px-5" style={{ backgroundColor: "#141413" }}>
+            <section className="partners-section px-5" style={{ backgroundColor: "#141413" }}>
                 <Container>
                     <Row className="justify-content-center align-items-center">
                         <Col lg={6}>
