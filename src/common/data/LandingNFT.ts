@@ -374,8 +374,8 @@ const agendaData = [
         dateCode: "Tue",
         duration: "30",
         topic: "Keynote Presentation on Digital Business Models",
-        theme:  "digital-business-models",
-        type: "Keynote Presetation",
+        theme:  ["distribution-models", "digital-business-models"],
+        type: "Keynote Presentation",
         speaker: [
             {
                 name: "Boye Ademola",
@@ -395,7 +395,7 @@ const agendaData = [
         dateCode: "Tue",
         duration: "50",
         topic: "Panel Session on Digital Business Models",
-        theme:  "digital-business-models",
+        theme:  ["digital-business-models"],
         type: "Panel Session",
         speaker: [
             {
@@ -416,7 +416,7 @@ const agendaData = [
         dateCode: "Tue",
         duration: "30",
         topic: "Keynote Presentation on Distribution Models",
-        theme:  "distribution-models",
+        theme:  ["distribution-models"],
         type: "Keynote Presentation",
         speaker: [
             {
@@ -437,8 +437,8 @@ const agendaData = [
         dateCode: "Tue",
         duration: "20",
         topic: "Fire Chat on Distribution Models",
-        theme:  "distribution-models",
-        type: "Chat",
+        theme:  ["distribution-models", "digital-business-models"],
+        type: "Fireside Chat",
         speaker: [
             {
                 name: "Boye Ademola",
@@ -458,7 +458,7 @@ const agendaData = [
         dateCode: "Tue",
         duration: "30",
         topic: "Keynote Presentation on Customer Experience",
-        theme:  "customer-experience",
+        theme: ["customer-experience"],
         type: "Keynote Presentation",
         speaker: [
             {
@@ -479,7 +479,7 @@ const agendaData = [
         dateCode: "Tue",
         duration: "50",
         topic: "Panel Session on Customer Experience",
-        theme:  "customer-experience",
+        theme:  ["customer-experience"],
         type: "Panel Session",
         speaker: [
             {
@@ -521,8 +521,8 @@ const agendaData = [
         dateCode: "Wed",
         duration: "60",
         topic: "Keynote Presentation on Artificial Intelligence",
-        theme: "artificial-intelligence",
-        type: "Keynote Presetation",
+        theme: ["artificial-intelligence"],
+        type: "Keynote Presentation",
         speaker: [
             {
                 img: speaker3,
@@ -542,8 +542,8 @@ const agendaData = [
         dateCode: "Wed",
         duration: "10",
         topic: "Launch of Artificial Intelligence Thought Leadership",
-        theme: "artificial-intelligence",
-        type: "Session",
+        theme: ["artificial-intelligence"],
+        type: "Panel Session",
         speaker: [
             {
                 img: speaker3,
@@ -563,7 +563,7 @@ const agendaData = [
         dateCode: "Wed",
         duration: "60",
         topic: "Keynote Presentation on Technologies Powering Financial Services",
-        theme: "fintech",
+        theme: ["digital-business-models", "fintech"],
         type: "Keynote Presentation",
         speaker: [
             {

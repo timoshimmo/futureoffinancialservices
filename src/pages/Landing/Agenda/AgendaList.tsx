@@ -129,9 +129,22 @@ const AgendaList = () => {
                                     <Col key={item.id} lg={12} sm={12}>
                                         <Card className="shadow-none border-top border-bottom border-white rounded-3 mb-4 p-4 text-white">
                                             <CardBody className='p-0'>
-                                                <div className='d-flex gap-2 align-items-center mb-2'><span className='text-white fs-16'>{item.date}</span> | <span className='text-white fs-16'>{item.time}</span></div>
+                                                <div className='d-flex gap-2 align-items-center mb-2'><span className='text-white fs-14'>{item.date}</span> | <span className='text-white fs-14'>{item.time}</span></div>
                                                 <h6 className='text-white fw-semibold fs-20'>{item.topic}</h6>
-                                                <p className='text-secondary fs-13'>{item.type}</p>
+                                                <div className='d-flex gap-2'>
+                                                {
+                                                    item.theme !== null ?
+                                                    (item?.theme.map((row: string) => (
+                                                        <p className="fw-light fs-11 text-capitalize border border-white rounded-2 py-1 px-2">{row.replace(/-/g, ' ')}</p>
+                                                
+                                                    ))
+                                                    )
+                                                    :
+                                                    <p className="fw-light fs-11 text-capitalize border border-white rounded-2 py-1 px-2">General Session</p>
+                                                }
+                                                    
+                                                </div>
+                                                <p className='text-secondary fs-12 fw-light'>{item.type}</p>
                                                 <div className='d-flex gap-2 mt-4'>
                                                     <img src={item.speaker[0].pic} alt="" height="60" />
                                                     <div className='px-2'>
