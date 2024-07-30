@@ -10,8 +10,9 @@ const Footer = () => {
         <React.Fragment>
             <footer className="custom-footer bg-dark pb-5 position-relative footer-style">
                 <Container>
+                    <hr className='mb-4'/>
                     <Row>
-                        <Col lg={5} className="mt-4">
+                        <Col lg={5} className="mt-5">
                             <div>
                                 <div className='mb-5'>
                                     <img src={logolight} alt="logo light" className="footer-logo" />
