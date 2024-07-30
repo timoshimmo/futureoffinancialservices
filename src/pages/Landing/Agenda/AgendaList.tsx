@@ -49,7 +49,7 @@ const AgendaList = () => {
                     
                     <Row className='justify-content-between'>
                         <Col lg={4} sm={12}>
-                            <div className='sticky-top'>
+                            <div className='sticky-top agenda-sticky-side'>
                                 <div className='border p-4 border-white rounded-3 mb-4'>
                                     <div className='w-100 hstack py-2 gap-2 search-box'>
                                         <img src={ic_search} height={15} />
@@ -110,22 +110,22 @@ const AgendaList = () => {
                             </div>
                         </Col>
                         <Col lg={8} sm={12}>
+                            <div className='sticky-top mb-4 pb-4 agenda-sticky-top' style={{ top: '70px', backgroundColor: '#141413' }}>
+                                <Nav pills className="nav-pills filter-btns gap-3" role="tablist">
+                                    <NavItem role="presentation">
+                                        <NavLink type="button" onClick={() => setDateNav("All")} className={dateNav === "All" ? " fw-medium fs-13 text-primary border border-white rounded-2 bg-white active" : "fw-medium fs-13 nav-tab-custom"}>All</NavLink>
+                                    </NavItem>
+                                    <NavItem role="presentation">
+                                        <NavLink type="button" onClick={() => setDateNav("Tue")} className={dateNav === "Tue" ? " fw-medium fs-13 text-primary border border-white rounded-2 bg-white active" : "fw-medium  text-primary fs-13 nav-tab-custom"}>Tuesday <span className={dateNav === "Tue" ? 'text-dark fs-11' : 'text-white fs-11'}>8 October</span></NavLink>
+                                    </NavItem>
+                                    <NavItem role="presentation">
+                                        <NavLink type="button" onClick={() => setDateNav("Wed")} className={dateNav === "Wed" ? " fw-medium fs-12 text-primary border border-white rounded-2 bg-white active" : "fw-medium fs-13 text-primary fs-13 nav-tab-custom"}>Wednesday <span className={dateNav === "Wed" ? 'text-dark fs-11' : 'text-white fs-11'}>9 October</span></NavLink>
+                                    </NavItem>
+                                </Nav>
+
+                                </div>
                             <Row className='mb-5'> 
                                 <Col lg={12}>
-                                        <div className='sticky-top mb-4'>
-                                            <Nav pills className="nav-pills filter-btns gap-3" role="tablist">
-                                                <NavItem role="presentation">
-                                                    <NavLink type="button" onClick={() => setDateNav("All")} className={dateNav === "All" ? " fw-medium fs-13 text-primary border border-white rounded-2 bg-white active" : "fw-medium fs-13 nav-tab-custom"}>All</NavLink>
-                                                </NavItem>
-                                                <NavItem role="presentation">
-                                                    <NavLink type="button" onClick={() => setDateNav("Tue")} className={dateNav === "Tue" ? " fw-medium fs-13 text-primary border border-white rounded-2 bg-white active" : "fw-medium  text-primary fs-13 nav-tab-custom"}>Tuesday <span className={dateNav === "Tue" ? 'text-dark fs-11' : 'text-white fs-11'}>8 October</span></NavLink>
-                                                </NavItem>
-                                                <NavItem role="presentation">
-                                                    <NavLink type="button" onClick={() => setDateNav("Wed")} className={dateNav === "Wed" ? " fw-medium fs-12 text-primary border border-white rounded-2 bg-white active" : "fw-medium fs-13 text-primary fs-13 nav-tab-custom"}>Wednesday <span className={dateNav === "Wed" ? 'text-dark fs-11' : 'text-white fs-11'}>9 October</span></NavLink>
-                                                </NavItem>
-                                            </Nav>
-
-                                        </div>
                                     </Col>
                                     {agendaData.filter(data => data.dateCode === dateNav || dateNav === 'All').map((item) => (
                                     <Col key={item.id} lg={12} sm={12}>
