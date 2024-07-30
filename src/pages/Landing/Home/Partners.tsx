@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Card, CardBody } from 'reactstrap';
 import { Link } from 'react-router-dom';
-import partnerBazara from "../../../assets/images/brands/img_bazara_logo.png";
+import partnerBazara from "../../../assets/images/brands/img_bazara_logo_white.png";
 //import { partnerImgsData } from '../../../common/data';
 
 const Partners = () => {
