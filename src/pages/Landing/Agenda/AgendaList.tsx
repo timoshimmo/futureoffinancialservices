@@ -73,7 +73,7 @@ const AgendaList = () => {
                                             <NavLink type="button" onClick={() => setNav("artificial-intelligence")} className={nav === "artificial-intelligence" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>Artificial Intelligence</NavLink>
                                         </NavItem>
                                         <NavItem role="presentation">
-                                            <NavLink type="button" onClick={() => setNav("fintech")} className={nav === "fintech" ? " fw-medium fs-11 active" : "fw-medium fs-11 border border-white rounded-2"}>Financial Technology</NavLink>
+                                            <NavLink type="button" onClick={() => setNav("fintech")} className={nav === "fintech" ? " fw-medium fs-11 active" : "fw-medium fs-11 border border-white rounded-2"}>FinTech</NavLink>
                                         </NavItem>
                                     </Nav>
                                 </div>
@@ -110,7 +110,7 @@ const AgendaList = () => {
                             </div>
                         </Col>
                         <Col lg={8} sm={12}>
-                            <div className='sticky-top mb-4 pb-4 agenda-sticky-top' style={{ top: '70px', backgroundColor: '#141413' }}>
+                            <div className='sticky-top mb-4 pb-4 agenda-sticky-top' style={{ backgroundColor: '#141413' }}>
                                 <Nav pills className="nav-pills filter-btns gap-3" role="tablist">
                                     <NavItem role="presentation">
                                         <NavLink type="button" onClick={() => setDateNav("All")} className={dateNav === "All" ? " fw-medium fs-13 text-primary border border-white rounded-2 bg-white active" : "fw-medium fs-13 nav-tab-custom"}>All</NavLink>
