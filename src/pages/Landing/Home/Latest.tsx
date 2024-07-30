@@ -12,7 +12,7 @@ const Latest = () => {
                     <Row className="justify-content-center">
                         <Col lg={8} sm={12}>
                             <div className="text-center mb-4">
-                                <h2 className="mb-3 fw-semibold lh-base text-secondary">Latest <span className='text-primary'>Submit Updates</span></h2>
+                                <h2 className="mb-3 fw-semibold lh-base text-secondary"  style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>Latest <span className='text-primary'>Submit Updates</span></h2>
                             </div>
                         </Col>
                     </Row>

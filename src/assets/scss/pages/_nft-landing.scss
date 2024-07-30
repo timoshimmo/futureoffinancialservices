@@ -269,7 +269,7 @@
 }
 
 .partners-section {
-    padding-bottom: 120px;
+    padding: 140px 0;
 }
 
 .what-left-title {
@@ -399,8 +399,8 @@
 }
 
 .sponsor-right {
-    padding-left: 3rem;
-    padding-right: 3rem;
+    //padding-left: 3rem;
+    //padding-right: 3rem;
 }
 
 @media (max-width: 767.98px) { 
@@ -537,8 +537,6 @@
     .row-footer {
         justify-content: start;
     }
-    
-    
 }
 
 @media (max-width: 767.98px) { 

@@ -37,6 +37,8 @@ import speaker6 from "../../assets/images/home/speaker6.png";
 //import partner1 from "../../assets/images/home/partner1.png";
 import partner2 from "../../assets/images/home/partner2.png";
 import partner3 from "../../assets/images/home/partner3.png";
+
+import partnerBazara from "../../assets/images/brands/img_bazara_logo.png";
 //import partner4 from "../../assets/images/home/partner4.png";
 
 //Profile
@@ -117,18 +119,18 @@ const whatIsData = [
 
 const numbersData = [
     {
-        value: "12,000",
+        value: "300",
         caption: "Participants",
         color: "#FF0000",
     },
     {
-        value: "20",
-        caption: "Speakers",
+        value: "62",
+        caption: "Sessions",
         color: "#990001",
     },
     {
-        value: "62",
-        caption: "Pitches",
+        value: "20",
+        caption: "Speakers",
         color: "#66FFCC",
     },
     {
@@ -148,10 +150,10 @@ const numbersData = [
 
 const partnerImgsData = [
     {
-        img: partner2,
+        img: partnerBazara,
     },
     {
-        img: partner3,
+        img: partnerBazara,
     },
 
 ]

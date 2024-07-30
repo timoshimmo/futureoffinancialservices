@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Col, Container, Row } from 'reactstrap';
 
 // Import Images
-import imgSponsor from "../../../assets/images/home/img_sponsor.png";
+import imgSponsor from "../../../assets/images/home/img_sponsor_spacing.png";
 
 const Sponsor = () => {
     return (
@@ -13,7 +13,7 @@ const Sponsor = () => {
                 <Container>
                     <Row className="align-items-center gy-4">
                         <Col lg={6} sm={12} className="mx-auto">
-                            <div className='sponsor-left'>
+                            <div className='sponsor-left d-flex justify-content-center'>
                                 <img src={imgSponsor} alt="" className="img-fluid mx-auto" />
                             </div>
                         </Col>
