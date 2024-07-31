@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import ic_youtube from "../../../assets/images/home/ic_youtube.png";
 import ic_linkedin from "../../../assets/images/home/ic_linkedin.png";
 import ic_x from "../../../assets/images/home/ic_x.png";
-import ic_instagram from "../../../assets/images/home/ic_instagram.png";
+//import ic_instagram from "../../../assets/images/home/ic_instagram.png";
 import { whatIsData } from '../../../common/data';
 import 'keen-slider/keen-slider.min.css';
 import { useKeenSlider, KeenSliderPlugin } from 'keen-slider/react';
@@ -133,10 +133,9 @@ const Numbers = () => {
                                 <p className="mb-5 text-white fs-15">A premier event that will bring together global leaders, innovators, and visionaries from the financial services industry to explore and shape its future. With a variety of insightful sessions, roundtables, workshops, and exhibitions, participants will engage in an in-depth exploration of the future of financial services and the technological advancements that will drive the next decade.</p>
                                 <p className="mb-3 text-white fs-15">Follow the conversation on social media:</p>
                                 <div className="hstack gap-4 py-2 align-items-center">
-                                    <Link to={'/'}><img src={ic_youtube} height={25}/></Link>
                                     <Link to={'/'}><img src={ic_linkedin} height={25}/></Link>
                                     <Link to={'/'}><img src={ic_x} height={25}/></Link>
-                                    <Link to={'/'}><img src={ic_instagram} height={25}/></Link>
+                                    <Link to={'/'}><img src={ic_youtube} height={25}/></Link>
                                 </div>
                             </div>
                         </Col>
@@ -149,9 +148,9 @@ const Numbers = () => {
                         </Col>
                     </Row>
 
-                    <Row className="justify-content-center mx-auto" style={{ maxWidth: '700px' }}>
+                    <Row className="justify-content-center mx-auto numbers-area">
                         {numbersData.map((item, key) => (
-                            <Col key={key} lg={3} sm={6} className="numbers-item">
+                            <Col key={key} lg={3} sm={6} xs={6} className="numbers-item">
                                 <div className="w-100 text-center">
                                    <div className='d-flex justify-content-center align-items-start'>
                                         <span className='display-5 fw-bold' style={{ color: item.color, fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>

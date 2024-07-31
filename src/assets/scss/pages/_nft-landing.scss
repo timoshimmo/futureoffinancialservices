@@ -277,6 +277,8 @@
     padding-bottom: 120px;
 }
 
+
+
 .parallax {
     background-attachment: fixed;
 }
@@ -469,8 +471,12 @@
 
 }
 
+.numbers-area {
+    max-width: 700px;
+}
+
 @media (max-width: 767.98px) { 
-    .numbers-item {
+    .numbers-area {
         width: 100%;
     }
 }
