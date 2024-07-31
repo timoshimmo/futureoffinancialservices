@@ -48,11 +48,13 @@ const SpeakersList = () => {
 
     return (
         <React.Fragment>
-            <section className="section">
+            <section className="section speakers-list-body">
                 <Container>
                     <Row>
                         <Col lg={7} sm={12}>
+                            <div className='w-100 sticky-top py-3' style={{ backgroundColor: '#141413', top: '60px' }}></div>
                             <Row>
+                                
                                 {speakersFullData.filter(data => data.tags.includes(nav) || nav === 'All').map((item) => (
                                     <Col key={item.id} lg={6} sm={12}>
                                         <Card onClick={()=>passData(item)} className="shadow-none rounded-0 speakers-card mb-2 text-white" style={{ cursor: "pointer" }}>
@@ -69,13 +71,13 @@ const SpeakersList = () => {
                             </Row>
                         </Col>
                         <Col lg={5} sm={12}>
-                            <div className='sticky-top speakers-sticky-side'>
+                            <div className='sticky-top speakers-sticky-side' style={{ marginTop: '34px' }}>
                                 <div className='border p-4 border-white rounded-3 mb-4'>
                                     <div className="w-100 hstack py-2 gap-2 search-box">
                                         <img src={ic_search} height={15} />
                                         <input type="text" placeholder="Search" className="border-0 fs-14"  style={{ color: '#FFFFFF', backgroundColor: 'transparent' }} />
                                     </div>
-                                    <h2 className='my-4 text-primary fs-20' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>Topics</h2>
+                                    <h2 className='my-4 text-primary fs-20' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>Themes</h2>
                                     <Nav pills className="nav-pills filter-btns gap-2" role="tablist">
                                         <NavItem role="presentation">
                                             <NavLink type="button" onClick={() => setNav("All")} className={nav === "All" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>All</NavLink>
