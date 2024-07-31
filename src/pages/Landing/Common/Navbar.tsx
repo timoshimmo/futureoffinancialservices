@@ -20,6 +20,7 @@ const Navbar = () => {
     const [openEvents, setOpenEvents] = useState(false);
     const [openInvolved, setInvolved] = useState(false);
 
+
     const toggle = () => setisOpenMenu(!isOpenMenu);
     const toggleEvents = () => setOpenEvents((prevState) => !prevState);
     const toggleInvolved = () => setInvolved((prevState) => !prevState);
@@ -97,6 +98,7 @@ const Navbar = () => {
                     <Collapse
                         className="navbar-collapse"
                         id="navbarSupportedContent"
+                        isOpen={isOpenMenu}
                     >
                         <Scrollspy
                             offset={-18}
@@ -133,8 +135,45 @@ const Navbar = () => {
                                     </DropdownMenu>
                                 </Dropdown>
                             </li>
+                        </Scrollspy>
+                        <div className='ms-4'>
+                            <Link to="/register" className="btn btn-success btn-banner">Register </Link>
+                        </div>       
+                    </Collapse>
+
+{/*
+
+ <Collapse
+                        className="navbar-collapse mobile-navbar"
+                        id="navbarSupportedContent"
+                        isOpen={isOpenMenu}
+                    >
+                        <Scrollspy
+                            offset={-18}
+                            items={[
+                                "home",
+                                "agenda",
+                                "speakers",
+                                "get-involved",
+                            ]}
+                            currentClassName="active"
+                            className="navbar-nav ms-auto mt-2 mt-lg-0"
+                            id="navbar-example"
+                        >
                             <li className="nav-item px-4">
-                                <Dropdown isOpen={isOpenMenu} toggle={toggle}>
+                                <NavLink className="nav-link fs-14 text-white" to="/home" activeClassName="active" tag={RRNavLink}>Home</NavLink>
+                            </li>
+                            <li className="nav-item px-4">
+                                <NavLink className="nav-link fs-14 text-white" to="/agenda" activeClassName="active" tag={RRNavLink}>Agenda</NavLink>
+                            </li>
+                            <li className="nav-item px-4">
+                                <NavLink className="nav-link fs-14 text-white" to="/speakers" activeClassName="active" tag={RRNavLink}>Speakers</NavLink>
+                            </li>
+                            <li className="nav-item px-4">
+                                <Dropdown isOpen={openInvolved} toggle={toggleInvolved}>
+                                    <DropdownToggle caret tag="button" className="nav-link fs-14">
+                                        Get Involved
+                                    </DropdownToggle>
                                     <DropdownMenu className='px-2'>
                                         <DropdownItem href='/sponsors' className="fs-14 fw-light" style={{ color: '#E1E7EC' }}>Be a Sponsor</DropdownItem>
                                         <DropdownItem divider style={{ borderColor: '#E1E7EC' }}/>
@@ -147,8 +186,12 @@ const Navbar = () => {
                         </Scrollspy>
                         <div className='ms-4'>
                             <Link to="/register" className="btn btn-success btn-banner">Register </Link>
-                        </div>
+                        </div>       
                     </Collapse>
+
+
+                        */}
+                   
                 </Container>
             </nav>
             <div className="bg-overlay bg-overlay-pattern"></div>

@@ -104,6 +104,37 @@
 
 }
 
+.partners-row-web {
+    display: flex;
+}
+
+.partners-row-mobile {
+    display: none;
+}
+
+
+.mobile-navbar {
+    display: none;
+}
+
+@media (max-width: 767.98px) { 
+    .mobile-navbar {
+        display: block;
+    }
+
+}
+
+@media (max-width: 767.98px) { 
+    .partners-row-web {
+        display: none;
+    }
+    
+    .partners-row-mobile {
+        display: block;
+    }
+
+}
+
 #explorecard-list {
     .list-element {
         display: none;
@@ -408,7 +439,7 @@
 }
 
 .speakers-web {
-    display: block;
+    display: flex;
 }
 
 @media (max-width: 767.98px) { 

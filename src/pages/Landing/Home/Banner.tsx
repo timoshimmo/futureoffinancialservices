@@ -23,7 +23,7 @@ const Banner = () => {
                             </div>
                            
                             <div className="w-100 btn-home-mobile">
-                                <div className="d-flex flex-column align-items-center gps-3">
+                                <div className="d-flex flex-column align-items-center gps-3 px-5">
                                     <Link to="/register" className="w-100 btn btn-primary btn-banner">Register</Link>
                                     <NavLink href="#speakers" className="w-100 mt-3 btn btn-outline-secondary border border-secondary border-2 btn-banner btn-banner-secondary">See More</NavLink>
                                 </div>
