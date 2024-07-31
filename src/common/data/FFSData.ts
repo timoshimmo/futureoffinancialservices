@@ -196,17 +196,7 @@ const speakersData = [
         img: img_abdullo,
         name: "Abdullo Kurbanov",
         credentials: "Co-Founder, Ayan Capital and Alif Bank"
-    },
-    {
-        img: speaker5,
-        name: "Funke Adebayo",
-        credentials: "President, First Bank Nigeria",
-    },
-    {
-        img: speaker6,
-        name: "Yewande Akinyi",
-        credentials: "Founder, AfriTech Solutions",
-    },
+    }
 ]
 
 const speakersFullData = [
