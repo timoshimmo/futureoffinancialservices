@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Banner = () => {
     return (
         <React.Fragment>
-            <section className="section ffs-banner">
+            <section className="section ffs-banner parallax">
             <div className="bg-overlay"></div>
             <Container>
                 <Row className="justify-content-center">

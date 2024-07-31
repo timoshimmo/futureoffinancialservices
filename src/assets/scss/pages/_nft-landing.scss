@@ -91,7 +91,6 @@
     background-size: cover;
     background-position: bottom;
     padding: 222px 0 150px 0;
-    background-attachment: fixed;
     .bg-overlay {
         background-color: #141413;
         opacity: 0;
@@ -268,8 +267,17 @@
     background-size: contain;
     background-position: left bottom;
     padding-bottom: 120px;
-    background-attachment: fixed;
 }
+
+.parallax {
+    background-attachment: fixed;
+  }
+
+@media only screen and (max-device-width: 1366px) {
+    .parallax {
+      background-attachment: scroll;
+    }
+  }
 
 .partners-section {
     padding: 120px 0;
