@@ -4,10 +4,11 @@ import { Container, Row, Col, Card, CardBody } from 'reactstrap';
 import { connectData } from '../../../common/data';
 //import arrow_link from "../../../assets/images/home/img_link_arrow.png";
 //import home_submit_right from "../../../assets/images/home/img_home_summit_right.png";
+import summit1 from "../../../assets/images/home/img_one_summit1.png";
 
 const Connect = () => {
 
-    const [imgName, setImageName] = useState("");
+    const [imgName, setImageName] = useState(summit1);
     const [indexVal, setIndexVal] = useState(0);
     
     return (
