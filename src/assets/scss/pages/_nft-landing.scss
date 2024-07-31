@@ -166,9 +166,13 @@
    /* background-image: url('../../images/banners/img_agenda_banner.png'); */
     background-size: cover;
     background-position: bottom;
-    padding: 140px 30px 0;
+    padding: 140px 30px 0px;
     display: flex;
     align-items: end;
+}
+
+.agenda-list-body {
+    padding-top: 70px;
 }
 
 .form-box {
@@ -404,7 +408,6 @@
 }
 
 .partner-card {
-   
     height: 150px;
 }
 
@@ -420,16 +423,15 @@
     font-size: 13px;
 }
 
-.sponsor-right {
+/*.sponsor-right {
     //padding-left: 3rem;
     //padding-right: 3rem;
-}
+}*/
 
 @media (max-width: 767.98px) { 
 
     .sponsor-left {
-        margin-bottom: 25px;
-        
+        margin-bottom: 25px; 
     }
 
     .sponsor-right {
@@ -644,16 +646,26 @@
 .agenda-sticky-top {
     top: 70px;
     background-color: '#141413';
+    
 }
 
 @media (min-width: 1025px) { 
     .agenda-sticky-side {
-        top: 70px;
+        top: 80px;
     }
 
 }
 
 .agenda-sticky-side {
-    top: 95px;
+    top: 70px;
 }
+
+.list-row {
+    border-left: 1px solid #FFFFFF;
+}
+
+.list-row:hover {
+    border-left: 1px solid #33CC99;
+}
+
 

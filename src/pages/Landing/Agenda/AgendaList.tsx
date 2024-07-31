@@ -44,12 +44,12 @@ const AgendaList = () => {
 
     return (
         <React.Fragment>
-            <section className="section">
+            <section className="section agenda-list-body">
                 <Container>
                     
                     <Row className='justify-content-between'>
                         <Col lg={4} sm={12}>
-                            <div className='sticky-top agenda-sticky-side'>
+                            <div className='sticky-top py-5 agenda-sticky-side'>
                                 <div className='border p-4 border-white rounded-3 mb-4'>
                                     <div className='w-100 hstack py-2 gap-2 search-box'>
                                         <img src={ic_search} height={15} />
@@ -75,9 +75,9 @@ const AgendaList = () => {
                                         <NavItem role="presentation">
                                             <NavLink type="button" onClick={() => setNav("fintech")} className={nav === "fintech" ? " fw-medium fs-11 active" : "fw-medium fs-11 border border-white rounded-2"}>FinTech</NavLink>
                                         </NavItem>
-                                        <NavItem role="presentation">
+                                      {/*}  <NavItem role="presentation">
                                             <NavLink type="button" onClick={() => setNav("general")} className={nav === "general" ? " fw-medium fs-11 active" : "fw-medium fs-11 border border-white rounded-2"}>General Session</NavLink>
-                                        </NavItem>
+    </NavItem> */}
                                     </Nav>
                                 </div>
                                 <div className='border py-3 px-4 border-white rounded-3'>
@@ -108,12 +108,15 @@ const AgendaList = () => {
                                         <NavItem role="presentation">
                                             <NavLink type="button" className="fw-medium fs-11 border border-white rounded-2">Roundtable</NavLink>
                                         </NavItem>
+                                        <NavItem role="presentation">
+                                            <NavLink type="button" className="fw-medium fs-11 border border-white rounded-2">General Session</NavLink>
+                                        </NavItem>
                                     </Nav>
                                 </div>
                             </div>
                         </Col>
                         <Col lg={8} sm={12}>
-                            <div className='sticky-top mb-4 pb-4 agenda-sticky-top' style={{ backgroundColor: '#141413' }}>
+                            <div className='sticky-top mb-4 pt-5 pb-3 agenda-sticky-top' style={{ backgroundColor: '#141413' }}>
                                 <Nav pills className="nav-pills filter-btns gap-3" role="tablist">
                                     <NavItem role="presentation">
                                         <NavLink type="button" onClick={() => setDateNav("All")} className={dateNav === "All" ? " fw-medium fs-13 text-primary border border-white rounded-2 bg-white active" : "fw-medium fs-13 nav-tab-custom"}>All</NavLink>
@@ -134,7 +137,7 @@ const AgendaList = () => {
                                             <CardBody className='p-0'>
                                                 <div className='d-flex gap-2 align-items-center mb-2'><span className='text-white fs-14'>{item.date}</span> | <span className='text-white fs-14'>{item.time}</span></div>
                                                 <h6 className='text-white fw-semibold fs-20'>{item.topic}</h6>
-                                                <div className='d-flex gap-2'>
+                                                <div className='d-flex gap-3 align-items-center'>
                                                     {
                                                         item.theme !== null ?
                                                         (item?.theme.map((row: string) => (
@@ -144,8 +147,9 @@ const AgendaList = () => {
                                                         :
                                                         <p className="fw-light fs-11 text-capitalize border border-white rounded-2 py-1 px-2">General Session</p>
                                                     } 
+                                                    <p className='text-secondary fs-12 fw-light'>{item.type}</p>
                                                 </div>
-                                                <p className='text-secondary fs-12 fw-light'>{item.type}</p>
+                                                
                                                 <div className='d-flex gap-2 mt-4'>
                                                     <img src={item.speaker[0].pic} alt="" height="60" />
                                                     <div className='px-2'>

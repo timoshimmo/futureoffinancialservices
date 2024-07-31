@@ -15,10 +15,10 @@ import avatar10 from "../../assets/images/users/avatar-10.jpg";
 //import img05 from "../../assets/images/nft/img-05.jpg";
 //import img06 from "../../assets/images/nft/img-06.jpg";
 
-import summit1 from "../../assets/images/home/img_summit1.png";
-import summit2 from "../../assets/images/home/img_summit2.png";
-import summit3 from "../../assets/images/home/img_summit3.png";
-import summit4 from "../../assets/images/home/img_summit4.png";
+import summit1 from "../../assets/images/home/img_one_summit1.png";
+import summit2 from "../../assets/images/home/img_one_summit2.png";
+import summit3 from "../../assets/images/home/img_one_summit3.png";
+import summit4 from "../../assets/images/home/img_one_summit4.png";
 
 import latest1 from "../../assets/images/home/img_latest1.png";
 import latest2 from "../../assets/images/home/img_latest2.png";
@@ -52,25 +52,25 @@ const connectData = [
         img: summit1,
         title: "Expand Your Network",
         textContent: "Maximize your conference experience by connecting with industry leaders, innovators, and peers.",
-        rowType: 0
+        rowIndex: 0
     },
     {
         img: summit2,
         title: "Build Partnerships",
         textContent: "Forge meaningful partnerships that can drive your business forward.",
-        rowType: 1
+        rowIndex: 2
     },
     {
         img: summit3,
         title: "Collaborate for the Future",
         textContent: "Join forces with innovators, leaders, and visionaries to shape the future of financial services.",
-        rowType: 1
+        rowIndex: 3
     },
     {
         img: summit4,
         title: "Explore New Technologies",
         textContent: "Discover the latest advancements in financial technology and learn how they can transform your business.",
-        rowType: 1
+        rowIndex: 4
     },
 ];
 
