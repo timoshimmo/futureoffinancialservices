@@ -69,11 +69,21 @@ const Speakers = () => {
         <React.Fragment>
             <section className="section pb-custom" id="speakers">
             <Container>
-                <Row className="justify-content-center">
-                    <Col lg={8}>
+                <Row className="justify-content-center speakers-web">
+                    <Col lg={7}>
                         <div className="text-center mb-5">
                             <h2 className="mb-2 fw-semibold lh-base text-primary" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>Featured Speakers</h2>
-                            <p className="w-70 mb-5 fs-14 text-white text-center">Discover the Voices Behind the Most Impactful Ideas and Transformative Solutions. Engage with Our Diverse Speakers Who Bring Knowledge, Passion, and Insight</p>
+                            <p className="mb-5 fs-14 text-white text-center">Discover the Voices Behind the Most Impactful Ideas and Transformative Solutions. Engage with Our Diverse Speakers Who Bring Knowledge, Passion, and Insight</p>
+                            {/* <p className="mb-3 fs-13 text-white">Our Esteemed Panel of Influential Experts Sharing Their Wisdom, Experience, and Innovative Ideas</p> */}
+                        </div>
+                    </Col>
+                </Row>
+
+                <Row className="justify-content-center speakers-mobile">
+                    <Col sm={12} xs={12}>
+                        <div className="text-center mb-5">
+                            <h2 className="mb-2 h1 fw-semibold lh-base text-primary" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>Featured Speakers</h2>
+                            <p className="mb-5 fs-12 text-white text-center">Discover the Voices Behind the Most Impactful Ideas and Transformative Solutions. Engage with Our Diverse Speakers Who Bring Knowledge, Passion, and Insight</p>
                             {/* <p className="mb-3 fs-13 text-white">Our Esteemed Panel of Influential Experts Sharing Their Wisdom, Experience, and Innovative Ideas</p> */}
                         </div>
                     </Col>
@@ -144,13 +154,13 @@ const Speakers = () => {
                             ))}   
                     </Marquee>                           
                 </Row>
-                <Row className='mobile-featured-speakers'>
+                <Row className='mobile-featured-speakers mt-3'>
                     {speakersData.map((item, key) => (
-                        <Col key={key} sm={12} xs={12} className='px-2'>
+                        <Col key={key} sm={12} className='px-2'>
                             <Card className="shadow-none rounded-0 speakers-card text-white" style={{ cursor: "pointer" }}>
-                                <CardBody className='p-0'>
+                                <CardBody className='p-0 d-flex flex-column align-items-center'>
                                     <img src={item.img} alt="" className="avatar-speaker"/>
-                                    <div className='w-100 mt-2 px-2'>
+                                    <div className='w-100 mt-2'>
                                         <h5 className="text-white fs-14" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>{item.name}</h5>
                                         <p className="text-white fs-11 fw-light">{item.credentials}</p>
                                     </div>
