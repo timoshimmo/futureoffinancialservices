@@ -4,6 +4,8 @@ import { Col, Container, Row } from 'reactstrap';
 
 // Import Images
 import logolight from "../../../assets/images/ffs_top_logo_light.png";
+import ffsLogoDark from "../../../assets/images/ffs_top_logo_dark.png";
+import ffsLogoLight1 from "../../../assets/images/ffs_top_logo_light2.png";
 
 const Footer = () => {
     return (
@@ -15,7 +17,7 @@ const Footer = () => {
                         <Col lg={5} className="mt-5">
                             <div>
                                 <div className='mb-5'>
-                                    <img src={logolight} alt="logo light" className="footer-logo" />
+                                    <img src={ffsLogoLight1} alt="logo light" className="footer-logo" />
                                 </div>
                                 <div className="mt-4 fs-13">
                                     <ul className="list-inline mb-0 footer-social-link">

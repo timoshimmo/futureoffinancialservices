@@ -190,7 +190,7 @@ const speakersData = [
     {
         img: img_meaghan,
         name: "Meaghan Johnson",
-        credentials: "Chief Strategy Officer, Bazara Tech Inc"
+        credentials: "Chief Strategy Officer, Bazara"
     },
     {
         img: img_abdullo,
@@ -340,7 +340,7 @@ const speakersFullData = [
         name: "Meaghan Johnson",
         tags: ["artificial-intelligence"],
         credentials: "Chief Strategy Officer",
-        company: "Bazara Tech Inc.",
+        company: "Bazara",
         courses: [
             {
                 title: "Insights From The Artificial Intelligence TL", 
