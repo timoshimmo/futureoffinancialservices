@@ -138,6 +138,7 @@ const AgendaList = () => {
                                                 <div className='d-flex gap-2 align-items-center mb-2'><span className='text-white fs-14'>{item.date}</span> | <span className='text-white fs-14'>{item.time}</span></div>
                                                 <h6 className='text-white fw-semibold fs-20'>{item.topic}</h6>
                                                 <div className='d-flex gap-2 align-items-center'>
+                                                    <p className='fw-light fs-11 text-capitalize border border-white rounded-2 py-1 px-2' style={{ cursor: 'pointer' }}>{item.type}</p>
                                                     {
                                                         item.theme !== null ?
                                                         (item?.theme.map((row: string) => (
@@ -145,9 +146,8 @@ const AgendaList = () => {
                                                         ))
                                                         )
                                                         :
-                                                        <p className="fw-light fs-11 text-capitalize border border-white rounded-2 py-1 px-2" style={{ cursor: 'pointer' }}>General Session</p>
+                                                        null
                                                     } 
-                                                    <p className='fw-light fs-11 text-capitalize border border-white rounded-2 py-1 px-2' style={{ cursor: 'pointer' }}>{item.type}</p>
                                                 </div>
                                                 <p className='text-secondary fs-12 fw-light'>{item.type}</p>
                                                 <div className='d-flex gap-2 mt-4'>
