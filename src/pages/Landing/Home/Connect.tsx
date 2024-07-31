@@ -15,16 +15,16 @@ const Connect = () => {
         <React.Fragment>
             <section className="submit-section body-bg-dark px-4" style={{ backgroundColor: "#141413" }}>
                 <Container>
+                    {/* summit-padding */}
                     <Row className="gy-4">
-                        <Col lg={12} className='px-5'>
+                        <Col lg={12} className='summit-padding'>
                             <div className="w-100">
                                 <h2 className="mb-4 fw-semibold lh-base text-secondary" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>One Summit, <br /><span className='text-primary'>Unlimited Possibilities</span></h2>
                             </div>
                         </Col>
-                        <Col lg={7} sm={12} className='px-5'>
+                        <Col lg={7} sm={12} className='summit-padding'>
                             <Row className="justify-content-center mx-auto">
                                 {connectData.map((item, key) => (
-                                    //onClick={() => setNav("All")} className={nav === "All" ? " fw-medium fs-11 active" : "fw-medium fs-11 border border-white rounded-2"}
                                     <Col key={key} lg={12} sm={12} onMouseOver={() => {setImageName(item.img); setIndexVal(key); }} className={indexVal === key ? 'border-start border-2 border-primary fs-18 py-4' : 'border-start border-2 border-white fs-18 py-4'}>
                                         <div className="shadow-none px-3 py-2">
                                             <div className='w-100 justify-content-between align-items-start'>

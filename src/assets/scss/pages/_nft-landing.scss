@@ -297,10 +297,17 @@
 
 @media only screen and (max-device-width: 767.98px) {
     .partners-img-style {
-        width: 50px;
+        width: 100px;
     }
   }
 
+  @media only screen and (max-device-width: 767.98px) {
+    .partners-img-area {
+        margin-top: 40px
+    }
+  }
+
+  
 .what-left-title {
     font-family: Georgia, 'Times New Roman', Times, serif;
     border: 1px solid #33CC99;
@@ -390,6 +397,19 @@
     
 }
 
+.summit-padding {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+@media (max-width: 767.98px) { 
+    .summit-padding {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+}
+
 @media (max-width: 767.98px) { 
     .web-featured-speakers {
         display: none;
@@ -409,7 +429,7 @@
         width: 100%;
         height: 230px;
         object-fit: contain;
-        object-position: left top;
+        object-position: center top;
     }
 
 }

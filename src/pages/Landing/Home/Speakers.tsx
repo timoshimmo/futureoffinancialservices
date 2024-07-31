@@ -79,7 +79,7 @@ const Speakers = () => {
                     </Col>
                 </Row>
 
-                <Row className="justify-content-center speakers-mobile">
+                <Row className="justify-content-center speakers-mobile mt-5">
                     <Col sm={12} xs={12}>
                         <div className="text-center mb-5">
                             <h2 className="mb-2 h1 fw-semibold lh-base text-primary" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>Featured Speakers</h2>
@@ -160,9 +160,9 @@ const Speakers = () => {
                             <Card className="shadow-none rounded-0 speakers-card text-white" style={{ cursor: "pointer" }}>
                                 <CardBody className='p-0 d-flex flex-column align-items-center'>
                                     <img src={item.img} alt="" className="avatar-speaker"/>
-                                    <div className='w-100 mt-2'>
-                                        <h5 className="text-white fs-14" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>{item.name}</h5>
-                                        <p className="text-white fs-11 fw-light">{item.credentials}</p>
+                                    <div className='mt-3'>
+                                        <h5 className="text-white fs-14 text-center" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>{item.name}</h5>
+                                        <p className="text-white fs-11 fw-light text-center">{item.credentials}</p>
                                     </div>
                                 </CardBody>
                             </Card>

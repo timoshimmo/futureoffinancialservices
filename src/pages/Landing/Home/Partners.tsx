@@ -21,7 +21,7 @@ const Partners = () => {
                             </div>
                         </Col>
                         <Col lg={6} sm={12}>
-                            <div className='justify-content-center d-flex align-items-center gap-2'>
+                            <div className='justify-content-center d-flex align-items-center gap-2 partners-img-area'>
                                 <div className='px-2'>
                                     <img src={partnerBazara} alt="" className="partners-img-style" />
                                 </div>
