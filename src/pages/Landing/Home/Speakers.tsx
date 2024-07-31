@@ -108,8 +108,8 @@ const Speakers = () => {
 
                     </Col>
                 </Row>
-*/}
-                <Row>
+
+                  <Row className='web-featured-speakers'>
                     <Col>
                         <div ref={sliderRef} className="keen-slider">
                             {speakersData.map((item, key) => (
@@ -124,7 +124,8 @@ const Speakers = () => {
                         </div>
                     </Col>
                 </Row>
-               {/* <Row className='web-featured-speakers'>
+*/}
+                <Row className='web-featured-speakers'>
                     <Marquee
                         pauseOnClick={true}>
                             {speakersData.map((item, key) => (
@@ -141,12 +142,11 @@ const Speakers = () => {
                                     </Card>
                                 </Col>
                             ))}   
-                    </Marquee>
-                                                  
-                            </Row> */}
+                    </Marquee>                           
+                </Row>
                 <Row className='mobile-featured-speakers'>
                     {speakersData.map((item, key) => (
-                        <Col key={key} sm={12}>
+                        <Col key={key} sm={12} xs={12} className='px-2'>
                             <Card className="shadow-none rounded-0 speakers-card text-white" style={{ cursor: "pointer" }}>
                                 <CardBody className='p-0'>
                                     <img src={item.img} alt="" className="avatar-speaker"/>

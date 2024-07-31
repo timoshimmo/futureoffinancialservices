@@ -16,7 +16,7 @@ import Agenda from '../pages/Landing/Agenda';
 
 const publicRoutes : any= [
   //FFS Routes
-  { path: "/home", component: <Home /> },
+  { path: "/", component: <Home /> },
   { path: "/about", component: <About /> },
   { path: "/register", component: <Register /> },
   { path: "/exhibitors", component: <Exhibitor /> },
@@ -27,9 +27,9 @@ const publicRoutes : any= [
   { path: "/agenda", component: <Agenda /> },
   
   {
-    path: "/",
+    path: "/home",
     exact: true,
-    component: <Navigate to="/home" />,
+    component: <Navigate to="/" />,
   },
   { path: "*", component: <Navigate to="/home" /> },
 
