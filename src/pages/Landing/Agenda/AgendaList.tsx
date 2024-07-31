@@ -75,6 +75,9 @@ const AgendaList = () => {
                                         <NavItem role="presentation">
                                             <NavLink type="button" onClick={() => setNav("fintech")} className={nav === "fintech" ? " fw-medium fs-11 active" : "fw-medium fs-11 border border-white rounded-2"}>FinTech</NavLink>
                                         </NavItem>
+                                        <NavItem role="presentation">
+                                            <NavLink type="button" onClick={() => setNav("general")} className={nav === "general" ? " fw-medium fs-11 active" : "fw-medium fs-11 border border-white rounded-2"}>General Session</NavLink>
+                                        </NavItem>
                                     </Nav>
                                 </div>
                                 <div className='border py-3 px-4 border-white rounded-3'>
@@ -125,8 +128,6 @@ const AgendaList = () => {
 
                                 </div>
                             <Row className='mb-5'> 
-                                <Col lg={12}>
-                                    </Col>
                                     {agendaData.filter(data => data.dateCode === dateNav || dateNav === 'All').map((item) => (
                                     <Col key={item.id} lg={12} sm={12}>
                                         <Card className="shadow-none border-top border-bottom border-white rounded-3 mb-4 p-4 text-white">

@@ -204,12 +204,14 @@ const speakersFullData = [
             {
                 title: "The Impact of Quantum Computing on Fianancial Services", 
                 date: "Tuesday 14 October 2024",
-                time: "13:00 - 15:30"
+                time: "13:00 - 15:30",
+                tags: ["fintech"],
             },
             {
                 title: "The Impact of AI on Ditribution Models", 
                 date: "Tuesday 14 October 2024",
-                time: "16:00 - 17:00"
+                time: "16:00 - 17:00",
+                tags: ["distribution-models", "artificial-intelligence"],
             }
             
         ],
@@ -227,7 +229,8 @@ const speakersFullData = [
             {
                 title: "Customer Experience Through Leadership", 
                 date: "Tuesday 14 October 2024",
-                time: "15:35 - 16:00"
+                time: "15:35 - 16:00",
+                tags: ["customer-experience"],
             },
             
         ],
@@ -246,7 +249,8 @@ const speakersFullData = [
             {
                 title: "Insights From The Artificial Intelligence TL", 
                 date: "Wednesday 15 October 2024",
-                time: "11:00 - 11:55"
+                time: "11:00 - 11:55",
+                tags: ["artificial-intelligence"],
             },
             
         ],
@@ -265,7 +269,8 @@ const speakersFullData = [
             {
                 title: "Technologies Powering Financial Services", 
                 date: "Wednesday 15 October 2024",
-                time: "13:00 - 13:45"
+                time: "13:00 - 13:45",
+                tags: ["fintech"],
             },
             
         ],
@@ -324,7 +329,7 @@ const agendaData = [
         dateCode: "Tue",
         duration: "30",
         topic: "Keynote Presentation on Digital Business Models",
-        theme:  ["distribution-models", "digital-business-models"],
+        theme:  ["digital-business-models"],
         type: "Keynote Presentation",
         speaker: [
             {
@@ -387,7 +392,7 @@ const agendaData = [
         dateCode: "Tue",
         duration: "20",
         topic: "Fire Chat on Distribution Models",
-        theme:  ["distribution-models", "digital-business-models"],
+        theme:  ["distribution-models"],
         type: "Fireside Chat",
         speaker: [
             {
@@ -493,7 +498,7 @@ const agendaData = [
         duration: "10",
         topic: "Launch of Artificial Intelligence Thought Leadership",
         theme: ["artificial-intelligence"],
-        type: "Panel Session",
+        type: "Roundtable",
         speaker: [
             {
                 img: speaker3,
@@ -513,7 +518,7 @@ const agendaData = [
         dateCode: "Wed",
         duration: "60",
         topic: "Keynote Presentation on Technologies Powering Financial Services",
-        theme: ["digital-business-models", "fintech"],
+        theme: ["fintech"],
         type: "Keynote Presentation",
         speaker: [
             {

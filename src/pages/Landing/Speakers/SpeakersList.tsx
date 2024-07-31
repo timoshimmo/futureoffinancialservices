@@ -123,7 +123,27 @@ const SpeakersList = () => {
                                 <p className='text-secondary fs-13'>{currentData?.courses[0].date}, {currentData?.courses[0].time}</p> */}
                                 <p className='text-white fs-13 bio-style'><span className='text-primary fw-semibold'>{currentData?.name}</span> {currentData?.bio}</p>
                             </div>
-                            <h2 className='my-4 text-primary fs-20' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>Topics</h2>
+                            <p className='my-4 text-white fs-17 fw-bold'>Will be Speaking On</p>
+                            {currentData?.courses.map((item: any) => (
+                                <Card className="shadow-none border border-white rounded-3 mb-4 p-4 text-white">
+                                    <CardBody className='p-0'>
+                                        <div className='d-flex gap-2 align-items-center mb-3'><span className='text-white fs-14'>{item.date}</span> | <span className='text-white fs-14'>{item.time}</span></div>
+                                        <h6 className='text-primary fw-semibold fs-20 mb-2'>{item.title}</h6>
+                                        <div className='d-flex gap-2'>
+                                            {
+                                                item.tags !== null ?
+                                                (item?.tags.map((row: string) => (
+                                                    <p className="fw-light fs-11 text-capitalize border border-white rounded-2 py-1 px-2">{row.replace(/-/g, ' ')}</p>
+                                                ))
+                                                )
+                                                :
+                                                <p className="fw-light fs-11 text-capitalize border border-white rounded-2 py-1 px-2">General Session</p>
+                                            } 
+                                        </div>
+                                    </CardBody>
+                                </Card>
+                            ))}
+                            {/*<h2 className='my-4 text-primary fs-20' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>Topics</h2>
                             <Nav pills className="nav-pills filter-btns gap-2" role="tablist">
                                 {
                                     currentData?.tags.map((row: string) => (
@@ -133,7 +153,7 @@ const SpeakersList = () => {
                                 
                                     ))
                                 }
-                            </Nav>
+                            </Nav> */}
                        </div>
                        
                     </OffcanvasBody>
