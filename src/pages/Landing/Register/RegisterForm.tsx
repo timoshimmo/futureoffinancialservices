@@ -50,7 +50,7 @@ const RegisterForm = () => {
         <React.Fragment>
             <section className="section form-container">
                 <Container>
-                    <Row className="justify-content-end">
+                    <Row className="justify-content-center">
                         <Col lg={7} sm={12} className='px-3'>
 
                             {!successful ?
@@ -151,7 +151,7 @@ const RegisterForm = () => {
                                                         id="email"
                                                         name="email"
                                                         placeholder="Enter email address"
-                                                        className="border-0 fs-14 px-2"  
+                                                        className="border-0 fs-14 px-2 py-2"  
                                                         type="email"
                                                         onChange={validation.handleChange}
                                                         onBlur={validation.handleBlur}

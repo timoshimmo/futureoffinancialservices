@@ -7,7 +7,7 @@ const PartnerForm = () => {
         <React.Fragment>
             <section className="section form-container-sponsor">
                 <Container>
-                    <Row className="justify-content-end">
+                    <Row className="justify-content-center">
                         <Col lg={7} sm={12} className='px-3'>
                             <Card className="border mb-5 border-white bg-white rounded-4 shadow-none">
                                 <CardBody className="p-4">
