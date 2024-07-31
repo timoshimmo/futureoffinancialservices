@@ -297,13 +297,13 @@
 
 @media only screen and (max-device-width: 767.98px) {
     .partners-img-style {
-        width: 100px;
+        width: 120px;
     }
   }
 
   @media only screen and (max-device-width: 767.98px) {
     .partners-img-area {
-        margin-top: 40px
+        margin-top: 60px
     }
   }
 
@@ -457,6 +457,16 @@
     margin-left: 20px;
     margin-right: 20px;
     border: 1px solid gray;
+}
+
+@media (max-width: 767.98px) { 
+
+    .vl {
+        height: 40px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
 }
 
 @media (max-width: 767.98px) { 
