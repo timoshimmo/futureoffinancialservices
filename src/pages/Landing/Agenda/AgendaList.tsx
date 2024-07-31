@@ -129,7 +129,7 @@ const AgendaList = () => {
                                     </NavItem>
                                 </Nav>
 
-                                </div>
+                            </div>
                             <Row className='mb-5'> 
                                     {agendaData.filter(data => data.dateCode === dateNav || dateNav === 'All').map((item) => (
                                     <Col key={item.id} lg={12} sm={12}>
@@ -167,7 +167,6 @@ const AgendaList = () => {
                     </Row>
                 </Container>
             </section>
-            
         </React.Fragment>
     );
 }

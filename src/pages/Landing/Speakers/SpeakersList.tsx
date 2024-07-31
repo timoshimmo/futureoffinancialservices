@@ -69,31 +69,35 @@ const SpeakersList = () => {
                             </Row>
                         </Col>
                         <Col lg={5} sm={12}>
-                            <div className="w-100 hstack py-2 gap-2 search-box">
-                                <img src={ic_search} height={15} />
-                                <input type="text" placeholder="Search" className="border-0 fs-14"  style={{ color: '#FFFFFF', backgroundColor: 'transparent' }} />
+                            <div className='sticky-top speakers-sticky-side'>
+                                <div className='border p-4 border-white rounded-3 mb-4'>
+                                    <div className="w-100 hstack py-2 gap-2 search-box">
+                                        <img src={ic_search} height={15} />
+                                        <input type="text" placeholder="Search" className="border-0 fs-14"  style={{ color: '#FFFFFF', backgroundColor: 'transparent' }} />
+                                    </div>
+                                    <h2 className='my-4 text-primary fs-20' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>Topics</h2>
+                                    <Nav pills className="nav-pills filter-btns gap-2" role="tablist">
+                                        <NavItem role="presentation">
+                                            <NavLink type="button" onClick={() => setNav("All")} className={nav === "All" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>All</NavLink>
+                                        </NavItem>
+                                        <NavItem role="presentation">
+                                            <NavLink type="button" onClick={() => setNav("digital-business-models")} className={nav === "digital-business-models" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>Digital Business Models</NavLink>
+                                        </NavItem>
+                                        <NavItem role="presentation">
+                                            <NavLink type="button" onClick={() => setNav("distribution-models")} className={nav === "distribution-models" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>Distribution Models</NavLink>
+                                        </NavItem>
+                                        <NavItem role="presentation">
+                                            <NavLink type="button" onClick={() => setNav("customer-experience")} className={nav === "customer-experience" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>Customer Experience</NavLink>
+                                        </NavItem>
+                                        <NavItem role="presentation">
+                                            <NavLink type="button" onClick={() => setNav("artificial-intelligence")} className={nav === "artificial-intelligence" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>Artificial Intelligence</NavLink>
+                                        </NavItem>
+                                        <NavItem role="presentation">
+                                            <NavLink type="button" onClick={() => setNav("fintech")} className={nav === "fintech" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>FinTech</NavLink>
+                                        </NavItem>
+                                    </Nav>
+                                </div>
                             </div>
-                            <h2 className='my-4 text-primary fs-20' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>Topics</h2>
-                            <Nav pills className="nav-pills filter-btns gap-2" role="tablist">
-                                <NavItem role="presentation">
-                                    <NavLink type="button" onClick={() => setNav("All")} className={nav === "All" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>All</NavLink>
-                                </NavItem>
-                                <NavItem role="presentation">
-                                    <NavLink type="button" onClick={() => setNav("digital-business-models")} className={nav === "digital-business-models" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>Digital Business Models</NavLink>
-                                </NavItem>
-                                <NavItem role="presentation">
-                                    <NavLink type="button" onClick={() => setNav("distribution-models")} className={nav === "distribution-models" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>Distribution Models</NavLink>
-                                </NavItem>
-                                <NavItem role="presentation">
-                                    <NavLink type="button" onClick={() => setNav("customer-experience")} className={nav === "customer-experience" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>Customer Experience</NavLink>
-                                </NavItem>
-                                <NavItem role="presentation">
-                                    <NavLink type="button" onClick={() => setNav("artificial-intelligence")} className={nav === "artificial-intelligence" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>Artificial Intelligence</NavLink>
-                                </NavItem>
-                                <NavItem role="presentation">
-                                    <NavLink type="button" onClick={() => setNav("fintech")} className={nav === "fintech" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>Financial Technology</NavLink>
-                                </NavItem>
-                            </Nav>
                         </Col>
                     </Row>
                 </Container>
@@ -118,31 +122,30 @@ const SpeakersList = () => {
                                 </Col>
                             </Row>
                             <div className='w-100 mt-4 p-4 border border-primary rounded-3'>
-                                
                                {/*  <p className='text-primary fs-18 fw-semibold lhbase'>{currentData?.courses[0].title}</p>
                                 <p className='text-secondary fs-13'>{currentData?.courses[0].date}, {currentData?.courses[0].time}</p> */}
                                 <p className='text-white fs-13 bio-style'><span className='text-primary fw-semibold'>{currentData?.name}</span> {currentData?.bio}</p>
                             </div>
                             <p className='my-4 text-white fs-17 fw-bold'>Will be Speaking On</p>
-                            {currentData?.courses.map((item: any) => (
-                                <Card className="shadow-none border border-white rounded-3 mb-4 p-4 text-white">
-                                    <CardBody className='p-0'>
-                                        <div className='d-flex gap-2 align-items-center mb-3'><span className='text-white fs-14'>{item.date}</span> | <span className='text-white fs-14'>{item.time}</span></div>
-                                        <h6 className='text-primary fw-semibold fs-20 mb-2'>{item.title}</h6>
-                                        <div className='d-flex gap-2'>
-                                            {
-                                                item.tags !== null ?
-                                                (item?.tags.map((row: string) => (
-                                                    <p className="fw-light fs-11 text-capitalize border border-white rounded-2 py-1 px-2">{row.replace(/-/g, ' ')}</p>
-                                                ))
-                                                )
-                                                :
-                                                <p className="fw-light fs-11 text-capitalize border border-white rounded-2 py-1 px-2">General Session</p>
-                                            } 
-                                        </div>
-                                    </CardBody>
-                                </Card>
-                            ))}
+                                {currentData?.courses.map((item: any) => (
+                                    <Card className="shadow-none border border-white rounded-3 mb-4 p-4 text-white">
+                                        <CardBody className='p-0'>
+                                            <div className='d-flex gap-2 align-items-center mb-3'><span className='text-white fs-14'>{item.date}</span> | <span className='text-white fs-14'>{item.time}</span></div>
+                                            <h6 className='text-primary fw-semibold fs-20 mb-2'>{item.title}</h6>
+                                            <div className='d-flex gap-2'>
+                                                {
+                                                    item.tags !== null ?
+                                                    (item?.tags.map((row: string) => (
+                                                        <p className="fw-light fs-11 text-capitalize border border-white rounded-2 py-1 px-2">{row.replace(/-/g, ' ')}</p>
+                                                    ))
+                                                    )
+                                                    :
+                                                    <p className="fw-light fs-11 text-capitalize border border-white rounded-2 py-1 px-2">General Session</p>
+                                                } 
+                                            </div>
+                                        </CardBody>
+                                    </Card>
+                                ))}
                             {/*<h2 className='my-4 text-primary fs-20' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>Topics</h2>
                             <Nav pills className="nav-pills filter-btns gap-2" role="tablist">
                                 {
