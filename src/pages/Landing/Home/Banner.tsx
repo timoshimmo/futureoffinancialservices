@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Banner = () => {
     return (
         <React.Fragment>
-            <section className="section nft-hero" id="hero">
+            <section className="section ffs-banner">
             <div className="bg-overlay"></div>
             <Container>
                 <Row className="justify-content-center">
