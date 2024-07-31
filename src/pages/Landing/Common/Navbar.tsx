@@ -98,7 +98,7 @@ const Navbar = () => {
                     <Collapse
                         className="navbar-collapse"
                         id="navbarSupportedContent"
-                        isOpen={isOpenMenu}
+                        
                     >
                         <Scrollspy
                             offset={-18}
