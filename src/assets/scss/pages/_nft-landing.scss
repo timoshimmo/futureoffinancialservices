@@ -97,6 +97,14 @@
     }
 }
 
+@media (max-width: 767.98px) { 
+    .ffs-container {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+}
+
 #explorecard-list {
     .list-element {
         display: none;
@@ -277,13 +285,30 @@
     padding-bottom: 120px;
 }
 
+.btn-home-web {
+    display: block;
+}
 
+.btn-home-mobile {
+    display:none;
+}
+
+@media (max-width: 767.98px) { 
+    .btn-home-web {
+        display: none;
+    }
+
+    .btn-home-mobile {
+        display: block;
+    }
+
+}
 
 .parallax {
     background-attachment: fixed;
 }
 
-@media only screen and (max-device-width: 767.98px) {
+@media (max-width: 767.98px) { 
     .parallax {
       background-attachment: scroll;
     }
@@ -297,13 +322,13 @@
     width: 250px;
 }
 
-@media only screen and (max-device-width: 767.98px) {
+@media (max-width: 767.98px) { 
     .partners-img-style {
         width: 120px;
     }
   }
 
-  @media only screen and (max-device-width: 767.98px) {
+  @media (max-width: 767.98px) { 
     .partners-img-area {
         margin-top: 60px
     }

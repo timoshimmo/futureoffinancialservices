@@ -133,6 +133,17 @@ const Navbar = () => {
                                     </DropdownMenu>
                                 </Dropdown>
                             </li>
+                            <li className="nav-item px-4">
+                                <Dropdown isOpen={isOpenMenu} toggle={toggle}>
+                                    <DropdownMenu className='px-2'>
+                                        <DropdownItem href='/sponsors' className="fs-14 fw-light" style={{ color: '#E1E7EC' }}>Be a Sponsor</DropdownItem>
+                                        <DropdownItem divider style={{ borderColor: '#E1E7EC' }}/>
+                                        <DropdownItem href="/exhibitors" className="fs-14 fw-light" style={{ color: '#E1E7EC' }}>Be an Exhibitor</DropdownItem>
+                                        <DropdownItem divider style={{ borderColor: '#E1E7EC' }}/>
+                                        <DropdownItem href='/partners' className="fs-14 fw-light" style={{ color: '#E1E7EC' }}>Partner with us</DropdownItem>
+                                    </DropdownMenu>
+                                </Dropdown>
+                            </li>
                         </Scrollspy>
                         <div className='ms-4'>
                             <Link to="/register" className="btn btn-success btn-banner">Register </Link>
