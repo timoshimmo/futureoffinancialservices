@@ -24,12 +24,10 @@ const Banner = () => {
                            
                             <div className="w-100 btn-home-mobile">
                                 <div className="d-flex flex-column align-items-center gps-3">
-                                    <Link to="/register" className="btn btn-primary btn-banner">Register</Link>
-                                    <NavLink href="#speakers" className="mt-3 btn btn-outline-secondary border border-secondary border-2 btn-banner btn-banner-secondary">See More</NavLink>
+                                    <Link to="/register" className="w-100 btn btn-primary btn-banner">Register</Link>
+                                    <NavLink href="#speakers" className="w-100 mt-3 btn btn-outline-secondary border border-secondary border-2 btn-banner btn-banner-secondary">See More</NavLink>
                                 </div>
                             </div>
-                           
-                            
                         </div>
                     </Col>
                 </Row>
