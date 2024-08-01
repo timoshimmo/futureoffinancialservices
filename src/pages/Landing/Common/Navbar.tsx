@@ -98,7 +98,7 @@ const Navbar = () => {
                     <Collapse
                         className="navbar-collapse"
                         id="navbarSupportedContent"
-                        
+                        isOpen={isOpenMenu}
                     >
                         <Scrollspy
                             offset={-18}
@@ -121,7 +121,17 @@ const Navbar = () => {
                             <li className="nav-item px-4">
                                 <NavLink className="nav-link fs-14 text-white" to="/speakers" activeClassName="active" tag={RRNavLink}>Speakers</NavLink>
                             </li>
-                            <li className="nav-item px-4">
+                            <li className="nav-item px-4 mobile-navbar">
+                                <NavLink className="nav-link fs-14 text-white" to="/sponsors" activeClassName="active" tag={RRNavLink}>Be a Sponsor</NavLink>
+                            </li>
+                            <li className="nav-item px-4 mobile-navbar">
+                                <NavLink className="nav-link fs-14 text-white" to="/exhibitors" activeClassName="active" tag={RRNavLink}>Be an Exhibitor</NavLink>
+                            </li>
+                            <li className="nav-item px-4 mobile-navbar">
+                                <NavLink className="nav-link fs-14 text-white" to="/partners" activeClassName="active" tag={RRNavLink}>Partner with us</NavLink>
+                            </li>
+
+                            <li className="nav-item px-4 web-navbar">
                                 <Dropdown isOpen={openInvolved} toggle={toggleInvolved}>
                                     <DropdownToggle caret tag="button" className="nav-link fs-14">
                                         Get Involved
@@ -136,7 +146,7 @@ const Navbar = () => {
                                 </Dropdown>
                             </li>
                         </Scrollspy>
-                        <div className='ms-4'>
+                        <div className='ms-4 mobile-nav-button'>
                             <Link to="/register" className="btn btn-success btn-banner">Register </Link>
                         </div>       
                     </Collapse>

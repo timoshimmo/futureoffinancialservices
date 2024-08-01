@@ -117,12 +117,25 @@
     display: none;
 }
 
+.web-navbar {
+    display: block;
+}
+
 @media (max-width: 767.98px) { 
     .mobile-navbar {
         display: block;
     }
 
+    .web-navbar {
+        display: none;
+    }
+
+    .mobile-nav-button {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
 }
+
 
 @media (max-width: 767.98px) { 
     .partners-row-web {

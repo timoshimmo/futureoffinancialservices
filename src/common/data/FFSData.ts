@@ -158,9 +158,14 @@ const partnerImgsData = [
 
 const speakersData = [
     {
-        img: img_boye,
-        name: "Boye Ademola",
-        credentials: "Co-Founder, Bazara",
+        img: img_iyinoluwa,
+        name: "Iyinoluwa Aboyeji",
+        credentials: "Founding Partner, Future Africa",
+    },
+    {
+        img: img_sabrina,
+        name: "Sabrina Del Prete",
+        credentials: "Founder, KORE"
     },
     {
         img: img_abu_suleiman,
@@ -173,9 +178,9 @@ const speakersData = [
         credentials: "Open Futurist, Radiam",
     },
     {
-        img: img_iyinoluwa,
-        name: "Iyinoluwa Aboyeji",
-        credentials: "Founding Partner, Future Africa",
+        img: img_boye,
+        name: "Boye Ademola",
+        credentials: "Co-Founder, Bazara",
     },
     {
         img: img_bayo,
@@ -183,48 +188,57 @@ const speakersData = [
         credentials: "Founder/CEO, DSNai",
     },
     {
-        img: img_sabrina,
-        name: "Sabrina Del Prete",
-        credentials: "Founder, KORE"
+        img: img_abdullo,
+        name: "Abdullo Kurbanov",
+        credentials: "Co-Founder, Ayan Capital and Alif Bank"
     },
     {
         img: img_meaghan,
         name: "Meaghan Johnson",
         credentials: "Chief Strategy Officer, Bazara"
     },
-    {
-        img: img_abdullo,
-        name: "Abdullo Kurbanov",
-        credentials: "Co-Founder, Ayan Capital and Alif Bank"
-    }
 ]
 
 const speakersFullData = [
 
     {
-        id: 1,
-        img: img_boye,
-        pic: img_boye,
-        name: "Boye Ademola",
-        tags: ["distribution-models", "digital-business-models"],
-        credentials: "Co-Founder",
-        company: "Bazara",
+        id: 4,
+        img: img_iyinoluwa,
+        pic: img_iyinoluwa,
+        name: "Iyinoluwa Aboyeji",
+        tags: ["digital-business-models", "fintech"],
+        credentials: "Founding Partner",
+        company: "Future Africa",
         courses: [
             {
-                title: "The Impact of Quantum Computing on Fianancial Services", 
-                date: "Tuesday 14 October 2024",
-                time: "13:00 - 15:30",
+                title: "Technologies Powering Financial Services", 
+                date: "Wednesday 15 October 2024",
+                time: "13:00 - 13:45",
                 tags: ["fintech"],
             },
-            {
-                title: "The Impact of AI on Ditribution Models", 
-                date: "Tuesday 14 October 2024",
-                time: "16:00 - 17:00",
-                tags: ["distribution-models", "artificial-intelligence"],
-            }
             
         ],
-        bio: "is the Founder/CEO of Bazara Technologies Inc., a software engineering & systems integration firm carving a niche for taking on audacious innovation projects in the B2B space. \nBazara is reimagining and re-engineering core banking systems leveraging UI/UX, Microservices, APIs, AI & the cloud. \n\nPrior to Bazara, Boye was Partner and Head of Digital Transformation at KPMG in Africa, where he led digital strategy, AI implementation and cloud transformation projects for large corporates. \nHe served on KPMG’s Global Digital Transformation Leadership, Global Fintech Leadership and is an adviser to banks, Fintechs, FS players and regulators on the future of financial services."
+        bio: "is a renowned African entrepreneur and visionary. He co-founded Flutterwave, an integrated payments platform that processed over $2.5 billion in transactions and raised a $250 million Series D that valued the company at $3 billion in February 2022. \n\nIyin also co-founded Andela, which develops Africa's top software engineers and has raised significant capital. Currently, he is a Founding Partner at Future Africa, empowering visionary leaders to turn Africa's biggest challenges into business opportunities. His work focuses on technological innovation, sustainable development, and empowering African talent."
+
+    },
+    {
+        id: 6,
+        img: img_sabrina,
+        pic: img_sabrina,
+        name: "Sabrina Del Prete",
+        tags: ["artificial-intelligence"],
+        credentials: "Founder",
+        company: "KORE",
+        courses: [
+            {
+                title: "Insights From The Artificial Intelligence TL", 
+                date: "Wednesday 15 October 2024",
+                time: "11:00 - 11:55",
+                tags: ["artificial-intelligence"],
+            },
+            
+        ],
+        bio: "is a business transformation expert, digital strategist, and fintech entrepreneur with over 30 years of experience in international financial services. As the Founder and CEO of Kore Labs, she drives innovation by digitizing financial product data through a cloud-enabled platform. Sabrina has held senior roles at JP Morgan Chase, Barclays, and RBS Group, where she served as Chief Digital Transformation Officer. She sits on the Board of Governors of the London Foundation of Banking and Finance and has received multiple innovation awards, including the EISA Entrepreneur of the Year in 2023. Sabrina holds a Master's in Finance from London Business School and a degree in Business and Economics from the University of Turin. "
     },
     {
         id: 2,
@@ -266,24 +280,29 @@ const speakersFullData = [
         bio: "is an influential figure in open finance and open banking, serving as an Open Futurist at Raidiam. \nShe has authored modules and tutored courses at Cambridge University's Open Banking and Open Finance program. \n\nAs curator of open-conversations.org, she provides insights into global open data trends. Marie is also an expert contributor to the UK's Smart Data Council on Trust, Compliance, and Consumer Protection. With over 20 years of experience, she has been a driving force behind key data sharing ecosystems globally, including the UK's open banking trust framework and Brazil's open finance infrastructure."
     },
     {
-        id: 4,
-        img: img_iyinoluwa,
-        pic: img_iyinoluwa,
-        name: "Iyinoluwa Aboyeji",
-        tags: ["digital-business-models", "fintech"],
-        credentials: "Founding Partner",
-        company: "Future Africa",
+        id: 1,
+        img: img_boye,
+        pic: img_boye,
+        name: "Boye Ademola",
+        tags: ["distribution-models", "digital-business-models"],
+        credentials: "Co-Founder",
+        company: "Bazara",
         courses: [
             {
-                title: "Technologies Powering Financial Services", 
-                date: "Wednesday 15 October 2024",
-                time: "13:00 - 13:45",
+                title: "The Impact of Quantum Computing on Fianancial Services", 
+                date: "Tuesday 14 October 2024",
+                time: "13:00 - 15:30",
                 tags: ["fintech"],
             },
+            {
+                title: "The Impact of AI on Ditribution Models", 
+                date: "Tuesday 14 October 2024",
+                time: "16:00 - 17:00",
+                tags: ["distribution-models", "artificial-intelligence"],
+            }
             
         ],
-        bio: "is a renowned African entrepreneur and visionary. He co-founded Flutterwave, an integrated payments platform that processed over $2.5 billion in transactions and raised a $250 million Series D that valued the company at $3 billion in February 2022. \n\nIyin also co-founded Andela, which develops Africa's top software engineers and has raised significant capital. Currently, he is a Founding Partner at Future Africa, empowering visionary leaders to turn Africa's biggest challenges into business opportunities. His work focuses on technological innovation, sustainable development, and empowering African talent."
-
+        bio: "is the Founder/CEO of Bazara Technologies Inc., a software engineering & systems integration firm carving a niche for taking on audacious innovation projects in the B2B space. \nBazara is reimagining and re-engineering core banking systems leveraging UI/UX, Microservices, APIs, AI & the cloud. \n\nPrior to Bazara, Boye was Partner and Head of Digital Transformation at KPMG in Africa, where he led digital strategy, AI implementation and cloud transformation projects for large corporates. \nHe served on KPMG’s Global Digital Transformation Leadership, Global Fintech Leadership and is an adviser to banks, Fintechs, FS players and regulators on the future of financial services."
     },
     {
         id: 5,
@@ -305,13 +324,13 @@ const speakersFullData = [
         bio: "is an award-winning executive with over 22 years of experience in AI, Data Science, and Digital Innovation across 30 African markets. \n\nHe won the Bill and Melinda Gates Global Grand Challenge for AI-enabled financial tools and led five UNESCO/IRCAI Top 100 AI products. A top-ranking data scientist and prolific researcher, he has advanced education from prestigious institutions and a PhD from City, University of London. Bayo also founded Data Scientist Network, training over 500,000 students and authored Africa's first AI book for kids."
     },
     {
-        id: 6,
-        img: img_sabrina,
-        pic: img_sabrina,
-        name: "Sabrina Del Prete",
+        id: 8,
+        img: img_abdullo,
+        pic: img_abdullo,
+        name: "Abdullo Kurbanov ",
         tags: ["artificial-intelligence"],
-        credentials: "Founder",
-        company: "KORE",
+        credentials: "Co-Founder",
+        company: "Ayan Capital and Alif Bank",
         courses: [
             {
                 title: "Insights From The Artificial Intelligence TL", 
@@ -321,7 +340,7 @@ const speakersFullData = [
             },
             
         ],
-        bio: "is a business transformation expert, digital strategist, and fintech entrepreneur with over 30 years of experience in international financial services. As the Founder and CEO of Kore Labs, she drives innovation by digitizing financial product data through a cloud-enabled platform. Sabrina has held senior roles at JP Morgan Chase, Barclays, and RBS Group, where she served as Chief Digital Transformation Officer. She sits on the Board of Governors of the London Foundation of Banking and Finance and has received multiple innovation awards, including the EISA Entrepreneur of the Year in 2023. Sabrina holds a Master's in Finance from London Business School and a degree in Business and Economics from the University of Turin. "
+        bio: "is the co-founder of Ayan and Alif Bank, focusing on Islamic finance, technology, education, and youth. With a team of over 1100, Alif Bank leads in POS-financing, mobile payments, Visa payments, and e-commerce in Tajikistan and Uzbekistan, serving 2 million clients. Yanki has driven the development of in-house banking technologies and launched Alif Academy, teaching over 2000 students. He is also the co-founder and CEO of Ayan Capital, providing vehicle finance in London. Yanki holds an MS in Finance from LSE and has studied fintech and blockchain technologies at Harvard and Wharton."
     },
     {
         id: 7,
@@ -341,25 +360,6 @@ const speakersFullData = [
             
         ],
         bio: "is the Chief Strategy Officer at Bazara Tech Inc and an independent consultant to banks, fintechs, and regulators on digital transformation and customer experience. With over 10 years in digital banking and fintech, she founded Digital Magss, advising on product development and strategic partnerships. Meaghan is a Senior Lecturer at CFTE, a Subject Matter Expert at Manchester Business School, and a Fintech Contributor at Forbes. Her extensive experience includes roles at 11:FS, Mapa Research, and advisory positions at various fintech startups."
-    },
-    {
-        id: 8,
-        img: img_abdullo,
-        pic: img_abdullo,
-        name: "Abdullo Kurbanov ",
-        tags: ["artificial-intelligence"],
-        credentials: "Co-Founder",
-        company: "Ayan Capital and Alif Bank",
-        courses: [
-            {
-                title: "Insights From The Artificial Intelligence TL", 
-                date: "Wednesday 15 October 2024",
-                time: "11:00 - 11:55",
-                tags: ["artificial-intelligence"],
-            },
-            
-        ],
-        bio: "is the co-founder of Ayan and Alif Bank, focusing on Islamic finance, technology, education, and youth. With a team of over 1100, Alif Bank leads in POS-financing, mobile payments, Visa payments, and e-commerce in Tajikistan and Uzbekistan, serving 2 million clients. Yanki has driven the development of in-house banking technologies and launched Alif Academy, teaching over 2000 students. He is also the co-founder and CEO of Ayan Capital, providing vehicle finance in London. Yanki holds an MS in Finance from LSE and has studied fintech and blockchain technologies at Harvard and Wharton."
     },
     
 ]
