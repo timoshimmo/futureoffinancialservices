@@ -25,7 +25,7 @@ const CTA = () => {
                 </Container>
             </section>
 
-            <section className="p-4 position-relative mobile-cta-home">
+            <section className="p-2 position-relative mobile-cta-home">
                 <div className="bg-overlay bg-overlay-pattern opacity-50"></div>
                 <Container>
                     <Row className="justify-content-center align-items-center border rounded-4 mobile-inner-cta">
@@ -36,8 +36,11 @@ const CTA = () => {
                             </div>
                             <div className="mt-4 hstack p-2 justify-content-between border border-1 rounded-5">
                                 <input type="email" placeholder="example@email.com" className="border-0 fs-12 px-3 w-100"  style={{ color: '#141413', backgroundColor: 'transparent' }} />
-								<input type="button" className="btn btn-primary border border-primary rounded-5 py-2 fs-13" value="Subscribe" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}/>
                             </div>
+                            <div className="mt-3 d-flex justify-content-center">
+                                <input type="button" className="btn btn-primary border border-primary rounded-5 py-2 fs-13" value="Subscribe" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}/>
+                            </div>
+                            
                         </Col>
                     </Row>
                 </Container>
