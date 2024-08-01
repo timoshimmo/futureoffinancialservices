@@ -123,14 +123,14 @@ const Speakers = () => {
                             pagination={{
                                 clickable: true,
                             }}
-                            slidesPerView={1.5}
+                            slidesPerView={1}
                             navigation={false}
                             modules={[Autoplay, Pagination, Navigation]}
                         >
                             {speakersData.map((item, key) => (
-                                <SwiperSlide className='mb-4'>
+                                <SwiperSlide className='mb-5'>
                                     <img src={item.img} alt="" className="avatar-speaker"/>
-                                    <div className='w-100 px-2' >
+                                    <div className='w-100 px-2 mt-3' >
                                         <h5 className="text-white text-center fs-14 mb-0" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>{item.name}</h5>
                                         <p className="text-white text-center fs-11 fw-light">{item.credentials}</p>
                                     </div>
