@@ -60,7 +60,7 @@ const Connect = () => {
                     <Row className="mobile-one-summit justify-content-center position-relative">
                         <Col lg={12} className='summit-padding mb-3'>
                             <div className="w-100">
-                                <h2 className="mb-4 fw-semibold lh-base text-secondary text-center" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>One Summit, <br /><span className='text-primary'>Unlimited Possibilities</span></h2>
+                                <h2 className="mb-4 fw-semibold lh-base text-secondary" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>One Summit, <br /><span className='text-primary'>Unlimited Possibilities</span></h2>
                             </div>
                         </Col>
                         <Col sm={12}>
