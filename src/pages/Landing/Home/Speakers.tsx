@@ -89,55 +89,11 @@ const Speakers = () => {
                     </Col>
                 </Row>
 
-                {/*<Row className="justify-content-center" style={{ height: '400px' }}>
-                    <Col lg={12}>
-                        <Swiper
-                            spaceBetween={30}
-                            centeredSlides={true}
-                            autoplay={{
-                            delay: 25000,
-                            disableOnInteraction: false,
-                            }}
-                            pagination={{
-                            clickable: true,
-                            }}
-                            navigation={true}
-                            modules={[Autoplay, Pagination, Navigation]}
-                            className="mySwiper"
-                        >
-                            <SwiperSlide>Slide 1</SwiperSlide>
-                            <SwiperSlide>Slide 2</SwiperSlide>
-                            <SwiperSlide>Slide 3</SwiperSlide>
-                            <SwiperSlide>Slide 4</SwiperSlide>
-                            <SwiperSlide>Slide 5</SwiperSlide>
-                            <SwiperSlide>Slide 6</SwiperSlide>
-                            <SwiperSlide>Slide 7</SwiperSlide>
-                            <SwiperSlide>Slide 8</SwiperSlide>
-                            <SwiperSlide>Slide 9</SwiperSlide>
-                        </Swiper>
-
-                    </Col>
-                </Row>
-
-                  <Row className='web-featured-speakers'>
-                    <Col>
-                        <div ref={sliderRef} className="keen-slider">
-                            {speakersData.map((item, key) => (
-                                <div className="keen-slider__slide">
-                                    <img src={item.img} alt="" className="avatar-speaker"/>
-                                    <div className='w-100 mt-3 px-2' >
-                                        <h5 className="text-white fs-14 mb-0" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>{item.name}</h5>
-                                        <p className="text-white fs-11 fw-light">{item.credentials}</p>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </Col>
-                </Row>
-*/}
                 <Row className='web-featured-speakers'>
                     <Marquee
-                        pauseOnClick={true}>
+                        pauseOnClick={true}
+                        pauseOnHover={true}
+                        >
                             {speakersData.map((item, key) => (
                                 <Col key={key} lg={3}>
                                     <Card className="shadow-none rounded-0 speakers-card mx-3 text-white" style={{ cursor: "pointer" }}>
@@ -154,7 +110,40 @@ const Speakers = () => {
                             ))}   
                     </Marquee>                           
                 </Row>
-                <Row className='mobile-featured-speakers mt-3'>
+
+                <Row className="mobile-featured-speakers justify-content-center">
+                    <Col lg={12}>
+                        <Swiper
+                            spaceBetween={30}
+                            centeredSlides={true}
+                            autoplay={{
+                                delay: 5000,
+                                disableOnInteraction: false,
+                            }}
+                            pagination={{
+                                clickable: true,
+                            }}
+                            slidesPerView={1.5}
+                            navigation={false}
+                            modules={[Autoplay, Pagination, Navigation]}
+                        >
+                            {speakersData.map((item, key) => (
+                                <SwiperSlide className='mb-4'>
+                                    <img src={item.img} alt="" className="avatar-speaker"/>
+                                    <div className='w-100 px-2' >
+                                        <h5 className="text-white text-center fs-14 mb-0" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>{item.name}</h5>
+                                        <p className="text-white text-center fs-11 fw-light">{item.credentials}</p>
+                                    </div>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+
+                    </Col>
+                </Row>
+
+{/*
+
+<Row className='mobile-featured-speakers mt-3'>
                     {speakersData.map((item, key) => (
                         <Col key={key} sm={12} className='px-2'>
                             <Card className="shadow-none rounded-0 speakers-card text-white" style={{ cursor: "pointer" }}>
@@ -169,6 +158,8 @@ const Speakers = () => {
                         </Col>
                     ))} 
                 </Row>
+                            */}
+                
             </Container>
         </section>
         </React.Fragment>
