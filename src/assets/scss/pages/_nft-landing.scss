@@ -839,6 +839,14 @@
     
 }
 
+@media (max-width: 767.98px) { 
+    .agenda-sticky-top {
+        top: 40px;
+        background-color: '#141413';
+        
+    }
+}
+
 .speakers-sticky-side {
     top: 90px;
     margin-top: 34px;
@@ -862,6 +870,15 @@
 
 .agenda-sticky-side {
     top: 70px;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+@media (max-width: 767.98px) { 
+    .agenda-sticky-side {
+        padding-top: 20px;
+    }
+
 }
 
 .list-row {

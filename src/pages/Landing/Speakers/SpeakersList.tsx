@@ -51,7 +51,7 @@ const SpeakersList = () => {
                 <Container>
                     <Row>
                         <Col lg={7} sm={12}>
-                            <div className='w-100 sticky-top py-3' style={{ backgroundColor: '#141413', top: '60px' }}></div>
+                            <div className='w-100 sticky-top py-3 speakers-web-row' style={{ backgroundColor: '#141413', top: '60px' }}></div>
                             <Row className='speakers-web-row'>
                                 {speakersFullData.filter(data => data.tags.includes(nav) || nav === 'All').map((item) => (
                                     <Col key={item.id} lg={6} sm={12}>

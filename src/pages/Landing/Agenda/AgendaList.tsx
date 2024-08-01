@@ -49,7 +49,7 @@ const AgendaList = () => {
                     
                     <Row className='justify-content-between'>
                         <Col lg={4} sm={12}>
-                            <div className='sticky-top py-5 agenda-sticky-side'>
+                            <div className='sticky-top agenda-sticky-side'>
                                 <div className='border p-4 border-white rounded-3 mb-4'>
                                     <div className='w-100 hstack py-2 gap-2 search-box'>
                                         <img src={ic_search} height={15} />
