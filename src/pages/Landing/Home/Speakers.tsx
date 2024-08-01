@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Container, Row, Col, Card, CardBody } from 'reactstrap';
 import Marquee from "react-fast-marquee";
 import 'keen-slider/keen-slider.min.css';
-import { useKeenSlider, KeenSliderPlugin } from 'keen-slider/react';
+import { useKeenSlider } from 'keen-slider/react';
 import { speakersData } from '../../../common/data';
 
 // Import Swiper React components
@@ -103,14 +103,12 @@ const Speakers = () => {
                                                 <h5 className="text-white fs-14 mb-0" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>{item.name}</h5>
                                                 <p className="text-white fs-11 fw-light">{item.credentials}</p>
                                             </div>
-                                            
                                         </CardBody>
                                     </Card>
                                 </Col>
                             ))}   
                     </Marquee>                           
                 </Row>
-
                 <Row className="mobile-featured-speakers justify-content-center">
                     <Col lg={12}>
                         <Swiper
@@ -141,8 +139,7 @@ const Speakers = () => {
                 </Row>
 
 {/*
-
-<Row className='mobile-featured-speakers mt-3'>
+        <Row className='mobile-featured-speakers mt-3'>
                     {speakersData.map((item, key) => (
                         <Col key={key} sm={12} className='px-2'>
                             <Card className="shadow-none rounded-0 speakers-card text-white" style={{ cursor: "pointer" }}>
@@ -157,7 +154,7 @@ const Speakers = () => {
                         </Col>
                     ))} 
                 </Row>
-                            */}
+*/}
                 
             </Container>
         </section>

@@ -131,8 +131,10 @@
     }
 
     .mobile-nav-button {
-        margin-top: 15px;
+        margin-top: 20px;
         margin-bottom: 15px;
+        display: flex;
+        justify-content: end;
     }
 }
 
