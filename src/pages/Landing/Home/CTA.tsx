@@ -25,7 +25,7 @@ const CTA = () => {
                 </Container>
             </section>
 
-            <section className="p-2 position-relative mobile-cta-home">
+            <section className="p-3 position-relative mobile-cta-home">
                 <div className="bg-overlay bg-overlay-pattern opacity-50"></div>
                 <Container>
                     <Row className="justify-content-center align-items-center border rounded-4 mobile-inner-cta">
