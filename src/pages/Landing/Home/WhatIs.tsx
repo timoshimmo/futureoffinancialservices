@@ -100,7 +100,7 @@ const WhatIs = () => {
 
             <section className="section body-bg-dark what-is-container">
                 <Container>
-                    <Row className="align-items-end gy-4">
+                      <Row className="what-is-web-body align-items-end gy-4">
                         <Col lg={4} sm={12} className="mx-auto p-0 what-left-body">
                             <div className='w-100'>
                                 <p className="text-white fw-bold h3 bg-primary py-3 text-center mb-0 what-left-title">What is FFS?</p>
@@ -129,14 +129,29 @@ const WhatIs = () => {
                         </Col>
                         <Col lg={8} sm={12} className='what-right-body'>
                             <div className="px-3 py-4">
-                                <p className="text-primary fw-bold h2 pt-3 pb-4 text-center mb-0 what-left-title-mb">What is FFS?</p>
+                                {/*<p className="text-primary fw-bold h2 pt-3 pb-4 text-center mb-0 what-left-title-mb">What is FFS?</p>*/}
                                 <p className="mb-5 text-white fs-15">A premier event that will bring together global leaders, innovators, and visionaries from the financial services industry to explore and shape its future. With a variety of insightful sessions, roundtables, workshops, and exhibitions, participants will engage in an in-depth exploration of the future of financial services and the technological advancements that will drive the next decade.</p>
                                 <p className="mb-3 text-white fs-15">Follow the conversation on social media:</p>
                                 <div className="hstack gap-4 py-2 align-items-center">
-                                    <Link to={'/'}><img src={ic_youtube} height={25}/></Link>
                                     <Link to={'/'}><img src={ic_linkedin} height={25}/></Link>
                                     <Link to={'/'}><img src={ic_x} height={25}/></Link>
-                                    <Link to={'/'}><img src={ic_instagram} height={25}/></Link>
+                                    <Link to={'/'}><img src={ic_youtube} height={25}/></Link>
+                                </div>
+                            </div>
+                        </Col>
+                    </Row>
+                    <Row className="mobile-top-body align-items-center gy-4">
+                        <Col lg={8} sm={12}>
+                            <div className='w-100'>
+                                <p className="text-white fw-bold h3 bg-primary py-3 text-center mb-0 what-left-title">What is FFS?</p>
+                            </div>
+                            <div className="px-3 py-4">
+                                <p className="mb-5 text-white fs-15">A premier event that will bring together global leaders, innovators, and visionaries from the financial services industry to explore and shape its future. With a variety of insightful sessions, roundtables, workshops, and exhibitions, participants will engage in an in-depth exploration of the future of financial services and the technological advancements that will drive the next decade.</p>
+                                <p className="mb-3 text-white fs-15">Follow the conversation on social media:</p>
+                                <div className="hstack gap-4 py-2 align-items-center">
+                                    <Link to={'/'}><img src={ic_linkedin} height={25}/></Link>
+                                    <Link to={'/'}><img src={ic_x} height={25}/></Link>
+                                    <Link to={'/'}><img src={ic_youtube} height={25}/></Link>
                                 </div>
                             </div>
                         </Col>
