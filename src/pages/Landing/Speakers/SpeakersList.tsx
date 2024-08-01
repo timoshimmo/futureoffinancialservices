@@ -4,6 +4,7 @@ import { Container,
     Col, 
     Card, 
     CardBody, 
+    Button,
     Nav, 
     NavItem, 
     NavLink,
@@ -51,7 +52,7 @@ const SpeakersList = () => {
                     <Row>
                         <Col lg={7} sm={12}>
                             <div className='w-100 sticky-top py-3' style={{ backgroundColor: '#141413', top: '60px' }}></div>
-                            <Row>
+                            <Row className='speakers-web-row'>
                                 {speakersFullData.filter(data => data.tags.includes(nav) || nav === 'All').map((item) => (
                                     <Col key={item.id} lg={6} sm={12}>
                                         <Card onClick={()=>passData(item)} className="shadow-none rounded-0 speakers-card mb-2 text-white" style={{ cursor: "pointer" }}>
@@ -66,9 +67,24 @@ const SpeakersList = () => {
                                     </Col>
                                 ))}
                             </Row>
+                            <Row className='speakers-mobile-row'>
+                                {speakersFullData.filter(data => data.tags.includes(nav) || nav === 'All').map((item) => (
+                                    <Col key={item.id} lg={6} sm={12}>
+                                        <Card onClick={()=>passData(item)} className="shadow-none rounded-0 speakers-card mb-5 text-white" style={{ cursor: "pointer" }}>
+                                            <CardBody className='p-0'>
+                                                <img src={item.img} alt="" className="avatar-speaker"/>
+                                                <div className='w-100 mt-3'>
+                                                    <h5 className="text-white fs-14" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>{item.name}</h5>
+                                                    <p className="text-white fs-11 fw-light">{item.credentials}, {item.company}</p>
+                                                </div>
+                                            </CardBody>
+                                        </Card>
+                                    </Col>
+                                ))}
+                            </Row>
                         </Col>
                         <Col lg={5} sm={12}>
-                            <div className='sticky-top speakers-sticky-side' style={{ marginTop: '34px' }}>
+                            <div className='sticky-top speakers-sticky-side'>
                                 <div className='border p-4 border-white rounded-3 mb-4'>
                                     <div className="w-100 hstack py-2 gap-2 search-box">
                                         <img src={ic_search} height={15} />
@@ -105,8 +121,10 @@ const SpeakersList = () => {
                 {/* profile-modal profile-modal */}
                 <Offcanvas isOpen={open} toggle={toggleLeftCanvas} direction="end" className="offcanvas-end border-0 canvas-style">
                     <OffcanvasBody className="p-0 canvas-body">
-                       
-                       <div className='w-100 p-4'>
+                       <div className='w-100 speakers-pop-up-body'>
+                            <div className='d-flex justify-content-end pt-2 pb-4'>
+                                <Button onClick={()=>setOpen(false)} className='bg-transparent border-0 p-0'><i className="mdi mdi-close display-6"></i></Button>
+                            </div>
                             <Row>
                                 <Col lg={5}>
                                     <img src={currentData?.pic} className='w-100 border-0 rounded-3'/>
@@ -129,7 +147,11 @@ const SpeakersList = () => {
                                 {currentData?.courses.map((item: any) => (
                                     <Card className="shadow-none border border-white rounded-3 mb-4 p-4 text-white">
                                         <CardBody className='p-0'>
-                                            <div className='d-flex gap-2 align-items-center mb-3'><span className='text-white fs-14'>{item.date}</span> | <span className='text-white fs-14'>{item.time}</span></div>
+                                            <div className='gap-2 align-items-center mb-3 speakers-agenda-bottom-web'><span className='text-white fs-14'>{item.date}</span> | <span className='text-white fs-14'>{item.time}</span></div>
+                                            <div className='mb-3 speakers-agenda-bottom-mobile'>
+                                                <p className='text-white fs-14 mb-1'>{item.date}</p>
+                                                <p className='text-white fs-14'>{item.time}</p>
+                                            </div>
                                             <h6 className='text-primary fw-semibold fs-20 mb-2'>{item.title}</h6>
                                             <div className='d-flex gap-2'>
                                                 {
