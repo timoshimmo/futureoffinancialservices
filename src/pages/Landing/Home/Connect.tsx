@@ -7,13 +7,11 @@ import summit1 from "../../../assets/images/home/img_one_summit1.png";
 
 // Import Swiper styles
 import 'swiper/css';
-import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import 'swiper/css/autoplay';
 import 'swiper/css/scrollbar';
 
 // import required modules
-import { Scrollbar, Pagination, Navigation } from 'swiper/modules';
+import { Scrollbar, Navigation } from 'swiper/modules';
 
 const Connect = () => {
 
@@ -60,7 +58,11 @@ const Connect = () => {
                         </Col>
                     </Row>
                     <Row className="mobile-one-summit justify-content-center position-relative">
-                        <div className='swiper-scrollbar position-relative bg-white mb-4' style={{ height: '10px' }}></div>
+                        <Col lg={12} className='summit-padding mb-3'>
+                            <div className="w-100">
+                                <h2 className="mb-4 fw-semibold lh-base text-secondary text-center" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>One Summit, <br /><span className='text-primary'>Unlimited Possibilities</span></h2>
+                            </div>
+                        </Col>
                         <Col sm={12}>
                             <Swiper
                                 spaceBetween={20}
@@ -78,12 +80,12 @@ const Connect = () => {
                                   }}
                                 slidesPerView={1}
                                 navigation={false}
-                                modules={[Pagination, Navigation, Scrollbar]}
+                                modules={[Navigation, Scrollbar]}
                                 className="mySwiper"
                                 onSlideChange={(swiper) => setMobileImg(connectData[swiper.realIndex].img) /*console.log(connectData[swiper.realIndex].img)*/}
                             >
                                 {connectData.map((item, key) => (
-                                    <SwiperSlide key={key} className='mb-5'>
+                                    <SwiperSlide key={key} className='mb-2'>
                                          {({ isActive }) => (
                                             <>
                                                 <div className="shadow-none py-2">
@@ -99,6 +101,7 @@ const Connect = () => {
                                 ))}
                             </Swiper>
                         </Col>
+                        <div className='swiper-scrollbar position-relative bg-white mb-5' style={{ height: '10px' }}></div>
                         <Col lg={5} sm={12} className="mx-auto">
                             <div className='sponsor-left'>
                                 <img src={mobileImg} alt="" className="img-fluid mx-auto border border-0 rounded-4" />
