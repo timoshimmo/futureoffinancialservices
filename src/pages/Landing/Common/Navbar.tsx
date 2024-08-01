@@ -85,7 +85,7 @@ const Navbar = () => {
         <React.Fragment>
             <nav className={"navbar navbar-expand-lg navbar-landing fixed-top " + navClass} id="navbar">
                 <Container>
-                    <Link className="navbar-brand" to="/home">
+                    <Link className="navbar-brand" to="/">
                         <img src={ffsLogoDark} className="card-logo card-logo-dark" alt="logo dark" height="40" />
                         <img src={ffsLogoLight1} className="card-logo card-logo-light" alt="logo light" height="40" />
                     </Link>
@@ -113,7 +113,7 @@ const Navbar = () => {
                             id="navbar-example"
                         >
                             <li className="nav-item px-4 web-navbar">
-                                <NavLink className="nav-link fs-14 text-white" to="/home" activeClassName="active" tag={RRNavLink}>Home</NavLink>
+                                <NavLink className="nav-link fs-14 text-white" to="/" activeClassName="active" tag={RRNavLink}>Home</NavLink>
                             </li>
                             <li className="nav-item px-4 web-navbar">
                                 <NavLink className="nav-link fs-14 text-white" to="/agenda" activeClassName="active" tag={RRNavLink}>Agenda</NavLink>
