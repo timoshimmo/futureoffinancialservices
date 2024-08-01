@@ -8,9 +8,7 @@ import { Container,
     NavItem, 
     NavLink,
     Offcanvas,
-    OffcanvasHeader,
-    OffcanvasBody,
-    Collapse } from 'reactstrap';
+    OffcanvasBody } from 'reactstrap';
 
 import { Link } from 'react-router-dom';
 import { speakersFullData } from '../../../common/data';
@@ -54,7 +52,6 @@ const SpeakersList = () => {
                         <Col lg={7} sm={12}>
                             <div className='w-100 sticky-top py-3' style={{ backgroundColor: '#141413', top: '60px' }}></div>
                             <Row>
-                                
                                 {speakersFullData.filter(data => data.tags.includes(nav) || nav === 'All').map((item) => (
                                     <Col key={item.id} lg={6} sm={12}>
                                         <Card onClick={()=>passData(item)} className="shadow-none rounded-0 speakers-card mb-2 text-white" style={{ cursor: "pointer" }}>

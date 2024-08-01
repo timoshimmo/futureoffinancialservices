@@ -136,15 +136,16 @@ const Navbar = () => {
                             {/* Mobile Navbar  */}
                             <li className="mobile-navbar">
                                 <UncontrolledDropdown inNavbar nav>
-                                    <DropdownToggle caret nav className="nav-link fs-14 d-flex justify-content-end">
+                                    <DropdownToggle caret nav className="nav-link nav-item-mobile fs-14 d-flex justify-content-end">
                                         Get Involved
                                     </DropdownToggle>
                                     <DropdownMenu right>
-                                    <DropdownItem href='/sponsors' className="fs-14 fw-light" style={{ color: '#E1E7EC' }}>Be a Sponsor</DropdownItem>
+                                        <DropdownItem href='/sponsors' className="fs-14 fw-light text-end" style={{ color: '#E1E7EC' }}>Be a Sponsor</DropdownItem>
                                         <DropdownItem divider style={{ borderColor: '#E1E7EC' }}/>
-                                        <DropdownItem href="/exhibitors" className="fs-14 fw-light" style={{ color: '#E1E7EC' }}>Be an Exhibitor</DropdownItem>
+                                        <DropdownItem href="/exhibitors" className="fs-14 fw-light text-end" style={{ color: '#E1E7EC' }}>Be an Exhibitor</DropdownItem>
                                         <DropdownItem divider style={{ borderColor: '#E1E7EC' }}/>
-                                        <DropdownItem href='/partners' className="fs-14 fw-light" style={{ color: '#E1E7EC' }}>Partner with us</DropdownItem>
+                                        <DropdownItem href='/partners' className="fs-14 fw-light text-end" style={{ color: '#E1E7EC' }}>Partner with us</DropdownItem>
+                                        <DropdownItem divider style={{ borderColor: '#E1E7EC' }}/>
                                     </DropdownMenu>
                                 </UncontrolledDropdown>
                             </li>

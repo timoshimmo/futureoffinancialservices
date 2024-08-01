@@ -311,6 +311,14 @@
     border-bottom: 1px solid #33CC99;
 }
 
+.nav-item-mobile {
+    border-bottom: 1px solid transparent;
+}
+
+.navbar li.mobile-navbar li.nav-item:hover {
+    border-bottom: 1px solid transparent;
+}
+
 .what-is-container {
     background-image: url('../../images/home/ffs_bg_pattern1.png');
     background-size: cover;
