@@ -78,8 +78,7 @@ const Speakers = () => {
                         </div>
                     </Col>
                 </Row>
-
-                <Row className="justify-content-center speakers-mobile mt-5">
+                <Row className="justify-content-center speakers-mobile mt-4">
                     <Col sm={12} xs={12}>
                         <div className="text-center mb-5">
                             <h2 className="mb-2 h1 fw-semibold lh-base text-primary" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>Featured Speakers</h2>
@@ -88,7 +87,6 @@ const Speakers = () => {
                         </div>
                     </Col>
                 </Row>
-
                 <Row className='web-featured-speakers'>
                     <Marquee
                         pauseOnClick={true}
@@ -113,6 +111,7 @@ const Speakers = () => {
                     <Col lg={12}>
                         <Swiper
                             spaceBetween={30}
+                            loop={true}
                             centeredSlides={true}
                             autoplay={{
                                 delay: 5000,

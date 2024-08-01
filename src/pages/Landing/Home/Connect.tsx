@@ -1,21 +1,35 @@
-import React, { useState } from 'react';
+import React, { useState, useRef  } from 'react';
 import { Container, Row, Col, Card, CardBody } from 'reactstrap';
 //import { Link } from 'react-router-dom';
 import { connectData } from '../../../common/data';
-//import arrow_link from "../../../assets/images/home/img_link_arrow.png";
-//import home_submit_right from "../../../assets/images/home/img_home_summit_right.png";
+import { Swiper, SwiperSlide } from 'swiper/react';
 import summit1 from "../../../assets/images/home/img_one_summit1.png";
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import 'swiper/css/autoplay';
+
+// import required modules
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 const Connect = () => {
 
     const [imgName, setImageName] = useState(summit1);
     const [indexVal, setIndexVal] = useState(0);
+    const swiperRef = useRef<HTMLInputElement | null>(null);
+
+
+    swiperRef.current?.addEventListener('swiperslidechange', (e) => {
+        //console.log(e.detail);
+    });
     
     return (
         <React.Fragment>
-            <section className="submit-section body-bg-dark px-4" style={{ backgroundColor: "#141413" }}>
+            <section className="submit-section body-bg-dark one-summit-section" style={{ backgroundColor: "#141413" }}>
                 <Container>
-                    {/* summit-padding */}
+                    {/* summit-padding web-one-summit */}
                     <Row className="gy-4">
                         <Col lg={12} className='summit-padding'>
                             <div className="w-100">
@@ -42,6 +56,48 @@ const Connect = () => {
                             </div>
                         </Col>
                     </Row>
+                    {/*<Row className="mobile-one-summit justify-content-center">
+                        <Col sm={12}>
+                            <div className="w-100 mb-4 d-flex justify-content-center">
+                                <span className='swiper-pagination'></span>
+                                <span className='swiper-pagination'></span>
+                                <span className='swiper-pagination'></span>
+                                <span className='swiper-pagination'></span>
+                            </div>
+                            <Swiper
+                                spaceBetween={20}
+                                centeredSlides={true}
+                                pagination={{
+                                    el: '.swiper-pagination',
+                                    clickable: true,
+                                    type: "bullets",
+                                    bulletClass: "bg-amber-400",
+                                    bulletActiveClass: "bg-primary"
+                                }}
+                                slidesPerView={1.5}
+                                navigation={false}
+                                modules={[Pagination, Navigation]}
+                                className="my-swiper"
+                               
+                            >
+                                {connectData.map((item, key) => (
+                                    <SwiperSlide key={key} className='mb-5'>
+                                         {({ isActive }) => (
+                                            <>
+                                                <div className="shadow-none py-2">
+                                                    <div className='w-100 justify-content-between align-items-start'>
+                                                        <h5 className={isActive ? 'text-primary fs-18 mb-0' : 'text-white fs-18 mb-0'} style={{ fontFamily: 'Georgia' }}>{item.title}</h5>
+                                                    </div>                       
+                                                    <p className="fs-12 text-white fw-light mb-0">{item.textContent}</p>
+                                                </div>
+                                            </>
+                                        )}
+                                        
+                                    </SwiperSlide>
+                                ))}
+                            </Swiper>
+                        </Col>
+                    </Row> */}
                 </Container>
             </section>
         </React.Fragment>

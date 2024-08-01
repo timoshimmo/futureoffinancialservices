@@ -850,3 +850,34 @@
     border-left: 1px solid #33CC99;
 }
 
+.web-one-summit {
+    display: flex;
+}
+
+
+.mobile-one-summit {
+    display: none;
+}
+
+@media (max-width: 767.98px) { 
+    .mobile-one-summit {
+        display: flex;
+    }
+
+    .web-one-summit {
+        display: none;
+    }
+}
+
+.one-summit-section {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+@media (max-width: 767.98px) { 
+    .one-summit-section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
