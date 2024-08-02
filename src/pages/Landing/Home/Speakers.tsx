@@ -133,8 +133,11 @@ const Speakers = () => {
                             spaceBetween={30}
                             loop={true}
                             centeredSlides={true}
+                            freeMode={true}
+                            allowTouchMove={false}
+                            speed={10000}
                             autoplay={{
-                                delay: 5000,
+                                delay: 0,
                                 disableOnInteraction: false,
                             }}
                             pagination={{
