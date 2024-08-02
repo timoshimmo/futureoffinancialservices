@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Col, Container, Row } from 'reactstrap';
 import ic_phone from "../../../assets/images/icons/ic_call.png";
 import ic_email from "../../../assets/images/icons/ic_email.png";
@@ -24,8 +23,7 @@ const Contact = () => {
                                 </div>
                                 <h6 className="fw-semibold lh-base text-white fs-14">Call Suppport Team</h6>
                                 <p className="mb-2 fs-14 text-white">Questions? We've got you covered</p>
-
-                                {/* <Link to="//1.envato.market/velzon-admin" target="_blank" className="text-white fw-normal fs-14"><u>Call Support Team</u></Link> */}
+                                <a href="tel:+12816835601" target="_blank" className="text-white fw-normal fs-14"><u>+12816835601</u></a>
                             </div>
                         </Col>
                         <Col lg={3} sm={12}>
@@ -36,7 +34,7 @@ const Contact = () => {
                                 <h6 className="fw-semibold lh-base text-white fs-14">Email Suppport Team</h6>
                                 <p className="mb-2 fs-14 text-white">Questions? We've got you covered</p>
 
-                                {/*<Link to="//1.envato.market/velzon-admin" target="_blank" className="text-white fw-normal fs-14"><u>Email Support Team</u></Link> */}
+                                <a href="mailto:contact@futureoffinancialservices.org" target="_blank" className="text-white fw-normal fs-14"><u>contact@futureoffinancialservices.org</u></a>
                             </div>
                         </Col>
                     </Row>

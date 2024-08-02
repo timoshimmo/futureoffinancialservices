@@ -9,7 +9,7 @@ const Faq = () => {
 
 
     const [activeTab, setActiveTab] = useState<number | undefined>(0);
-    const [openFlush, setOpenFlush] = useState('1');
+    const [openFlush, setOpenFlush] = useState('0');
     const toggleFlush = (id: any) => {
         if (openFlush !== id) {
             setOpenFlush(id);
