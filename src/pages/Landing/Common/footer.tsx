@@ -22,14 +22,14 @@ const Footer = () => {
                                 <div className="mt-4 fs-13">
                                     <ul className="list-inline mb-0 footer-social-link">
                                         <li className="list-inline-item">
-                                            <Link to="#" className="avatar-xs d-block">
+                                            <Link to="https://www.linkedin.com/company/finance-ffs/" className="avatar-xs d-block">
                                                 <div className="avatar-title rounded-circle">
                                                     <i className="ri-linkedin-fill"></i>
                                                 </div>
                                             </Link>
                                         </li>
                                         <li className="list-inline-item">
-                                            <Link to="#" className="avatar-xs d-block">
+                                            <Link to="https://x.com/finance_ffs" className="avatar-xs d-block">
                                                 <div className="avatar-title rounded-circle">
                                                     <i className="ri-twitter-x-fill"></i>
                                                 </div>

@@ -132,8 +132,8 @@ const Numbers = () => {
                                 <p className="mb-5 text-white fs-15">A premier event that will bring together global leaders, innovators, and visionaries from the financial services industry to explore and shape its future. With a variety of insightful sessions, roundtables, workshops, and exhibitions, participants will engage in an in-depth exploration of the future of financial services and the technological advancements that will drive the next decade.</p>
                                 <p className="mb-3 text-white fs-15">Follow the conversation on social media:</p>
                                 <div className="hstack gap-4 py-2 align-items-center">
-                                    <Link to={'/'}><img src={ic_linkedin} height={25}/></Link>
-                                    <Link to={'/'}><img src={ic_x} height={25}/></Link>
+                                    <Link to={'https://www.linkedin.com/company/finance-ffs/'}><img src={ic_linkedin} height={25}/></Link>
+                                    <Link to={'https://x.com/finance_ffs'}><img src={ic_x} height={25}/></Link>
                                     <Link to={'/'}><img src={ic_youtube} height={25}/></Link>
                                 </div>
                             </div>
@@ -148,8 +148,8 @@ const Numbers = () => {
                                 <p className="mb-5 text-white fs-15">A premier event that will bring together global leaders, innovators, and visionaries from the financial services industry to explore and shape its future. With a variety of insightful sessions, roundtables, workshops, and exhibitions, participants will engage in an in-depth exploration of the future of financial services and the technological advancements that will drive the next decade.</p>
                                 <p className="mb-3 text-white fs-15">Follow the conversation on social media:</p>
                                 <div className="hstack gap-4 py-2 align-items-center">
-                                    <Link to={'/'}><img src={ic_linkedin} height={25}/></Link>
-                                    <Link to={'/'}><img src={ic_x} height={25}/></Link>
+                                    <Link to={'https://www.linkedin.com/company/finance-ffs/'}><img src={ic_linkedin} height={25}/></Link>
+                                    <Link to={'https://x.com/finance_ffs'}><img src={ic_x} height={25}/></Link>
                                     <Link to={'/'}><img src={ic_youtube} height={25}/></Link>
                                 </div>
                             </div>
