@@ -199,7 +199,7 @@ const RegisterForm = () => {
                                     <Row className='justify-content-center'>
                                         <Col lg={9} sm={12} className='px-2 mt-4'>
                                             <h2 className='text-primary mb-3 text-center fw-bold' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>Your Entry Was Successful</h2>
-                                            <p className='text-dark fs-14 text-center fw-medium px-4 mb-0' style={{ color: '#303030' }}>We have have received your submission, your request would be reviewed and we would revert accordingly where necessary."</p>
+                                            <p className='text-dark fs-14 text-center fw-medium px-4 mb-4' style={{ color: '#303030' }}>We have have received your submission, your request would be reviewed and we would revert accordingly where necessary."</p>
                                             <div className="hstack justify-content-center">
                                                 <Link to="/" className="text-muted fs-12">Back to Home</Link>
                                             </div>

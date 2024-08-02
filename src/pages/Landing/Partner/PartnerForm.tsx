@@ -71,22 +71,22 @@ const PartnerForm = () => {
                                         <Row>
                                             <Col lg={12} sm={12} className='px-2 mt-4'>
                                                 <Label className="fs-13 form-label mb-0">First Name</Label>
-                                                    <div className="w-100 vstack p-2 rounded-2 form-box">
-                                                        <Input 
-                                                            id="first_name"
-                                                            name="first_name"
-                                                            type="text" 
-                                                            placeholder="Enter First Name" 
-                                                            className="border-0 fs-14 px-2 form-inputs-custom"  
-                                                            onChange={validation.handleChange}
-                                                            onBlur={validation.handleBlur}
-                                                            value={validation.values.first_name || ""}
-                                                            invalid={
-                                                                validation.touched.first_name && validation.errors.first_name ? true : false
-                                                            }
-                                                            style={{ color: '#303030', backgroundColor: 'transparent', boxShadow: 'none' }} 
-                                                        />  
-                                                    </div>
+                                                <div className="w-100 vstack p-2 rounded-2 form-box">
+                                                    <Input 
+                                                        id="first_name"
+                                                        name="first_name"
+                                                        type="text" 
+                                                        placeholder="Enter First Name" 
+                                                        className="border-0 fs-14 px-2 form-inputs-custom"  
+                                                        onChange={validation.handleChange}
+                                                        onBlur={validation.handleBlur}
+                                                        value={validation.values.first_name || ""}
+                                                        invalid={
+                                                            validation.touched.first_name && validation.errors.first_name ? true : false
+                                                        }
+                                                        style={{ color: '#303030', backgroundColor: 'transparent', boxShadow: 'none' }} 
+                                                    />  
+                                                </div>
                                             </Col>
                                             <Col lg={12} sm={12} className='px-2 mt-4'>
                                                 <Label className="fs-13 form-label mb-0">Last Name</Label>
@@ -260,7 +260,7 @@ const PartnerForm = () => {
                                         <Row className='justify-content-center'>
                                             <Col lg={9} sm={12} className='px-2 mt-4'>
                                                 <h2 className='text-primary mb-3 text-center fw-bold' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>Your Entry Was Successful</h2>
-                                                <p className='text-dark fs-14 text-center fw-medium px-4 mb-0' style={{ color: '#303030' }}>We have received your request to form a partnership, your request would be reviewed and we would revert accordingly where necessary."</p>
+                                                <p className='text-dark fs-14 text-center fw-medium px-4 mb-4' style={{ color: '#303030' }}>We have received your request to form a partnership, your request would be reviewed and we would revert accordingly where necessary."</p>
                                                 <div className="hstack justify-content-center">
                                                     <Link to="/" className="text-muted fs-12">Back to Home</Link>
                                                 </div>
