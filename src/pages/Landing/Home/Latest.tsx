@@ -12,11 +12,10 @@ const Latest = () => {
                     <Row className="justify-content-center">
                         <Col lg={8} sm={12}>
                             <div className="text-center mb-4">
-                                <h2 className="mb-3 fw-semibold lh-base text-secondary"  style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>Latest <span className='text-primary'>Submit Updates</span></h2>
+                                <h2 className="mb-3 fw-semibold lh-base text-secondary"  style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>Summit <span className='text-primary'>Features</span></h2>
                             </div>
                         </Col>
                     </Row>
-
                     <Row className="g-4 mt-1">
                         {latestData.map((item, key) => (
                             <Col key={key} lg={3} sm={12}>

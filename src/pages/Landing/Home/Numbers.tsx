@@ -134,7 +134,7 @@ const Numbers = () => {
                                 <div className="hstack gap-4 py-2 align-items-center">
                                     <Link to={'https://www.linkedin.com/company/finance-ffs/'}><img src={ic_linkedin} height={25}/></Link>
                                     <Link to={'https://x.com/finance_ffs'}><img src={ic_x} height={25}/></Link>
-                                    <Link to={'/'}><img src={ic_youtube} height={25}/></Link>
+                                    <Link to={'https://www.youtube.com/@finance_ffs'}><img src={ic_youtube} height={25}/></Link>
                                 </div>
                             </div>
                         </Col>
@@ -150,7 +150,7 @@ const Numbers = () => {
                                 <div className="hstack gap-4 py-2 align-items-center">
                                     <Link to={'https://www.linkedin.com/company/finance-ffs/'}><img src={ic_linkedin} height={25}/></Link>
                                     <Link to={'https://x.com/finance_ffs'}><img src={ic_x} height={25}/></Link>
-                                    <Link to={'/'}><img src={ic_youtube} height={25}/></Link>
+                                    <Link to={'https://www.youtube.com/@finance_ffs'}><img src={ic_youtube} height={25}/></Link>
                                 </div>
                             </div>
                         </Col>

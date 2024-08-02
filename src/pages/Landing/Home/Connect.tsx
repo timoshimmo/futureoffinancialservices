@@ -37,7 +37,7 @@ const Connect = () => {
                                 <h2 className="mb-4 fw-semibold lh-base text-secondary" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>One Summit, <br /><span className='text-primary'>Unlimited Possibilities</span></h2>
                             </div>
                         </Col>
-                        <Col lg={7} sm={12} className='summit-padding'>
+                        <Col lg={7} sm={6} xs={12} className='summit-padding'>
                             <Row className="justify-content-center mx-auto">
                                 {connectData.map((item, key) => (
                                     <Col key={key} lg={12} sm={12} onMouseOver={() => {setImageName(item.img); setIndexVal(key); }} className={indexVal === key ? 'border-start border-2 border-primary fs-18 py-4' : 'border-start border-2 border-white fs-18 py-4'}>

@@ -201,7 +201,7 @@ const RegisterForm = () => {
                                             <h2 className='text-primary mb-3 text-center fw-bold' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>Your Entry Was Successful</h2>
                                             <p className='text-dark fs-14 text-center fw-medium px-4 mb-0' style={{ color: '#303030' }}>We have have received your submission, your request would be reviewed and we would revert accordingly where necessary."</p>
                                             <div className="hstack justify-content-center">
-                                                <Link to="/home" className="text-muted fs-12">Back to Home</Link>
+                                                <Link to="/" className="text-muted fs-12">Back to Home</Link>
                                             </div>
                                         </Col>
                                     </Row>
