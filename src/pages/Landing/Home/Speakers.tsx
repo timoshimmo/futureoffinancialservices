@@ -50,21 +50,6 @@ const Speakers = () => {
         
     })
 
-    /*
- <Card className="w-100 shadow-none rounded-0 speakers-card mx-3 text-white" style={{ cursor: "pointer" }}>
-                                    <CardBody className='p-0'>
-                                        <img src={item.img} alt="" className="avatar-speaker"/>
-                                        <div className='w-100 mt-3 px-2' >
-                                            <h5 className="text-white fs-14 mb-0" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>{item.name}</h5>
-                                            <p className="text-white fs-11 fw-light">{item.credentials}</p>
-                                        </div>
-                                        
-                                    </CardBody>
-                                </Card>
-
-    */
-
-
     return (
         <React.Fragment>
             <section className="section pb-custom" id="speakers">
@@ -88,7 +73,36 @@ const Speakers = () => {
                     </Col>
                 </Row>
                 <Row className='web-featured-speakers'>
-                    <Marquee
+                    <Col lg={12}>
+                        <Swiper
+                            spaceBetween={30}
+                            loop={true}
+                            centeredSlides={true}
+                            autoplay={{
+                                delay: 5000,
+                                disableOnInteraction: false,
+                            }}
+                            pagination={{
+                                clickable: true,
+                            }}
+                            slidesPerView={4}
+                            navigation={false}
+                            modules={[Autoplay, Pagination, Navigation]}
+                        >
+                            {speakersData.map((item, key) => (
+                                <SwiperSlide key={key} className='mb-5'>
+                                    <img src={item.img} alt="" className="avatar-speaker"/>
+                                    <div className='w-100 px-2 mt-3' >
+                                        <h5 className="text-white text-center fs-14 mb-0" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>{item.name}</h5>
+                                        <p className="text-white text-center fs-11 fw-light">{item.credentials}</p>
+                                    </div>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+                    </Col>
+                    {/*
+                    
+                  <Marquee
                         pauseOnClick={true}
                         pauseOnHover={true}
                         >
@@ -105,7 +119,10 @@ const Speakers = () => {
                                     </Card>
                                 </Col>
                             ))}   
-                    </Marquee>                           
+                    </Marquee>       
+                
+                            */}
+                                      
                 </Row>
                 <Row className="mobile-featured-speakers justify-content-center">
                     <Col lg={12}>
@@ -135,26 +152,7 @@ const Speakers = () => {
                             ))}
                         </Swiper>
                     </Col>
-                </Row>
-
-{/*
-        <Row className='mobile-featured-speakers mt-3'>
-                    {speakersData.map((item, key) => (
-                        <Col key={key} sm={12} className='px-2'>
-                            <Card className="shadow-none rounded-0 speakers-card text-white" style={{ cursor: "pointer" }}>
-                                <CardBody className='p-0 d-flex flex-column align-items-center'>
-                                    <img src={item.img} alt="" className="avatar-speaker"/>
-                                    <div className='mt-3'>
-                                        <h5 className="text-white fs-14 text-center" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>{item.name}</h5>
-                                        <p className="text-white fs-11 fw-light text-center">{item.credentials}</p>
-                                    </div>
-                                </CardBody>
-                            </Card>
-                        </Col>
-                    ))} 
-                </Row>
-*/}
-                
+                </Row>        
             </Container>
         </section>
         </React.Fragment>
