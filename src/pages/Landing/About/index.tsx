@@ -6,6 +6,7 @@ import Partners from './Partners';
 import Sponsor from './Sponsor';
 import Faq from './Faq';
 import CTA from './CTA';
+import MissionVision from './MissionVision';
 import Footer from '../Common/footer';
 
 const index = () => {
@@ -36,7 +37,8 @@ const index = () => {
             <div className="layout-wrapper landing body-bg-dark">
                 <Navbar />
                 <About />
-                <Sponsor />
+                <MissionVision />
+               {/* <Sponsor /> */} 
                 <Partners />
                 <Faq />
                 <CTA />

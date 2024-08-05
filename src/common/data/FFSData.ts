@@ -251,7 +251,7 @@ const speakersData = [
     {
         img: img_bayo,
         name: "Bayo Adekanmbi",
-        credentials: "Founder/CEO, DSNai",
+        credentials: "Founder/CEO, DSN",
     },
     {
         img: img_meaghan,
@@ -382,7 +382,7 @@ const speakersFullData = [
             }
             
         ],
-        bio: "is the Founder/CEO of Bazara Technologies Inc., a software engineering & systems integration firm carving a niche for taking on audacious innovation projects in the B2B space. Bazara is reimagining and re-engineering systems that power financial services leveraging UI/UX, Microservices, APIs, AI & the cloud.\n\nPrior to Bazara, Boye was Partner and Head of Digital Transformation at KPMG in Africa, where he led digital strategy, AI implementation and cloud transformation projects for large corporates. \n\nHe served on KPMG’s Global Digital Transformation Leadership, Global Fintech Leadership and is an adviser to banks, Fintechs, FS players and regulators on the future of financial services."
+        bio: "is the Founder/CEO of Bazara Technologies Inc., a software engineering & systems integration firm carving a niche for taking on audacious innovation projects in the B2B space. Bazara is reimagining and re-engineering core banking systems leveraging UI/UX, Microservices, APIs, AI & the Cloud. \n\nPrior to Bazara, Boye was Partner and Head of Digital Transformation at KPMG in Africa, where he led digital strategy, AI implementation and cloud transformation projects for large corporates. \n\nHe served on KPMG’s Global Digital Transformation Leadership, Global Fintech Leadership and is an adviser to banks, Fintechs, FS players and regulators on the future of financial services."
     },
     {
         id: 5,
@@ -391,7 +391,7 @@ const speakersFullData = [
         name: "Bayo Adekanmbi",
         tags: ["artificial-intelligence"],
         credentials: "Founder/CEO",
-        company: "DSNai",
+        company: "DSN",
         courses: [
             {
                 title: "Insights From The Artificial Intelligence TL", 
@@ -420,7 +420,7 @@ const speakersFullData = [
             },
             
         ],
-        bio: "is the CEO, FFS and the convener of the FFS Summit. She is an independent consultant to banks, fintechs, and regulators on digital transformation and customer experience.\n\n With over 10 years in digital banking and fintech, she founded Digital Magss, advising on product development and strategic partnerships.\n\nMeaghan is a Senior Lecturer at CFTE, a Subject Matter Expert at Manchester Business School, and a Fintech Contributor at Forbes. Her extensive experience includes roles at 11:FS, Mapa Research, and advisory positions at various fintech startups."
+        bio: "is the CEO of FFS and the convener of the Future of Financial Services Summit. She is also an independent consultant to banks, fintechs, and regulators on digital transformation and customer experience.\n\n With over 10 years in digital banking and fintech, she founded Digital Magss, advising on product development and strategic partnerships.\n\nMeaghan is a Senior Lecturer at CFTE, a Subject Matter Expert at Manchester Business School, and a Fintech Contributor at Forbes. Her extensive experience includes roles at 11:FS, Mapa Research, and advisory positions at various fintech startups."
     },
     
 ]
