@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Row, Col, Card, CardBody, Label, Input, Form } from 'reactstrap';
+import { Container, Row, Col, Card, CardBody, Label, Input, Form, Button } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import * as Yup from "yup";
 import { useFormik } from "formik";
@@ -212,9 +212,14 @@ const RegisterForm = () => {
                                 </Card>
                                 :
                                 <Card className="border border-white bg-white rounded-4 shadow-none">
-                                    <CardBody className="p-4">
+                                    <CardBody className="px-2 pb-5 pt-0">
                                         <Row className='justify-content-center'>
-                                            <Col lg={9} sm={12} className='px-2 mt-4'>
+                                            <Col lg={12}>
+                                                <div className='d-flex justify-content-end pb-4'>
+                                                    <Button onClick={()=>setSuccessful(false)} className='bg-transparent border-0 p-0 text-muted'><i className="mdi mdi-close display-6"></i></Button>
+                                                </div>
+                                            </Col>
+                                            <Col lg={9} sm={12} className='px-2 mt-3'>
                                                 <div className='d-flex justify-content-center'>
                                                     <img src={success_check}/>
                                                 </div>

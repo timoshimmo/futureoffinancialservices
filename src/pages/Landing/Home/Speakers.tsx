@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useNavigate  } from "react-router-dom";
 import { Container, Row, Col, Card, CardBody } from 'reactstrap';
-import Marquee from "react-fast-marquee";
-import 'keen-slider/keen-slider.min.css';
-import { useKeenSlider } from 'keen-slider/react';
 import { speakersData } from '../../../common/data';
 
 // Import Swiper React components
@@ -20,35 +18,11 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 const Speakers = () => {
 
-    const [currentSlide, setCurrentSlide] = React.useState(0)
-    const [loaded, setLoaded] = useState(false)
-    const animation = { duration: 30000, easing: (t: number) => t }
+    let navigate = useNavigate();
 
-    const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
-        loop: true,
-        renderMode: "performance",
-        initial: 0,
-        slides: {
-            origin: "center",
-            perView: 4,
-            spacing: 30,
-        },
-        drag: false,
-        slideChanged(slider) {
-            setCurrentSlide(slider.track.details.rel)
-        },
-        created(s) {
-          s.moveToIdx(5, true, animation)
-          setLoaded(true)
-        },
-        updated(s) {
-          s.moveToIdx(s.track.details.abs + 5, true, animation)
-        },
-        animationEnded(s) {
-          s.moveToIdx(s.track.details.abs + 5, true, animation)
-        },
-        
-    })
+    const redirect =() => {
+        navigate('/speakers');
+    }
 
     return (
         <React.Fragment>
@@ -93,7 +67,7 @@ const Speakers = () => {
                             modules={[Autoplay, Pagination, Navigation]}
                         >
                             {speakersData.map((item, key) => (
-                                <SwiperSlide key={key} className='mb-5'>
+                                <SwiperSlide key={key} className='mb-5' onClick={redirect} style={{ cursor: 'pointer' }}>
                                     <img src={item.img} alt="" className="avatar-speaker"/>
                                     <div className='w-100 px-2 mt-3' >
                                         <h5 className="text-white text-center fs-14 mb-0" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>{item.name}</h5>
