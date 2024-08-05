@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Col, Container, Row } from 'reactstrap';
+import { Col, Container, Row, NavLink } from 'reactstrap';
 
 // Import Images
 import logolight from "../../../assets/images/ffs_top_logo_light.png";
@@ -22,21 +22,21 @@ const Footer = () => {
                                 <div className="mt-4 fs-13">
                                     <ul className="list-inline mb-0 footer-social-link">
                                         <li className="list-inline-item">
-                                            <Link to="https://www.linkedin.com/company/finance-ffs/" className="avatar-xs d-block">
+                                            <Link to="https://www.linkedin.com/company/finance-ffs/" target="_blank" rel="noopener noreferrer" className="avatar-xs d-block">
                                                 <div className="avatar-title rounded-circle">
                                                     <i className="ri-linkedin-fill"></i>
                                                 </div>
                                             </Link>
                                         </li>
                                         <li className="list-inline-item">
-                                            <Link to="https://x.com/finance_ffs" className="avatar-xs d-block">
+                                            <Link to="https://x.com/finance_ffs" className="avatar-xs d-block" target='_blank'>
                                                 <div className="avatar-title rounded-circle">
                                                     <i className="ri-twitter-x-fill"></i>
                                                 </div>
                                             </Link>
                                         </li>
                                         <li className="list-inline-item">
-                                            <Link to="#" className="avatar-xs d-block">
+                                            <Link to="https://www.youtube.com/@finance_ffs" className="avatar-xs d-block" target='_blank'>
                                                 <div className="avatar-title rounded-circle">
                                                     <i className="ri-youtube-fill"></i>
                                                 </div>
@@ -52,8 +52,8 @@ const Footer = () => {
                                     <h5 className="text-primary mb-0" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>About Us</h5>
                                     <div className="text-white mt-3">
                                         <ul className="list-unstyled ff-secondary footer-list">
-                                            <li><Link to="/about" className="text-white fs-14">About FFS</Link></li>
-                                            <li><Link to="/pages-gallery" className="text-white fs-14">Team</Link></li>
+                                            <li><Link to="/home#banner" className="text-white fs-14">About FFS</Link></li>
+                                            {/* <li><Link to="/pages-gallery" className="text-white fs-14">Team</Link></li> */}
                                             <li><Link to="/contact-us" className="text-white fs-14">Contact Us</Link></li>
                                         </ul>
                                     </div>
@@ -64,7 +64,7 @@ const Footer = () => {
                                         <ul className="list-unstyled ff-secondary footer-list">
                                             <li><Link to="/register" className="text-white fs-14">Register</Link></li>
                                             <li><Link to="/sponsors" className="text-white fs-14">Be a Sponsor</Link></li>
-                                            <li><Link to="/exhibitors" className="text-white fs-14">Be an Exhibitor</Link></li>
+                                            {/* <li><Link to="/exhibitors" className="text-white fs-14">Be an Exhibitor</Link></li> */}
                                             <li><Link to="/partners" className="text-white fs-14">Partner With Us</Link></li>
                                         </ul>
                                     </div>

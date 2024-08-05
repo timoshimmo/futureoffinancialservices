@@ -115,22 +115,32 @@ const Navbar = () => {
                             <li className="nav-item px-4 web-navbar">
                                 <NavLink className="nav-link fs-14 text-white" to="/" activeClassName="active" tag={RRNavLink}>Home</NavLink>
                             </li>
-                            <li className="nav-item px-4 web-navbar">
+                            {/*
+                             <li className="nav-item px-4 web-navbar">
                                 <NavLink className="nav-link fs-14 text-white" to="/agenda" activeClassName="active" tag={RRNavLink}>Agenda</NavLink>
                             </li>
+                        */}
                             <li className="nav-item px-4 web-navbar">
                                 <NavLink className="nav-link fs-14 text-white" to="/speakers" activeClassName="active" tag={RRNavLink}>Speakers</NavLink>
+                            </li>
+                            <li className="nav-item px-4 web-navbar">
+                                <NavLink className="nav-link fs-14 text-white" to="/about" activeClassName="active" tag={RRNavLink}>About</NavLink>
                             </li>
                           
                             {/* Mobile Navbar  */}
                             <li className="nav-item mobile-navbar">
                                 <NavLink className="nav-link fs-14 text-white d-flex justify-content-end" to="/home" activeClassName="active" tag={RRNavLink}>Home</NavLink>
                             </li>
-                            <li className="nav-item mobile-navbar">
-                                <NavLink className="nav-link fs-14 text-white d-flex justify-content-end" to="/agenda" activeClassName="active" tag={RRNavLink}>Agenda</NavLink>
-                            </li>
+                            {/*
+                                <li className="nav-item mobile-navbar">
+                                    <NavLink className="nav-link fs-14 text-white d-flex justify-content-end" to="/agenda" activeClassName="active" tag={RRNavLink}>Agenda</NavLink>
+                                </li>
+                            */}
                             <li className="nav-item mobile-navbar">
                                 <NavLink className="nav-link fs-14 text-white d-flex justify-content-end" to="/speakers" activeClassName="active" tag={RRNavLink}>Speakers</NavLink>
+                            </li>
+                            <li className="nav-item mobile-navbar">
+                                    <NavLink className="nav-link fs-14 text-white d-flex justify-content-end" to="/about" activeClassName="active" tag={RRNavLink}>About</NavLink>
                             </li>
 
                             {/* Mobile Navbar  */}
@@ -142,8 +152,8 @@ const Navbar = () => {
                                     <DropdownMenu right>
                                         <DropdownItem href='/sponsors' className="fs-14 fw-light text-end" style={{ color: '#E1E7EC' }}>Be a Sponsor</DropdownItem>
                                         <DropdownItem divider style={{ borderColor: '#E1E7EC' }}/>
-                                        <DropdownItem href="/exhibitors" className="fs-14 fw-light text-end" style={{ color: '#E1E7EC' }}>Be an Exhibitor</DropdownItem>
-                                        <DropdownItem divider style={{ borderColor: '#E1E7EC' }}/>
+                                        {/* <DropdownItem href="/exhibitors" className="fs-14 fw-light text-end" style={{ color: '#E1E7EC' }}>Be an Exhibitor</DropdownItem>
+                                        <DropdownItem divider style={{ borderColor: '#E1E7EC' }}/> */}
                                         <DropdownItem href='/partners' className="fs-14 fw-light text-end" style={{ color: '#E1E7EC' }}>Partner with us</DropdownItem>
                                         <DropdownItem divider style={{ borderColor: '#E1E7EC' }}/>
                                     </DropdownMenu>
@@ -157,8 +167,8 @@ const Navbar = () => {
                                     <DropdownMenu className='px-2'>
                                         <DropdownItem href='/sponsors' className="fs-14 fw-light" style={{ color: '#E1E7EC' }}>Be a Sponsor</DropdownItem>
                                         <DropdownItem divider style={{ borderColor: '#E1E7EC' }}/>
-                                        <DropdownItem href="/exhibitors" className="fs-14 fw-light" style={{ color: '#E1E7EC' }}>Be an Exhibitor</DropdownItem>
-                                        <DropdownItem divider style={{ borderColor: '#E1E7EC' }}/>
+                                        {/* <DropdownItem href="/exhibitors" className="fs-14 fw-light" style={{ color: '#E1E7EC' }}>Be an Exhibitor</DropdownItem>
+                                        <DropdownItem divider style={{ borderColor: '#E1E7EC' }}/> */}
                                         <DropdownItem href='/partners' className="fs-14 fw-light" style={{ color: '#E1E7EC' }}>Partner with us</DropdownItem>
                                     </DropdownMenu>
                                 </Dropdown>
