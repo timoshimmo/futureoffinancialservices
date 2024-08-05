@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Row, Col, Card, CardBody } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import partnerBazara from "../../../assets/images/brands/bazara_logo.png";
+import partnerPeerless from "../../../assets/images/brands/peerless_logo_light.svg";
 //import { partnerImgsData } from '../../../common/data';
 
 const Partners = () => {
@@ -27,7 +28,7 @@ const Partners = () => {
                                 </div>
                                 <div className="vl"></div>
                                 <div className='px-2'>
-                                    <img src={partnerBazara} alt="" className="partners-img-style" />
+                                    <img src={partnerPeerless} alt="" className="partners-img-style" />
                                 </div>
                             </div>
                         </Col>
@@ -45,7 +46,7 @@ const Partners = () => {
                                 </div>
                                 <div className="vl"></div>
                                 <div className='ps-2'>
-                                    <img src={partnerBazara} alt="" className="partners-img-style" />
+                                    <img src={partnerPeerless} alt="" className="partners-img-style" />
                                 </div>
                             </div>
                         </Col>

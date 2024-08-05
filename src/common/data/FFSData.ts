@@ -23,7 +23,7 @@ import latest4 from "../../assets/images/home/img_latest4.png";
 import img_boye from "../../assets/images/home/img_boye.png";
 import img_abu_suleiman from "../../assets/images/home/img_abu_suleiman.png";
 import img_bayo from "../../assets/images/home/img_bayo.png";
-import img_iyinoluwa from "../../assets/images/home/img_iyinoluwa.png";
+import img_iyinoluwa from "../../assets/images/home/img_iyinoluwa.jpeg";
 import img_marie from "../../assets/images/speakers/img_marie.png";
 import img_sabrina from "../../assets/images/speakers/img_sabrina.png";
 import img_meaghan from "../../assets/images/speakers/img_meaghan.png";
@@ -37,6 +37,7 @@ import partner2 from "../../assets/images/home/partner2.png";
 import partner3 from "../../assets/images/home/partner3.png";
 
 import partnerBazara from "../../assets/images/brands/img_bazara_logo.png";
+import partnersPeerless from "../../assets/images/brands/peerless_logo_light.svg";
 //import partner4 from "../../assets/images/home/partner4.png";
 
 //Profile
@@ -151,7 +152,7 @@ const partnerImgsData = [
         img: partnerBazara,
     },
     {
-        img: partnerBazara,
+        img: partnersPeerless,
     },
 
 ]
