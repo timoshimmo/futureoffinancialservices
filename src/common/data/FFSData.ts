@@ -20,31 +20,30 @@ import latest3 from "../../assets/images/home/img_latest3.png";
 import latest4 from "../../assets/images/home/img_latest4.png";
 
 //Speakers
-import img_boye from "../../assets/images/home/img_boye.png";
-import img_abu_suleiman from "../../assets/images/home/img_abu_suleiman.png";
-import img_bayo from "../../assets/images/home/img_bayo.png";
-import img_iyinoluwa from "../../assets/images/home/img_iyinoluwa.jpeg";
+import img_boye from "../../assets/images/speakers/img_boye.png";
+import img_abu_suleiman from "../../assets/images/speakers/img_abu_suleiman.png";
+import img_bayo from "../../assets/images/speakers/img_bayo.png";
+import img_iyinoluwa from "../../assets/images/speakers/img_iyinoluwa.png";
 import img_marie from "../../assets/images/speakers/img_marie.png";
 import img_sabrina from "../../assets/images/speakers/img_sabrina.png";
 import img_meaghan from "../../assets/images/speakers/img_meaghan.png";
 import img_abdullo from "../../assets/images/speakers/img_abdullo.png";
-import speaker5 from "../../assets/images/home/speaker5.png";
-import speaker6 from "../../assets/images/home/speaker6.png";
+
+
 
 //Partners
 //import partner1 from "../../assets/images/home/partner1.png";
-import partner2 from "../../assets/images/home/partner2.png";
-import partner3 from "../../assets/images/home/partner3.png";
-
+//import partner2 from "../../assets/images/home/partner2.png";
+//import partner3 from "../../assets/images/home/partner3.png";
 import partnerBazara from "../../assets/images/brands/img_bazara_logo.png";
 import partnersPeerless from "../../assets/images/brands/peerless_logo_light.svg";
-//import partner4 from "../../assets/images/home/partner4.png";
 
-//Profile
-//import profile_boye from '../../assets/images/profile/img_profile_boye.png';
+//Insights
+import featuredInsights1 from "../../assets/images/insights/featured_insight_1.png";
+import featuredInsights2 from "../../assets/images/insights/featured_insight_1.png";
+import featuredInsights3 from "../../assets/images/insights/featured_insight_1.png";
 
-// import img04 from "../../assets/images/nft/gif/img-4.gif";
-// import gifImg01 from "../../assets/images/nft/gif/img-1.gif";
+
 
 const connectData = [
     {
@@ -72,6 +71,31 @@ const connectData = [
         rowIndex: 4
     },
 ];
+
+
+
+
+const featuredInsightsData = [
+    {
+        img: featuredInsights1,
+        title: "Expand Your Network",
+        textContent: "Maximize your conference experience by connecting with industry leaders, innovators, and peers.",
+        rowIndex: 0
+    },
+    {
+        img: featuredInsights2,
+        title: "Build Partnerships",
+        textContent: "Forge meaningful partnerships that can drive your business forward.",
+        rowIndex: 2
+    },
+    {
+        img: featuredInsights3,
+        title: "Collaborate for the Future",
+        textContent: "Join forces with innovators, leaders, and visionaries to shape the future of financial services.",
+        rowIndex: 3
+    }
+];
+
 
 
 const latestData = [
