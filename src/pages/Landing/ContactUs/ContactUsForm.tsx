@@ -3,11 +3,14 @@ import { Container, Row, Col, Card, CardBody, Label, Input, Form } from 'reactst
 import { Link } from 'react-router-dom';
 import * as Yup from "yup";
 import { useFormik } from "formik";
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css';
 
 const ContactUsForm = () => {
 
     const [successful, setSuccessful] = useState(false);
     const [loading, setLoading] = useState(false);
+    const [value, setValue] = useState('');
 
     const validation = useFormik({
         // enableReinitialize : use this flag when initial values needs to be changed
@@ -126,7 +129,19 @@ const ContactUsForm = () => {
                                         </Col>
                                         <Col lg={12} sm={12} className='px-2 mt-4'>
                                             <Label className="fs-13 form-label mb-0">Phone Number</Label>
-                                            <div className="w-100 vstack p-2 rounded-2 form-box">
+                                            <PhoneInput
+                                                country={'gb'}
+                                                value={value}
+                                                placeholder="Enter Phone Number" 
+                                                onChange={phone => setValue(phone)}
+                                                containerClass="w-100 vstack p-2 rounded-2 form-box"
+                                                inputClass='fs-14'
+                                                inputStyle={{ color: '#303030', borderColor: 'transparent', boxShadow: 'none', fontFamily: 'Montserrat, IBM Plex Sans, sans-serif' }} 
+                                                dropdownStyle={{ borderColor: 'transparent', boxShadow: 'none' }}
+                                                buttonStyle={{ borderColor: 'transparent', backgroundColor: 'transparent', boxShadow: 'none' }}
+                                            />
+                                            {/*<div className="w-100 vstack p-2 rounded-2 form-box">
+                                               
                                                 <Input 
                                                     id="phone_no"
                                                     name="phone_no"
@@ -140,8 +155,8 @@ const ContactUsForm = () => {
                                                         validation.touched.phone_no && validation.errors.phone_no ? true : false
                                                     }
                                                     style={{ color: '#303030', backgroundColor: 'transparent', boxShadow: 'none' }} 
-                                                />
-                                            </div>
+                                                /> 
+                                            </div> */}
                                         </Col>
                                         <Col lg={12} sm={12} className='px-2 mt-4'>
                                             <Label className="fs-13 form-label mb-0">Additional Information</Label>

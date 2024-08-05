@@ -29,8 +29,6 @@ import img_sabrina from "../../assets/images/speakers/img_sabrina.png";
 import img_meaghan from "../../assets/images/speakers/img_meaghan.png";
 import img_abdullo from "../../assets/images/speakers/img_abdullo.png";
 
-
-
 //Partners
 //import partner1 from "../../assets/images/home/partner1.png";
 //import partner2 from "../../assets/images/home/partner2.png";
@@ -42,6 +40,10 @@ import partnersPeerless from "../../assets/images/brands/peerless_logo_light.svg
 import featuredInsights1 from "../../assets/images/insights/featured_insight_1.png";
 import featuredInsights2 from "../../assets/images/insights/featured_insight_1.png";
 import featuredInsights3 from "../../assets/images/insights/featured_insight_1.png";
+
+//bloggers
+import blogger1 from "../../assets/images/insights/blogger1.png";
+import blogger2 from "../../assets/images/insights/blogger2.png";
 
 
 
@@ -75,25 +77,59 @@ const connectData = [
 
 
 
-const featuredInsightsData = [
+const insightsData = [
     {
-        img: featuredInsights1,
-        title: "Expand Your Network",
-        textContent: "Maximize your conference experience by connecting with industry leaders, innovators, and peers.",
-        rowIndex: 0
+        id: 1,
+        date: "15 JUN 2024",
+        topic: "Countdown to the Future of Financial Services Conference 2024",
+        tags: ["Finacial Service Coference", "FinTech Innovation"],
+        event: "FFS 2024",
+        image: featuredInsights1,
+        type: 0,
+        writer: [
+            {
+                name: "Lanre Akomolafe",
+                img: blogger1,
+                credentials: "Convener, Future of Financial Services Conference"
+            }
+           
+        ]
     },
     {
-        img: featuredInsights2,
-        title: "Build Partnerships",
-        textContent: "Forge meaningful partnerships that can drive your business forward.",
-        rowIndex: 2
+        id: 2,
+        date: "12 JUN 2024",
+        topic: "Success Stories: Innovations from Past Conferences",
+        tags: ["Research"],
+        event: "FFS 2024",
+        image: featuredInsights2,
+        type: 0,
+        writer: [
+            {
+                name: "Jide Kolapo",
+                img: blogger1,
+                credentials: "Convener, Future of Financial Services Conference"
+            }
+           
+        ]
     },
     {
-        img: featuredInsights3,
-        title: "Collaborate for the Future",
-        textContent: "Join forces with innovators, leaders, and visionaries to shape the future of financial services.",
-        rowIndex: 3
-    }
+        id: 3,
+        date: "10 JUN 2024",
+        topic: "Post-Conference Recap: Key Takeaways and Insights",
+        tags: ["Research"],
+        event: "FFS 2024",
+        image: featuredInsights2,
+        type: 0,
+        writer: [
+            {
+                name: "Rita Ora",
+                img: blogger2,
+                credentials: "Convener, Future of Financial Services Conference"
+            }
+           
+        ]
+    },
+   
 ];
 
 

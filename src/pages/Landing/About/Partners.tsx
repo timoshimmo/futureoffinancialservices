@@ -24,11 +24,11 @@ const Partners = () => {
                         <Col lg={6} sm={12}>
                             <div className='justify-content-center d-flex align-items-center gap-2 partners-img-area'>
                                 <div className='px-2'>
-                                    <img src={partnerBazara} alt="" className="partners-img-style" />
+                                    <img src={partnerPeerless} alt="" className="partners-img-style" />
                                 </div>
                                 <div className="vl"></div>
                                 <div className='px-2'>
-                                    <img src={partnerPeerless} alt="" className="partners-img-style" />
+                                    <img src={partnerBazara} alt="" className="partners-img-style" />
                                 </div>
                             </div>
                         </Col>
@@ -41,12 +41,12 @@ const Partners = () => {
                                 <p className="fs-13 text-white">From startups to the world’s largest companies</p>
                             </div>
                             <div className='d-flex align-items-center gap-2 partners-img-area'>
-                                <div className='pe-2'>
-                                    <img src={partnerBazara} alt="" className="partners-img-style" />
-                                </div>
-                                <div className="vl"></div>
                                 <div className='ps-2'>
                                     <img src={partnerPeerless} alt="" className="partners-img-style" />
+                                </div>
+                                <div className="vl"></div>
+                                <div className='pe-2'>
+                                    <img src={partnerBazara} alt="" className="partners-img-style" />
                                 </div>
                             </div>
                         </Col>

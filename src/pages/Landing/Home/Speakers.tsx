@@ -32,7 +32,7 @@ const Speakers = () => {
                     <Col lg={7}>
                         <div className="text-center mb-5">
                             <h2 className="mb-2 fw-semibold lh-base text-primary" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>Featured Speakers</h2>
-                            <p className="mb-5 fs-14 text-white text-center">Discover the Voices Behind the Most Impactful Ideas and Transformative Solutions. Engage with Our Diverse Speakers Who Bring Knowledge, Passion, and Insight</p>
+                            <p className="mb-5 fs-14 text-white text-center">We are bringing together the most innovative thought leaders shaping the future of financial services. Join us to engage with diverse speakers who bring audacious thinking and transformative solutions to every discussion.</p>
                             {/* <p className="mb-3 fs-13 text-white">Our Esteemed Panel of Influential Experts Sharing Their Wisdom, Experience, and Innovative Ideas</p> */}
                         </div>
                     </Col>
@@ -41,7 +41,7 @@ const Speakers = () => {
                     <Col sm={12} xs={12}>
                         <div className="text-center mb-5">
                             <h2 className="mb-2 h1 fw-semibold lh-base text-primary" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>Featured Speakers</h2>
-                            <p className="mb-5 fs-12 text-white text-center">Discover the Voices Behind the Most Impactful Ideas and Transformative Solutions. Engage with Our Diverse Speakers Who Bring Knowledge, Passion, and Insight</p>
+                            <p className="mb-5 fs-12 text-white text-center">We are bringing together the most innovative thought leaders shaping the future of financial services. Join us to engage with diverse speakers who bring audacious thinking and transformative solutions to every discussion.</p>
                             {/* <p className="mb-3 fs-13 text-white">Our Esteemed Panel of Influential Experts Sharing Their Wisdom, Experience, and Innovative Ideas</p> */}
                         </div>
                     </Col>
