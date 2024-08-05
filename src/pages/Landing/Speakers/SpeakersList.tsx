@@ -122,7 +122,7 @@ const SpeakersList = () => {
                 <Offcanvas isOpen={open} toggle={toggleLeftCanvas} direction="end" className="offcanvas-end border-0 canvas-style">
                     <OffcanvasBody className="p-0 canvas-body">
                        <div className='w-100 speakers-pop-up-body'>
-                            <div className='d-flex justify-content-end pt-2 pb-4'>
+                            <div className='pt-2 pb-4 top-profile-close-mobile'>
                                 <Button onClick={()=>setOpen(false)} className='bg-transparent border-0 p-0'><i className="mdi mdi-close display-6"></i></Button>
                             </div>
                             <Row>
@@ -143,31 +143,31 @@ const SpeakersList = () => {
                                 <p className='text-secondary fs-13'>{currentData?.courses[0].date}, {currentData?.courses[0].time}</p> */}
                                 <p className='text-white fs-13 bio-style'><span className='text-primary fw-semibold'>{currentData?.name}</span> {currentData?.bio}</p>
                             </div>
-                            <p className='my-4 text-white fs-17 fw-bold'>Will be Speaking On</p>
-                                {currentData?.courses.map((item: any) => (
-                                    <Card className="shadow-none border border-white rounded-3 mb-4 p-4 text-white">
-                                        <CardBody className='p-0'>
-                                            <div className='gap-2 align-items-center mb-3 speakers-agenda-bottom-web'><span className='text-white fs-14'>{item.date}</span> | <span className='text-white fs-14'>{item.time}</span></div>
-                                            <div className='mb-3 speakers-agenda-bottom-mobile'>
-                                                <p className='text-white fs-14 mb-1'>{item.date}</p>
-                                                <p className='text-white fs-14'>{item.time}</p>
-                                            </div>
-                                            <h6 className='text-primary fw-semibold fs-20 mb-2'>{item.title}</h6>
-                                            <div className='d-flex gap-2'>
-                                                {
-                                                    item.tags !== null ?
-                                                    (item?.tags.map((row: string) => (
-                                                        <p className="fw-light fs-11 text-capitalize border border-white rounded-2 py-1 px-2">{row.replace(/-/g, ' ')}</p>
-                                                    ))
-                                                    )
-                                                    :
-                                                    <p className="fw-light fs-11 text-capitalize border border-white rounded-2 py-1 px-2">General Session</p>
-                                                } 
-                                            </div>
-                                        </CardBody>
-                                    </Card>
-                                ))}
-                            {/*<h2 className='my-4 text-primary fs-20' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>Topics</h2>
+                            {/*<p className='my-4 text-white fs-17 fw-bold'>Will be Speaking On</p>
+                            {currentData?.courses.map((item: any) => (
+                                <Card className="shadow-none border border-white rounded-3 mb-4 p-4 text-white">
+                                    <CardBody className='p-0'>
+                                        <div className='gap-2 align-items-center mb-3 speakers-agenda-bottom-web'><span className='text-white fs-14'>{item.date}</span> | <span className='text-white fs-14'>{item.time}</span></div>
+                                        <div className='mb-3 speakers-agenda-bottom-mobile'>
+                                            <p className='text-white fs-14 mb-1'>{item.date}</p>
+                                            <p className='text-white fs-14'>{item.time}</p>
+                                        </div>
+                                        <h6 className='text-primary fw-semibold fs-20 mb-2'>{item.title}</h6>
+                                        <div className='d-flex gap-2'>
+                                            {
+                                                item.tags !== null ?
+                                                (item?.tags.map((row: string) => (
+                                                    <p className="fw-light fs-11 text-capitalize border border-white rounded-2 py-1 px-2">{row.replace(/-/g, ' ')}</p>
+                                                ))
+                                                )
+                                                :
+                                                <p className="fw-light fs-11 text-capitalize border border-white rounded-2 py-1 px-2">General Session</p>
+                                            } 
+                                        </div>
+                                    </CardBody>
+                                </Card>
+                            ))}
+                            <h2 className='my-4 text-primary fs-20' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>Topics</h2>
                             <Nav pills className="nav-pills filter-btns gap-2" role="tablist">
                                 {
                                     currentData?.tags.map((row: string) => (
