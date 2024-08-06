@@ -2,11 +2,12 @@ import React from 'react';
 //import Navbar from './Navbar';
 import Navbar from '../Common/Navbar';
 import About from "./About";
-import Partners from './Partners';
-import Sponsor from './Sponsor';
+import WhyChoose from './WhyChoose';
+import WhatWeDo from './WhatWeDo';
 import Faq from './Faq';
 import CTA from './CTA';
 import MissionVision from './MissionVision';
+import JoinUs from './JoinUs';
 import Footer from '../Common/footer';
 
 const index = () => {
@@ -38,8 +39,9 @@ const index = () => {
                 <Navbar />
                 <About />
                 <MissionVision />
-               {/* <Sponsor /> */} 
-                <Partners />
+                <WhatWeDo />
+                <WhyChoose />
+                <JoinUs />
                 <Faq />
                 <CTA />
                 <Footer />

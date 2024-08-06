@@ -640,6 +640,27 @@
     border-color: #FFFFFF;
 }
 
+
+
+.why-choose {
+    height: 420px;
+    border-color: #33CC99;
+}
+
+
+@media (max-width: 767.98px) { 
+    .why-choose {
+        height: 440px;
+    }
+    
+}
+
+.why-choose:hover {
+    background-color: #FFFFFF;
+    color: #141413;
+    border-color: #FFFFFF;
+}
+
 .footer-style {
     padding-top: 120px;
     color: #9ba7b3;
@@ -664,7 +685,7 @@
 }
 
 .faq-body {
-    height: 850px;
+    height: 950px;
 }
 
 @media (max-width: 767.98px) { 
@@ -675,7 +696,7 @@
 }
 
 .faq-full-body {
-    height: 1200px;
+    height: 1300px;
 }
 
 .mobile-cta-home {
@@ -714,11 +735,12 @@
 
 .web-cta {
     position: absolute;
-    bottom: 13%;
+    bottom: 8%;
     left: 0;
     right: 0;
     z-index: 1000;
     max-width: 900px;
+    margin-bottom: 20px;
 }
 
 .web-cta-home {
@@ -984,6 +1006,19 @@
         display: flex;
         justify-content: end;
     }
+}
+
+.bottom-padding {
+    padding-bottom: 80px;
+}
+
+.what-we-do-card {
+    width: 95%;
+}
+
+.summit-img {
+    height: 180px;
+    object-fit: cover;
 }
 
 /*

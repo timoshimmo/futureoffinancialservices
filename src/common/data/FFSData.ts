@@ -14,10 +14,12 @@ import summit2 from "../../assets/images/home/img_one_summit2.png";
 import summit3 from "../../assets/images/home/img_one_summit3.png";
 import summit4 from "../../assets/images/home/img_one_summit4.png";
 
-import latest1 from "../../assets/images/home/img_latest1.png";
-import latest2 from "../../assets/images/home/img_latest2.png";
-import latest3 from "../../assets/images/home/img_latest3.png";
-import latest4 from "../../assets/images/home/img_latest4.png";
+
+//Summit Features Images
+import expert_presentations from "../../assets/images/home/expert_presentations1.jpeg";
+import round_tables from "../../assets/images/home/round_tables1.jpg";
+import field_visit from "../../assets/images/home/field_visit1.jpg";
+import specialized_workshops from "../../assets/images/home/specialized_workshops1.jpeg";
 
 //Speakers
 import img_boye from "../../assets/images/speakers/img_boye.png";
@@ -45,7 +47,20 @@ import featuredInsights3 from "../../assets/images/insights/featured_insight_1.p
 import blogger1 from "../../assets/images/insights/blogger1.png";
 import blogger2 from "../../assets/images/insights/blogger2.png";
 
+//what we do icons
+import ic_research_insight from "../../assets/images/icons/ic_research_insight.png";
+import ic_events_conferences from "../../assets/images/icons/ic_events_conferences.png";
+import ic_thought_leadership from "../../assets/images/icons/ic_thought_leadership.png";
+import ic_community_engagement from "../../assets/images/icons/ic_community_engagement.png";
+import ic_innovation_technology from "../../assets/images/icons/ic_innovation_technology.png";
 
+//Why Choose FFS 
+import why_choose1 from "../../assets/images/about/why_choose1.png";
+import why_choose2 from "../../assets/images/about/why_choose2.png";
+import why_choose3 from "../../assets/images/about/why_choose3.png";
+import why_choose4 from "../../assets/images/about/why_choose4.png";
+
+import pattern from "../../assets/images/form_bg_pattern.png";
 
 const connectData = [
     {
@@ -132,30 +147,66 @@ const insightsData = [
    
 ];
 
-
-
 const latestData = [
     {
-        img: latest1,
+        img: expert_presentations,
         title: "Expert Presentations",
         textContent: "Examine how fintech innovations are making financial services more accessible to underserved populations.",
     },
     {
-        img: latest2,
+        img: round_tables,
         title: "Roundtables",
         textContent: "Examine how fintech innovations are making financial services more accessible to underserved populations.",
     },
     {
-        img: latest3,
+        img: field_visit,
         title: "Study Tour/ Field Visit",
         textContent: "Examine how fintech innovations are making financial services more accessible to underserved populations.",
     },
     {
-        img: latest4,
+        img: specialized_workshops,
         title: "Specialized Workshops",
         textContent: "Examine how fintech innovations are making financial services more accessible to underserved populations.",
     },
 ];
+
+
+const whyChooseData = [
+    {
+        img: why_choose1,
+        title: "Expertise",
+        textContent: "Our team comprises seasoned professionals with deep expertise in financial services, technology, and business transformation.",
+    },
+    {
+        img: why_choose2,
+        title: "Commitment to Innovation",
+        textContent: "With participants and contributors from around the world, FFS offers a truly global perspective on the future of finance.",
+    },
+    {
+        img: why_choose3,
+        title: "Global Reach",
+        textContent: "From research reports and thought leadership to events and networking opportunities, FFS provides a wealth of resources to support your strategic goals.",
+    },
+    {
+        img: why_choose4,
+        title: "Comprehensive Resources",
+        textContent: "We are dedicated to promoting and accelerating innovation within the financial services industry, helping our members stay ahead of the curve.",
+    },
+];
+
+
+const joinContactsData = [
+    {
+        img: pattern,
+        name: "Lanre Akomolafe",
+        email: "lanre@futureoffinancialservices.org",
+    },
+    {
+        img: pattern,
+        name: "Meaghan Johnson",
+        email: "meaghan@futureoffinancialservices.org",
+    },
+]
 
 const whatIsData = [
     {
@@ -744,4 +795,33 @@ const faqFullData = [
 ];
 
 
-export {connectData, speakersData, whatIsData, numbersData, partnerImgsData, latestData, faqData, faqFullData, speakersFullData, agendaData}
+const whatWeDoData = [
+    {
+        img: ic_research_insight,
+        title: "Research and Insights:",
+        description: "We conduct in-depth research and publish insightful reports on the latest trends, technologies, and innovations shaping the financial services industry. Our research covers a wide array of topics, from artificial intelligence and blockchain to digital transformation and regulatory changes."
+    },
+    {
+        img: ic_events_conferences,
+        title: "Events and Conferences:",
+        description: "We host premier events, including the annual Future of Financial Services Global Conference, where industry leaders and innovators gather to discuss and explore the future of finance. Our events feature keynote presentations, panel discussions, workshops, and networking opportunities."
+    },
+    {
+        img: ic_thought_leadership,
+        title: "Thought Leadership:",
+        description: "We provide a platform for industry experts to share their knowledge and perspectives on critical issues and emerging trends. Our thought leadership content includes articles, whitepapers, interviews, and webinars."
+    },
+    {
+        img: ic_community_engagement,
+        title: "Community Engagement:",
+        description: "FFS fosters a vibrant community of professionals from across the financial services spectrum. We facilitate collaboration and knowledge-sharing through online forums, roundtables, and special interest groups."
+    },
+    {
+        img: ic_innovation_technology,
+        title: "Innovation & Technology:",
+        description: "We spotlight and support innovative technologies and solutions that are transforming financial services. Our platform provides opportunities for fintech startups and technology providers to showcase their products and connect with potential partners and investors."
+    },
+]
+
+
+export {connectData, speakersData, whatIsData, numbersData, partnerImgsData, latestData, faqData, faqFullData, speakersFullData, agendaData, whatWeDoData, whyChooseData, joinContactsData }

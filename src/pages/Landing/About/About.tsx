@@ -9,7 +9,7 @@ const About = () => {
     return (
         <React.Fragment>
 
-            <section className="section body-bg-dark" id="features">
+            <section className="section body-bg-dark bottom-padding">
                 <Container>
                     <Row className="justify-content-center">
                         <Col lg={7}>
