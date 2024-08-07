@@ -408,7 +408,7 @@ const speakersFullData = [
             },
             
         ],
-        bio: "is the co-founder of Ayan and Alif Bank, focusing on Islamic finance, technology, education, and youth. With a team of over 1100, Alif Bank leads in POS-financing, mobile payments, Visa payments, and e-commerce in Tajikistan and Uzbekistan, serving 2 million clients. \n\nHe has driven the development of in-house banking technologies and launched Alif Academy, teaching over 2000 students. He is also the co-founder and CEO of Ayan Capital, providing vehicle finance in London. \n\nAbdullo holds an MS in Finance from LSE and has studied fintech and blockchain technologies at Harvard and Wharton."
+        bio: "is the co-founder of Ayan and Alif Bank, focusing on Islamic finance, technology, education, and youth. With a team of over 1100, Alif Bank leads in POS-financing, mobile payments, Visa payments, and e-commerce in Tajikistan and Uzbekistan, serving 2 million clients.\n\nHe has driven the development of in-house banking technologies and launched Alif Academy, teaching over 2000 students. He is also the co-founder and CEO of Ayan Capital, providing vehicle finance in London.\n\nAbdullo holds an MS in Finance from LSE and has studied fintech and blockchain technologies at Harvard and Wharton."
     },
     {
         id: 1,
@@ -433,7 +433,7 @@ const speakersFullData = [
             }
             
         ],
-        bio: "is the Founder/CEO of Bazara Technologies Inc., a software engineering & systems integration firm carving a niche for taking on audacious innovation projects in the B2B space. Bazara is reimagining and re-engineering core banking systems leveraging UI/UX, Microservices, APIs, AI & the Cloud. \n\nPrior to Bazara, Boye was Partner and Head of Digital Transformation at KPMG in Africa, where he led digital strategy, AI implementation and cloud transformation projects for large corporates. \n\nHe served on KPMG’s Global Digital Transformation Leadership, Global Fintech Leadership and is an adviser to banks, Fintechs, FS players and regulators on the future of financial services."
+        bio: "is the Founder/CEO of Bazara Technologies Inc., a software engineering & systems integration firm carving a niche for taking on audacious innovation projects in the B2B space. Bazara is reimagining and re-engineering systems that power financial services leveraging UI/UX, Microservices, APIs, AI & the Cloud.\n\nPrior to Bazara, Boye was Partner and Head of Digital Transformation at KPMG in Africa, where he led digital strategy, AI implementation and cloud transformation projects for large corporates.\n\nHe served on KPMG’s Global Digital Transformation Leadership, Global Fintech Leadership and is an adviser to banks, Fintechs, FS players and regulators on the future of financial services."
     },
     {
         id: 5,
@@ -471,7 +471,7 @@ const speakersFullData = [
             },
             
         ],
-        bio: "is the CEO of FFS and the convener of the Future of Financial Services Summit. She is also an independent consultant to banks, fintechs, and regulators on digital transformation and customer experience.\n\n With over 10 years in digital banking and fintech, she founded Digital Magss, advising on product development and strategic partnerships.\n\nMeaghan is a Senior Lecturer at CFTE, a Subject Matter Expert at Manchester Business School, and a Fintech Contributor at Forbes. Her extensive experience includes roles at 11:FS, Mapa Research, and advisory positions at various fintech startups."
+        bio: "is the CEO of FFS and the convener of the Future of Financial Services Summit. She is also an independent consultant to banks, fintechs, and regulators on digital transformation and customer experience.\n\nWith over 10 years in digital banking and fintech, she founded Digital Magss, advising on product development and strategic partnerships.\n\nMeaghan is a Senior Lecturer at CFTE, a Subject Matter Expert at Manchester Business School, and a Fintech Contributor at Forbes. Her extensive experience includes roles at 11:FS, Mapa Research, and advisory positions at various fintech startups."
     },
     
 ]
