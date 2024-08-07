@@ -14,13 +14,15 @@ import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
 
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import ic_slide_left_arrow from "../../../assets/images/icons/ic_slide_left_arrow.png";
+import ic_slide_right_arrow from "../../../assets/images/icons/ic_slide_right_arrow.png";
 
 const Banner = () => {
 
     let navigate = useNavigate();
     //const sliderRef = useRef();
 
-    const swiper = useSwiper();
+    const btnSwiper = useSwiper();
 
     const redirect =() => {
         navigate('/speakers');
@@ -54,10 +56,10 @@ const Banner = () => {
                                 delay: 0,
                                 disableOnInteraction: false,
                             }}
-                            navigation
+                            navigation={false}
                             slidesPerView={5}
                             modules={[Autoplay, Navigation]}
-                            className="relative mx-auto d-flex mySwiper"
+                            className="position-relative mx-auto d-flex mySwiper"
                         >
                             {speakersData.map((item, key) => (
                                 <SwiperSlide key={key} className='swiper-slide-web' onClick={redirect} style={{ cursor: 'pointer' }}>
@@ -73,9 +75,16 @@ const Banner = () => {
                             </div> */}
                         </Swiper>
                     {/* </Col> */}
-                    {/* <div className="slide-button-area">
-                        <button className="swiper-button-prev bg-primary -ml-2 lg:-ml-4 flex justify-center items-center"></button>
-                            </div> */}
+                    <div className="slide-button-left-area">
+                        <button className="swiper-button-custom bg-primary d-flex justify-content-center align-items-center">
+                            <img src={ic_slide_left_arrow} />
+                        </button>
+                    </div>
+                    <div className="slide-button-right-area">
+                        <button className="swiper-button-custom btn-primary d-flex justify-content-center align-items-center">
+                            <img src={ic_slide_right_arrow} />
+                        </button>
+                    </div>
                 </div >
                 <Row className="mobile-featured-speakers justify-content-center">
                     <Col lg={8}>
