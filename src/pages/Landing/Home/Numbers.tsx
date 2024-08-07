@@ -98,7 +98,7 @@ const Numbers = () => {
 
     return (
         <React.Fragment>
-            <section className="section body-bg-dark numbers-section parallax">
+            <section className="section body-bg-dark numbers-section parallax" id="whatis">
                 <Container>
                     <Row className="what-is-web-body align-items-end gy-4">
                         <Col lg={4} sm={12} className="mx-auto p-0 what-left-body">

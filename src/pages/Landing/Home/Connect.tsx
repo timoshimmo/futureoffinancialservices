@@ -28,7 +28,7 @@ const Connect = () => {
     
     return (
         <React.Fragment>
-            <section className="submit-section body-bg-dark one-summit-section" style={{ backgroundColor: "#141413" }}>
+            <section className="section summit-section body-bg-dark one-summit-section" style={{ backgroundColor: "#141413" }}>
                 <Container>
                     {/* summit-padding web-one-summit */}
                     <Row className="gy-4 web-one-summit">

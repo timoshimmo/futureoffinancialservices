@@ -452,7 +452,7 @@ const speakersFullData = [
             },
             
         ],
-        bio: "is an award-winning executive with over 22 years of experience in AI, Data Science, and Digital Innovation across 30 African markets. \n\nHe won the Bill and Melinda Gates Global Grand Challenge for AI-enabled financial tools and led five UNESCO/IRCAI Top 100 AI products. A top-ranking data scientist and prolific researcher, he has advanced education from prestigious institutions and a PhD from City, University of London. \n\nBayo also founded Data Scientist Network, training over 500,000 students and authored Africa's first AI book for kids."
+        bio: "is an award-winning executive with over 22 years of experience in AI, Data Science, and Digital Innovation across 30 African markets.\n\nHe won the Bill and Melinda Gates Global Grand Challenge for AI-enabled financial tools and led five UNESCO/IRCAI Top 100 AI products. A top-ranking data scientist and prolific researcher, he has advanced education from prestigious institutions and a PhD from City, University of London.\n\nBayo also founded Data Scientist Network, training over 500,000 students and authored Africa's first AI book for kids."
     },
     {
         id: 7,

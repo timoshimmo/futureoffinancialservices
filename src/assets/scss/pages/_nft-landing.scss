@@ -90,7 +90,7 @@
     background-image: url('../../images/banners/img_home_banner1.png');
     background-size: cover;
     background-position: bottom;
-    padding: 222px 0 150px 0;
+    padding: 120px 0 150px;
     .bg-overlay {
         background-color: #141413;
         opacity: 0;
@@ -99,7 +99,7 @@
 
 @media (max-width: 767.98px) { 
     .ffs-container {
-        padding-bottom: 190px;
+        padding: 60px 0;
     }
 
 }
@@ -280,7 +280,7 @@
 }
 
 .btn-banner {
-    width: 170px;
+    width: 200px;
     padding-top: 12px;
     padding-bottom: 12px;
     font-size: 14px;
@@ -459,9 +459,9 @@
 }
 
 .avatar-speaker {
-    width: 258px;
-    height: 230px;
-    object-fit: cover;
+    width: 220px;
+    height: 180px;
+    object-fit: contain;
     object-position: left top;
 }
 .card-possibilities {
@@ -525,7 +525,7 @@
     }
 
     .mobile-featured-speakers {
-        display: block;
+        display: flex;
     }
     
     .speakers-card {
@@ -557,9 +557,11 @@
     max-width: 800px;
 }
 
-.submit-section {
+.summit-section {
     padding-bottom: 120px;
+    padding-top: 120px;
 }
+
 
 .vl {
     height: 80px;
@@ -1020,6 +1022,32 @@
     height: 180px;
     object-fit: cover;
 }
+
+/*
+.swiper-button-next {
+    --swiper-navigation-color: #33CC99;
+    background-color: #33CC99;
+    border: 1px solid #33CC99;
+  }
+  
+.swiper-button-prev {
+    background-color: #33CC99;
+    border: 1px solid #33CC99;
+    border-radius: 50%;
+    color: white;
+    z-index: 10000;
+  }
+
+  */
+
+  .slide-button-area {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+  }
+
+ 
+
 
 /*
 .swiper-scrollbar-drag{background: none;}

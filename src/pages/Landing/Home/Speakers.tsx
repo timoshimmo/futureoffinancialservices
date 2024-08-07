@@ -14,6 +14,13 @@ import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
 
 // import required modules
+
+/*
+pagination={{
+    clickable: true,
+}}
+*/
+
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 const Speakers = () => {
@@ -59,12 +66,9 @@ const Speakers = () => {
                                 delay: 0,
                                 disableOnInteraction: false,
                             }}
-                            pagination={{
-                                clickable: true,
-                            }}
                             slidesPerView={4}
                             navigation={false}
-                            modules={[Autoplay, Pagination, Navigation]}
+                            modules={[Autoplay, Navigation]}
                         >
                             {speakersData.map((item, key) => (
                                 <SwiperSlide key={key} className='mb-5' onClick={redirect} style={{ cursor: 'pointer' }}>
@@ -76,30 +80,7 @@ const Speakers = () => {
                                 </SwiperSlide>
                             ))}
                         </Swiper>
-                    </Col>
-                    {/*
-                    
-                  <Marquee
-                        pauseOnClick={true}
-                        pauseOnHover={true}
-                        >
-                            {speakersData.map((item, key) => (
-                                <Col key={key} lg={3}>
-                                    <Card className="shadow-none rounded-0 speakers-card mx-3 text-white" style={{ cursor: "pointer" }}>
-                                        <CardBody className='p-0'>
-                                            <img src={item.img} alt="" className="avatar-speaker"/>
-                                            <div className='w-100 mt-3 px-2' >
-                                                <h5 className="text-white fs-14 mb-0" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>{item.name}</h5>
-                                                <p className="text-white fs-11 fw-light">{item.credentials}</p>
-                                            </div>
-                                        </CardBody>
-                                    </Card>
-                                </Col>
-                            ))}   
-                    </Marquee>       
-                
-                            */}
-                                      
+                    </Col> 
                 </Row>
                 <Row className="mobile-featured-speakers justify-content-center">
                     <Col lg={12}>
