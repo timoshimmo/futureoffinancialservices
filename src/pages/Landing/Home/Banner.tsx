@@ -50,7 +50,7 @@ const Banner = () => {
                             centeredSlides={true}
                             freeMode={true}
                             allowTouchMove={true}
-                            speed={4000}
+                            speed={3000}
                             autoplay={{
                                 delay: 0,
                                 disableOnInteraction: false,
