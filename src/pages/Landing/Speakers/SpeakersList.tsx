@@ -57,8 +57,8 @@ const SpeakersList = () => {
                                     <Col key={item.id} lg={6} sm={12}>
                                         <Card onClick={()=>passData(item)} className="shadow-none rounded-0 speakers-card mb-2 text-white" style={{ cursor: "pointer" }}>
                                             <CardBody className='p-0'>
-                                                <img src={item.img} alt="" className="avatar-speaker"/>
-                                                <div className='w-100 mt-2 px-2'>
+                                                <img src={item.img} alt="" className="avatar-speaker-list"/>
+                                                <div className='w-100 mt-2'>
                                                     <h5 className="text-white fs-14" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>{item.name}</h5>
                                                     <p className="text-white fs-11 fw-light">{item.credentials}, {item.company}</p>
                                                 </div>
@@ -72,7 +72,7 @@ const SpeakersList = () => {
                                     <Col key={item.id} lg={6} sm={12}>
                                         <Card onClick={()=>passData(item)} className="shadow-none rounded-0 speakers-card mb-5 text-white" style={{ cursor: "pointer" }}>
                                             <CardBody className='p-0'>
-                                                <img src={item.img} alt="" className="avatar-speaker"/>
+                                                <img src={item.img} alt="" className="avatar-speaker-list"/>
                                                 <div className='w-100 mt-3'>
                                                     <h5 className="text-white fs-14" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>{item.name}</h5>
                                                     <p className="text-white fs-11 fw-light">{item.credentials}, {item.company}</p>

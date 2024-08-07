@@ -21,7 +21,6 @@ const Banner = () => {
 
     let navigate = useNavigate();
     //const sliderRef = useRef();
-
     const btnSwiper = useSwiper();
 
     const redirect =() => {
@@ -36,8 +35,8 @@ const Banner = () => {
                 <Row className='justify-content-center'>
                     <Col lg={7} sm={12} className='px-3'>
                         <div className="text-center">
-                            <h1 className="display-5 fw-bold mb-2 text-white title" style={{ fontFamily: 'Georgia, Montserrat' }}>Future of Financial Services Summit</h1>
-                            <p className="h6 text-primary mb-4 py-2 caption" style={{ fontWeight: 600 }}>October 8 - 10, 2024 | Level 39, Canary Wharf, London</p>
+                            <h1 className="display-3 fw-bold text-white title" style={{ fontFamily: 'Georgia, Montserrat' }}>Future of Financial Services Summit</h1>
+                            <p className="h5 text-primary mb-4 py-2 caption" style={{ fontWeight: 600 }}>October 8 - 10, 2024 | Level 39, Canary Wharf, London</p>
                             {/*<p className="h4 text-white mb-4 py-2 caption">Innovating the Next Generation of Finance</p> */}
 
                         </div>
@@ -51,7 +50,7 @@ const Banner = () => {
                             centeredSlides={true}
                             freeMode={true}
                             allowTouchMove={true}
-                            speed={10000}
+                            speed={4000}
                             autoplay={{
                                 delay: 0,
                                 disableOnInteraction: false,
@@ -94,7 +93,7 @@ const Banner = () => {
                             centeredSlides={true}
                             freeMode={true}
                             allowTouchMove={false}
-                            speed={10000}
+                            speed={5000}
                             autoplay={{
                                 delay: 0,
                                 disableOnInteraction: false,

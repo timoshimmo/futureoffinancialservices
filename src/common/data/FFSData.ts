@@ -27,7 +27,7 @@ import img_abu_suleiman from "../../assets/images/speakers/img_abu_suleiman.png"
 import img_bayo from "../../assets/images/speakers/img_bayo.png";
 import img_iyinoluwa from "../../assets/images/speakers/img_iyinoluwa.png";
 import img_marie from "../../assets/images/speakers/img_marie.png";
-import img_sabrina from "../../assets/images/speakers/img_sabrina.png";
+import img_sabrina from "../../assets/images/speakers/img_sabrina_pretz.png";
 import img_meaghan from "../../assets/images/speakers/img_meaghan.png";
 import img_abdullo from "../../assets/images/speakers/img_abdullo.png";
 
@@ -292,7 +292,7 @@ const speakersData = [
     {
         img: img_abdullo,
         name: "Abdullo Kurbanov",
-        credentials: "Co-Founder, Ayan Capital and Alif Bank"
+        credentials: "Co-Founder, Ayan Capital & Alif Bank"
     },
     {
         img: img_boye,
