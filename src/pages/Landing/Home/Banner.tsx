@@ -42,7 +42,7 @@ const Banner = () => {
                         <div className="text-center">
                             <h1 className="display-3 fw-bold text-white title" style={{ fontFamily: 'Georgia, Montserrat' }}>Future of Financial Services Summit</h1>
                             <p className="h5 text-primary mb-4 py-2 caption-web" style={{ fontWeight: 600 }}>October 8 - 10, 2024 | Level 39, Canary Wharf, London</p>
-                            <p className="h5 text-primary mb-4 py-2 caption-mobile" style={{ fontWeight: 600 }}>October 8 - 10, 2024 | L39, Canary Wharf, London</p>
+                            <p className="h5 text-primary mb-4 py-2 caption-mobile" style={{ fontWeight: 600 }}>October 8 - 10, 2024 | Canary Wharf, London</p>
                             {/*<p className="h4 text-white mb-4 py-2 caption">Innovating the Next Generation of Finance</p> */}
 
                         </div>
