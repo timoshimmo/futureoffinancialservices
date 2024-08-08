@@ -1,10 +1,11 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef }  from 'react';
 import { Container, Row, Col, NavLink } from 'reactstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import { speakersData } from '../../../common/data';
 
 // Import Swiper React components
-import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
+import { Swiper, SwiperRef, SwiperSlide } from 'swiper/react';
+import SwiperCore from 'swiper';
 //import { useSwiper } from 'swiper/react';
 
 // Import Swiper styles
@@ -21,7 +22,11 @@ const Banner = () => {
 
     let navigate = useNavigate();
     //const sliderRef = useRef();
-    const btnSwiper = useSwiper();
+    const swiperRef = useRef<SwiperRef>(null);
+
+   /* useEffect(() => {
+        //swiperRef.current?.in;
+    }, []);*/
 
     const redirect =() => {
         navigate('/speakers');
@@ -49,16 +54,17 @@ const Banner = () => {
                             loop={true}
                             centeredSlides={true}
                             freeMode={true}
-                            allowTouchMove={true}
-                            speed={3000}
+                            allowTouchMove
+                            speed={1500}
                             autoplay={{
-                                delay: 0,
+                                delay: 1000,
                                 disableOnInteraction: false,
                             }}
                             navigation={false}
                             slidesPerView={5}
                             modules={[Autoplay, Navigation]}
-                            className="position-relative mx-auto d-flex mySwiper"
+                            ref={swiperRef}
+                            className="position-relative mySwiper"
                         >
                             {speakersData.map((item, key) => (
                                 <SwiperSlide key={key} className='swiper-slide-web' onClick={redirect} style={{ cursor: 'pointer' }}>
@@ -69,18 +75,15 @@ const Banner = () => {
                                     </div>
                                 </SwiperSlide>
                             ))}
-                            {/* <div className="absolute inset-y-0 left-0 d-flex items-center">
-                                <button className="swiper-button-prev bg-primary -ml-2 lg:-ml-4 flex justify-center items-center"></button>
-                            </div> */}
                         </Swiper>
                     {/* </Col> */}
                     <div className="slide-button-left-area">
-                        <button className="swiper-button-custom bg-primary d-flex justify-content-center align-items-center">
+                        <button onClick={() => swiperRef?.current?.swiper.slidePrev()} className="swiper-button-custom bg-primary d-flex justify-content-center align-items-center">
                             <img src={ic_slide_left_arrow} />
                         </button>
                     </div>
                     <div className="slide-button-right-area">
-                        <button className="swiper-button-custom btn-primary d-flex justify-content-center align-items-center">
+                        <button onClick={() => swiperRef?.current?.swiper.slideNext()} className="swiper-button-custom btn-primary d-flex justify-content-center align-items-center">
                             <img src={ic_slide_right_arrow} />
                         </button>
                     </div>
@@ -93,7 +96,7 @@ const Banner = () => {
                             centeredSlides={true}
                             freeMode={true}
                             allowTouchMove={false}
-                            speed={4000}
+                            speed={3000}
                             autoplay={{
                                 delay: 0,
                                 disableOnInteraction: false,
@@ -101,7 +104,7 @@ const Banner = () => {
                             slidesPerView={1.5}
                             navigation={false}
                             modules={[Autoplay]}
-                            className="mySwiper"
+                            className="mySwiper positio-relative"
                         >
                             {speakersData.map((item, key) => (
                                 <SwiperSlide key={key}>

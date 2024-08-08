@@ -1049,6 +1049,40 @@
   }
   */
 
+  .swiper-button-prev {
+    background-image: url("../../images/icons/ic_slide_left_arrow.png") !important;
+    background-repeat: no-repeat;
+    background-size: 50% auto;
+    background-position: center;
+    background-color: #33CC99;
+    border-radius: 50%;
+    height: 40px !important;
+    width: 40px !important;
+    
+    }
+    
+    /*
+    .swiper-button-next {
+    background-image: url("../../images/icons/ic_slide_right_arrow.png") !important;
+    background-repeat: no-repeat;
+    background-size: 50% auto;
+    background-position: center;
+    background-color: #33CC99;
+    border-radius: 50%;
+    height: 40px !important;
+    width: 40px !important;
+    }
+    
+    .swiper-button-next::after {
+    display: none;
+    }
+
+    */
+    
+    .swiper-button-prev::after {
+    display: none;
+    }
+
   .swiper-button-custom {
     background-color: #33CC99;
     border: 1px solid #33CC99;
