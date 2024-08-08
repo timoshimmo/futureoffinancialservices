@@ -41,7 +41,7 @@ const Banner = () => {
                     <Col lg={7} sm={12} className='px-3'>
                         <div className="text-center">
                             <h1 className="display-3 fw-bold text-white title" style={{ fontFamily: 'Georgia, Montserrat' }}>Future of Financial Services Summit</h1>
-                            <p className="h5 text-primary mb-4 py-2 caption" style={{ fontWeight: 600 }}>October 8 - 10, 2024 | Level 39, Canary Wharf, London</p>
+                            <p className="h5 text-primary mb-4 py-2 caption-banner" style={{ fontWeight: 600 }}>October 8 - 10, 2024 | Level 39, Canary Wharf, London</p>
                             {/*<p className="h4 text-white mb-4 py-2 caption">Innovating the Next Generation of Finance</p> */}
 
                         </div>
@@ -89,9 +89,9 @@ const Banner = () => {
                     </div>
                 </div >
                 <Row className="mobile-featured-speakers justify-content-center">
-                    <Col lg={8}>
+                    <Col lg={5}>
                         <Swiper
-                            spaceBetween={30}
+                            spaceBetween={5}
                             loop={true}
                             centeredSlides={true}
                             freeMode={true}
@@ -101,7 +101,7 @@ const Banner = () => {
                                 delay: 0,
                                 disableOnInteraction: false,
                             }}
-                            slidesPerView={1.5}
+                            slidesPerView={1.7}
                             navigation={false}
                             modules={[Autoplay]}
                             className="mySwiper positio-relative"
@@ -129,20 +129,21 @@ const Banner = () => {
                                         </div>
                                 </div>
 
-                                <div className="w-100 btn-home-mobile">
-                                    <div className="d-flex flex-column align-items-center gps-3 px-5">
-                                        <Link to="/register" className="w-100 btn btn-primary btn-banner">Register</Link>
-                                        <NavLink href="#whatis" className="w-100 mt-3 btn btn-outline-secondary border border-secondary border-2 btn-banner btn-banner-secondary">See More</NavLink>
+                                <div className="w-100">
+                                    <div className="d-flex gap-3 justify-content-center">
+                                        <Link to="/register" className="btn btn-primary btn-banner">Register</Link>
+                                        <NavLink href="#whatis" className="btn btn-outline-secondary border border-secondary border-2 btn-banner btn-banner-secondary">See More</NavLink>
                                     </div>
                                 </div>
+
                             */}
 
-                            <div className="w-100">
-                                <div className="d-flex gap-3 justify-content-center">
-                                    <Link to="/register" className="btn btn-primary btn-banner">Register</Link>
-                                    <NavLink href="#whatis" className="btn btn-outline-secondary border border-secondary border-2 btn-banner btn-banner-secondary">See More</NavLink>
+                            <div className="w-100 btn-home-mobile">
+                                <div className="d-flex flex-column align-items-center gps-3 px-5">
+                                    <Link to="/register" className="w-100 btn btn-primary btn-banner">Register</Link>
+                                    <NavLink href="#whatis" className="w-100 mt-3 btn btn-outline-secondary border border-secondary border-2 btn-banner btn-banner-secondary">See More</NavLink>
                                 </div>
-                            </div>
+                            </div>  
                     </Col>
                 </Row>
             </Container>

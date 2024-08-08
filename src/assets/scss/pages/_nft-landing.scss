@@ -267,6 +267,17 @@
 }
 */
 
+
+
+
+@media (max-width: 767.98px) { 
+
+    .caption-banner {
+        font-size: 14px;
+    }
+    
+}
+
 @media (max-width: 767.98px) { 
     .ffs-banner .caption {
         font-size: 16px;
@@ -543,7 +554,7 @@
     }
 
     .avatar-speaker {
-        width: 100%;
+        width: 220px;
         height: auto;
         object-fit: contain;
         object-position: center top;
