@@ -267,20 +267,28 @@
 }
 */
 
-
-
-
-@media (max-width: 767.98px) { 
-
-    .caption-banner {
-        font-size: 14px;
-    }
-    
-}
-
 @media (max-width: 767.98px) { 
     .ffs-banner .caption {
         font-size: 16px;
+    }
+}
+
+.caption-mobile {
+    display: none;
+}
+
+.caption-web {
+    display: block;
+}
+
+@media (max-width: 767.98px) { 
+    .caption-mobile {
+        display: block;
+        font-size: 14px;
+    }
+
+    .caption-web {
+        display: none;
     }
 }
 
@@ -554,7 +562,14 @@
     }
 
     .avatar-speaker {
-        width: 220px;
+        width: 190px;
+        height: auto;
+        object-fit: contain;
+        object-position: center top;
+    }
+
+    .avatar-speaker-list {
+        width: 100%;
         height: auto;
         object-fit: contain;
         object-position: center top;
@@ -1028,6 +1043,11 @@
         justify-content: end;
     }
 }
+
+@media (max-width: 767.98px) { 
+   
+}
+
 
 .bottom-padding {
     padding-bottom: 80px;
