@@ -29,12 +29,12 @@ const WhatWeDo = () => {
                             <Row className='align-items-center pt-3'>
                                 {whatWeDoData.map((item, key) => (
                                     <Col key={key} lg={6} sm={6} className="p-0 d-flex justify-content-end">
-                                        <Card className="border mb-3 border-white bg-white rounded-2 shadow-none what-we-do-card">
+                                        <Card className="border mb-3 border-primary bg-primary rounded-2 shadow-none what-we-do-card">
                                             <CardBody className="p-3">
                                                 <div className="py-2">
                                                     <img src={item.img} className='mb-2' width={30}/>
-                                                    <h4 className='mb-2 fs-15 text-dark fw-bold' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>{item.title}</h4>
-                                                    <p className='text-dark fs-11'>{item.description}</p>
+                                                    <h4 className='mb-2 fs-15 text-white fw-bold' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>{item.title}</h4>
+                                                    <p className='text-white fs-11'>{item.description}</p>
                                                 </div>
                                             </CardBody>
                                         </Card>

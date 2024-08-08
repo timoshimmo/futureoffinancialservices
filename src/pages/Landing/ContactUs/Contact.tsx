@@ -16,23 +16,25 @@ const Contact = () => {
                                 <p className="fs-14 text-white">We are here to assist you with any requires you may have.</p>
                             </div>
                         </Col>
-                        <Col lg={3} sm={12} className='mobile-bottom-padding'>
-                            <div>
-                                <div className='border border-white rounded-3 d-flex align-items-center justify-content-center mb-2' style={{ height: '30px', width: '30px' }}>
-                                    <img src={ic_phone} height={15} />
+                        {/*
+                            <Col lg={3} sm={12} className='mobile-bottom-padding'>
+                                <div>
+                                    <div className='border border-white rounded-3 d-flex align-items-center justify-content-center mb-2' style={{ height: '30px', width: '30px' }}>
+                                        <img src={ic_phone} height={15} />
+                                    </div>
+                                    <h6 className="fw-semibold lh-base text-white fs-14">Call Suppport Team</h6>
+                                    <p className="mb-2 fs-14 text-white">Questions? We've got you covered</p>
+                                    <a href="tel:+12816835601" target="_blank" className="text-white fw-normal fs-14"><u>+12816835601</u></a>
                                 </div>
-                                <h6 className="fw-semibold lh-base text-white fs-14">Call Suppport Team</h6>
-                                <p className="mb-2 fs-14 text-white">Questions? We've got you covered</p>
-                                <a href="tel:+12816835601" target="_blank" className="text-white fw-normal fs-14"><u>+12816835601</u></a>
-                            </div>
-                        </Col>
+                            </Col>
+                        */}
                         <Col lg={3} sm={12}>
                             <div>
                                 <div className='border border-white rounded-3 d-flex align-items-center justify-content-center mb-2' style={{ height: '30px', width: '30px' }}>
                                     <img src={ic_email} height={15}/>
                                 </div>
                                 <h6 className="fw-semibold lh-base text-white fs-14">Email Suppport Team</h6>
-                                <p className="mb-2 fs-14 text-white">Questions? We've got you covered</p>
+                                {/* <p className="mb-2 fs-14 text-white">Questions? We've got you covered</p> */}
 
                                 <a href="mailto:contact@futureoffinancialservices.org" target="_blank" className="text-white fw-normal fs-14"><u>contact@futureoffinancialservices.org</u></a>
                             </div>

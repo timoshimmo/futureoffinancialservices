@@ -1149,7 +1149,6 @@
 
 .inner-contact-body {
     padding: 3rem;
-    justify-content: space-between;
     align-items: center;
 }
 
@@ -1182,6 +1181,22 @@
 
 }
 
+.insight-title {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #FFB615;
+}
+
+.insight-title-link {
+    color: #FFFFFF;
+}
+
+.insight-title-link:hover {
+    color: #FFB615;
+}
+
+.insight-img-right {
+    object-fit: cover;
+}
 
 /*
 .swiper-scrollbar-drag{background: none;}

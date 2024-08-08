@@ -39,20 +39,35 @@ import partnerBazara from "../../assets/images/brands/img_bazara_logo.png";
 import partnersPeerless from "../../assets/images/brands/peerless_logo_light.svg";
 
 //Insights
-import featuredInsights1 from "../../assets/images/insights/featured_insight_1.png";
-import featuredInsights2 from "../../assets/images/insights/featured_insight_1.png";
-import featuredInsights3 from "../../assets/images/insights/featured_insight_1.png";
+import insights1 from "../../assets/images/insights/insight1.png";
+import insights2 from "../../assets/images/insights/insight2.png";
+import insights3 from "../../assets/images/insights/insight3.png";
+
+import insights4 from "../../assets/images/insights/insight4.png";
+import insights5 from "../../assets/images/insights/insight5.png";
+import insights6 from "../../assets/images/insights/insight6.png";
+
+import insights7 from "../../assets/images/insights/insight7.png";
+import insights8 from "../../assets/images/insights/insight8.png";
+import insights9 from "../../assets/images/insights/insight9.png";
 
 //bloggers
 import blogger1 from "../../assets/images/insights/blogger1.png";
 import blogger2 from "../../assets/images/insights/blogger2.png";
 
 //what we do icons
-import ic_research_insight from "../../assets/images/icons/ic_research_insight.png";
+/*import ic_research_insight from "../../assets/images/icons/ic_research_insight.png";
 import ic_events_conferences from "../../assets/images/icons/ic_events_conferences.png";
 import ic_thought_leadership from "../../assets/images/icons/ic_thought_leadership.png";
 import ic_community_engagement from "../../assets/images/icons/ic_community_engagement.png";
 import ic_innovation_technology from "../../assets/images/icons/ic_innovation_technology.png";
+*/
+
+import ic_research_insight from "../../assets/images/icons/ic_research_insight _white.png";
+import ic_events_conferences from "../../assets/images/icons/ic_events_conferences_white.png";
+import ic_thought_leadership from "../../assets/images/icons/ic_thought_leadership_white.png";
+import ic_community_engagement from "../../assets/images/icons/ic_community_engagement_white.png";
+import ic_innovation_technology from "../../assets/images/icons/ic_innovation_technology_white.png";
 
 //Why Choose FFS 
 import why_choose1 from "../../assets/images/about/why_choose1.png";
@@ -99,8 +114,8 @@ const insightsData = [
         topic: "Countdown to the Future of Financial Services Conference 2024",
         tags: ["Finacial Service Coference", "FinTech Innovation"],
         event: "FFS 2024",
-        image: featuredInsights1,
-        type: 0,
+        image: insights1,
+        type: 9,
         writer: [
             {
                 name: "Lanre Akomolafe",
@@ -116,7 +131,7 @@ const insightsData = [
         topic: "Success Stories: Innovations from Past Conferences",
         tags: ["Research"],
         event: "FFS 2024",
-        image: featuredInsights2,
+        image: insights2,
         type: 0,
         writer: [
             {
@@ -133,7 +148,7 @@ const insightsData = [
         topic: "Post-Conference Recap: Key Takeaways and Insights",
         tags: ["Research"],
         event: "FFS 2024",
-        image: featuredInsights2,
+        image: insights3,
         type: 0,
         writer: [
             {
@@ -144,7 +159,159 @@ const insightsData = [
            
         ]
     },
-   
+    {
+        id: 4,
+        date: "17 May 2024",
+        topic: "How Fintech is Driving Financial Inclusion",
+        tags: ["Research"],
+        event: "FinTech",
+        image: insights4,
+        type: 1,
+        writer: [
+            {
+                name: "Adeniyi Jones",
+                img: blogger1,
+                credentials: "Convener, Future of Financial Services Conference"
+            }
+           
+        ]
+    },
+    {
+        id: 5,
+        date: "05 May 2024",
+        topic: "Sustainability in Financial Services: Trends and Innovations",
+        tags: ["Research"],
+        event: "FFS 2024",
+        image: insights5,
+        type: 1,
+        writer: [
+            {
+                name: "Helen Paul",
+                img: blogger2,
+                credentials: "Convener, Future of Financial Services Conference"
+            }
+           
+        ]
+    },
+    {
+        id: 6,
+        date: "30 Apr 2024",
+        topic: "Spotlight on Women Leaders in Financial Services",
+        tags: ["Research"],
+        event: "FinTech",
+        image: insights6,
+        type: 1,
+        writer: [
+            {
+                name: "Paula White",
+                img: blogger2,
+                credentials: "Convener, Future of Financial Services Conference"
+            }
+           
+        ]
+    },
+    {
+        id: 7,
+        date: "24 Apr 2024",
+        topic: "The Importance of Networking in the Financial Services Industry",
+        tags: ["Research"],
+        event: "Summit",
+        image: insights7,
+        type: 1, 
+        writer: [
+            {
+                name: "Jane Jackson",
+                img: blogger2,
+                credentials: "Convener, Future of Financial Services Conference"
+            }
+           
+        ]
+    },
+    {
+        id: 8,
+        date: "18 Apr 2024",
+        topic: "Navigating Regulatory Changes in Financial Services",
+        tags: ["Research"],
+        event: "Blog",
+        image: insights8,
+        type: 1,
+        writer: [
+            {
+                name: "Jimmy Francis",
+                img: blogger1,
+                credentials: "Convener, Future of Financial Services Conference"
+            }
+           
+        ]
+    },
+    {
+        id: 9,
+        date: "10 Apr 2024",
+        topic: "The Role of AI in Shaping the Future of Financial Services",
+        tags: ["Research"],
+        event: "Events & News",
+        image: insights9,
+        type: 1,
+        writer: [
+            {
+                name: "Tems Tiwa",
+                img: blogger2,
+                credentials: "Convener, Future of Financial Services Conference"
+            }
+           
+        ]
+    },
+    {
+        id: 10,
+        date: "08 Apr 2024",
+        topic: "The Importance of Networking in the Financial Services Industry",
+        tags: ["Research"],
+        event: "Summit",
+        image: insights7,
+        type: 1, 
+        writer: [
+            {
+                name: "Jane Jackson",
+                img: blogger2,
+                credentials: "Convener, Future of Financial Services Conference"
+            }
+        
+        ]
+    },
+    {
+        id: 11,
+        date: "07 Apr 2024",
+        topic: "Navigating Regulatory Changes in Financial Services",
+        tags: ["Research"],
+        event: "Blog",
+        image: insights8,
+        type: 1,
+        writer: [
+            {
+                name: "Jimmy Francis",
+                img: blogger1,
+                credentials: "Convener, Future of Financial Services Conference"
+            }
+        
+        ]
+    },
+    {
+        id: 12,
+        date: "03 Apr 2024",
+        topic: "The Role of AI in Shaping the Future of Financial Services",
+        tags: ["Research"],
+        event: "Events & News",
+        image: insights9,
+        type: 1,
+        writer: [
+            {
+                name: "Tems Tiwa",
+                img: blogger2,
+                credentials: "Convener, Future of Financial Services Conference"
+            }
+        
+        ]
+    },
 ];
 
 const latestData = [
@@ -244,7 +411,7 @@ const numbersData = [
         color: "#66FFCC",
     },
     {
-        value: "8",
+        value: "20",
         caption: "Countries",
         color: "#34CC33",
     },
@@ -824,4 +991,4 @@ const whatWeDoData = [
 ]
 
 
-export {connectData, speakersData, whatIsData, numbersData, partnerImgsData, latestData, faqData, faqFullData, speakersFullData, agendaData, whatWeDoData, whyChooseData, joinContactsData }
+export {connectData, speakersData, whatIsData, numbersData, partnerImgsData, latestData, faqData, faqFullData, speakersFullData, agendaData, whatWeDoData, whyChooseData, joinContactsData, insightsData }

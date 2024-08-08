@@ -52,7 +52,8 @@ const Footer = () => {
                                     <h5 className="text-primary mb-0" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>About Us</h5>
                                     <div className="text-white mt-3">
                                         <ul className="list-unstyled ff-secondary footer-list">
-                                            <li><Link to="/home#banner" className="text-white fs-14">About FFS</Link></li>
+                                            <li><Link to="/about" className="text-white fs-14">About FFS</Link></li>
+                                            {/* home#banner */}
                                             {/* <li><Link to="/pages-gallery" className="text-white fs-14">Team</Link></li> */}
                                             <li><Link to="/contact-us" className="text-white fs-14">Contact Us</Link></li>
                                         </ul>
@@ -73,8 +74,8 @@ const Footer = () => {
                                     <h5 className="text-primary mb-0" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>Resources</h5>
                                     <div className="text-white  mt-3">
                                         <ul className="list-unstyled ff-secondary footer-list">
-                                            <li><Link to="/pages-faqs" className="text-white fs-14">Insights</Link></li>
-                                            <li><Link to="/pages-faqs" className="text-white fs-14">Events</Link></li>
+                                            <li><Link to="/insights" className="text-white fs-14">Insights</Link></li>
+                                            <li><Link to="/insights" className="text-white fs-14">Events</Link></li>
                                         </ul>
                                     </div>
                                 </Col>

@@ -10,8 +10,6 @@ import { Container,
     NavLink,
     Offcanvas,
     OffcanvasBody } from 'reactstrap';
-
-import { Link } from 'react-router-dom';
 import { speakersFullData } from '../../../common/data';
 import ic_search from '../../../assets/images/icons/ic_search.png';
 
@@ -121,7 +119,7 @@ const SpeakersList = () => {
                 {/* profile-modal profile-modal */}
                 <Offcanvas isOpen={open} toggle={toggleLeftCanvas} direction="end" className="offcanvas-end border-0 canvas-style">
                     <OffcanvasBody className="p-0 canvas-body">
-                       <div className='w-100 speakers-pop-up-body'>
+                        <div className='w-100 speakers-pop-up-body'>
                             <div className='pt-2 pb-4 top-profile-close-mobile'>
                                 <Button onClick={()=>setOpen(false)} className='bg-transparent border-0 p-0'><i className="mdi mdi-close display-6"></i></Button>
                             </div>
