@@ -92,14 +92,14 @@ const Banner = () => {
                 <Row className="mobile-featured-speakers justify-content-center">
                     <Col lg={5}>
                         <Swiper
-                            spaceBetween={1}
+                            spaceBetween={15}
                             loop={true}
                             centeredSlides={true}
                             freeMode={true}
-                            allowTouchMove={false}
+                            allowTouchMove={true}
                             speed={3000}
                             autoplay={{
-                                delay: 0,
+                                delay: 1000,
                                 disableOnInteraction: false,
                             }}
                             slidesPerView={1.9}
