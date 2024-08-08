@@ -31,7 +31,7 @@ const CTA = () => {
                         <Col lg={12}>
                             <div className='text-center'>
                                 <p className="text-primary mb-2 fs-13">Never miss an update</p>
-                                <h2 className="text-white mb-0 fw-bold" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>Join Our Ever Growing Community</h2>
+                                <h2 className="text-dark mb-0 fw-bold" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>Join Our Ever Growing Community</h2>
                             </div>
                             <div className="mt-2 hstack p-2 justify-content-between border bg-white border-1 rounded-5">
                                 <input type="email" placeholder="example@email.com" className="border-0 fs-12 px-3 w-100"  style={{ color: '#141413', backgroundColor: 'transparent' }} />

@@ -1044,10 +1044,6 @@
     }
 }
 
-@media (max-width: 767.98px) { 
-   
-}
-
 
 .bottom-padding {
     padding-bottom: 80px;
@@ -1145,6 +1141,34 @@
     display: flex;
     margin-right: -40px;
  }
+
+.phone-input-style {
+    width: 100% !important;
+}
+
+
+.inner-contact-body {
+    padding: 3rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+@media (max-width: 767.98px) { 
+    
+    .inner-contact-body {
+        padding: 0px;
+    }
+    
+}
+
+@media (max-width: 767.98px) { 
+
+    .mobile-bottom-padding {
+        padding-bottom: 30px;
+    }
+
+}
 
 
 /*

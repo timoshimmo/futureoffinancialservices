@@ -9,14 +9,14 @@ const Contact = () => {
             <section className="p-5 position-relative" style={{ backgroundColor: '#33CC997A' }}>
                 <div className="bg-overlay bg-overlay-pattern opacity-50"></div>
                 <Container>
-                    <Row className="align-items-center justify-content-between p-5">
-                        <Col lg={4} sm={12}>
+                    <Row className="inner-contact-body">
+                        <Col lg={4} sm={12} className='mobile-bottom-padding'>
                             <div>
                                 <h2 className="mb-2 fw-bold lh-base text-white">Need More Assistance?</h2>
                                 <p className="fs-14 text-white">We are here to assist you with any requires you may have.</p>
                             </div>
                         </Col>
-                        <Col lg={3} sm={12}>
+                        <Col lg={3} sm={12} className='mobile-bottom-padding'>
                             <div>
                                 <div className='border border-white rounded-3 d-flex align-items-center justify-content-center mb-2' style={{ height: '30px', width: '30px' }}>
                                     <img src={ic_phone} height={15} />

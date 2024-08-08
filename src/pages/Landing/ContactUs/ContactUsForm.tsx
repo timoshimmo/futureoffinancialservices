@@ -54,8 +54,8 @@ const ContactUsForm = () => {
                     <Row className="justify-content-end">
                         <Col lg={5}>
                             <div className="w-100">
-                                <h2 className="fw-bold lh-sm text-primary display-6" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>Have Questions? Get in Touch</h2>
-                                <p className="mb-4 fw-light text-white fs-15" >Whether you need more information about the conference, assistance with registration, or have specific inquiries, our team is ready to assist you. Fill out the form and our team will get back to you shortly.</p>
+                                <h2 className="fw-bold lh-sm text-primary display-6" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>Get in Touch</h2>
+                                <p className="mb-4 fw-light text-white fs-15" >Whether you need more information about the summit, assistance with registration, or have specific inquiries, our team is ready to assist you. Fill out the form and our team will get back to you shortly.</p>
                             </div>
                         </Col>
                         <Col lg={7} sm={12} className='px-3'>
@@ -135,7 +135,7 @@ const ContactUsForm = () => {
                                                 placeholder="Enter Phone Number" 
                                                 onChange={phone => setValue(phone)}
                                                 containerClass="w-100 vstack p-2 rounded-2 form-box"
-                                                inputClass='fs-14'
+                                                inputClass='fs-14 phone-input-style'
                                                 inputStyle={{ color: '#303030', borderColor: 'transparent', boxShadow: 'none', fontFamily: 'Montserrat, IBM Plex Sans, sans-serif' }} 
                                                 dropdownStyle={{ borderColor: 'transparent', boxShadow: 'none' }}
                                                 buttonStyle={{ borderColor: 'transparent', backgroundColor: 'transparent', boxShadow: 'none' }}
