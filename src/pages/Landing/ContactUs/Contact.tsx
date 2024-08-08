@@ -6,7 +6,7 @@ import ic_email from "../../../assets/images/icons/ic_email.png";
 const Contact = () => {
     return (
         <React.Fragment>
-            <section className="p-5 position-relative" style={{ backgroundColor: '#33CC997A' }}>
+            <section className="outer-contact-body position-relative" style={{ backgroundColor: '#33CC997A' }}>
                 <div className="bg-overlay bg-overlay-pattern opacity-50"></div>
                 <Container>
                     <Row className="inner-contact-body">
