@@ -78,9 +78,7 @@ const RegisterForm = () => {
                     </Row>
                     <Row className="justify-content-center">
                         <Col lg={7} sm={12} className='px-3'>
-
                             {!successful ?
-
                                 <Card className="border border-white bg-white rounded-4 shadow-none">
                                     <CardBody className="p-4">
                                     <Form

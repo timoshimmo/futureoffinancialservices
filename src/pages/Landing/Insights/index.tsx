@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../Common/Navbar';
 import Footer from '../Common/footer';
 import Banner from './Banner';
+import Main from './Main';
 import CTA from './CTA'
 
 const index = () => {
@@ -27,6 +28,7 @@ const index = () => {
             <div className="layout-wrapper landing body-bg-dark">
                 <Navbar />
                 <Banner />
+              {/* <Main /> */}  
                 <CTA />
                 <Footer />
             </div>

@@ -13,11 +13,11 @@ const Banner = () => {
 
     return (
         <React.Fragment>
-            <section className="section">
+            <section className="section insight-banner">
                 <Container>
                     <Row className='px-4 mb-5 justify-content-center'>
                         <Col lg={12} sm={12} className='d-flex justify-conntent-center'>
-                            <h2 className='w-100 display-3 mb-5 text-center fw-bold lh-base text-primary' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif', display: 'inline-block', width: 'auto' }}>Insights</h2>
+                            <h2 className='w-100 display-4 mb-5 text-center fw-bold lh-base text-primary' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif', display: 'inline-block', width: 'auto' }}>Insights</h2>
                         </Col>
                     </Row>
                     <Row className='px-4'>
@@ -51,7 +51,7 @@ const Banner = () => {
                                     </Col>
                                     <Col lg={6}>
                                         <div className='w-100'>
-                                            <p className='fs-14 text-primary mb-2 fw-semibold'>{item.writer[0].name} <span>.</span> {item.date}</p>
+                                            <p className='fs-14 text-primary mb-2 fw-semibold mobile-top-spacing'>{item.writer[0].name} <span>.</span> {item.date}</p>
                                             <div className='mb-3'>    
                                                 <Link to="#" className='h4 fw-bold insight-title-link' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>{item.topic}</Link> 
                                             </div>
@@ -76,7 +76,7 @@ const Banner = () => {
                             ))}
                         </Col>
                     </Row>
-                    <div style={{ height: '350px' }}></div>
+                    <div className="placeholder-insight-space"></div>
                 </Container>
             </section>
         </React.Fragment>

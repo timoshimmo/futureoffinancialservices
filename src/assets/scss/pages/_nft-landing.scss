@@ -275,11 +275,34 @@
 }
 */
 
+.placeholder-insight-space {
+    height: 350px;
+}
+
 @media (max-width: 767.98px) { 
     .ffs-banner .caption {
         font-size: 16px;
     }
+
+    .insight-banner {
+        padding-top: 140px;
+    }
 }
+
+@media (max-width: 767.98px) { 
+    .mobile-top-spacing {
+        margin-top: 30px;
+    }
+}
+
+
+@media (max-width: 767.98px) { 
+    .placeholder-insight-space {
+        height: 0px;
+    }
+}
+
+
 
 .caption-mobile {
     display: none;
@@ -755,6 +778,10 @@
     .mobile-cta-home {
         display: block;
     }
+
+    .faq-full-body {
+        height: 1000px;
+    }
 }
 
 @media (max-width: 767.98px) { 
@@ -798,7 +825,7 @@
 
 .web-cta-insights {
     position: absolute;
-    bottom: 26%;
+    bottom: 27%;
     left: 0;
     right: 0;
     z-index: 1000;
@@ -822,6 +849,10 @@
     }
 
     .web-cta-home  {
+        display: none;
+    }
+
+    .web-cta-insights {
         display: none;
     }
     
