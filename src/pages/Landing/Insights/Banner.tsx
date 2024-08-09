@@ -52,8 +52,13 @@ const Banner = () => {
                                     <Col lg={6}>
                                         <div className='w-100'>
                                             <p className='fs-14 text-primary mb-2 fw-semibold title-top-spacing'>{item.writer[0].name} <span>.</span> {item.date}</p>
-                                            <div className='mb-3'>    
-                                                <Link to="#" className='h4 fw-bold insight-title-link' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>{item.topic}</Link> 
+                                            <div className='d-flex justify-content-between mb-2'>      
+                                                <div style={{ width: '90%' }}>
+                                                    <Link to="#" className='h4 fw-bold insight-title-link' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>{item.topic}</Link> 
+                                                </div>
+                                                <div className='d-flex justify-content-end mt-2' style={{ width: '10%' }}>
+                                                    <img src={ic_up_right_arrow} height={8}/>
+                                                </div>
                                             </div>
                                             <div className='d-flex align-items-center gap-2 mt-4'>
                                                 <p className='fs-12 text-center border border-primary text-primary py-2 px-4 rounded-pill small-tags-insight'>{item.event}</p>
