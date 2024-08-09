@@ -1,7 +1,8 @@
 import React from 'react';
 import { Container, Row, Col, Card, CardBody } from 'reactstrap';
 import { joinContactsData } from '../../../common/data';
-
+import avatar_female from '../../../assets/images/icons/woman.png';
+import avatar_male from '../../../assets/images/icons/men.png';
 
 const JoinUs = () => {
     
@@ -22,7 +23,7 @@ const JoinUs = () => {
                             <Col key={key} lg={4} sm={12}>
                                 <Card className="border-2 border-primary rounded-3 shadow-none">
                                     <CardBody className="p-3 d-flex flex-column align-items-center">
-                                        <img src={item.img} alt="" className="rounded-circle bg-white" width={100} height={100}/>
+                                        <img src={item.img} alt="" className="p-2 rounded-circle bg-white border border-dark" width={100} height={100}/>
                                         <h5 className='text-white fw-semibold fs-14 my-2'>{item.name}</h5>                     
                                         <p className="text-primary fs-14"><u>{item.email}</u></p>
                                     </CardBody>

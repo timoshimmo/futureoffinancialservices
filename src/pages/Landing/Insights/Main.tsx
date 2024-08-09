@@ -19,7 +19,7 @@ const Banner = () => {
                     </Row>
                     <Row className='px-4'>
                         <Col lg={7} sm={12}>
-                            {insightsData.filter(data => data.type === 9).map((item, key) => (
+                            {insightsData.filter(data => data.type === 1).map((item, key) => (
                                 <div className='w-100' key={key}>
                                     <img src={item.image} className='w-100'/>
                                     <div className='w-100 mt-5'>

@@ -15,9 +15,9 @@ const Banner = () => {
         <React.Fragment>
             <section className="section">
                 <Container>
-                    <Row className='px-4 mb-5'>
-                        <Col lg={4} sm={12}>
-                            <h2 className='insight-title mb-2 fw-semibold lh-base text-primary' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif', display: 'inline-block', width: 'auto' }}>Pre 2024</h2>
+                    <Row className='px-4 mb-5 justify-content-center'>
+                        <Col lg={12} sm={12} className='d-flex justify-conntent-center'>
+                            <h2 className='w-100 display-3 mb-5 text-center fw-bold lh-base text-primary' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif', display: 'inline-block', width: 'auto' }}>Insights</h2>
                         </Col>
                     </Row>
                     <Row className='px-4'>
@@ -45,9 +45,9 @@ const Banner = () => {
                         </Col>
                         <Col lg={5} sm={12} className=' d-flex flex-column'>
                             {insightsData.filter(data => data.type === 0).map((item, key) => (
-                                <Row className='mb-4 flex-grow-1' key={key}>
+                                <Row className='mb-4 ' key={key}>
                                     <Col lg={6}>
-                                        <img src={item.image} className='w-100 h-100 rounded-3 insight-img-right'/>  
+                                        <img src={item.image} className='w-100 rounded-3 insight-img-right'/>  
                                     </Col>
                                     <Col lg={6}>
                                         <div className='w-100'>
@@ -55,7 +55,7 @@ const Banner = () => {
                                             <div className='mb-3'>    
                                                 <Link to="#" className='h4 fw-bold insight-title-link' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>{item.topic}</Link> 
                                             </div>
-                                            <Nav pills className="nav-pills filter-btns gap-2" role="tablist">
+                                            <Nav pills className="nav-pills filter-btns" role="tablist">
                                                 <NavItem role="presentation">
                                                     <NavLink type="button" className='fs-10 border border-primary text-primary py-2 px-4 rounded-pill'>{item.event}</NavLink>
                                                 </NavItem>
@@ -76,6 +76,7 @@ const Banner = () => {
                             ))}
                         </Col>
                     </Row>
+                    <div style={{ height: '350px' }}></div>
                 </Container>
             </section>
         </React.Fragment>

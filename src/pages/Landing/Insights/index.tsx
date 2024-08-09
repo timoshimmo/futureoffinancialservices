@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../Common/Navbar';
 import Footer from '../Common/footer';
 import Banner from './Banner';
+import CTA from './CTA'
 
 const index = () => {
     document.title = " FFS | Future of Financial Services Summit";
@@ -26,6 +27,7 @@ const index = () => {
             <div className="layout-wrapper landing body-bg-dark">
                 <Navbar />
                 <Banner />
+                <CTA />
                 <Footer />
             </div>
         </React.Fragment>

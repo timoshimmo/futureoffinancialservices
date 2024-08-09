@@ -77,6 +77,9 @@ import why_choose4 from "../../assets/images/about/why_choose4.png";
 
 import pattern from "../../assets/images/form_bg_pattern.png";
 
+import avatar_female from '../../assets/images/icons/woman.png';
+import avatar_male from '../../assets/images/icons/men.png';
+
 const connectData = [
     {
         img: summit1,
@@ -111,8 +114,8 @@ const insightsData = [
     {
         id: 1,
         date: "15 JUN 2024",
-        topic: "Countdown to the Future of Financial Services Conference 2024",
-        tags: ["Finacial Service Coference", "FinTech Innovation"],
+        topic: "Countdown to the Future of Financial Services Summit 2024",
+        tags: ["Future of Financial Services Summit"],
         event: "FFS 2024",
         image: insights1,
         type: 9,
@@ -364,12 +367,12 @@ const whyChooseData = [
 
 const joinContactsData = [
     {
-        img: pattern,
+        img: avatar_male,
         name: "Lanre Akomolafe",
         email: "lanre@futureoffinancialservices.org",
     },
     {
-        img: pattern,
+        img: avatar_female,
         name: "Meaghan Johnson",
         email: "meaghan@futureoffinancialservices.org",
     },
