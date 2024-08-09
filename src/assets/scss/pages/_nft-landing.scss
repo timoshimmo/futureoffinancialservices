@@ -354,10 +354,6 @@
     }
 }
 
-.small-tags-insight {
-
-}
-
 
 .caption-mobile {
     display: none;
@@ -1294,17 +1290,7 @@
 }
 
 .insight-title-link {
-    display: block;
     color: #FFFFFF;
-    text-overflow: ellipsis;
-    word-wrap: break-word;
-    overflow: hidden;
-    line-height: 1.2em;
-    overflow: hidden;
-    width: 100%;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
 }
 
 .insight-title-link:hover {
@@ -1313,11 +1299,8 @@
 
 @media (max-width: 767.98px) { 
     .insight-title-link {
-        width: auto;
         color: #FFFFFF;
-        text-overflow: ellipsis;
-        overflow: hidden; 
-        white-space: nowrap;
+       
     }
 
 }
