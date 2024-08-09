@@ -31,7 +31,7 @@ const Banner = () => {
                         {insightsData.filter(data => data.type === 1).map((item, key) => (
                             <Col lg={4}>
                                 <div className='w-100' key={key}>
-                                    <img src={item.image} className='w-100'/>
+                                    <img src={item.image} className='w-100 rounded-4'/>
                                     <div className='w-100 mt-5'>
                                         <p className='fs-15 text-primary mb-2 fw-semibold'>{item.writer[0].name} <span>.</span> {item.date}</p>
                                         <div className='d-flex justify-content-between'>    

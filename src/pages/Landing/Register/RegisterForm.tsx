@@ -14,31 +14,17 @@ const RegisterForm = () => {
     const [value, setValue] = useState('');
 
     useEffect(() => {
-        const kscript = document.createElement('script');
-        kscript.setAttribute('type', 'text/javascript');
-
-        //var _ctct_m = "9a8473feb12e9b78ee72998b18eba1ee"; 
-      
-        const inlineScript = document.createTextNode("var _ctct_m =9a8473feb12e9b78ee72998b18eba1ee");
-        kscript.async = true;
-       // kscript.append(inlineScript);
-        //kscript.innerHTML = "var _ctct_m =9a8473feb12e9b78ee72998b18eba1ee";
-        document.body.appendChild(kscript);
-      
-        return () => {
-          document.body.removeChild(kscript);
-        }
-      }, []); 
-
-
-    useEffect(() => {
         const script = document.createElement('script');
         //const keyscript = document.createElement('script');
       
         script.id="signupScript";
         script.src = "//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js";
+        script.innerHTML = "var _ctct_m =9a8473feb12e9b78ee72998b18eba1ee";
         script.async = true;
-      
+
+       // const inlineScript = document.createTextNode("var _ctct_m =9a8473feb12e9b78ee72998b18eba1ee");
+        //script.append(inlineScript);
+
         document.body.appendChild(script);
       
         return () => {
@@ -93,19 +79,18 @@ const RegisterForm = () => {
         <React.Fragment>
             <section className="section form-container">
                 <Container>
-                    <Row>
+                    <Row className='justify-content-center'>
                         <Col lg={8}>
                             <div className="ctct-inline-form" data-form-id="83b2b6c1-a7fd-4782-8c73-050f87716b39"></div>
                         </Col>
                     </Row>
 
-                    <Row className="justify-content-center">
+                    {/*  
+                             <Row className="justify-content-center">
                         <Col lg={7} sm={12} className='px-3'>
                             {!successful ?
                                 <Card className="border border-white bg-white rounded-4 shadow-none">
                                     <CardBody className="p-4">
-
-                                    <div className="ctct-inline-form" data-form-id="83b2b6c1-a7fd-4782-8c73-050f87716b39"></div>
                                     <Form
                                         onSubmit={(e) => {
                                             e.preventDefault();
@@ -225,31 +210,14 @@ const RegisterForm = () => {
                                                     dropdownStyle={{ borderColor: 'transparent', boxShadow: 'none' }}
                                                     buttonStyle={{ borderColor: 'transparent', backgroundColor: 'transparent', boxShadow: 'none' }}
                                                 />
-                                                {/*
-                                                    <div className="w-100 vstack p-2 rounded-2 form-box">
-                                                        <Input 
-                                                            id="phone_no"
-                                                            name="phone_no"
-                                                            type="text" 
-                                                            placeholder="Enter Phone Number" 
-                                                            className="border-0 fs-14 px-2"  
-                                                            onChange={validation.handleChange}
-                                                            onBlur={validation.handleBlur}
-                                                            value={validation.values.phone_no || ""}
-                                                            invalid={
-                                                                validation.touched.phone_no && validation.errors.phone_no ? true : false
-                                                            }
-                                                            style={{ color: '#303030', backgroundColor: 'transparent', boxShadow: 'none' }} 
-                                                        />
-                                                    </div>
-                                                    */}
+                        
                                             </Col>
                                             <Col lg={12} sm={12} className='px-2 mt-5'>
                                                 <button className=" w-100 btn btn-primary rounded-5 py-2 fs-16" type="submit" disabled={loading? true : false}>
                                                     {loading && <span className="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span> }
                                                     {loading ? 'Loading...' : 'Send'}
                                                 </button>
-                                                {/* <input type="button" className="w-100 btn btn-primary border border-primary rounded-5 py-2 fs-16" value="Send" /> */}
+
                                             </Col>
                                         </Row>
                                         </Form>
@@ -280,6 +248,8 @@ const RegisterForm = () => {
                             }
                         </Col>
                     </Row>
+
+                        */}
                 </Container>
             </section>
         </React.Fragment>

@@ -28,7 +28,7 @@ const index = () => {
             <div className="layout-wrapper landing body-bg-dark">
                 <Navbar />
                 <Banner />
-              {/* <Main /> */}  
+                <Main /> 
                 <CTA />
                 <Footer />
             </div>
