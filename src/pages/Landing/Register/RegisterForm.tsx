@@ -80,8 +80,13 @@ const RegisterForm = () => {
             <section className="section form-container">
                 <Container>
                     <Row className='justify-content-center'>
-                        <Col lg={8}>
-                            <div className="ctct-inline-form" data-form-id="83b2b6c1-a7fd-4782-8c73-050f87716b39"></div>
+                        <Col lg={8} className='position-relative px-0'>
+                            <div className='position-absolute bg-white white-cover'></div>
+                            <Card className="border border-white bg-white rounded-4 shadow-none">
+                                <CardBody className="py-5 px-4">
+                                    <div className="ctct-inline-form" data-form-id="83b2b6c1-a7fd-4782-8c73-050f87716b39"></div>
+                                </CardBody>
+                            </Card>                 
                         </Col>
                     </Row>
 
