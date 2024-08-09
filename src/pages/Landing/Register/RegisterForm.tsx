@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Card, CardBody, Label, Input, Form, Button } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import * as Yup from "yup";
@@ -12,6 +12,21 @@ const RegisterForm = () => {
     const [successful, setSuccessful] = useState(false);
     const [loading, setLoading] = useState(false);
     const [value, setValue] = useState('');
+
+/*
+    useEffect(() => {
+        const script = document.createElement('script');
+        const keyscript = document.createElement('script');
+      
+        script.src = "//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js";
+        script.async = true;
+      
+        document.body.appendChild(script);
+      
+        return () => {
+          document.body.removeChild(script);
+        }
+      }, []); */
 
     const validation = useFormik({
         // enableReinitialize : use this flag when initial values needs to be changed
@@ -50,10 +65,17 @@ const RegisterForm = () => {
         }, 5000);
     };
 
+
+
     return (
         <React.Fragment>
             <section className="section form-container">
                 <Container>
+                    <Row>
+                        <Col lg={8}>
+                            <div className="ctct-inline-form" data-form-id="83b2b6c1-a7fd-4782-8c73-050f87716b39"></div>
+                        </Col>
+                    </Row>
                     <Row className="justify-content-center">
                         <Col lg={7} sm={12} className='px-3'>
 
