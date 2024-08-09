@@ -1321,12 +1321,25 @@
 
 @media (max-width: 767.98px) { 
     .white-cover {
-        height: 120px;
+        height: 125px;
         bottom: 18%;
     }
 
 }
 
+
+.side-spacing {
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+@media (max-width: 767.98px) { 
+    .side-spacing {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+}
 
 /*
 .swiper-scrollbar-drag{background: none;}
