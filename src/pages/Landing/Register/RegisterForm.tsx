@@ -13,11 +13,29 @@ const RegisterForm = () => {
     const [loading, setLoading] = useState(false);
     const [value, setValue] = useState('');
 
-/*
+    useEffect(() => {
+        const kscript = document.createElement('script');
+        kscript.setAttribute('type', 'text/javascript');
+
+        //var _ctct_m = "9a8473feb12e9b78ee72998b18eba1ee"; 
+      
+        const inlineScript = document.createTextNode("var _ctct_m =9a8473feb12e9b78ee72998b18eba1ee");
+        kscript.async = true;
+       // kscript.append(inlineScript);
+        //kscript.innerHTML = "var _ctct_m =9a8473feb12e9b78ee72998b18eba1ee";
+        document.body.appendChild(kscript);
+      
+        return () => {
+          document.body.removeChild(kscript);
+        }
+      }, []); 
+
+
     useEffect(() => {
         const script = document.createElement('script');
-        const keyscript = document.createElement('script');
+        //const keyscript = document.createElement('script');
       
+        script.id="signupScript";
         script.src = "//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js";
         script.async = true;
       
@@ -26,7 +44,13 @@ const RegisterForm = () => {
         return () => {
           document.body.removeChild(script);
         }
-      }, []); */
+      }, []); 
+
+      /*
+
+<script> var _ctct_m = "9a8473feb12e9b78ee72998b18eba1ee"; </script>
+<script id="signupScript" src="//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js" async defer></script>
+      */
 
     const validation = useFormik({
         // enableReinitialize : use this flag when initial values needs to be changed
@@ -65,8 +89,6 @@ const RegisterForm = () => {
         }, 5000);
     };
 
-
-
     return (
         <React.Fragment>
             <section className="section form-container">
@@ -76,11 +98,14 @@ const RegisterForm = () => {
                             <div className="ctct-inline-form" data-form-id="83b2b6c1-a7fd-4782-8c73-050f87716b39"></div>
                         </Col>
                     </Row>
+
                     <Row className="justify-content-center">
                         <Col lg={7} sm={12} className='px-3'>
                             {!successful ?
                                 <Card className="border border-white bg-white rounded-4 shadow-none">
                                     <CardBody className="p-4">
+
+                                    <div className="ctct-inline-form" data-form-id="83b2b6c1-a7fd-4782-8c73-050f87716b39"></div>
                                     <Form
                                         onSubmit={(e) => {
                                             e.preventDefault();
