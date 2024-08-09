@@ -215,6 +215,10 @@
     align-items: end;
 }
 
+.top-padding {
+    padding: 140px 30px 0;
+}
+
 .agenda-banner {
    /* background-image: url('../../images/banners/img_agenda_banner.png'); */
     background-size: cover;
@@ -230,6 +234,10 @@
 
 .speakers-list-body {
     padding-top: 87px;
+}
+
+.mid-padding-top {
+    padding-top: 60px;
 }
 
 .form-box {
@@ -1046,6 +1054,10 @@
 
 
 .bottom-padding {
+    padding-bottom: 80px;
+}
+
+.mid-bottom-padding {
     padding-bottom: 80px;
 }
 

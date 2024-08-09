@@ -1,9 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Row, Col, Card, CardBody, Nav, NavItem, NavLink } from 'reactstrap';
-import insights1 from "../../../assets/images/insights/insight1.png";
-import insights2 from "../../../assets/images/insights/insight2.png";
-import insights3 from "../../../assets/images/insights/insight3.png";
 
 import ic_up_right_arrow from "../../../assets/images/icons/ic_up_righ_arrow.png";
 
@@ -17,7 +14,7 @@ const Banner = () => {
                 <Container>
                     <Row className='px-4 mb-5'>
                         <Col lg={4} sm={12}>
-                            <h2 className='insight-title mb-2 fw-semibold lh-base text-primary' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif', display: 'inline-block', width: 'auto' }}>Pre 2024</h2>
+                            <h2 className='insight-title-2 mb-2 fw-semibold lh-base text-primary' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif', display: 'inline-block', width: 'auto' }}>Insights</h2>
                         </Col>
                     </Row>
                     <Row className='px-4'>
