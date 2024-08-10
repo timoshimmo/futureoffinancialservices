@@ -36,7 +36,7 @@ const Banner = () => {
                 <Container>
                     <Row className='px-4 mb-5'>
                         <Col lg={4} sm={12}>
-                            <h2 className='insight-title mb-2 fw-semibold lh-base text-primary' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif', display: 'inline-block', width: 'auto' }}>Pre 2024</h2>
+                            <h2 className='insight-title mb-2 fw-semibold lh-base text-primary' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif', display: 'inline-block', width: 'auto' }}>News & Updates</h2>
                         </Col>
                     </Row>
                     <Row className='px-4 mb-3'>
