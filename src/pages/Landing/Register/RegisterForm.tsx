@@ -253,8 +253,6 @@ const RegisterForm = () => {
                             }
                         </Col>
                     </Row>
-
-                    
                 </Container>
             </section>
         </React.Fragment>

@@ -75,7 +75,8 @@ const Footer = () => {
                                     <div className="text-white  mt-3">
                                         <ul className="list-unstyled ff-secondary footer-list">
                                             <li><Link to="/insights" className="text-white fs-14">Insights</Link></li>
-                                            <li><Link to="#" className="text-white fs-14">Events</Link></li>
+                                            <span className="text-white fs-14">Events</span>
+                                            {/* <li><Link to="#" className="text-white fs-14">Events</Link></li> */}
                                         </ul>
                                     </div>
                                 </Col>
@@ -95,20 +96,20 @@ const Footer = () => {
                             <div className="text-sm-end mobile-copyright-area">
                                 <ul className="list-inline mb-0 footer-social-link">
                                     <li className="list-inline-item px-2">
-                                        <Link to="#" className="d-block">
+                                        {/* <Link to="#" className="d-block"> */}
                                             <span className="text-muted fs-14">Terms</span>
-                                        </Link>
+                                        {/* </Link> */}
                                     </li>
                                     <li className="list-inline-item px-2">
-                                        <Link to="#" className="d-block">
+                                        {/* <Link to="#" className="d-block"> */}
                                             <span className="text-muted fs-14">Privacy</span>
-                                        </Link>
+                                        {/* </Link> */}
                                     </li>
                                     <li className="list-inline-item px-2">
-                                        <Link to="#" className="d-block">
+                                        {/* <Link to="#" className="d-block"> */}
                                             <span className="text-muted fs-14">Cookies</span>
-                                        </Link>
-                                    </li>
+                                        {/* </Link> */}
+                                    </li> 
                                 </ul>
                             </div>
                         </Col>
