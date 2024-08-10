@@ -64,7 +64,7 @@ const Banner = () => {
                         ))}
                     </Row>
                     <Row>
-                        <Col lg={12} className='mt-5'>
+                        <Col lg={12} className='mt-5 px-5'>
                             <Pagination
                                 data={insightsData}
                                 currentPage={currentPage}
@@ -73,11 +73,11 @@ const Banner = () => {
                             />
                         </Col>
                     </Row>
+                    <div className="placeholder-insight-space"></div>
                 </Container>
             </section>
         </React.Fragment>
     );
-
 }
 
 export default Banner;

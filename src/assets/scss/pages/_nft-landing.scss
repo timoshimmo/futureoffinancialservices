@@ -874,15 +874,26 @@
     max-width: 900px;
 }
 
+
 .web-cta-insights {
     position: absolute;
-    bottom: 27%;
+    bottom: 16%;
     left: 0;
     right: 0;
     z-index: 1000;
     max-width: 900px;
 }
 
+/*
+.web-cta-insights {
+    position: absolute;
+    bottom: 26%;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    max-width: 900px;
+}
+*/
 .row-footer {
     justify-content: end;
 

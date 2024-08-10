@@ -38,14 +38,14 @@ const Pagination = ({ data, currentPage, setCurrentPage, perPageData }: any) => 
                             </Link>
                         ) :
                             <li className={currentPage <= 1 ? "page-item disabled" : "page-item"}>
-                                <Link to="#!" className="page-link" onClick={handleprevPage}>Previous</Link>
+                                <Link to="#!" className="page-link bg-white text-primary" onClick={handleprevPage}>Previous</Link>
                             </li>
                         }
                         <div className="d-flex gap-2 align-items-center">
                             {pageNumbers.map((item, key) => (
                                 <React.Fragment key={key}>
                                     <li className="page-item">
-                                        <Link to="#!" className={currentPage === item ? "page-link active" : "page-link"} onClick={() => handleClick(item)}>{item}</Link>
+                                        <Link to="#!" className={currentPage === item ? "page-link active rounded-circle py-2 px-3" : "page-link text-secondary border-0 rounded-circle py-2 px-3"} onClick={() => handleClick(item)}>{item}</Link>
                                     </li>
                                 </React.Fragment>
                             ))}
@@ -57,7 +57,7 @@ const Pagination = ({ data, currentPage, setCurrentPage, perPageData }: any) => 
                             </Link>
                         ) :
                             <li className={currentPage >= pageNumbers.length ? "page-item disabled" : "page-item"}>
-                                <Link to="#!" className="page-link" onClick={handlenextPage}>Next</Link>
+                                <Link to="#!" className="page-link bg-white text-primary" onClick={handlenextPage}>Next</Link>
                             </li>
                         }
                     </ul>
