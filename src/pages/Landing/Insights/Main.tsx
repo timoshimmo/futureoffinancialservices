@@ -42,9 +42,9 @@ const Banner = () => {
                     <Row className='px-4 mb-3'>
                         {currentListData.map((item, key) => (
                             <Col lg={4}>
-                                <div className='w-100' key={key}>
+                                <div className='w-100 news-bottom-margin' key={key}>
                                     <img src={item.image} className='w-100 rounded-4'/>
-                                    <div className='w-100 mt-5'>
+                                    <div className='w-100 title-small-top-spacing-news'>
                                         <p className='fs-15 text-primary mb-2 fw-semibold'>{item.writer[0].name} <span>.</span> {item.date}</p>
                                         <div className='d-flex justify-content-between'>    
                                             <div style={{ width: '90%' }}>

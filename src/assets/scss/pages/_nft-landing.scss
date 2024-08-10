@@ -307,6 +307,10 @@
     }
 }
 
+.title-small-top-spacing-news {
+    margin-top: 20px;
+}
+
 .insight-big-mb {
     margin-bottom: 0;
 }
@@ -883,6 +887,18 @@
     z-index: 1000;
     max-width: 900px;
 }
+
+.news-bottom-margin {
+    margin-bottom: 50px;
+}
+
+/*
+@media (max-width: 767.98px) { 
+    .news-bottom-margin {
+        margin-bottom: 50px;
+    }
+}
+*/
 
 /*
 .web-cta-insights {

@@ -61,8 +61,8 @@ const Banner = () => {
                                                 </div>
                                             </div>
                                             <div className='d-flex align-items-center gap-2 mt-4'>
-                                                <p className='fs-12 text-center border border-primary text-primary py-2 px-4 rounded-pill small-tags-insight'>{item.event}</p>
-                                                <p className='fs-12 text-center border border-secondary text-secondary py-2 px-4 rounded-pill small-tags-insight'>{item.tags[0]}</p>
+                                                <p className='fs-10 text-center border border-primary text-primary py-2 px-4 rounded-pill small-tags-insight'>{item.event}</p>
+                                                <p className='fs-10 text-center border border-secondary text-secondary py-2 px-4 rounded-pill small-tags-insight'>{item.tags[0]}</p>
                                             </div>
                                             {/*
                                                 <Row className='d-flex justify-content-between align-items-center gap-2 mt-4 w-100'>

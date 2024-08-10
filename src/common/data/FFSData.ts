@@ -108,7 +108,15 @@ const connectData = [
 ];
 
 
+/*
+5
+topic: "Sustainability in Financial Services: Trends and Innovations",
 
+
+7
+topic: "The Importance of Networking in the Financial Services Industry",
+
+*/
 
 const insightsData = [
     {
@@ -182,7 +190,7 @@ const insightsData = [
     {
         id: 5,
         date: "05 May 2024",
-        topic: "Sustainability in Financial Services: Trends and Innovations",
+        topic: "Sustainability in Financial Services: Trends and ...",
         tags: ["Research"],
         event: "FFS 2024",
         image: insights5,
@@ -216,7 +224,7 @@ const insightsData = [
     {
         id: 7,
         date: "24 Apr 2024",
-        topic: "The Importance of Networking in the Financial Services Industry",
+        topic: "The Importance of Networking in the Financial Services ...",
         tags: ["Research"],
         event: "Summit",
         image: insights7,
