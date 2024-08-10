@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { Container, Row, Col, Pagination, PaginationItem, PaginationLink } from 'reactstrap';
+import { Container, Row, Col } from 'reactstrap';
 
 import ic_up_right_arrow from "../../../assets/images/icons/ic_up_righ_arrow.png";
 
 import { insightsData } from '../../../common/data';
+
+import Pagination from 'Components/Common/Pagination';
 
 const Banner = () => {
 
@@ -12,6 +14,16 @@ const Banner = () => {
     const [newsState, setNewsState] = useState([]);
     const [currentState, setCurrentState] = useState(0);
     const [pageState, setPageState] = useState(0);
+
+    const [currentPage, setCurrentPage] = useState(1);
+
+    const currentListData = useMemo(() => {
+        const firstPageIndex = (currentPage - 1) * pageSize;
+        const lastPageIndex = firstPageIndex + pageSize;
+        return insightsData.filter(data => data.type === 1).slice(firstPageIndex, lastPageIndex);
+      }, [currentPage]);
+
+
 
    /* useEffect(() => {
         setNewsState(insightsData);
@@ -27,8 +39,8 @@ const Banner = () => {
                             <h2 className='insight-title mb-2 fw-semibold lh-base text-primary' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif', display: 'inline-block', width: 'auto' }}>Pre 2024</h2>
                         </Col>
                     </Row>
-                    <Row className='px-4'>
-                        {insightsData.filter(data => data.type === 1).map((item, key) => (
+                    <Row className='px-4 mb-3'>
+                        {currentListData.map((item, key) => (
                             <Col lg={4}>
                                 <div className='w-100' key={key}>
                                     <img src={item.image} className='w-100 rounded-4'/>
@@ -50,6 +62,16 @@ const Banner = () => {
                                 </div>
                             </Col>
                         ))}
+                    </Row>
+                    <Row>
+                        <Col lg={12} className='mt-5'>
+                            <Pagination
+                                data={insightsData}
+                                currentPage={currentPage}
+                                setCurrentPage={setCurrentPage}
+                                perPageData={pageSize}
+                            />
+                        </Col>
                     </Row>
                 </Container>
             </section>

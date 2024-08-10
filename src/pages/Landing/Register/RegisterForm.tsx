@@ -79,7 +79,7 @@ const RegisterForm = () => {
         <React.Fragment>
             <section className="section form-container">
                 <Container>
-                    <Row className='justify-content-center'>
+                    {/* <Row className='justify-content-center'>
                         <Col lg={8} className='position-relative px-0'>
                             <div className='position-absolute bg-white white-cover'></div>
                             <Card className="border border-white bg-white rounded-4 shadow-none">
@@ -88,10 +88,10 @@ const RegisterForm = () => {
                                 </CardBody>
                             </Card>                 
                         </Col>
-                    </Row>
+    </Row> */}
 
-                    {/*  
-                             <Row className="justify-content-center">
+                 
+                    <Row className="justify-content-center">
                         <Col lg={7} sm={12} className='px-3'>
                             {!successful ?
                                 <Card className="border border-white bg-white rounded-4 shadow-none">
@@ -254,7 +254,7 @@ const RegisterForm = () => {
                         </Col>
                     </Row>
 
-                        */}
+                    
                 </Container>
             </section>
         </React.Fragment>

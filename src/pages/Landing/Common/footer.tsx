@@ -75,7 +75,7 @@ const Footer = () => {
                                     <div className="text-white  mt-3">
                                         <ul className="list-unstyled ff-secondary footer-list">
                                             <li><Link to="/insights" className="text-white fs-14">Insights</Link></li>
-                                            <li><Link to="/insights" className="text-white fs-14">Events</Link></li>
+                                            <li><Link to="#" className="text-white fs-14">Events</Link></li>
                                         </ul>
                                     </div>
                                 </Col>
