@@ -38,7 +38,7 @@ const Pagination = ({ data, currentPage, setCurrentPage, perPageData }: any) => 
                             </Link>
                         ) :
                             <li className={currentPage <= 1 ? "page-item disabled" : "page-item"}>
-                                <Link to="#!" className="page-link bg-white text-primary" onClick={handleprevPage}>Previous</Link>
+                                <Link to="#!" className="page-link bg-white text-primary fw-semibold" onClick={handleprevPage}>Previous</Link>
                             </li>
                         }
                         <div className="d-flex gap-2 align-items-center">
@@ -52,12 +52,12 @@ const Pagination = ({ data, currentPage, setCurrentPage, perPageData }: any) => 
                         </div>
                         
                         {currentPage >= pageNumbers.length ? (
-                            <Link className="page-item pagination-next disabled" to="#!">
+                            <Link className="page-item pagination-next  text-center" to="#!" style={{ width: '90px' }}>
                                 Next
                             </Link>
                         ) :
                             <li className={currentPage >= pageNumbers.length ? "page-item disabled" : "page-item"}>
-                                <Link to="#!" className="page-link bg-white text-primary" onClick={handlenextPage}>Next</Link>
+                                <Link to="#!" className="page-link bg-white text-primary text-center fw-semibold" onClick={handlenextPage} style={{ width: '90px' }}>Next</Link>
                             </li>
                         }
                     </ul>
