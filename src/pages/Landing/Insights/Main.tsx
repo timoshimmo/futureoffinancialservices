@@ -32,7 +32,7 @@ const Banner = () => {
 
     return (
         <React.Fragment>
-            <section className="section">
+            <section className="section mobile-section">
                 <Container>
                     <Row className='px-4 mb-5'>
                         <Col lg={4} sm={12}>
@@ -64,7 +64,7 @@ const Banner = () => {
                         ))}
                     </Row>
                     <Row>
-                        <Col lg={12} className='mt-5 px-5'>
+                        <Col lg={12} className='mt-5 side-spacing-pagination'>
                             <Pagination
                                 data={insightsData}
                                 currentPage={currentPage}
