@@ -485,7 +485,7 @@ const speakersData = [
     {
         img: img_meaghan,
         name: "Meaghan Johnson",
-        credentials: "Convener/CEO, FFS"
+        credentials: "Convener/ED, FFS"
     },
 ]
 
@@ -638,7 +638,7 @@ const speakersFullData = [
         pic: img_meaghan,
         name: "Meaghan Johnson",
         tags: ["artificial-intelligence"],
-        credentials: "Convener/CEO",
+        credentials: "Convener/ED",
         company: "FFS",
         courses: [
             {

@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 //import Scss
 import './assets/scss/themes.scss';
 
 //imoprt Route
 import Route from './Routes';
+import ReactGA from 'react-ga4';
+ReactGA.initialize('G-C45JT7V5WH');
 
 // Import Firebase Configuration file
 // import { initFirebaseBackend } from "./helpers/firebase_helper";
@@ -30,6 +32,11 @@ import Route from './Routes';
 // initFirebaseBackend(firebaseConfig);
 
 function App() {
+
+  useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: window.location.pathname });
+  }, []);
+
   return (
     <React.Fragment>
       <Route />
