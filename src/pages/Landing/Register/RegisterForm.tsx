@@ -53,7 +53,10 @@ const RegisterForm = () => {
         validationSchema: Yup.object({
             first_name: Yup.string().required("Please Enter Your First Name"),
             last_name: Yup.string().required("Please Enter Your Last Name"),
-            email: Yup.string().email('Invalid email').required("Please Enter Your Email"),
+            email: Yup.string().email('Invalid email').required("Please Enter Your Email")
+            .test('valid-domain', 'Invalid email domain', (value) => {
+                return value.endsWith('.com' || '.org' || '.co' || '.edu');
+            }),
             company_name: Yup.string().required("Please Company Name is Required"),
             title_name: Yup.string().required("Please Enter Your Position in the Company"),
             phone_no: Yup.string().required("Please Your Phone Number is Required"),
@@ -201,6 +204,7 @@ const RegisterForm = () => {
                                                         style={{ color: '#303030', backgroundColor: 'transparent', boxShadow: 'none' }}
                                                     />
                                                 </div>
+                                                {validation.errors.email && validation.touched.email ? <p className='fs-11' style={{ color: 'red' }}>{validation.errors.email}</p> : null}
                                             </Col>
                                             <Col lg={12} sm={12} className='px-2 mt-4'>
                                                 <Label className="fs-13 form-label mb-0">Phone Number</Label>
