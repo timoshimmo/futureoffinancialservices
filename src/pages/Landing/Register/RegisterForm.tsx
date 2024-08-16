@@ -78,6 +78,15 @@ const RegisterForm = () => {
         }, 5000);
     };
 
+    const handleMobileClick = () => {
+        setLoading(true);
+        validation.handleSubmit();
+        setTimeout(() => {
+            setSuccessful(true);
+            setLoading(false);
+        }, 5000);
+    }
+
     return (
         <React.Fragment>
             <section className="section form-container">
@@ -215,14 +224,19 @@ const RegisterForm = () => {
                                                     onChange={phone => setValue(phone)}
                                                     containerClass="w-100 vstack p-2 rounded-2 form-box"
                                                     inputClass='fs-14'
-                                                    inputStyle={{ color: '#303030', borderColor: 'transparent', boxShadow: 'none', fontFamily: 'Montserrat, IBM Plex Sans, sans-serif' }} 
+                                                    inputStyle={{ width: '100%', color: '#303030', borderColor: 'transparent', boxShadow: 'none', fontFamily: 'Montserrat, IBM Plex Sans, sans-serif' }} 
                                                     dropdownStyle={{ borderColor: 'transparent', boxShadow: 'none' }}
                                                     buttonStyle={{ borderColor: 'transparent', backgroundColor: 'transparent', boxShadow: 'none' }}
                                                 />
                         
                                             </Col>
                                             <Col lg={12} sm={12} className='px-2 mt-5'>
-                                                <button className=" w-100 btn btn-primary rounded-5 py-2 fs-16" type="submit" disabled={loading? true : false}>
+                                                <button className="btn-submit-web w-100 btn btn-primary rounded-5 py-2 fs-16" type="submit" disabled={loading? true : false}>
+                                                    {loading && <span className="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span> }
+                                                    {loading ? 'Loading...' : 'Send'}
+                                                </button>
+
+                                                <button onClick={handleMobileClick} className="btn-submit-mobile w-100 btn btn-primary rounded-5 py-2 fs-16" type="button" disabled={loading? true : false}>
                                                     {loading && <span className="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span> }
                                                     {loading ? 'Loading...' : 'Send'}
                                                 </button>
