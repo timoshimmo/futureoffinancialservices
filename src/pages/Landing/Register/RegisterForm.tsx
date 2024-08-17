@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Card, CardBody, Label, Input, Form, Button } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 import * as Yup from "yup";
 import { useFormik } from "formik";
 import PhoneInput from 'react-phone-input-2';
@@ -11,9 +12,10 @@ const RegisterForm = () => {
 
     const [successful, setSuccessful] = useState(false);
     const [loading, setLoading] = useState(false);
-    const [value, setValue] = useState('');
+    //const [value, setValue] = useState('');
 
-    useEffect(() => {
+   /* useEffect(() => {
+        
         const script = document.createElement('script');
         //const keyscript = document.createElement('script');
       
@@ -30,49 +32,66 @@ const RegisterForm = () => {
         return () => {
           document.body.removeChild(script);
         }
-      }, []); 
 
-      /*
+        
+      }, []);  */
 
-<script> var _ctct_m = "9a8473feb12e9b78ee72998b18eba1ee"; </script>
-<script id="signupScript" src="//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js" async defer></script>
-      */
 
     const validation = useFormik({
         // enableReinitialize : use this flag when initial values needs to be changed
         enableReinitialize: true,
 
         initialValues: {
-            first_name: '',
-            last_name: '',
+            firstname: '',
+            lastname: '',
             email: '',
             company_name: '',
-            title_name: ''
+            title: '',
+            phone: ''
         },
         validationSchema: Yup.object({
-            first_name: Yup.string().required("Please Enter Your First Name"),
-            last_name: Yup.string().required("Please Enter Your Last Name"),
+            firstname: Yup.string().required("Please Enter Your First Name"),
+            lastname: Yup.string().required("Please Enter Your Last Name"),
             email: Yup.string().email('Invalid email').required("Please Enter Your Email")
-            .test('valid-domain', 'Invalid email domain', (value) => {
-                return value.endsWith('.com' || '.org' || '.co' || '.edu');
-            }),
+            .matches(/@[^.]*\./, "Invalid email format"),
             company_name: Yup.string().required("Please Company Name is Required"),
-            title_name: Yup.string().required("Please Enter Your Position in the Company")
+            title: Yup.string().required("Please Enter Your Position in the Company"),
+            phone: Yup.string().required("Please Your Phone Number is Required"),
         }),
-        onSubmit: (values) => {
+        onSubmit: (values, { resetForm }) => {
             /*dispatch(registerUser(values));
             setLoader(true)
             */
-            handleClick();
+            console.log("FORM VALUES", values);
+            handleClick(values);
+            resetForm();
         }
     });
 
-    const handleClick = () => {
+    const handleClick = (obj: any) => {
         setLoading(true);
-        setTimeout(() => {
+       /* setTimeout(() => {
             setSuccessful(true);
             setLoading(false);
-        }, 5000);
+        }, 5000); */
+
+        axios.post('https://api.futureoffinancialservices.org/api/user-register', obj)
+        .then(response => {
+            console.log(response);
+            setSuccessful(true);
+            setLoading(false);
+        })
+        .catch((error) => {
+            if (error.response) {
+            console.log(error.response);
+            console.log("server error");
+            } else if (error.request) {
+            console.log("network error");
+            } else {
+            console.log(error);
+            }
+            setLoading(false);
+      })
     };
 
     return (
@@ -108,16 +127,16 @@ const RegisterForm = () => {
                                                 <Label className="fs-13 form-label mb-0">First Name</Label>
                                                 <div className="w-100 vstack p-2 rounded-2 form-box">
                                                     <Input 
-                                                        id="first_name"
-                                                        name="first_name"
+                                                        id="firstname"
+                                                        name="firstname"
                                                         type="text" 
                                                         placeholder="Enter First Name" 
                                                         className="border-0 fs-14 px-2 form-inputs-custom"  
                                                         onChange={validation.handleChange}
                                                         onBlur={validation.handleBlur}
-                                                        value={validation.values.first_name || ""}
+                                                        value={validation.values.firstname || ""}
                                                         invalid={
-                                                            validation.touched.first_name && validation.errors.first_name ? true : false
+                                                            validation.touched.firstname && validation.errors.firstname ? true : false
                                                         }
                                                         style={{ color: '#303030', backgroundColor: 'transparent', boxShadow: 'none' }} 
                                                     />
@@ -127,16 +146,16 @@ const RegisterForm = () => {
                                                 <Label className="fs-13 form-label mb-0">Last Name</Label>
                                                 <div className="w-100 vstack p-2 rounded-2 form-box">
                                                     <Input 
-                                                        id="last_name"
-                                                        name="last_name"
+                                                        id="lastname"
+                                                        name="lastname"
                                                         type="text" 
                                                         placeholder="Enter Last Name" 
                                                         className="border-0 fs-14 px-2"  
                                                         onChange={validation.handleChange}
                                                         onBlur={validation.handleBlur}
-                                                        value={validation.values.last_name || ""}
+                                                        value={validation.values.lastname || ""}
                                                         invalid={
-                                                            validation.touched.last_name && validation.errors.last_name ? true : false
+                                                            validation.touched.lastname && validation.errors.lastname ? true : false
                                                         }
                                                         style={{ color: '#303030', backgroundColor: 'transparent', boxShadow: 'none' }} 
                                                     />
@@ -167,16 +186,16 @@ const RegisterForm = () => {
                                                 <Label className="fs-13 form-label mb-0">Position/Title Name</Label>
                                                 <div className="w-100 vstack p-2 rounded-2 form-box">
                                                     <Input 
-                                                        id="title_name"
-                                                        name="title_name"
+                                                        id="title"
+                                                        name="title"
                                                         type="text" 
                                                         placeholder="Enter Position/Title Name" 
                                                         className="border-0 fs-14 px-2"  
                                                         onChange={validation.handleChange}
                                                         onBlur={validation.handleBlur}
-                                                        value={validation.values.title_name || ""}
+                                                        value={validation.values.title || ""}
                                                         invalid={
-                                                            validation.touched.title_name && validation.errors.title_name ? true : false
+                                                            validation.touched.title && validation.errors.title ? true : false
                                                         }
                                                         style={{ color: '#303030', backgroundColor: 'transparent', boxShadow: 'none' }} 
                                                     />
@@ -207,9 +226,9 @@ const RegisterForm = () => {
                                                 <Label className="fs-13 form-label mb-0">Phone Number</Label>
                                                 <PhoneInput
                                                     country={'gb'}
-                                                    value={value}
                                                     placeholder="Enter Phone Number" 
-                                                    onChange={phone => setValue(phone)}
+                                                    onChange={value => validation.setFieldValue("phone", value)}
+                                                    value={validation.values.phone || ""}
                                                     containerClass="w-100 vstack p-2 rounded-2 form-box"
                                                     inputClass='fs-14'
                                                     inputStyle={{ width: '100%', color: '#303030', borderColor: 'transparent', boxShadow: 'none', fontFamily: 'Montserrat, IBM Plex Sans, sans-serif' }} 

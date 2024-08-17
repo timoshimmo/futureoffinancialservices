@@ -1332,24 +1332,6 @@
 
 }
 
-.btn-submit-web {
-    display: block;
-}
-
-.btn-submit-mobile {
-    display: none;
-}
-
-@media (max-width: 767.98px) { 
-    .btn-submit-mobile {
-        display: block;
-    }
-
-    .btn-submit-web {
-        display: none;
-    }
-}
-
 
 .insight-img-right {
     height: 180px;
