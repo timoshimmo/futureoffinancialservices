@@ -47,8 +47,7 @@ const RegisterForm = () => {
             last_name: '',
             email: '',
             company_name: '',
-            title_name: '',
-            phone_no: ''
+            title_name: ''
         },
         validationSchema: Yup.object({
             first_name: Yup.string().required("Please Enter Your First Name"),
@@ -58,14 +57,12 @@ const RegisterForm = () => {
                 return value.endsWith('.com' || '.org' || '.co' || '.edu');
             }),
             company_name: Yup.string().required("Please Company Name is Required"),
-            title_name: Yup.string().required("Please Enter Your Position in the Company"),
-            phone_no: Yup.string().required("Please Your Phone Number is Required"),
+            title_name: Yup.string().required("Please Enter Your Position in the Company")
         }),
         onSubmit: (values) => {
             /*dispatch(registerUser(values));
             setLoader(true)
             */
-
             handleClick();
         }
     });
@@ -77,15 +74,6 @@ const RegisterForm = () => {
             setLoading(false);
         }, 5000);
     };
-
-    const handleMobileClick = () => {
-        setLoading(true);
-        validation.handleSubmit();
-        setTimeout(() => {
-            setSuccessful(true);
-            setLoading(false);
-        }, 5000);
-    }
 
     return (
         <React.Fragment>
@@ -231,19 +219,13 @@ const RegisterForm = () => {
                         
                                             </Col>
                                             <Col lg={12} sm={12} className='px-2 mt-5'>
-                                                <button className="btn-submit-web w-100 btn btn-primary rounded-5 py-2 fs-16" type="submit" disabled={loading? true : false}>
+                                                <button className="w-100 btn btn-primary rounded-5 py-2 fs-16" type="submit" disabled={loading? true : false}>
                                                     {loading && <span className="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span> }
                                                     {loading ? 'Loading...' : 'Send'}
                                                 </button>
-
-                                                <button onClick={handleMobileClick} className="btn-submit-mobile w-100 btn btn-primary rounded-5 py-2 fs-16" type="button" disabled={loading? true : false}>
-                                                    {loading && <span className="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span> }
-                                                    {loading ? 'Loading...' : 'Send'}
-                                                </button>
-
                                             </Col>
                                         </Row>
-                                        </Form>
+                                    </Form>
                                     </CardBody>
                                 </Card>
                                 :
