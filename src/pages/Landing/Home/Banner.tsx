@@ -108,7 +108,7 @@ const Banner = () => {
                             className="mySwiper positio-relative"
                         >
                             {speakersData.map((item, key) => (
-                                <SwiperSlide key={key}>
+                                <SwiperSlide key={key} onClick={redirect}>
                                     <img src={item.img} alt="" className="avatar-speaker"/>
                                     <div className='w-100 mt-3'>
                                         <h5 className="text-white fs-14 mb-0" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>{item.name}</h5>
