@@ -35,7 +35,7 @@ import img_nicky from "../../assets/images/speakers/img_nicky.png";
 import img_lumley from "../../assets/images/speakers/img_lumley.png";
 import img_igor from "../../assets/images/speakers/img_igor.png";
 import img_matt from "../../assets/images/speakers/img_matt.png";
-import img_speaker3 from "../../assets/images/speakers/speaker3.png";
+import img_lanre from "../../assets/images/speakers/img_lanre.png";
 //Partners
 //import partner1 from "../../assets/images/home/partner1.png";
 //import partner2 from "../../assets/images/home/partner2.png";
@@ -451,35 +451,6 @@ const partnerImgsData = [
 
 ]
 
-/*
-
-{
-        img: img_speaker3,
-        name: "Lanre Bamisebi",
-        credentials: "ED IT & Digitalization, Access Holdings",
-    },
-
-
-     {
-        id: 10,
-        img: img_speaker3,
-        pic: img_speaker3,
-        name: "Lanre Bamisebi",
-        tags: ["artificial-intelligence"],
-        credentials: "ED IT & Digitalization",
-        company: "Access Holdings",
-        courses: [
-            {
-                title: "Insights From The Artificial Intelligence TL", 
-                date: "Wednesday 15 October 2024",
-                time: "11:00 - 11:55",
-                tags: ["artificial-intelligence"],
-            },
-            
-        ],
-        bio: "is Executive Director of IT and Digitalization at Access Holdings and is a seasoned professional with over two decades of pan-African experience spanning various sectors across 22 countries. Prior to joining Access Holdings, Lanre served as the Managing Director of Finserve Africa, the fintech arm of Equity Bank. He also held the position of Executive Group Director for IT & Operations at Equity Group Holding Limited (EGHL) and has served in advisory roles for Mastercard Technology and the Tony Elumelu Foundation, offering extensive fintech consulting services to African finance institutions.\n\nLanre holds two Bachelor’s degrees, a Master’s degree in business administration from Durham Business School, UK, and is currently undertaking a PhD in Global Strategy. He has completed several digitalization and leadership development courses at Harvard Business School, Wharton, IMD and Cambridge Judge Business School."
-    },
-*/
 
 const speakersData = [
     {
@@ -521,6 +492,11 @@ const speakersData = [
         img: img_nicky,
         name: "Nicky Goulimis",
         credentials: "CEO, Tunic Pay"
+    },
+    {
+        img: img_lanre,
+        name: "Lanre Bamisebi",
+        credentials: "ED IT & Digitalization, Access Holdings",
     },
     {
         img: img_lumley,
@@ -706,6 +682,26 @@ const speakersFullData = [
             
         ],
         bio: "is a fintech innovator and repeat founder, currently the CEO of Tunic Pay, which focuses on scam prevention in payments. She co-founded Nova Credit, where she serves as a Board Director, and also sits on the board of Hellas Direct.\n\nNicky has extensive experience in global financial services and has been recognized as a top woman in fintech. She holds a BA from Cambridge and an MBA from Stanford, and her work has been featured in major publications like the New York Times and Forbes."
+    },
+
+    {
+        id: 10,
+        img: img_lanre,
+        pic: img_lanre,
+        name: "Lanre Bamisebi",
+        tags: ["artificial-intelligence"],
+        credentials: "ED IT & Digitalization",
+        company: "Access Holdings",
+        courses: [
+            {
+                title: "Insights From The Artificial Intelligence TL", 
+                date: "Wednesday 15 October 2024",
+                time: "11:00 - 11:55",
+                tags: ["artificial-intelligence"],
+            },
+            
+        ],
+        bio: "is Executive Director of IT and Digitalization at Access Holdings and is a seasoned professional with over two decades of pan-African experience spanning various sectors across 22 countries. Prior to joining Access Holdings, Lanre served as the Managing Director of Finserve Africa, the fintech arm of Equity Bank. He also held the position of Executive Group Director for IT & Operations at Equity Group Holding Limited (EGHL) and has served in advisory roles for Mastercard Technology and the Tony Elumelu Foundation, offering extensive fintech consulting services to African finance institutions.\n\nLanre holds two Bachelor’s degrees, a Master’s degree in business administration from Durham Business School, UK, and is currently undertaking a PhD in Global Strategy. He has completed several digitalization and leadership development courses at Harvard Business School, Wharton, IMD and Cambridge Judge Business School."
     },
 
     {
