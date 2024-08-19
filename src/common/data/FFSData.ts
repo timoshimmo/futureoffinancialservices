@@ -765,7 +765,7 @@ const speakersFullData = [
             },
             
         ],
-        bio: ", having 18 years of extensive experience in global banking and technology, brings a wealth of knowledge and expertise to his role as Chief Commercial Officer at SaaScada, a cutting-edge, cloud-based core banking platform designed to accelerate innovation and transform the financial services industry.\n\nHis career has spanned both large financial institutions and agile challenger environments, where he has demonstrated a strong track record of managing and leading global teams. Matt holds a BA in International Relations & European Economic Policy."
+        bio: "having 18 years of extensive experience in global banking and technology, brings a wealth of knowledge and expertise to his role as Chief Commercial Officer at SaaScada, a cutting-edge, cloud-based core banking platform designed to accelerate innovation and transform the financial services industry.\n\nHis career has spanned both large financial institutions and agile challenger environments, where he has demonstrated a strong track record of managing and leading global teams. Matt holds a BA in International Relations & European Economic Policy."
     },
 
     {
