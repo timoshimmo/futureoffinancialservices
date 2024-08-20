@@ -3,10 +3,10 @@ import Navbar from '../Common/Navbar';
 import Footer from '../Common/footer';
 import Banner from './Banner';
 import Main from './Main';
-import CTA from './CTA'
+import CTA from '../Common/CTA';
 
 const index = () => {
-    document.title = " FFS | Future of Financial Services Summit";
+    document.title = "Future of Financial Services Summit | Insight";
 
     window.onscroll = function () {
         scrollFunction();

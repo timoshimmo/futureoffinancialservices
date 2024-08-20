@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import * as Yup from "yup";
 import { useFormik } from "formik";
+import img_successful_subscription from "../../../assets/images/gif/successful_subscription.gif";
 
 const CTA = () => {
 
@@ -61,6 +62,7 @@ const CTA = () => {
             <section className="py-5 mx-auto position-absolute bg-white border rounded-5 web-cta-home">
                 <div className="bg-overlay bg-overlay-pattern opacity-50"></div>
                 <Container>
+                    {!successful ?
                     <Row className="justify-content-center align-items-center gy-4">
                         <Col lg={12}>
                             <div className='text-center'>
@@ -82,7 +84,7 @@ const CTA = () => {
                                         id="email"
                                         name="email"
                                         placeholder="Enter email address"
-                                        className="border-0 fs-14 px-3 w-100"  
+                                        className="border-0 fs-15 px-3 w-100"  
                                         type="email"
                                         onChange={validation.handleChange}
                                         onBlur={validation.handleBlur}
@@ -93,19 +95,26 @@ const CTA = () => {
                                         }
                                     />        
                                     {/* <input type="button" className="btn btn-primary border border-primary rounded-5 py-2 fs-16" value="Subscribe" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}/> */}
-                                    <button className="btn btn-primary border border-primary rounded-5 py-2 fs-14" type="submit" disabled={loading? true : false} style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>
+                                    <button className="btn btn-primary border border-primary rounded-5 py-2 fs-15" type="submit" disabled={loading? true : false} style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>
                                         {/* loading && <span className="fs-10" role="status" aria-hidden="true"></span> */}
                                         {loading ? 'Loading...' : 'Subscribe'}
                                     </button>
                                 </div>
-                                {/*<div>
-                                    <lord-icon
-                                        src="https://cdn.lordicon.com/vaeagfzc.json" trigger="loop" colors="primary:#405189,secondary:#0ab39c" style={{ width: "55px", height: "55px" }}>
-                                    </lord-icon>
-                                    </div>*/}
+                                
                             </Form>
                         </Col>
                     </Row>
+                    :
+                    <Row className="justify-content-center align-items-center gy-4">
+                        <Col lg={8}>
+                            <div className='mx-auto d-flex flex-column align-items-center'>
+                                <img src={img_successful_subscription} />
+                                <h4 className="text-dark mb-0 fw-bold" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>Thank you for subscribing with us</h4>
+                                <p className="text-dark mt-3 fs-13">We'll continue to keep in touch with the latest future financial services news, updates and our upcoming events ad summits.</p>
+                            </div>
+                        </Col>
+                    </Row>
+                    }
                 </Container>
             </section>
 
@@ -122,7 +131,7 @@ const CTA = () => {
                                 <input type="email" placeholder="example@email.com" className="border-0 fs-12 px-3 w-100"  style={{ color: '#141413', backgroundColor: 'transparent' }} />
                             </div>
                             <div className="mt-3 d-flex justify-content-center">
-                                <input type="button" className="btn btn-primary border border-primary rounded-5 py-2 fs-13" value="Subscribe" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}/>
+                                <input type="button" className="btn btn-primary border border-primary rounded-5 py-2 fs-12" value="Subscribe" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}/>
                             </div>
                             
                         </Col>

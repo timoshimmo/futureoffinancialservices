@@ -5,7 +5,7 @@ import AgendaList from './AgendaList';
 import Footer from '../Common/footer';
 
 const index = () => {
-    document.title = " FFS | Future of Financial Services Summit";
+    document.title = "Future of Financial Services Summit | Agenda";
 
     window.onscroll = function () {
         scrollFunction();

@@ -105,8 +105,6 @@ const RegisterForm = () => {
                             </Card>                 
                         </Col>
     </Row> */}
-
-                 
                     <Row className="justify-content-center">
                         <Col lg={7} sm={12} className='px-3'>
                             {!successful ?
@@ -232,7 +230,6 @@ const RegisterForm = () => {
                                                     dropdownStyle={{ borderColor: 'transparent', boxShadow: 'none' }}
                                                     buttonStyle={{ borderColor: 'transparent', backgroundColor: 'transparent', boxShadow: 'none' }}
                                                 />
-                        
                                             </Col>
                                             <Col lg={12} sm={12} className='px-2 mt-5'>
                                                 <button className="w-100 btn btn-primary rounded-5 py-2 fs-16" type="submit" disabled={loading? true : false}>

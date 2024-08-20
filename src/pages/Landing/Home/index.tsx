@@ -7,11 +7,11 @@ import Partners from './Partners';
 import Sponsor from './Sponsor';
 import Latest from './Latest';
 import Faq from './Faq';
-import CTA from './CTA';
+import CTA from '../Common/CTA';
 import Footer from "../Common/footer";
 
 const index = () => {
-    document.title = " FFS | Future of Financial Services Summit";
+    document.title = "Future of Financial Services Summit | Home";
 
     window.onscroll = function () {
         scrollFunction();

@@ -3,6 +3,9 @@ import { Container, Row, Col, Card, CardBody, Label, Input, Form } from 'reactst
 import { Link } from 'react-router-dom';
 import * as Yup from "yup";
 import { useFormik } from "formik";
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css';
+import axios from 'axios';
 
 const SponsorsForm = () => {
 
@@ -14,40 +17,61 @@ const SponsorsForm = () => {
         enableReinitialize: true,
 
         initialValues: {
-            first_name: '',
-            last_name: '',
+            firstname: '',
+            lastname: '',
             email: '',
             company_name: '',
-            title_name: '',
-            phone_no: '',
+            title: '',
+            phone: '',
             company_website: '',
             additional_info: ''
         },
         validationSchema: Yup.object({
-            first_name: Yup.string().required("Please Enter Your First Name"),
-            last_name: Yup.string().required("Please Enter Your Last Name"),
+            firstname: Yup.string().required("Please Enter Your First Name"),
+            lastname: Yup.string().required("Please Enter Your Last Name"),
             email: Yup.string().required("Please Enter Your Email"),
             company_name: Yup.string().required("Please Company Name is Required"),
-            title_name: Yup.string().required("Please Enter Your Position in the Company"),
-            phone_no: Yup.string().required("Please Your Phone Number is Required"),
-            company_website: Yup.string().required("Please Company Website is Required"),
+            title: Yup.string().required("Please Enter Your Position in the Company"),
+            phone: Yup.string().required("Please Your Phone Number is Required"),
+            company_website: Yup.string(),
             additional_info: Yup.string(),
         }),
-        onSubmit: (values) => {
+        onSubmit: (values, { resetForm }) => {
             /*dispatch(registerUser(values));
             setLoader(true)
             */
 
-            handleClick();
+            handleClick(values);
+            resetForm();
         }
     });
 
-    const handleClick = () => {
-        setLoading(true);
+    const handleClick = (obj: any) => {
+       /* setLoading(true);
         setTimeout(() => {
             setSuccessful(true);
             setLoading(false);
         }, 6000);
+
+        */
+
+        axios.post('https://api.futureoffinancialservices.org/api/sponsor-register', obj)
+        .then(response => {
+            console.log(response);
+            setSuccessful(true);
+            setLoading(false);
+        })
+        .catch((error) => {
+            if (error.response) {
+            console.log(error.response);
+            console.log("server error");
+            } else if (error.request) {
+            console.log("network error");
+            } else {
+            console.log(error);
+            }
+            setLoading(false);
+      })
     };
 
     return (
@@ -71,16 +95,16 @@ const SponsorsForm = () => {
                                                 <Label className="fs-13 form-label mb-0">First Name</Label>
                                                     <div className="w-100 vstack p-2 rounded-2 form-box">
                                                         <Input 
-                                                            id="first_name"
-                                                            name="first_name"
+                                                            id="firstname"
+                                                            name="firstname"
                                                             type="text" 
                                                             placeholder="Enter First Name" 
                                                             className="border-0 fs-14 px-2 form-inputs-custom"  
                                                             onChange={validation.handleChange}
                                                             onBlur={validation.handleBlur}
-                                                            value={validation.values.first_name || ""}
+                                                            value={validation.values.firstname || ""}
                                                             invalid={
-                                                                validation.touched.first_name && validation.errors.first_name ? true : false
+                                                                validation.touched.firstname && validation.errors.firstname ? true : false
                                                             }
                                                             style={{ color: '#303030', backgroundColor: 'transparent', boxShadow: 'none' }} 
                                                         />  
@@ -90,16 +114,16 @@ const SponsorsForm = () => {
                                                 <Label className="fs-13 form-label mb-0">Last Name</Label>
                                                 <div className="w-100 vstack p-2 rounded-2 form-box">
                                                     <Input 
-                                                        id="last_name"
-                                                        name="last_name"
+                                                        id="lastname"
+                                                        name="lastname"
                                                         type="text" 
                                                         placeholder="Enter Last Name" 
                                                         className="border-0 fs-14 px-2"  
                                                         onChange={validation.handleChange}
                                                         onBlur={validation.handleBlur}
-                                                        value={validation.values.last_name || ""}
+                                                        value={validation.values.lastname || ""}
                                                         invalid={
-                                                            validation.touched.last_name && validation.errors.last_name ? true : false
+                                                            validation.touched.lastname && validation.errors.lastname ? true : false
                                                         }
                                                         style={{ color: '#303030', backgroundColor: 'transparent', boxShadow: 'none' }} 
                                                     />
@@ -129,16 +153,16 @@ const SponsorsForm = () => {
                                                 <Label className="fs-13 form-label mb-0">Position/Title Name</Label>
                                                 <div className="w-100 vstack p-2 rounded-2 form-box">
                                                     <Input 
-                                                        id="title_name"
-                                                        name="title_name"
+                                                        id="title"
+                                                        name="title"
                                                         type="text" 
                                                         placeholder="Enter Position/Title Name" 
                                                         className="border-0 fs-14 px-2"  
                                                         onChange={validation.handleChange}
                                                         onBlur={validation.handleBlur}
-                                                        value={validation.values.title_name || ""}
+                                                        value={validation.values.title || ""}
                                                         invalid={
-                                                            validation.touched.title_name && validation.errors.title_name ? true : false
+                                                            validation.touched.title && validation.errors.title ? true : false
                                                         }
                                                         style={{ color: '#303030', backgroundColor: 'transparent', boxShadow: 'none' }} 
                                                     />
@@ -166,20 +190,35 @@ const SponsorsForm = () => {
                                             <Col lg={12} sm={12} className='px-2 mt-4'>
                                                 <Label className="fs-13 form-label mb-0">Phone Number</Label>
                                                 <div className="w-100 vstack p-2 rounded-2 form-box">
-                                                    <Input 
-                                                        id="phone_no"
-                                                        name="phone_no"
+                                                <PhoneInput
+                                                    country={'gb'}
+                                                    placeholder="Enter Phone Number" 
+                                                    onChange={value => validation.setFieldValue("phone", value)}
+                                                    value={validation.values.phone || ""}
+                                                    containerClass="w-100 vstack p-2 rounded-2 form-box"
+                                                    inputClass='fs-14'
+                                                    inputStyle={{ width: '100%', color: '#303030', borderColor: 'transparent', boxShadow: 'none', fontFamily: 'Montserrat, IBM Plex Sans, sans-serif' }} 
+                                                    dropdownStyle={{ borderColor: 'transparent', boxShadow: 'none' }}
+                                                    buttonStyle={{ borderColor: 'transparent', backgroundColor: 'transparent', boxShadow: 'none' }}
+                                                />
+                                                   {/*
+
+                                                   <Input 
+                                                        id="phone"
+                                                        name="phone"
                                                         type="text" 
                                                         placeholder="Enter Phone Number" 
                                                         className="border-0 fs-14 px-2"  
                                                         onChange={validation.handleChange}
                                                         onBlur={validation.handleBlur}
-                                                        value={validation.values.phone_no || ""}
+                                                        value={validation.values.phone || ""}
                                                         invalid={
-                                                            validation.touched.phone_no && validation.errors.phone_no ? true : false
+                                                            validation.touched.phone && validation.errors.phone ? true : false
                                                         }
                                                         style={{ color: '#303030', backgroundColor: 'transparent', boxShadow: 'none' }} 
                                                     />
+                                                
+                                                    */} 
                                                 </div>
                                             </Col>
                                             <Col lg={12} sm={12} className='px-2 mt-4'>

@@ -6,7 +6,7 @@ import Footer from '../Common/footer';
 import Contact from './Contact';
 
 const index = () => {
-    document.title = " FFS | Future of Financial Services Summit";
+    document.title = "Future of Financial Services Summit | Contact Us";
 
     window.onscroll = function () {
         scrollFunction();
