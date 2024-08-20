@@ -59,10 +59,7 @@ const RegisterForm = () => {
             phone: Yup.string().required("Please Your Phone Number is Required"),
         }),
         onSubmit: (values, { resetForm }) => {
-            /*dispatch(registerUser(values));
-            setLoader(true)
-            */
-            console.log("FORM VALUES", values);
+            //console.log("FORM VALUES", values);
             handleClick(values);
             resetForm();
         }

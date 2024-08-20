@@ -1,9 +1,7 @@
 import React from 'react';
 import Navbar from "../Common/Navbar";
 import Banner from "./Banner";
-import WhatIs from './WhatIs';
 import Connect from './Connect';
-import Speakers from './Speakers';
 import Numbers from './Numbers';
 import Partners from './Partners';
 import Sponsor from './Sponsor';
@@ -50,9 +48,7 @@ const index = () => {
             <div className="layout-wrapper landing body-bg-dark">
                 <Navbar />
                 <Banner />
-               {/* <Speakers /> */}
                 <Connect />
-                {/* <WhatIs /> */}
                 <Numbers />
                 <Partners />
                 <Sponsor />
