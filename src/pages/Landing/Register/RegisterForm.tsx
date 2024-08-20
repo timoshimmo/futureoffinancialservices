@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Row, Col, Card, CardBody, Label, Input, Form, Button } from 'reactstrap';
+import { Container, Row, Col, Card, CardBody, Label, Input, Form, Button, Alert } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import * as Yup from "yup";
@@ -12,6 +12,9 @@ const RegisterForm = () => {
 
     const [successful, setSuccessful] = useState(false);
     const [loading, setLoading] = useState(false);
+
+    const [errorMsg, setErrorMsg] = useState('');
+    const [closeAlert, setCloseAlert] = useState(false);
     //const [value, setValue] = useState('');
 
    /* useEffect(() => {
@@ -58,10 +61,10 @@ const RegisterForm = () => {
             title: Yup.string().required("Please Enter Your Position in the Company"),
             phone: Yup.string().required("Please Your Phone Number is Required"),
         }),
-        onSubmit: (values, { resetForm }) => {
+        onSubmit: (values) => {
             //console.log("FORM VALUES", values);
             handleClick(values);
-            resetForm();
+            //resetForm();
         }
     });
 
@@ -77,19 +80,27 @@ const RegisterForm = () => {
             console.log(response);
             setSuccessful(true);
             setLoading(false);
+            validation.resetForm();
         })
         .catch((error) => {
             if (error.response) {
-            console.log(error.response);
-            console.log("server error");
+                console.log(error.response.data.message);
+                setErrorMsg(error.response.data.message);
+                setCloseAlert(true);
+                console.log("server error");
             } else if (error.request) {
-            console.log("network error");
+                console.log("network error");
             } else {
-            console.log(error);
+                console.log(error);
             }
             setLoading(false);
       })
     };
+
+    const onDismiss = () => {
+        setCloseAlert(false);
+
+    }
 
     return (
         <React.Fragment>
@@ -237,6 +248,10 @@ const RegisterForm = () => {
                                                     {loading ? 'Loading...' : 'Send'}
                                                 </button>
                                             </Col>
+                                            <Col lg={12} sm={12} className='px-2 mt-3'>
+                                                {errorMsg && errorMsg !== '' ? (<Alert color="danger" isOpen={closeAlert} toggle={onDismiss}> {errorMsg} </Alert>) : null}
+                                            </Col>
+                                            
                                         </Row>
                                     </Form>
                                     </CardBody>
@@ -257,7 +272,7 @@ const RegisterForm = () => {
                                                 <h2 className='text-primary my-3 text-center fw-bold' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>Your Registration Was Successful</h2>
                                                 <p className='text-dark fs-14 text-center fw-medium px-4 mb-4' style={{ color: '#303030' }}>Your request will be processed and we will revert shortly"</p>
                                                 <div className="hstack justify-content-center">
-                                                <Link to="/" className="fs-14 fw-medium link-style"><i className="mdi mdi-arrow-left"></i><u>Back to Home</u></Link>
+                                                    <Link to="/" className="fs-14 fw-medium link-style"><i className="mdi mdi-arrow-left"></i><u>Back to Home</u></Link>
                                                 </div>
                                             </Col>
                                         </Row>
