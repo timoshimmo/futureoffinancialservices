@@ -1,5 +1,5 @@
 import React, { useState }  from 'react';
-import { Container, Row, Col, Card, CardBody, Label, Input, Form } from 'reactstrap';
+import { Container, Row, Col, Card, CardBody, Label, Input, Form, Alert } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import * as Yup from "yup";
 import { useFormik } from "formik";
@@ -11,6 +11,8 @@ const SponsorsForm = () => {
 
     const [successful, setSuccessful] = useState(false);
     const [loading, setLoading] = useState(false);
+    const [errorMsg, setErrorMsg] = useState('');
+    const [closeAlert, setCloseAlert] = useState(false);
 
     const validation = useFormik({
         // enableReinitialize : use this flag when initial values needs to be changed
@@ -42,7 +44,6 @@ const SponsorsForm = () => {
             */
 
             handleClick(values);
-            resetForm();
         }
     });
 
@@ -60,19 +61,27 @@ const SponsorsForm = () => {
             console.log(response);
             setSuccessful(true);
             setLoading(false);
+            validation.resetForm();
         })
         .catch((error) => {
             if (error.response) {
-            console.log(error.response);
-            console.log("server error");
+                console.log(error.response.data.message);
+                setErrorMsg(error.response.data.message);
+                console.log("server error");
             } else if (error.request) {
-            console.log("network error");
+                console.log("network error");
             } else {
-            console.log(error);
+                console.log(error);
             }
             setLoading(false);
       })
     };
+
+    const onDismiss = () => {
+        setCloseAlert(false);
+
+    }
+
 
     return (
         <React.Fragment>
@@ -266,6 +275,9 @@ const SponsorsForm = () => {
                                                     {loading ? 'Loading...' : 'Send'}
                                                 </button>
                                                 {/* <input type="button" className="w-100 btn btn-primary border border-primary rounded-5 py-2 fs-16" value="Send" /> */}
+                                            </Col>
+                                            <Col lg={12} sm={12} className='px-2 mt-3'>
+                                                {errorMsg && errorMsg !== '' ? (<Alert color="danger" isOpen={closeAlert} toggle={onDismiss}> {errorMsg} </Alert>) : null}
                                             </Col>
                                         </Row>
                                         </Form>
