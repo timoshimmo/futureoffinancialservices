@@ -1389,7 +1389,117 @@
     }
 }
 
-/*
-.swiper-scrollbar-drag{background: none;}
-.swiper-scrollbar-drag:after{content: ""; width: 20px; height: 10px; border-radius: 10px; background: #33CC99; position: absolute; top: -10px; left: 20%; margin: 0 0 0 -30px;}
-*/
+#gdpr_text {
+    display: none !important;
+}
+
+.ctct-gdpr-text {
+    display: none;
+}
+
+#email_address_label_1 {
+    display: none;
+}
+
+.ctct-form-defaults  {
+    border: 1px solid #141413;
+    border-radius: 50px !important;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px !important;
+}
+
+@media (max-width: 767.98px) { 
+    .ctct-form-defaults  {
+        border: none;
+        border-radius: 0px !important;
+        display: block;
+        padding: 0px !important;
+    }
+}
+
+.ctct-form-footer {
+    display: none;
+}
+
+.g-recaptcha  {
+    display: none;
+}
+
+.ctct-form-field {
+    width: 70%;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 767.98px) { 
+    .ctct-form-field {
+        width: 100%;
+        border: 1px solid #141413;
+        border-radius: 50px !important;
+        display: flex;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        padding: 2px 5px !important;
+        margin: 0 0 1rem !important;
+    }
+}
+
+.ctct-form-element {
+    border: 0;
+    background-color: transparent;
+    font-size: 15px;
+    color: #303030;
+    font-family: 'Montserrat', "Georgia", "Times New Roman", "Times", serif; 
+    margin-left: 10px;
+    width: 100%;
+}
+
+@media (max-width: 767.98px) { 
+    .ctct-form-element {
+        width: 90% !important;
+        border: none !important;
+        border-radius: 50px;
+        background-color: transparent;
+        font-size: 15px;
+        height: 35px !important;
+        box-shadow: none !important;
+        color: #303030;
+        margin-left: 0px;
+        font-family: 'Montserrat', "Georgia", "Times New Roman", "Times", serif; 
+    }    
+
+}
+
+.ctct-form-button {
+    background-color: #33CC99;
+    font-size: 15px;
+    font-family: "Georgia", "Times New Roman", "Times", serif; 
+    color: #FFFFFF;
+    border: 1px solid #33CC99;
+    border-radius: 50px;
+    box-shadow: none;
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+@media (max-width: 767.98px) { 
+    .ctct-form-button {
+        background-color: #33CC99;
+        font-size: 14px !important;
+        font-family: "Georgia", "Times New Roman", "Times", serif; 
+        color: #FFFFFF !important;
+        border: 1px solid #33CC99 !important;
+        border-radius: 50px !important;
+        box-shadow: none !important;
+        padding-top: 0.7rem !important;
+        padding-bottom: 0.7rem !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        width: 40% !important;
+        margin: 0 auto !important;
+    }
+}

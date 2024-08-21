@@ -7,6 +7,7 @@ import { useFormik } from "formik";
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import success_check from "../../../assets/images/gif/success_check.gif";
+import successful_form_submission from "../../../assets/images/gif/successful_form_submission.gif";
 
 const RegisterForm = () => {
 
@@ -267,7 +268,7 @@ const RegisterForm = () => {
                                             </Col>
                                             <Col lg={9} sm={12} className='px-2 mt-3'>
                                                 <div className='d-flex justify-content-center'>
-                                                    <img src={success_check}/>
+                                                    <img src={successful_form_submission} height={100}/>
                                                 </div>
                                                 <h2 className='text-primary my-3 text-center fw-bold' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>Your Registration Was Successful</h2>
                                                 <p className='text-dark fs-14 text-center fw-medium px-4 mb-4' style={{ color: '#303030' }}>Your request will be processed and we will revert shortly"</p>

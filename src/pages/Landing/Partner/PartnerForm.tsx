@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { Container, Row, Col, Card, CardBody, Label, Input, Form, Alert } from 'reactstrap';
+import { Container, Row, Col, Card, CardBody, Label, Input, Form, Alert, Button } from 'reactstrap';
 import * as Yup from "yup";
 import { useFormik } from "formik";
 import { Link } from 'react-router-dom';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import axios from 'axios';
+import successful_form_submission from "../../../assets/images/gif/successful_form_submission.gif";
 
 const PartnerForm = () => {
 
@@ -201,8 +202,20 @@ const PartnerForm = () => {
                                                 </Col>
                                                 <Col lg={12} sm={12} className='px-2 mt-4'>
                                                     <Label className="fs-13 form-label mb-0">Phone Number</Label>
-                                                    <div className="w-100 vstack p-2 rounded-2 form-box">
+                                                    <PhoneInput
+                                                        country={'gb'}
+                                                        placeholder="Enter Phone Number" 
+                                                        onChange={value => validation.setFieldValue("phone", value)}
+                                                        value={validation.values.phone || ""}
+                                                        containerClass="w-100 vstack p-2 rounded-2 form-box"
+                                                        inputClass='fs-14'
+                                                        inputStyle={{ width: '100%', color: '#303030', borderColor: 'transparent', boxShadow: 'none', fontFamily: 'Montserrat, IBM Plex Sans, sans-serif' }} 
+                                                        dropdownStyle={{ borderColor: 'transparent', boxShadow: 'none' }}
+                                                        buttonStyle={{ borderColor: 'transparent', backgroundColor: 'transparent', boxShadow: 'none' }}
+                                                    />
                                                         {/*
+
+                                                        <div className="w-100 vstack p-2 rounded-2 form-box">
                                                             <Input 
                                                                 id="phone"
                                                                 name="phone"
@@ -217,20 +230,9 @@ const PartnerForm = () => {
                                                                 }
                                                                 style={{ color: '#303030', backgroundColor: 'transparent', boxShadow: 'none' }} 
                                                             />   
+                                                            </div>
                                                         */}
-
-                                                    <PhoneInput
-                                                        country={'gb'}
-                                                        placeholder="Enter Phone Number" 
-                                                        onChange={value => validation.setFieldValue("phone", value)}
-                                                        value={validation.values.phone || ""}
-                                                        containerClass="w-100 vstack p-2 rounded-2 form-box"
-                                                        inputClass='fs-14'
-                                                        inputStyle={{ width: '100%', color: '#303030', borderColor: 'transparent', boxShadow: 'none', fontFamily: 'Montserrat, IBM Plex Sans, sans-serif' }} 
-                                                        dropdownStyle={{ borderColor: 'transparent', boxShadow: 'none' }}
-                                                        buttonStyle={{ borderColor: 'transparent', backgroundColor: 'transparent', boxShadow: 'none' }}
-                                                    />
-                                                    </div>
+                                                    
                                                 </Col>
                                                 <Col lg={12} sm={12} className='px-2 mt-4'>
                                                     <Label className="fs-13 form-label mb-0">Company Website</Label>
@@ -309,8 +311,16 @@ const PartnerForm = () => {
                                 <Card className="border border-white bg-white rounded-4 shadow-none">
                                     <CardBody className="p-4">
                                         <Row className='justify-content-center'>
+                                            <Col lg={12}>
+                                                <div className='d-flex justify-content-end pb-4'>
+                                                    <Button onClick={()=>setSuccessful(false)} className='bg-transparent border-0 p-0 text-muted'><i className="mdi mdi-close display-6"></i></Button>
+                                                </div>
+                                            </Col>
                                             <Col lg={9} sm={12} className='px-2 mt-4'>
-                                                <h2 className='text-primary mb-3 text-center fw-bold' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>Your Entry Was Successful</h2>
+                                                <div className='d-flex justify-content-center'>
+                                                    <img src={successful_form_submission} height={100}/>
+                                                </div>
+                                                <h2 className='text-primary my-3 text-center fw-bold' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>Your Entry Was Successful</h2>
                                                 <p className='text-dark fs-14 text-center fw-medium px-4 mb-4' style={{ color: '#303030' }}>We have received your request to form a partnership, your request would be reviewed and we would revert accordingly where necessary."</p>
                                                 <div className="hstack justify-content-center">
                                                     <Link to="/" className="text-muted fs-12">Back to Home</Link>

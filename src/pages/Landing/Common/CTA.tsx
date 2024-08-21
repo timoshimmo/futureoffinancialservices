@@ -100,8 +100,16 @@ const CTA = () => {
                                         {loading ? 'Loading...' : 'Subscribe'}
                                     </button>
                                 </div>
+                                 {/* Begin Constant Contact Inline Form Code */}
+                                 {/* <div id="success_message_1" className="ctct-form-success" style={{display: "none"}} data-qe-id="success-message">
+                                    <h2 className="ctct-form-header">Thanks for signing up!</h2>
+                                    <p className="ctct-form-text">You can unsubscribe at any time using the Unsubscribe link at the bottom of every email.</p>
+                                    </div> */}
+                                {/* <div className="ctct-inline-form" data-form-id="83ba2d4a-9722-455c-9450-f7b20595b33c"></div> */}
+                                    {/* End Constant Contact Inline Form Code */}
                                 
                             </Form>
+                            
                         </Col>
                     </Row>
                     :
@@ -133,6 +141,8 @@ const CTA = () => {
                             <div className="mt-3 d-flex justify-content-center">
                                 <input type="button" className="btn btn-primary border border-primary rounded-5 py-2 fs-12" value="Subscribe" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}/>
                             </div>
+
+                            {/* <div className="ctct-inline-form" data-form-id="83ba2d4a-9722-455c-9450-f7b20595b33c"></div> */}
                             
                         </Col>
                     </Row>
