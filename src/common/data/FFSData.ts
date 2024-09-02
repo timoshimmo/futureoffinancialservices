@@ -513,6 +513,7 @@ const speakersData = [
         name: "Matt Breadon",
         credentials: "Chief Commercial Officer, SaaScada",
     },
+    /*
     {
         img: img_matt,
         name: "Jessica Figueras",
@@ -543,6 +544,7 @@ const speakersData = [
         name: "Paul Sweeney",
         credentials: "Senior Solution Architect, Engine by Starling Bank",
     },
+    */
     {
         img: img_meaghan,
         name: "Meaghan Johnson",
@@ -793,6 +795,7 @@ const speakersFullData = [
         ],
         bio: "having 18 years of extensive experience in global banking and technology, brings a wealth of knowledge and expertise to his role as Chief Commercial Officer at SaaScada, a cutting-edge, cloud-based core banking platform designed to accelerate innovation and transform the financial services industry.\n\nHis career has spanned both large financial institutions and agile challenger environments, where he has demonstrated a strong track record of managing and leading global teams. Matt holds a BA in International Relations & European Economic Policy."
     },
+    /*
     {
         id: 14,
         img: img_matt,
@@ -909,6 +912,7 @@ const speakersFullData = [
         ],
         bio: "is a Senior Solution Architect at Engine, Starling Bank's Software-as-a-Service arm. Working closely with clients, Paul ensures the design and delivery of secure, resilient and robust implementations, tailored to specific customer requirements.\n\nPaul came to Engine with over 20 years’ experience in Financial Services and Manufacturing, having worked at AIB and KBC Bank, and has delivered programmes across the full information and change lifecycle."
     },
+    */
     {
         id: 7,
         img: img_meaghan,
