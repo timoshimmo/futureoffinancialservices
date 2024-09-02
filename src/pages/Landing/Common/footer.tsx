@@ -101,9 +101,9 @@ const Footer = () => {
                                         {/* </Link> */}
                                     </li>
                                     <li className="list-inline-item px-2">
-                                        {/* <Link to="#" className="d-block"> */}
+                                         <Link to="privacy" className="d-block"> 
                                             <span className="text-muted fs-14">Privacy</span>
-                                        {/* </Link> */}
+                                         </Link>
                                     </li>
                                     <li className="list-inline-item px-2">
                                         {/* <Link to="#" className="d-block"> */}
