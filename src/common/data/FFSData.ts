@@ -514,6 +514,36 @@ const speakersData = [
         credentials: "Chief Commercial Officer, SaaScada",
     },
     {
+        img: img_matt,
+        name: "Jessica Figueras",
+        credentials: "CEO, Pionen and Co-founder, CxB",
+    },
+    {
+        img: img_matt,
+        name: "Tram Anh Nguyen",
+        credentials: "Co-Founder, CFTE",
+    },
+    {
+        img: img_matt,
+        name: "Jas Shah",
+        credentials: "Fintech and Product expert",
+    },
+    {
+        img: img_matt,
+        name: "Gwera Kiwana",
+        credentials: "VP, Blockchain Payments Onafriq",
+    },
+    {
+        img: img_matt,
+        name: "Alessandro Hatami",
+        credentials: "Founder & Managing Partner, Pacemakers.io",
+    },
+    {
+        img: img_matt,
+        name: "Paul Sweeney",
+        credentials: "Senior Solution Architect, Engine by Starling Bank",
+    },
+    {
         img: img_meaghan,
         name: "Meaghan Johnson",
         credentials: "Convener/ED, FFS"
@@ -763,7 +793,122 @@ const speakersFullData = [
         ],
         bio: "having 18 years of extensive experience in global banking and technology, brings a wealth of knowledge and expertise to his role as Chief Commercial Officer at SaaScada, a cutting-edge, cloud-based core banking platform designed to accelerate innovation and transform the financial services industry.\n\nHis career has spanned both large financial institutions and agile challenger environments, where he has demonstrated a strong track record of managing and leading global teams. Matt holds a BA in International Relations & European Economic Policy."
     },
+    {
+        id: 14,
+        img: img_matt,
+        pic: img_matt,
+        name: "Jessica Figueras",
+        tags: ["cyber-security"],
+        credentials: "Chief Executive, Pionen and Co-founder",
+        company: "CxB (Cyber Governance for Boards)",
+        courses: [
+            {
+                title: "The importance of Cyber Security in FinTech", 
+                date: "Wednesday 15 October 2024",
+                time: "11:00 - 11:55",
+                tags: ["cyber-security"],
+            },
+            
+        ],
+        bio: "is CEO of cyber security assurance firm Pionen, which works with government, critical national infrastructure and financial services. She is also Vice Chair of Trustees at the UK Cyber Security Council, and a co-founder of CxB (Cyber Governance for Boards), a non-profit supporting non-executive director to improve board oversight of cybersecurity.\n\nAs a strategist specializing in cyber security, digital trust and the role of tech in civil society, Jessica has advised the UK government on technology and policy issues relating to cyber security and online safety.\n\nShe is a sought-after speaker and commentator and was named one of Computer Weekly's Most Influential Women in UK Tech (2023, 2022 and 2021) and a Women in IT Awards finalist (2022)."
+    },
 
+    {
+        id: 15,
+        img: img_matt,
+        pic: img_matt,
+        name: "Tram Anh Nguyen",
+        tags: ["fintech"],
+        credentials: "Co-founder",
+        company: "CFTE",
+        courses: [
+            {
+                title: "The importance of Cyber Security in FinTech", 
+                date: "Wednesday 15 October 2024",
+                time: "11:00 - 11:55",
+                tags: ["fintech"],
+            },
+            
+        ],
+        bio: "is the co-founder of CFTE, a global platform for education in Fintech and financial services, with a mission to upskill finance professionals and promote inclusivity in the industry.\n\nShe is an Entrepreneurship Expert at Saïd Business School, Oxford, and an Industry Fellow at Imperial College. Recognized among the Top 10 Asian Pioneers in Tech UK 2023, Tram Anh advocates for women in Fintech and has spearheaded initiatives like the Fintech Job Report. Her diverse background spans 18 years in finance, with experience at major institutions like Standard Chartered and UBS."
+    },
+
+    {
+        id: 16,
+        img: img_matt,
+        pic: img_matt,
+        name: "Jas Shah",
+        tags: ["fintech"],
+        credentials: "Fintech and Product expert",
+        company: "CFTE",
+        courses: [
+            {
+                title: "The importance of Cyber Security in FinTech", 
+                date: "Wednesday 15 October 2024",
+                time: "11:00 - 11:55",
+                tags: ["fintech"],
+            },
+            
+        ],
+        bio: "is a career Fintech and Product expert. He uses his extensive & hands on expertise, honed at the likes of Citi, Fidelity and Schroders, to shape Product Development, define Digital & Product Strategy, speed up time to market and scale products for FS, FinTech’s and early-stage startups.\n\nHe’s led and shaped the product strategy and development of digital banks, PFM apps, lending platforms, and more. He also shares his Product + Fintech insights in his fortnightly newsletter."
+    },
+    {
+        id: 17,
+        img: img_matt,
+        pic: img_matt,
+        name: "Gwera Kiwana",
+        tags: ["fintech"],
+        credentials: "Vice President",
+        company: "Blockchain Payments Onafriq",
+        courses: [
+            {
+                title: "The importance of Cyber Security in FinTech", 
+                date: "Wednesday 15 October 2024",
+                time: "11:00 - 11:55",
+                tags: ["fintech"],
+            },
+            
+        ],
+        bio: "is an expert with interest in the intersection of Fintech and Web3.  She has spent the last few years building and scaling global fintech's and currently serves as the first crypto hire at Africa’s largest payment gateway, Onafriq (formerly MFS Africa).\n\nIn addition to leveraging crypto to unlock the next generation of Africa’s growth, Gwera also serves as a member of Launch Africa Ventures' Fund II Investment Committee, guiding investment strategies in innovative African startups."
+    },
+    {
+        id: 18,
+        img: img_matt,
+        pic: img_matt,
+        name: "Alessandro Hatami",
+        tags: ["fintech"],
+        credentials: "Founder & Managing Partner",
+        company: "Pacemakers.io",
+        courses: [
+            {
+                title: "The importance of Cyber Security in FinTech", 
+                date: "Wednesday 15 October 2024",
+                time: "11:00 - 11:55",
+                tags: ["fintech"],
+            },
+            
+        ],
+        bio: "is the founder and managing partner of Pacemakers.io, an advisory firm that helps organizations manage digital transformation in payments, financial services, and banking. With extensive experience in digital innovation, he has held executive roles at companies like Lloyds Banking Group, PayPal, GE Capital, and PayPoint, gaining valuable insights into the industry's evolving landscape.\n\nIn addition to his executive roles, Alessandro has served as a Non-Executive Director at Zempler Bank and as a Board Advisor at MTS Group. He actively mentors fintech startups through leading accelerators and invests in innovative startups within the industry.\n\nAlessandro is also a recognized writer and public speaker on digital innovation. His book, Reinventing Banking and Finance, was honoured as the Best Book on Banking of 2022 by Investopedia and has been published in three languages."
+    },
+    {
+        id: 19,
+        img: img_matt,
+        pic: img_matt,
+        name: "Paul Sweeney",
+        tags: ["fintech"],
+        credentials: "Senior Solution Architect",
+        company: "Engine by Starling Bank",
+        courses: [
+            {
+                title: "The importance of Cyber Security in FinTech", 
+                date: "Wednesday 15 October 2024",
+                time: "11:00 - 11:55",
+                tags: ["fintech"],
+            },
+            
+        ],
+        bio: "is a Senior Solution Architect at Engine, Starling Bank's Software-as-a-Service arm. Working closely with clients, Paul ensures the design and delivery of secure, resilient and robust implementations, tailored to specific customer requirements.\n\nPaul came to Engine with over 20 years’ experience in Financial Services and Manufacturing, having worked at AIB and KBC Bank, and has delivered programmes across the full information and change lifecycle."
+    },
     {
         id: 7,
         img: img_meaghan,

@@ -14,6 +14,7 @@ import ContactUs from '../pages/Landing/ContactUs';
 import Speakers from '../pages/Landing/Speakers';
 import Agenda from '../pages/Landing/Agenda';
 import Insights from '../pages/Landing/Insights';
+import PrivacyPolicy from '../pages/Landing/PrivacyPolicy';
 
 const publicRoutes : any= [
   //FFS Routes
@@ -27,6 +28,8 @@ const publicRoutes : any= [
   { path: "/speakers", component: <Speakers /> },
   { path: "/agenda", component: <Agenda /> },
   { path: "/insights", component: <Insights />},
+  { path: "/privacy", component: <PrivacyPolicy />},
+  
   
   /*
   {

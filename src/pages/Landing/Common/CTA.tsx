@@ -1,4 +1,4 @@
-import React, { useState }  from 'react';
+import React, { useState, useEffect }  from 'react';
 import { Container, Row, Col, Input, Form } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
@@ -10,6 +10,14 @@ const CTA = () => {
 
     const [successful, setSuccessful] = useState(false);
     const [loading, setLoading] = useState(false);
+
+    useEffect(() => {
+        setTimeout(() => {
+            const element = document.getElementById("email_address_1");
+            element?.setAttribute('placeholder', 'Enter email address');
+        }, 5000);
+        
+    }, []);
 
     const validation = useFormik({
         // enableReinitialize : use this flag when initial values needs to be changed
@@ -26,7 +34,6 @@ const CTA = () => {
             /*dispatch(registerUser(values));
             setLoader(true)
             */
-            console.log("FORM VALUES", values);
             handleClick(values);
             resetForm();
         }
@@ -100,12 +107,12 @@ const CTA = () => {
                                         {loading ? 'Loading...' : 'Subscribe'}
                                     </button>
                                 </div>
-                                 {/* Begin Constant Contact Inline Form Code */}
-                                 {/* <div id="success_message_1" className="ctct-form-success" style={{display: "none"}} data-qe-id="success-message">
+                                    {/* Begin Constant Contact Inline Form Code */}
+                                    {/* <div id="success_message_1" className="ctct-form-success" style={{display: "none"}} data-qe-id="success-message">
                                     <h2 className="ctct-form-header">Thanks for signing up!</h2>
                                     <p className="ctct-form-text">You can unsubscribe at any time using the Unsubscribe link at the bottom of every email.</p>
                                     </div> */}
-                                {/* <div className="ctct-inline-form" data-form-id="83ba2d4a-9722-455c-9450-f7b20595b33c"></div> */}
+                                    {/*  <div id="subscribe_form" className="ctct-inline-form" data-form-id="83ba2d4a-9722-455c-9450-f7b20595b33c"></div>  */} 
                                     {/* End Constant Contact Inline Form Code */}
                                 
                             </Form>
