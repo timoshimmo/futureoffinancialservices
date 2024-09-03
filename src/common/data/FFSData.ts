@@ -36,6 +36,14 @@ import img_lumley from "../../assets/images/speakers/img_lumley.png";
 import img_igor from "../../assets/images/speakers/img_igor.png";
 import img_matt from "../../assets/images/speakers/img_matt.png";
 import img_lanre from "../../assets/images/speakers/img_lanre.png";
+
+import img_jessica_figueras from "../../assets/images/speakers/img_jessica_figueras.png";
+import img_tram_anh_nguyen from "../../assets/images/speakers/img_tram_anh_nguyen.png";
+import img_jas_shah from "../../assets/images/speakers/img_jas_shah.png";
+import img_gwera_kiwana from "../../assets/images/speakers/img_gwera_kiwana.png";
+import img_alessandro_hatami from "../../assets/images/speakers/img_alessandro_hatami.png";
+import img_paul_sweeney from "../../assets/images/speakers/img_paul_sweeney.png";
+
 //Partners
 //import partner1 from "../../assets/images/home/partner1.png";
 //import partner2 from "../../assets/images/home/partner2.png";
@@ -513,38 +521,37 @@ const speakersData = [
         name: "Matt Breadon",
         credentials: "Chief Commercial Officer, SaaScada",
     },
-    /*
     {
-        img: img_matt,
+        img: img_jessica_figueras,
         name: "Jessica Figueras",
         credentials: "CEO, Pionen and Co-founder, CxB",
     },
     {
-        img: img_matt,
+        img: img_tram_anh_nguyen,
         name: "Tram Anh Nguyen",
         credentials: "Co-Founder, CFTE",
     },
     {
-        img: img_matt,
+        img: img_jas_shah,
         name: "Jas Shah",
         credentials: "Fintech and Product expert",
     },
     {
-        img: img_matt,
+        img: img_gwera_kiwana,
         name: "Gwera Kiwana",
         credentials: "VP, Blockchain Payments Onafriq",
     },
     {
-        img: img_matt,
+        img: img_alessandro_hatami,
         name: "Alessandro Hatami",
         credentials: "Founder & Managing Partner, Pacemakers.io",
     },
     {
-        img: img_matt,
+        img: img_paul_sweeney,
         name: "Paul Sweeney",
         credentials: "Senior Solution Architect, Engine by Starling Bank",
     },
-    */
+    
     {
         img: img_meaghan,
         name: "Meaghan Johnson",
@@ -795,11 +802,10 @@ const speakersFullData = [
         ],
         bio: "having 18 years of extensive experience in global banking and technology, brings a wealth of knowledge and expertise to his role as Chief Commercial Officer at SaaScada, a cutting-edge, cloud-based core banking platform designed to accelerate innovation and transform the financial services industry.\n\nHis career has spanned both large financial institutions and agile challenger environments, where he has demonstrated a strong track record of managing and leading global teams. Matt holds a BA in International Relations & European Economic Policy."
     },
-    /*
     {
         id: 14,
-        img: img_matt,
-        pic: img_matt,
+        img: img_jessica_figueras,
+        pic: img_jessica_figueras,
         name: "Jessica Figueras",
         tags: ["cyber-security"],
         credentials: "Chief Executive, Pionen and Co-founder",
@@ -818,8 +824,8 @@ const speakersFullData = [
 
     {
         id: 15,
-        img: img_matt,
-        pic: img_matt,
+        img: img_tram_anh_nguyen,
+        pic: img_tram_anh_nguyen,
         name: "Tram Anh Nguyen",
         tags: ["fintech"],
         credentials: "Co-founder",
@@ -838,8 +844,8 @@ const speakersFullData = [
 
     {
         id: 16,
-        img: img_matt,
-        pic: img_matt,
+        img: img_jas_shah,
+        pic: img_jas_shah,
         name: "Jas Shah",
         tags: ["fintech"],
         credentials: "Fintech and Product expert",
@@ -857,8 +863,8 @@ const speakersFullData = [
     },
     {
         id: 17,
-        img: img_matt,
-        pic: img_matt,
+        img: img_gwera_kiwana,
+        pic: img_gwera_kiwana,
         name: "Gwera Kiwana",
         tags: ["fintech"],
         credentials: "Vice President",
@@ -876,8 +882,8 @@ const speakersFullData = [
     },
     {
         id: 18,
-        img: img_matt,
-        pic: img_matt,
+        img: img_alessandro_hatami,
+        pic: img_alessandro_hatami,
         name: "Alessandro Hatami",
         tags: ["fintech"],
         credentials: "Founder & Managing Partner",
@@ -895,8 +901,8 @@ const speakersFullData = [
     },
     {
         id: 19,
-        img: img_matt,
-        pic: img_matt,
+        img: img_paul_sweeney,
+        pic: img_paul_sweeney,
         name: "Paul Sweeney",
         tags: ["fintech"],
         credentials: "Senior Solution Architect",
@@ -912,7 +918,7 @@ const speakersFullData = [
         ],
         bio: "is a Senior Solution Architect at Engine, Starling Bank's Software-as-a-Service arm. Working closely with clients, Paul ensures the design and delivery of secure, resilient and robust implementations, tailored to specific customer requirements.\n\nPaul came to Engine with over 20 years’ experience in Financial Services and Manufacturing, having worked at AIB and KBC Bank, and has delivered programmes across the full information and change lifecycle."
     },
-    */
+    
     {
         id: 7,
         img: img_meaghan,
