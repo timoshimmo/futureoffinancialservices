@@ -1,9 +1,5 @@
-import React, { useState } from 'react';
-import { Container, Row, Col, Card, CardBody, Label, Input, Form } from 'reactstrap';
-import { Link } from 'react-router-dom';
-import * as Yup from "yup";
-import { useFormik } from "formik";
-import PhoneInput from 'react-phone-input-2';
+import React from 'react';
+import { Container } from 'reactstrap';
 import 'react-phone-input-2/lib/style.css';
 
 const Main = () => {
@@ -158,6 +154,7 @@ const Main = () => {
                         <h2 className='mb-4'>10. Contact Information</h2>
                         <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your personal data, please contact us via any of our communication channels.</p>
                     </div>
+
                 </Container>
             </section>
         </React.Fragment>

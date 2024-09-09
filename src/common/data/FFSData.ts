@@ -43,6 +43,8 @@ import img_jas_shah from "../../assets/images/speakers/img_jas_shah.png";
 import img_gwera_kiwana from "../../assets/images/speakers/img_gwera_kiwana.png";
 import img_alessandro_hatami from "../../assets/images/speakers/img_alessandro_hatami.png";
 import img_paul_sweeney from "../../assets/images/speakers/img_paul_sweeney.png";
+import img_michelle_he from "../../assets/images/speakers/img_michelle_he.png";
+import img_natasha_kyprianidou_ from "../../assets/images/speakers/img_natasha_kyprianidou_.png";
 
 //Partners
 //import partner1 from "../../assets/images/home/partner1.png";
@@ -551,7 +553,16 @@ const speakersData = [
         name: "Paul Sweeney",
         credentials: "Senior Solution Architect, Engine by Starling Bank",
     },
-    
+    {
+        img: img_michelle_he,
+        name: "Michelle He",
+        credentials: "Co-founder and COO, Fintern",
+    },
+    {
+        img: img_natasha_kyprianidou_,
+        name: "Natasa Kyprianidou",
+        credentials: "Senior Director, Alvarez & Marsal",
+    },
     {
         img: img_meaghan,
         name: "Meaghan Johnson",
@@ -918,7 +929,44 @@ const speakersFullData = [
         ],
         bio: "is a Senior Solution Architect at Engine, Starling Bank's Software-as-a-Service arm. Working closely with clients, Paul ensures the design and delivery of secure, resilient and robust implementations, tailored to specific customer requirements.\n\nPaul came to Engine with over 20 years’ experience in Financial Services and Manufacturing, having worked at AIB and KBC Bank, and has delivered programmes across the full information and change lifecycle."
     },
-    
+    {
+        id: 20,
+        img: img_michelle_he,
+        pic: img_michelle_he,
+        name: "Michelle He",
+        tags: ["fintech"],
+        credentials: "Co-founder and COO, Fintern",
+        company: "Engine by Starling Bank",
+        courses: [
+            {
+                title: "The importance of Cyber Security in FinTech", 
+                date: "Wednesday 15 October 2024",
+                time: "11:00 - 11:55",
+                tags: ["fintech"],
+            },
+            
+        ],
+        bio: "is the Co-Founder and COO of Fintern. Before co-founding Fintern, she was a Director at EY in London. During her tenure at EY, Michelle specialised in lending, credit analytics, and driving complex banking transformations for banks and financial institutions.\n\nHer motivation to start Fintern stemmed from her personal experience after moving from Singapore to the UK 14 years ago. Despite having a stable job and decent pay at EY, and a PhD in AI, she struggled to secure a £5000 loan due to a lack of credit history. This inspired her to co-found Abound (the B2C arm) and Render (the B2B arm) to de-risk lending for financial institutions and provide access to finance for individuals like recent graduates and immigrants who have no credit histories.\n\nShe holds a Ph.D. in machine learning from the National University of Singapore and is a trusted advisor to rapidly growing global fintech firms."
+    },
+    {
+        id: 21,
+        img: img_natasha_kyprianidou_,
+        pic: img_natasha_kyprianidou_,
+        name: "Natasa Kyprianidou",
+        tags: ["fintech"],
+        credentials: "Senior Director, Alvarez & Marsal",
+        company: "Engine by Starling Bank",
+        courses: [
+            {
+                title: "The importance of Cyber Security in FinTech", 
+                date: "Wednesday 15 October 2024",
+                time: "11:00 - 11:55",
+                tags: ["fintech"],
+            },
+            
+        ],
+        bio: "is a Senior Director at Alvarez & Marsal’s Financial Services - Digital practice in London, with over 24 years of experience in the financial services sector across Europe and the UK. She specializes in building digital banks, transforming financial institutions, and launching large-scale products. Natasa collaborates with senior executives to integrate emerging technologies into consumer and commercial banking to enhance digital experiences and operational efficiency.\n\nBefore joining A&M, she was a Senior Director at Publicis Sapient, leading global product development in financial services. At Barclays, she played a key role in launching innovative digital lending solutions, including Instalments by Barclays on Amazon UK.  Earlier, Natasa served as Head of Omni-channel and Customer Experience at Hellenic Bank in Cyprus, where she launched a digital challenger bank and led award-winning Open Banking initiatives."
+    },
     {
         id: 7,
         img: img_meaghan,
