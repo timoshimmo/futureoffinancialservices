@@ -128,7 +128,7 @@ const SpeakersList = () => {
                                     <img src={currentData?.pic} className='w-100 border-0 rounded-3'/>
                                 </Col>
                                 <Col lg={7} className='vstack justify-content-center align-items-center'>
-                                    <div className='w-100'>
+                                    <div className='w-100 mt-3'>
                                         <p className='text-primary h3 fw-bold mb-2 lh-sm'>{currentData?.name}</p>
                                         <p className="text-white fs-15 fw-light mb-0">{currentData?.credentials}</p>
                                         <p className="text-white fs-13 fw-light">{currentData?.company}</p>
