@@ -43,8 +43,11 @@ import img_jas_shah from "../../assets/images/speakers/img_jas_shah.png";
 import img_gwera_kiwana from "../../assets/images/speakers/img_gwera_kiwana.png";
 import img_alessandro_hatami from "../../assets/images/speakers/img_alessandro_hatami.png";
 import img_paul_sweeney from "../../assets/images/speakers/img_paul_sweeney.png";
-import img_michelle_he from "../../assets/images/speakers/img_michelle_he.png";
 import img_natasha_kyprianidou_ from "../../assets/images/speakers/img_natasha_kyprianidou_.png";
+//import img_michelle_he from "../../assets/images/speakers/img_michelle_he.png";
+import img_lesley_anne_mcClean from "../../assets/images/speakers/img_lesley-anne_mcClean.png";
+import img_frankie_woodhead from "../../assets/images/speakers/img_frankie_woodhead.png";
+import img_richard_morgans from "../../assets/images/speakers/img_richard_morgans.png";
 
 //Partners
 //import partner1 from "../../assets/images/home/partner1.png";
@@ -554,14 +557,24 @@ const speakersData = [
         credentials: "Senior Solution Architect, Engine by Starling Bank",
     },
     {
-        img: img_michelle_he,
-        name: "Michelle He",
-        credentials: "Co-founder and COO, Fintern",
-    },
-    {
         img: img_natasha_kyprianidou_,
         name: "Natasa Kyprianidou",
         credentials: "Senior Director, Alvarez & Marsal",
+    },
+    {
+        img: img_lesley_anne_mcClean,
+        name: "Lesley-Anne McClean",
+        credentials: "AI and Financial Inclusion Expert, ex M-PESA",
+    },
+    {
+        img: img_frankie_woodhead,
+        name: "Frankie Woodhead",
+        credentials: "Group Chief Product Officer, Bank of London",
+    },
+    {
+        img: img_richard_morgans,
+        name: "Richard Morgans",
+        credentials: "Chief Digital Officer, UK MD, FCMB ",
     },
     {
         img: img_meaghan,
@@ -931,25 +944,6 @@ const speakersFullData = [
     },
     {
         id: 20,
-        img: img_michelle_he,
-        pic: img_michelle_he,
-        name: "Michelle He",
-        tags: ["fintech"],
-        credentials: "Co-founder and COO, Fintern",
-        company: "Engine by Starling Bank",
-        courses: [
-            {
-                title: "The importance of Cyber Security in FinTech", 
-                date: "Wednesday 15 October 2024",
-                time: "11:00 - 11:55",
-                tags: ["fintech"],
-            },
-            
-        ],
-        bio: "is the Co-Founder and COO of Fintern. Before co-founding Fintern, she was a Director at EY in London. During her tenure at EY, Michelle specialised in lending, credit analytics, and driving complex banking transformations for banks and financial institutions.\n\nHer motivation to start Fintern stemmed from her personal experience after moving from Singapore to the UK 14 years ago. Despite having a stable job and decent pay at EY, and a PhD in AI, she struggled to secure a £5000 loan due to a lack of credit history. This inspired her to co-found Abound (the B2C arm) and Render (the B2B arm) to de-risk lending for financial institutions and provide access to finance for individuals like recent graduates and immigrants who have no credit histories.\n\nShe holds a Ph.D. in machine learning from the National University of Singapore and is a trusted advisor to rapidly growing global fintech firms."
-    },
-    {
-        id: 21,
         img: img_natasha_kyprianidou_,
         pic: img_natasha_kyprianidou_,
         name: "Natasa Kyprianidou",
@@ -965,7 +959,64 @@ const speakersFullData = [
             },
             
         ],
-        bio: "is a Senior Director at Alvarez & Marsal’s Financial Services - Digital practice in London, with over 24 years of experience in the financial services sector across Europe and the UK. She specializes in building digital banks, transforming financial institutions, and launching large-scale products. Natasa collaborates with senior executives to integrate emerging technologies into consumer and commercial banking to enhance digital experiences and operational efficiency.\n\nBefore joining A&M, she was a Senior Director at Publicis Sapient, leading global product development in financial services. At Barclays, she played a key role in launching innovative digital lending solutions, including Instalments by Barclays on Amazon UK.  Earlier, Natasa served as Head of Omni-channel and Customer Experience at Hellenic Bank in Cyprus, where she launched a digital challenger bank and led award-winning Open Banking initiatives."
+        bio: "is a Senior Director at Alvarez & Marsal’s Financial Services - Digital practice in London, bringing over 24 years of experience in the financial services sector across Europe and the UK. She specializes in building digital banks, transforming financial institutions, and launching large-scale products. Natasa partners with senior executives to integrate emerging technologies into consumer and commercial banking, aiming to enhance digital experiences and improve operational efficiency.\n\nPrior to joining A&M, Natasa was a Senior Director at Publicis Sapient, where she led global product development in financial services. At Barclays, she played a pivotal role in launching innovative digital lending solutions, including Instalments by Barclays on Amazon UK. Earlier in her career, Natasa served as Head of Omni-channel and Customer Experience at Hellenic Bank in Cyprus, where she successfully launched a digital challenger bank and led award-winning Open Banking initiatives."
+    },
+    {
+        id: 21,
+        img: img_lesley_anne_mcClean,
+        pic: img_lesley_anne_mcClean,
+        name: "Lesley-Anne McClean",
+        tags: ["fintech"],
+        credentials: "AI and Financial Inclusion Expert",
+        company: "ex M-PESA",
+        courses: [
+            {
+                title: "The importance of Cyber Security in FinTech", 
+                date: "Wednesday 15 October 2024",
+                time: "11:00 - 11:55",
+                tags: ["fintech"],
+            },
+            
+        ],
+        bio: "began her career as a software engineer at an innovation consultancy before shifting focus to digital financial service innovation in emerging markets in 2005. She is one of the creators of Vodafone's M-PESA money transfer service and is named on the patent. Lesley later became Chief Product Officer, building a fintech platform for emerging markets (backed by Naspers MIH), and now consults independently, providing interim product management leadership, product operations setup, and related services including discovery research, design, information architecture, and agile coaching.\n\nHer consultancy clients include major telco networks, the Bill and Melinda Gates Foundation, CGAP, IFC, Microsoft, Mastercard, Accion, and fintech startups like M-KOPA Solar, Segovia, and TrustStamp.\n\nLesley is skilled in fostering cross-functional collaboration using design thinking, lean product management, and process automation, while promoting a flow-based delivery culture focused on continuous learning and early value delivery. Her domain expertise spans retail banking, mobile money, alternative payments, API-driven ecosystems, agent network management, business architecture, risk management, and digital operating models."
+    },
+    {
+        id: 22,
+        img: img_frankie_woodhead,
+        pic: img_frankie_woodhead,
+        name: "Frankie Woodhead",
+        tags: ["fintech"],
+        credentials: "Group Chief Product Officer",
+        company: "Bank of London",
+        courses: [
+            {
+                title: "The importance of Cyber Security in FinTech", 
+                date: "Wednesday 15 October 2024",
+                time: "11:00 - 11:55",
+                tags: ["fintech"],
+            },
+            
+        ],
+        bio: "is a visionary leader committed to creating exceptional banking experiences and innovative products through highly engaged teams and cutting-edge technology. With over 15 years of experience in financial services, including 10 years at a Tier 1 FTSE 100 firm, Frankie has a proven track record in scaling businesses from zero to one and navigating Series A to D funding.\n\nCurrently serving as Chief Product Officer at The Bank of London, Frankie continues to shape the future of banking at one of the UK’s six principal clearing banks."
+    },
+    {
+        id: 23,
+        img: img_richard_morgans,
+        pic: img_richard_morgans,
+        name: "Richard Morgans",
+        tags: ["fintech"],
+        credentials: "Chief Digital Officer, UK MD",
+        company: "FCMB",
+        courses: [
+            {
+                title: "The importance of Cyber Security in FinTech", 
+                date: "Wednesday 15 October 2024",
+                time: "11:00 - 11:55",
+                tags: ["fintech"],
+            },
+            
+        ],
+        bio: "has built a career in financial services with a focus on digital innovation, product development, and transformation. His experience spans large mid-tier banks and startup banks, including roles at Barclays, Atom Bank, and running the core banking platform Mambu in the UK & Ireland.\n\nCurrently, Richard serves as the Chief Digital Officer for FCMB UK and Managing Director of Rova, the bank’s new digital brand. Rova offers seamless banking services and products tailored to the needs of the global citizen, reflecting Richard’s commitment to driving innovation in financial services."
     },
     {
         id: 7,
