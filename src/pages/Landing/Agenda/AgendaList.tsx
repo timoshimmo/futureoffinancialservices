@@ -29,6 +29,7 @@ const AgendaList = () => {
     const [open, setOpen] = useState(false);
 
     const [dateNav, setDateNav] = useState("All");
+    const [sessionNav, setSessionNav] = useState("All");
     const [currentData, setCurrentData] = useState<IProfile>();
 
     const toggleLeftCanvas = () => {
@@ -61,10 +62,10 @@ const AgendaList = () => {
                                             <NavLink type="button" onClick={() => setNav("All")} className={nav === "All" ? " fw-medium fs-11 active" : "fw-medium fs-11 border border-white rounded-2"}>All</NavLink>
                                         </NavItem>
                                         <NavItem role="presentation">
-                                            <NavLink type="button" onClick={() => setNav("digital-business-models")} className={nav === "digital-business-models" ? " fw-medium fs-11 active" : "fw-medium fs-11 border border-white rounded-2"}>Digital Business Models</NavLink>
+                                            <NavLink type="button" onClick={() => setNav("strategy-&-market")} className={nav === "strategy-&-market" ? " fw-medium fs-11 active" : "fw-medium fs-11 border border-white rounded-2"}>Strategy & Market</NavLink>
                                         </NavItem>
                                         <NavItem role="presentation">
-                                            <NavLink type="button" onClick={() => setNav("distribution-models")} className={nav === "distribution-models" ? " fw-medium fs-11 active" : "fw-medium fs-11 border border-white rounded-2"}>Distribution Models</NavLink>
+                                            <NavLink type="button" onClick={() => setNav("cybersecurity")} className={nav === "cybersecurity" ? " fw-medium fs-11 active" : "fw-medium fs-11 border border-white rounded-2"}>Cybersecurity</NavLink>
                                         </NavItem>
                                         <NavItem role="presentation">
                                             <NavLink type="button" onClick={() => setNav("customer-experience")} className={nav === "customer-experience" ? " fw-medium fs-11 active" : "fw-medium fs-11 border border-white rounded-2"}>Customer Experience</NavLink>
@@ -75,9 +76,12 @@ const AgendaList = () => {
                                         <NavItem role="presentation">
                                             <NavLink type="button" onClick={() => setNav("fintech")} className={nav === "fintech" ? " fw-medium fs-11 active" : "fw-medium fs-11 border border-white rounded-2"}>FinTech</NavLink>
                                         </NavItem>
-                                      {/*}  <NavItem role="presentation">
-                                            <NavLink type="button" onClick={() => setNav("general")} className={nav === "general" ? " fw-medium fs-11 active" : "fw-medium fs-11 border border-white rounded-2"}>General Session</NavLink>
-    </NavItem> */}
+                                        <NavItem role="presentation">
+                                            <NavLink type="button" onClick={() => setNav("general")} className={nav === "general" ? " fw-medium fs-11 active" : "fw-medium fs-11 border border-white rounded-2"}>General</NavLink>
+                                        </NavItem> 
+                                        <NavItem role="presentation">
+                                            <NavLink type="button" onClick={() => setNav("curated-session")} className={nav === "curated-session" ? " fw-medium fs-11 active" : "fw-medium fs-11 border border-white rounded-2"}>Curated Sessions</NavLink>
+                                        </NavItem> 
                                     </Nav>
                                 </div>
                                 <div className='border py-3 px-4 border-white rounded-3'>
@@ -88,28 +92,28 @@ const AgendaList = () => {
                                     <h2 className='mb-3 text-primary fs-20' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>Session Types</h2>
                                     <Nav pills className="nav-pills filter-btns gap-2" role="tablist">
                                         <NavItem role="presentation">
-                                            <NavLink type="button" className="fw-medium fs-11 border border-white rounded-2">All</NavLink>
+                                            <NavLink type="button" onClick={() => setSessionNav("All")} className="fw-medium fs-11 border border-white rounded-2">All</NavLink>
                                         </NavItem>
                                         <NavItem role="presentation">
-                                            <NavLink type="button" className="fw-medium fs-11 border border-white rounded-2">Keynote Presentation</NavLink>
+                                            <NavLink type="button" onClick={() => setSessionNav("keynote")} className="fw-medium fs-11 border border-white rounded-2">Keynote Presentation</NavLink>
                                         </NavItem>
                                         <NavItem role="presentation">
-                                            <NavLink type="button" className="fw-medium fs-11 border border-white rounded-2">Panel Session</NavLink>
+                                            <NavLink type="button" onClick={() => setSessionNav("panel")} className="fw-medium fs-11 border border-white rounded-2">Panel Session</NavLink>
                                         </NavItem>
                                         <NavItem role="presentation">
-                                            <NavLink type="button" className="fw-medium fs-11 border border-white rounded-2">Fireside Chat</NavLink>
+                                            <NavLink type="button" onClick={() => setSessionNav("fireside-chat")} className="fw-medium fs-11 border border-white rounded-2">Fireside Chat</NavLink>
                                         </NavItem>
                                         <NavItem role="presentation">
-                                            <NavLink type="button" className="fw-medium fs-11 border border-white rounded-2">Product Demo</NavLink>
+                                            <NavLink type="button" onClick={() => setSessionNav("demo")} className="fw-medium fs-11 border border-white rounded-2">Product Demo</NavLink>
                                         </NavItem>
                                         <NavItem role="presentation">
-                                            <NavLink type="button" className="fw-medium fs-11 border border-white rounded-2">Workshops</NavLink>
+                                            <NavLink type="button" onClick={() => setSessionNav("workshop")} className="fw-medium fs-11 border border-white rounded-2">Workshops</NavLink>
                                         </NavItem>
                                         <NavItem role="presentation">
-                                            <NavLink type="button" className="fw-medium fs-11 border border-white rounded-2">Roundtable</NavLink>
+                                            <NavLink type="button" onClick={() => setSessionNav("board-room-session")} className="fw-medium fs-11 border border-white rounded-2">Boardroom Sessions</NavLink>
                                         </NavItem>
                                         <NavItem role="presentation">
-                                            <NavLink type="button" className="fw-medium fs-11 border border-white rounded-2">General Session</NavLink>
+                                            <NavLink type="button" onClick={() => setSessionNav("break")} className="fw-medium fs-11 border border-white rounded-2">Breaks</NavLink>
                                         </NavItem>
                                     </Nav>
                                 </div>
@@ -127,6 +131,9 @@ const AgendaList = () => {
                                     <NavItem role="presentation">
                                         <NavLink type="button" onClick={() => setDateNav("Wed")} className={dateNav === "Wed" ? " fw-medium fs-12 text-primary border border-white rounded-2 bg-white active" : "fw-medium fs-13 text-primary fs-13 nav-tab-custom"}>Wednesday <span className={dateNav === "Wed" ? 'text-dark fs-11' : 'text-white fs-11'}>9 October</span></NavLink>
                                     </NavItem>
+                                    <NavItem role="presentation">
+                                        <NavLink type="button" onClick={() => setDateNav("Thur")} className={dateNav === "Thur" ? " fw-medium fs-12 text-primary border border-white rounded-2 bg-white active" : "fw-medium fs-13 text-primary fs-13 nav-tab-custom"}>Thursday <span className={dateNav === "Thur" ? 'text-dark fs-11' : 'text-white fs-11'}>10 October</span></NavLink>
+                                    </NavItem>
                                 </Nav>
 
                             </div>
@@ -135,7 +142,7 @@ const AgendaList = () => {
                                     <Col key={item.id} lg={12} sm={12}>
                                         <Card className="shadow-none border-top border-bottom border-white rounded-3 mb-4 p-4 text-white">
                                             <CardBody className='p-0'>
-                                                <div className='d-flex gap-2 align-items-center mb-2'><span className='text-white fs-14'>{item.date}</span> | <span className='text-white fs-14'>{item.time}</span></div>
+                                                <div className='d-flex gap-2 align-items-center mb-2'><span className='text-white fs-14'>{item.date}</span> | <span className='text-white fs-14'>{item.startTime}</span> - <span className='text-white fs-14'>{item.endTime}</span></div>
                                                 <h6 className='text-white fw-semibold fs-20'>{item.topic}</h6>
                                                 <div className='d-flex gap-2 align-items-center'>
                                                     <p className='fw-light fs-11 text-capitalize border border-white rounded-2 py-1 px-2' style={{ cursor: 'pointer' }}>{item.type}</p>
@@ -150,14 +157,33 @@ const AgendaList = () => {
                                                     } 
                                                 </div>
                                                 <p className='text-secondary fs-12 fw-light'>{item.type}</p>
-                                                <div className='d-flex gap-2 mt-4'>
-                                                    <img src={item.speaker[0].pic} alt="" height="60" />
-                                                    <div className='px-2'>
-                                                        <h5 className="text-primary fs-14 mb-2">{item.speaker[0].name}</h5>
-                                                        <p className="text-white fs-11 fw-light mb-0">{item.speaker[0].credentials}</p>
-                                                        <p className="text-white fs-11 fw-light">{item.speaker[0].company}</p>
-                                                    </div>
-                                                </div>
+                                                {
+                                                    item.speaker !== null ?
+                                                        item.speaker.map((row) => (
+                                                            <div className='d-flex gap-2 mt-4'>
+                                                                <img src={row.pic} alt="" height="60" />
+                                                                <div className='px-2'>
+                                                                    <h5 className="text-primary fs-14 mb-2">{row.name}</h5>
+                                                                    <p className="text-white fs-11 fw-light mb-0">{row.credentials}</p>
+                                                                    <p className="text-white fs-11 fw-light">{row.company}</p>
+                                                                </div>
+                                                            </div>
+                                                        ))
+                                                    :
+                                                    item.product ?
+                                                        item?.product.map((row) => (
+                                                            <div className='d-flex gap-2 mt-4'>
+                                                                <img src={row.img} alt="" height="50" />
+                                                                <div className='px-2'>
+                                                                    <h5 className="text-primary fs-14 mb-2">{row.name}</h5>
+                                                                    <p className="text-white fs-11 fw-light">{row.company}</p>
+                                                                </div>
+                                                            </div>
+                                                        ))
+                                                        :
+                                                        null
+                                                }
+                                                
                                             </CardBody>
                                         </Card>
                                     </Col>
