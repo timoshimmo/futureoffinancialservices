@@ -142,47 +142,65 @@ const AgendaList = () => {
                                     <Col key={item.id} lg={12} sm={12}>
                                         <Card className="shadow-none border-top border-bottom border-white rounded-3 mb-4 p-4 text-white">
                                             <CardBody className='p-0'>
-                                                <div className='d-flex gap-2 align-items-center mb-2'><span className='text-white fs-14'>{item.date}</span> | <span className='text-white fs-14'>{item.startTime}</span> - <span className='text-white fs-14'>{item.endTime}</span></div>
-                                                <h6 className='text-white fw-semibold fs-20'>{item.topic}</h6>
-                                                <div className='d-flex gap-2 align-items-center'>
-                                                    <p className='fw-light fs-11 text-capitalize border border-white rounded-2 py-1 px-2' style={{ cursor: 'pointer' }}>{item.type}</p>
+                                                <div className='d-flex gap-2 align-items-center mb-2'><span className='text-white fs-14'>{item.date}</span> | <span className='text-white fs-14'>{item.startTime}</span></div>
+                                                { item.topic !== "" ? <h6 className='text-white fw-semibold fs-20'>{item.topic}</h6> : <h6 className='text-white fw-semibold fs-20'>{item.description}</h6>}
+                                                <div className='d-flex mt-3 gap-2 align-items-center'>
+                                                    { item.topic !== "" ? <p className='fw-light fs-11 text-capitalize border border-white rounded-2 py-1 px-2' style={{ cursor: 'pointer' }}>{item.description}</p> : null }
                                                     {
                                                         item.theme !== null ?
-                                                        (item?.theme.map((row: string) => (
-                                                            <p className="fw-light fs-11 text-capitalize border border-white rounded-2 py-1 px-2" style={{ cursor: 'pointer' }}>{row.replace(/-/g, ' ')}</p>
-                                                        ))
-                                                        )
+                                                            (item?.theme.map((row: string) => (
+                                                                <p className="fw-light fs-11 text-capitalize border border-white rounded-2 py-1 px-2" style={{ cursor: 'pointer' }}>{row.replace(/-/g, ' ')}</p>
+                                                            ))
+                                                            )
                                                         :
                                                         null
                                                     } 
                                                 </div>
-                                                <p className='text-secondary fs-12 fw-light'>{item.type}</p>
-                                                {
+                                                {/* <p className='text-secondary fs-12 fw-light'>{item.type}</p> */}
+                                                    <Row>
+                                                    {
                                                     item.speaker !== null ?
                                                         item.speaker.map((row) => (
-                                                            <div className='d-flex gap-2 mt-4'>
-                                                                <img src={row.pic} alt="" height="60" />
-                                                                <div className='px-2'>
-                                                                    <h5 className="text-primary fs-14 mb-2">{row.name}</h5>
-                                                                    <p className="text-white fs-11 fw-light mb-0">{row.credentials}</p>
-                                                                    <p className="text-white fs-11 fw-light">{row.company}</p>
-                                                                </div>
-                                                            </div>
+                                                            item.speaker.length > 1 ?
+                                                                <Col lg={4}>
+                                                                    <div className='d-flex gap-2 mt-4'>
+                                                                        <img src={row.pic} alt="" height="60" />
+                                                                        <div className='px-2'>
+                                                                            <h5 className="text-primary fs-14 mb-2">{row.name}</h5>
+                                                                            <p className="text-white fs-11 fw-light mb-0">{row.credentials}</p>
+                                                                            <p className="text-white fs-11 fw-light">{row.company}</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </Col>
+                                                                :
+                                                                <Col lg={6}>
+                                                                    <div className='d-flex gap-2 mt-4'>
+                                                                        <img src={row.pic} alt="" height="60" />
+                                                                        <div className='px-2'>
+                                                                            <h5 className="text-primary fs-14 mb-2">{row.name}</h5>
+                                                                            <p className="text-white fs-11 fw-light mb-0">{row.credentials}</p>
+                                                                            <p className="text-white fs-11 fw-light">{row.company}</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </Col>
                                                         ))
                                                     :
                                                     item.product ?
                                                         item?.product.map((row) => (
-                                                            <div className='d-flex gap-2 mt-4'>
-                                                                <img src={row.img} alt="" height="50" />
-                                                                <div className='px-2'>
-                                                                    <h5 className="text-primary fs-14 mb-2">{row.name}</h5>
-                                                                    <p className="text-white fs-11 fw-light">{row.company}</p>
+                                                            <Col lg={6}>
+                                                                <div className='mt-4'>
+                                                                    <img src={row.img} alt="" height="50" />
+                                                                    <div className='px-2 pt-2'>
+                                                                        <h5 className="text-primary fs-14 mb-2">{row.name}</h5>
+                                                                        <p className="text-white fs-11 fw-light">{row.company}</p>
+                                                                    </div>
                                                                 </div>
-                                                            </div>
+                                                            </Col>
                                                         ))
                                                         :
                                                         null
                                                 }
+                                                    </Row>
                                                 
                                             </CardBody>
                                         </Card>
