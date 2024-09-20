@@ -115,11 +115,10 @@ const Navbar = () => {
                             <li className="nav-item px-4 web-navbar">
                                 <NavLink className="nav-link fs-14 text-white" to="/" activeClassName="active" tag={RRNavLink}>Home</NavLink>
                             </li>
-                            {/*
                              <li className="nav-item px-4 web-navbar">
                                 <NavLink className="nav-link fs-14 text-white" to="/agenda" activeClassName="active" tag={RRNavLink}>Agenda</NavLink>
                             </li>
-                        */}
+                        
                             <li className="nav-item px-4 web-navbar">
                                 <NavLink className="nav-link fs-14 text-white" to="/speakers" activeClassName="active" tag={RRNavLink}>Speakers</NavLink>
                             </li>
@@ -131,11 +130,11 @@ const Navbar = () => {
                             <li className="nav-item mobile-navbar">
                                 <NavLink className="nav-link fs-14 text-white d-flex justify-content-end" to="/home" activeClassName="active" tag={RRNavLink}>Home</NavLink>
                             </li>
-                            {/*
-                                <li className="nav-item mobile-navbar">
-                                    <NavLink className="nav-link fs-14 text-white d-flex justify-content-end" to="/agenda" activeClassName="active" tag={RRNavLink}>Agenda</NavLink>
-                                </li>
-                            */}
+                            
+                            <li className="nav-item mobile-navbar">
+                                <NavLink className="nav-link fs-14 text-white d-flex justify-content-end" to="/agenda" activeClassName="active" tag={RRNavLink}>Agenda</NavLink>
+                            </li>
+                            
                             <li className="nav-item mobile-navbar">
                                 <NavLink className="nav-link fs-14 text-white d-flex justify-content-end" to="/speakers" activeClassName="active" tag={RRNavLink}>Speakers</NavLink>
                             </li>

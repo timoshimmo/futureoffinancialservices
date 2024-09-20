@@ -1894,8 +1894,6 @@ const agendaData = [
         description: "Keynote Presentation",
         speaker: null
     },
-   
-   
     {
         id: 37,
         date: "Thur, 10 Oct",
