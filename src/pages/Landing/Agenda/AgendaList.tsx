@@ -185,20 +185,8 @@ const AgendaList = () => {
                                                                 </Col>
                                                         ))
                                                     :
-                                                    item.product ?
-                                                        item?.product.map((row) => (
-                                                            <Col lg={6}>
-                                                                <div className='mt-4'>
-                                                                    <img src={row.img} alt="" height="50" />
-                                                                    <div className='px-2 pt-2'>
-                                                                        <h5 className="text-primary fs-14 mb-2">{row.name}</h5>
-                                                                        <p className="text-white fs-11 fw-light">{row.company}</p>
-                                                                    </div>
-                                                                </div>
-                                                            </Col>
-                                                        ))
-                                                        :
-                                                        null
+                                                    null
+                                                    
                                                 }
                                                     </Row>
                                                 

@@ -56,6 +56,8 @@ import img_speaker_1 from "../../assets/images/speakers/speaker1.png";
 import img_speaker_3 from "../../assets/images/speakers/speaker3.png";
 import img_speaker_5 from "../../assets/images/speakers/speaker5.png";
 
+import img_user_placeholder from "../../assets/images/speakers/user_placeholder.png";
+
 //Partners
 //import partner1 from "../../assets/images/home/partner1.png";
 //import partner2 from "../../assets/images/home/partner2.png";
@@ -1297,7 +1299,7 @@ const agendaData = [
         endTime: "12:00PM",
         dateCode: "Tue",
         duration: "50",
-        topic: "Peerless (SaaS Core Banking)",
+        topic: "Product Demo, Peerless (SaaS Core Banking)",
         theme: ["fintech"],
         type: ["demo"],
         description: "Product Demo",
@@ -1348,8 +1350,8 @@ const agendaData = [
         description: "Board Room Session",
         speaker: [
             {
-                img: img_speaker_3,
-                pic: img_speaker_3,
+                img: img_user_placeholder,
+                pic: img_user_placeholder,
                 name: "Bode Pedro",
                 credentials: "Founder/CEO",
                 company: "Casava",
@@ -1365,7 +1367,7 @@ const agendaData = [
         endTime: "11:00AM",
         dateCode: "Tue",
         duration: "10",
-        topic: "CEO and Founder, Skaleet",
+        topic: "Product Demo, Skaleet",
         theme: ["fintech"],
         type: ["demo"],
         description: "Product Demo",
@@ -1393,8 +1395,8 @@ const agendaData = [
         description: "Panel Session",
         speaker: [
             {
-                img: img_speaker_3,
-                pic: img_speaker_3,
+                img: img_user_placeholder,
+                pic: img_user_placeholder,
                 name: "Yinka Oni",
                 credentials: "ED",
                 company: "Sterling Financial Holding",
@@ -1425,8 +1427,8 @@ const agendaData = [
                 tags: ["fintech"]
             },
             {
-                img: img_speaker_1,
-                pic: img_speaker_1,
+                img: img_user_placeholder,
+                pic: img_user_placeholder,
                 name: "Tunji Odumuboni",
                 credentials: "Co-Founder/CPTO",
                 company: "Bazara",
@@ -1468,8 +1470,8 @@ const agendaData = [
                 company: "Future Africa",
             },
             {
-                img: img_speaker_1,
-                pic: img_speaker_1,
+                img: img_user_placeholder,
+                pic: img_user_placeholder,
                 name: "Tayo Bamiduro",
                 credentials: "Founder/CEO",
                 company: "Max",
@@ -1506,8 +1508,8 @@ const agendaData = [
                 company: "Radiam",
             },
             {
-                img: img_speaker_1,
-                pic: img_speaker_1,
+                img: img_user_placeholder,
+                pic: img_user_placeholder,
                 name: "Nadav Mordechai",
                 tags: ["customer-experience"],
                 credentials: "Product and Strategy Director",
@@ -1558,8 +1560,8 @@ const agendaData = [
         description: "Recap of Day 1",
         speaker: [
             {
-                img: img_speaker_3,
-                pic: img_speaker_3,
+                img: img_user_placeholder,
+                pic: img_user_placeholder,
                 name: "Nina Mohanty",
                 credentials: "-",
                 company: "-",
@@ -1581,8 +1583,8 @@ const agendaData = [
         description: "Keynote Presentation",
         speaker: [
             {
-                img: img_speaker_5,
-                pic: img_speaker_5,
+                img: img_user_placeholder,
+                pic: img_user_placeholder,
                 name: "Mathias Canales",
                 credentials: "Customer Engineer AI/ML",
                 company: "Google",
@@ -1598,7 +1600,7 @@ const agendaData = [
         endTime: "10:25AM",
         dateCode: "Wed",
         duration: "50",
-        topic: "AI's Competitive Edge: Shapig the Future of Financial Products",
+        topic: "AI's Competitive Edge: Shaping the Future of Financial Products",
         theme: ["artificial-intelligence"],
         type: ["panel"],
         description: "Panel Session",
@@ -1613,16 +1615,16 @@ const agendaData = [
             },
             {
               
-                img: img_speaker_1,
-                pic: img_speaker_1,
+                img: img_user_placeholder,
+                pic: img_user_placeholder,
                 name: "Gerald Chappell",
                 credentials: "CEO and Co-Founder",
                 company: "Abound",
                 tags: ["artificial-intelligence"],
             },
             {
-                img: img_speaker_5,
-                pic: img_speaker_5,
+                img: img_user_placeholder,
+                pic: img_user_placeholder,
                 name: "JP Fabri",
                 tags: ["artificial-intelligence"],
                 credentials: "Founder",
@@ -1721,8 +1723,8 @@ const agendaData = [
         description: "Board Room Session",
         speaker: [
             {
-                img: img_speaker_1,
-                pic: img_speaker_1,
+                img: img_user_placeholder,
+                pic: img_user_placeholder,
                 name: "Nadav Mordechai",
                 tags: ["customer-experience"],
                 credentials: "Product and Strategy Director",
@@ -1746,7 +1748,7 @@ const agendaData = [
         endTime: "10:45AM",
         dateCode: "Wed",
         duration: "50",
-        topic: "Intellibonds Demo",
+        topic: "Product Demo, Intellibonds",
         theme: ["artificial-intelligence"],
         type: ["demo"],
         description: "Product Demo",
@@ -1781,16 +1783,16 @@ const agendaData = [
                 company: "CFTE",
             },
             {
-                img: img_speaker_5,
-                pic: img_speaker_5,
+                img: img_user_placeholder,
+                pic: img_user_placeholder,
                 name: "Phil Watson",
                 credentials: "Founder",
                 company: "Lightbox Wealth",
                 tags: ["artificial-intelligence"],
             },
             {
-                img: img_speaker_1,
-                pic: img_speaker_1,
+                img: img_user_placeholder,
+                pic: img_user_placeholder,
                 name: "Royston Da Costa",
                 tags: ["leadership"],
                 credentials: "Assitant Treasurer",
@@ -1806,8 +1808,8 @@ const agendaData = [
             },
            
             {
-                img: img_speaker_3,
-                pic: img_speaker_3,
+                img: img_user_placeholder,
+                pic: img_user_placeholder,
                 name: "Kimberly Long",
                 tags: ["leadership"],
                 credentials: "Asia Editor",
@@ -1872,8 +1874,8 @@ const agendaData = [
                 company: "Tonic Pay"
             },
             {
-                img: img_speaker_1,
-                pic: img_speaker_1,
+                img: img_user_placeholder,
+                pic: img_user_placeholder,
                 name: "Ali Paterson",
                 tags: ["artificial-intelligence"],
                 credentials: "Founder/CEO Editor in Chief",
@@ -1904,7 +1906,7 @@ const agendaData = [
         topic: "",
         theme: ["general", "fintech", "artificial-intelligence"],
         type: ["break"],
-        description: "Board Session (Only By Invitation)",
+        description: "Invitation-only Workshops",
         speaker: null
     }
 
