@@ -1373,7 +1373,17 @@ const agendaData = [
         theme:  ["strategy-&-markets"],
         type: ["keynote"],
         description: "Keynote Presentation",
-        speaker: null
+        speaker: [
+            {
+                name: "Sophie Guibaud",
+                img: img_user_placeholder,
+                pic: img_user_placeholder,
+                credentials: "-",
+                company: "-",
+                tags: ["strategy-&-markets"], 
+            }
+           
+        ]
     },
     {
         id: 6,
