@@ -910,7 +910,7 @@ const speakersFullData = [
         id: 15,
         img: img_tram_anh_nguyen,
         pic: img_tram_anh_nguyen,
-        name: "Leveraging AI to Create Value",
+        name: "Tram Anh Nguyen",
         tags: ["artificial-intelligence", "financial-technology"],
         credentials: "Co-founder",
         company: "CFTE",
