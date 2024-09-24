@@ -5,7 +5,7 @@ import ExhibitorForm from './ExhibitorForm';
 import Footer from '../Common/footer';
 
 const index = () => {
-    document.title = "Future of Financial Services Summit | Exhibitors";
+    document.title = "Future of Financial Services | Exhibitors";
 
     window.onscroll = function () {
         scrollFunction();

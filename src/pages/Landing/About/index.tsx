@@ -11,7 +11,7 @@ import JoinUs from './JoinUs';
 import Footer from '../Common/footer';
 
 const index = () => {
-    document.title = "Future of Financial Services Summit | About";
+    document.title = "Future of Financial Services | About";
 
     window.onscroll = function () {
         scrollFunction();

@@ -48,9 +48,16 @@ import img_natasha_kyprianidou_ from "../../assets/images/speakers/img_natasha_k
 import img_lesley_anne_mcClean from "../../assets/images/speakers/img_lesley-anne_mcClean.png";
 import img_frankie_woodhead from "../../assets/images/speakers/img_frankie_woodhead.png";
 //import img_richard_morgans from "../../assets/images/speakers/img_richard_morgans.png";
+import img_nadav_mordechai from "../../assets/images/speakers/img_nadav_mordechai.png";
+import img_royston_da_costa from "../../assets/images/speakers/img_royston_da_costa.png";
+import img_gerald_chappell from "../../assets/images/speakers/img_gerald_chappell.png";
 
 import img_barry_sullivan from "../../assets/images/speakers/img_barry_sullivan.png";
 import img_jp_fabri from "../../assets/images/speakers/img_jp_fabri.png";
+
+import img_michael_anyfantakis from "../../assets/images/speakers/img_michael_anyfantakis.png";
+import img_phil_watson from "../../assets/images/speakers/img_phil_watson.png";
+import img_paul_payne from "../../assets/images/speakers/img_paul_payne.png";
 
 import img_speaker_1 from "../../assets/images/speakers/speaker1.png";
 import img_speaker_3 from "../../assets/images/speakers/speaker3.png";
@@ -534,9 +541,9 @@ const speakersData = [
         credentials: "Founder & CEO, Intelligbonds",
     },
     {
-        img: img_matt,
-        name: "Matt Breadon",
-        credentials: "Chief Commercial Officer, SaaScada",
+        img: img_paul_payne,
+        name: "Paul Payne",
+        credentials: "CTO, SaaScada",
     },
     {
         img: img_jessica_figueras,
@@ -551,12 +558,12 @@ const speakersData = [
     {
         img: img_jas_shah,
         name: "Jas Shah",
-        credentials: "Founder, Bitsyl",
+        credentials: "Fintech Consultant, Bitsul",
     },
     {
         img: img_gwera_kiwana,
         name: "Gwera Kiwana",
-        credentials: "VP, Blockchain Payments Onafriq",
+        credentials: "VP Blockchain, Onafriq",
     },
     {
         img: img_alessandro_hatami,
@@ -575,7 +582,7 @@ const speakersData = [
     },
     {
         img: img_lesley_anne_mcClean,
-        name: "Lesley Anne McClean",
+        name: "Lesley-Ann McClean",
         credentials: "AI and Financial Inclusion Expert, ex M-PESA",
     },
     {
@@ -583,7 +590,6 @@ const speakersData = [
         name: "Frankie Woodhead",
         credentials: "Group Chief Product Officer, Bank of London",
     },
- 
     {
         img: img_barry_sullivan,
         name: "Barry O'Sullivan",
@@ -595,19 +601,29 @@ const speakersData = [
         credentials: "Co-founder, myUbuntu",
     },
     {
-        img: img_speaker_1,
+        img: img_nadav_mordechai,
         name: "Nadav Mordechai",
         credentials: "Product and Strategy Director, Elsewhen",
     },
     {
-        img: img_speaker_3,
+        img: img_royston_da_costa,
         name: "Royston Da Costa",
         credentials: "Assistant Treasurer, CTP, AffilACT",
     },
     {
-        img: img_speaker_1,
+        img: img_gerald_chappell,
         name: "Gerald Chappell",
         credentials: "CEO and Co-Founder, Abound",
+    },
+    {
+        img: img_phil_watson,
+        name: "Phil Watson",
+        credentials: "CEO, Lightbox Wealth",
+    },
+    {
+        img: img_michael_anyfantakis,
+        name: "Michael Anyfantakis",
+        credentials: "Digital & Innovation Expert, Ex Capital One & Lloyds",
     },
     {
         img: img_meaghan,
@@ -623,15 +639,15 @@ const speakersFullData = [
         img: img_sabrina,
         pic: img_sabrina,
         name: "Sabrina Del Prete",
-        tags: ["artificial-intelligence"],
+        tags: ["strategy-&-markets"],
         credentials: "Founder",
         company: "KORE",
         courses: [
             {
-                title: "Insights From The Artificial Intelligence TL", 
-                date: "Wednesday 15 October 2024",
-                time: "11:00 - 11:55",
-                tags: ["artificial-intelligence"],
+                title: "Reflections from Innovators on the Future of Banking", 
+                date: "Tuesday 08, October 2024",
+                time: "9:50 AM",
+                tags: ["strategy-&-markets"],
             },
             
         ],
@@ -642,15 +658,15 @@ const speakersFullData = [
         img: img_iyinoluwa,
         pic: img_iyinoluwa,
         name: "Iyinoluwa Aboyeji",
-        tags: ["digital-business-models", "fintech"],
+        tags: ["strategy-&-markets", "investment"],
         credentials: "Founding Partner",
         company: "Future Africa",
         courses: [
             {
-                title: "Technologies Powering Financial Services", 
-                date: "Wednesday 15 October 2024",
-                time: "13:00 - 13:45",
-                tags: ["fintech"],
+                title: "Funding the Next Wave of Financial Innovation", 
+                date: "Tuesday 08, October 2024",
+                time: "2:55 PM",
+                tags: ["strategy-&-markets", "investment"],
             },
             
         ],
@@ -662,15 +678,15 @@ const speakersFullData = [
         img: img_marie,
         pic: img_marie,
         name: "Marie Walker",
-        tags: ["artificial-intelligence"],
+        tags: ["customer-experience", "financial-technology", "artificial-intelligence"],
         credentials: "Open Futurist",
         company: "Radiam",
         courses: [
             {
-                title: "Insights From The Artificial Intelligence TL", 
-                date: "Wednesday 15 October 2024",
-                time: "11:00 - 11:55",
-                tags: ["artificial-intelligence"],
+                title: "Redefining CX through Open Finance, AI and Technologies", 
+                date: "Tuesday 08, October 2024",
+                time: "2:55 PM",
+                tags: ["customer-experience", "financial-technology", "artificial-intelligence"],
             },
             
         ],
@@ -681,16 +697,22 @@ const speakersFullData = [
         img: img_abu_suleiman,
         pic: img_abu_suleiman,
         name: "Abubakar Suleiman",
-        tags: ["fintech", "customer-experience", "distribution-models"],
+        tags: ["strategy-&-markets"],
         credentials: "CEO",
         company: "Sterling Bank",
         courses: [
             {
-                title: "Customer Experience Through Leadership", 
-                date: "Tuesday 14 October 2024",
-                time: "15:35 - 16:00",
-                tags: ["customer-experience"],
+                title: "The Future of Banking", 
+                date: "Tuesday 08, October 2024",
+                time: "9:15 AM",
+                tags: ["strategy-&-markets"],
             },
+            {
+                title: "Reflections from Innovators on the Future of Banking", 
+                date: "Tuesday 08, October 2024",
+                time: "9:50 AM",
+                tags: ["strategy-&-markets"],
+            }
             
         ],
         bio: "is an economist and banker with over 20 years of experience in consulting and financial services. As CEO of Sterling Bank Plc, he focuses on optimizing financial intermediation in key sectors: Health, Education, Agriculture, Renewable Energy, and Transportation (H.E.A.R.T). \n\nPreviously, he served as Executive Director and CFO of Sterling Bank and led its non-interest banking business. Abubakar holds a B.Sc. in Economics from the University of Abuja and an M.Sc. in Major Programme Management from the University of Oxford. \n\nHe has also worked in tax advisory at Arthur Andersen and financial markets at Citibank Nigeria. Abubakar serves on the boards of Noor Takaful and the Nigerian Economic Summit Group (NESG)."
@@ -701,15 +723,15 @@ const speakersFullData = [
         img: img_abdullo,
         pic: img_abdullo,
         name: "Abdullo Kurbanov ",
-        tags: ["artificial-intelligence"],
+        tags: ["customer-experience", "financial-technology", "artificial-intelligence"],
         credentials: "Co-Founder",
         company: "Ayan Capital and Alif Bank",
         courses: [
             {
-                title: "Insights From The Artificial Intelligence TL", 
-                date: "Wednesday 15 October 2024",
-                time: "11:00 - 11:55",
-                tags: ["artificial-intelligence"],
+                title: "Redefining CX through Open Finance, AI and Technologies", 
+                date: "Tuesday 08, October 2024",
+                time: "2:55 PM",
+                tags: ["customer-experience", "financial-technology", "artificial-intelligence"],
             },
             
         ],
@@ -720,21 +742,15 @@ const speakersFullData = [
         img: img_boye,
         pic: img_boye,
         name: "Boye Ademola",
-        tags: ["distribution-models", "digital-business-models"],
+        tags: ["strategy-&-markets"],
         credentials: "Founder/CEO",
         company: "Bazara",
         courses: [
             {
-                title: "The Impact of Quantum Computing on Fianancial Services", 
-                date: "Tuesday 14 October 2024",
-                time: "13:00 - 15:30",
-                tags: ["fintech"],
-            },
-            {
-                title: "The Impact of AI on Ditribution Models", 
-                date: "Tuesday 14 October 2024",
-                time: "16:00 - 17:00",
-                tags: ["distribution-models", "artificial-intelligence"],
+                title: "Building the Future Together: Strategic Parterships in Financial Services", 
+                date: "Tuesday 08, October 2024",
+                time: "11:35 AM",
+                tags: ["strategy-&-markets"],
             }
             
         ],
@@ -745,15 +761,15 @@ const speakersFullData = [
         img: img_bayo,
         pic: img_bayo,
         name: "Bayo Adekanmbi",
-        tags: ["artificial-intelligence"],
+        tags: ["artificial-intelligence", "financial-technology"],
         credentials: "Founder/CEO",
         company: "DSN",
         courses: [
             {
-                title: "Insights From The Artificial Intelligence TL", 
-                date: "Wednesday 15 October 2024",
-                time: "11:00 - 11:55",
-                tags: ["artificial-intelligence"],
+                title: "Leveraging AI to Create Value", 
+                date: "Wednesday 09, October 2024",
+                time: "1:35PM",
+                tags: ["artificial-intelligence", "financial-technology"],
             },
             
         ],
@@ -765,15 +781,15 @@ const speakersFullData = [
         img: img_nicky,
         pic: img_nicky,
         name: "Nicky Goulimis",
-        tags: ["artificial-intelligence"],
+        tags: ["cybersecurity", "risk"],
         credentials: "CEO",
         company: "Tunic Pay",
         courses: [
             {
-                title: "Insights From The Artificial Intelligence TL", 
-                date: "Wednesday 15 October 2024",
-                time: "11:00 - 11:55",
-                tags: ["artificial-intelligence"],
+                title: "Fighting Financial Fraud: The Future of APP Scams And Consumer Protection", 
+                date: "Wednesday 09, October 2024",
+                time: "3:10 PM",
+                tags: ["cybersecurity", "risk"],
             },
             
         ],
@@ -785,16 +801,22 @@ const speakersFullData = [
         img: img_lanre,
         pic: img_lanre,
         name: "Lanre Bamisebi",
-        tags: ["artificial-intelligence"],
+        tags: ["financial-technology"],
         credentials: "ED IT & Digitalization",
         company: "Access Holdings",
         courses: [
             {
-                title: "Insights From The Artificial Intelligence TL", 
-                date: "Wednesday 15 October 2024",
-                time: "11:00 - 11:55",
-                tags: ["artificial-intelligence"],
+                title: "Reimagining the Engine that Powers Digital", 
+                date: "Tuesday 08, October 2024",
+                time: "1:20 PM",
+                tags: ["financial-technology"],
             },
+            {
+                title: "Digital Transformation in Banking", 
+                date: "Wednesday 09, October 2024",
+                time: "11:20 AM",
+                tags: ["financial-technology"],
+            }
             
         ],
         bio: "is Executive Director of IT and Digitalization at Access Holdings and is a seasoned professional with over two decades of pan-African experience spanning various sectors across 22 countries. Prior to joining Access Holdings, Lanre served as the Managing Director of Finserve Africa, the fintech arm of Equity Bank. He also held the position of Executive Group Director for IT & Operations at Equity Group Holding Limited (EGHL) and has served in advisory roles for Mastercard Technology and the Tony Elumelu Foundation, offering extensive fintech consulting services to African finance institutions.\n\nLanre holds two Bachelor’s degrees, a Master’s degree in business administration from Durham Business School, UK, and is currently undertaking a PhD in Global Strategy. He has completed several digitalization and leadership development courses at Harvard Business School, Wharton, IMD and Cambridge Judge Business School."
@@ -805,16 +827,16 @@ const speakersFullData = [
         img: img_lumley,
         pic: img_lumley,
         name: "Elizabeth Lumley",
-        tags: ["artificial-intelligence"],
+        tags: ["strategy-&-markets"],
         credentials: "Deputy Editor",
         company: "The Banker",
         courses: [
             {
-                title: "Insights From The Artificial Intelligence TL", 
-                date: "Wednesday 15 October 2024",
-                time: "11:00 - 11:55",
-                tags: ["artificial-intelligence"],
-            },
+                title: "Reflections from Innovators on the Future of Banking", 
+                date: "Tuesday 08, October 2024",
+                time: "9:50 AM",
+                tags: ["strategy-&-markets"],
+            }
             
         ],
         bio: "is the Deputy Editor at The Banker. She is a global specialist commentator on global financial technology or “fintech”. She has spent 30 years working in the financial technology space, most recently as director at VC Innovations and architect of the Fintech Talents Festival, managing director at Startupbootcamp FinTech London and an editor at financial services and technology newswire, Finextra.\n\nShe was named Journalist of the Year for Technology and Digital Finance at State Street’s UK Press Awards for 2022."
@@ -842,39 +864,38 @@ const speakersFullData = [
 
     {
         id: 13,
-        img: img_matt,
-        pic: img_matt,
-        name: "Matt Breadon",
-        tags: ["artificial-intelligence"],
-        credentials: "Chief Commercial Officer",
+        img: img_paul_payne,
+        pic: img_paul_payne,
+        name: "Paul Payne",
+        tags: ["financial-technology"],
+        credentials: "CTO",
         company: "SaaScada",
         courses: [
             {
-                title: "Insights From The Artificial Intelligence TL", 
-                date: "Wednesday 15 October 2024",
-                time: "11:00 - 11:55",
-                tags: ["artificial-intelligence"],
+                title: "Reimagining the Engine that Powers Digital", 
+                date: "Tuesday 08, October 2024",
+                time: "1:20 PM",
+                tags: ["financial-technology"],
             },
             
         ],
-        bio: "having 18 years of extensive experience in global banking and technology, brings a wealth of knowledge and expertise to his role as Chief Commercial Officer at SaaScada, a cutting-edge, cloud-based core banking platform designed to accelerate innovation and transform the financial services industry.\n\nHis career has spanned both large financial institutions and agile challenger environments, where he has demonstrated a strong track record of managing and leading global teams. Matt holds a BA in International Relations & European Economic Policy."
+        bio: "is the Chief Technology Officer (CTO) at SaaScada, a core banking platform provider. He has over 20 years of experience in software development, cloud platform engineering, and team leadership, spanning startups, SMEs, and FTSE100 firms. Prior to joining SaaScada, Paul held executive roles at Iris Software Systems and worked at Direct Line Group and LexisNexis.\n\nAt SaaScada, Paul is responsible for driving the company’s technology roadmap and enhancing its cloud-native platform to support the evolving needs of retail banks."
     },
     {
         id: 14,
         img: img_jessica_figueras,
         pic: img_jessica_figueras,
         name: "Jessica Figueras",
-        tags: ["cybersecurity"],
+        tags: ["cybersecurity", "risk"],
         credentials: "Chief Executive, Pionen and Co-founder",
         company: "CxB (Cyber Governance for Boards)",
         courses: [
             {
-                title: "The importance of Cyber Security in FinTech", 
-                date: "Wednesday 15 October 2024",
-                time: "11:00 - 11:55",
-                tags: ["cybersecurity"],
-            },
-            
+                title: "Building Business Agility and Cyber Resiliece", 
+                date: "Wednesday 09, October 2024",
+                time: "2:30 PM",
+                tags: ["cybersecurity", "risk"],
+            }
         ],
         bio: "is CEO of cyber security assurance firm Pionen, which works with government, critical national infrastructure and financial services. She is also Vice Chair of Trustees at the UK Cyber Security Council, and a co-founder of CxB (Cyber Governance for Boards), a non-profit supporting non-executive director to improve board oversight of cybersecurity.\n\nAs a strategist specializing in cyber security, digital trust and the role of tech in civil society, Jessica has advised the UK government on technology and policy issues relating to cyber security and online safety.\n\nShe is a sought-after speaker and commentator and was named one of Computer Weekly's Most Influential Women in UK Tech (2023, 2022 and 2021) and a Women in IT Awards finalist (2022)."
     },
@@ -883,16 +904,16 @@ const speakersFullData = [
         id: 15,
         img: img_tram_anh_nguyen,
         pic: img_tram_anh_nguyen,
-        name: "Tram Anh Nguyen",
-        tags: ["fintech"],
+        name: "Leveraging AI to Create Value",
+        tags: ["artificial-intelligence", "financial-technology"],
         credentials: "Co-founder",
         company: "CFTE",
         courses: [
             {
                 title: "The importance of Cyber Security in FinTech", 
-                date: "Wednesday 15 October 2024",
-                time: "11:00 - 11:55",
-                tags: ["fintech"],
+                date: "Wednesday 09, October 2024",
+                time: "1:35PM",
+                tags: ["artificial-intelligence", "financial-technology"],
             },
             
         ],
@@ -904,17 +925,22 @@ const speakersFullData = [
         img: img_jas_shah,
         pic: img_jas_shah,
         name: "Jas Shah",
-        tags: ["fintech"],
-        credentials: "Founder",
-        company: "Bitsyl",
+        tags: ["customer-experience", "financial-technology", "artificial-intelligence", "strategy-&-markets"],
+        credentials: "Fintech Consultant",
+        company: "Bitsul",
         courses: [
             {
-                title: "The importance of Cyber Security in FinTech", 
-                date: "Wednesday 15 October 2024",
-                time: "11:00 - 11:55",
-                tags: ["fintech"],
+                title: "Redefining CX through Open Finance, AI and Technologies", 
+                date: "Tuesday 08, October 2024",
+                time: "2:25 PM",
+                tags: ["customer-experience", "financial-technology", "artificial-intelligence"],
             },
-            
+            {
+                title: "Launching a Digital Bank", 
+                date: "Wednesday 09, October 2024",
+                time: "1:20 PM",
+                tags: ["strategy-&-markets"],
+            }
         ],
         bio: "is a career Fintech and Product expert. He uses his extensive & hands on expertise, honed at the likes of Citi, Fidelity and Schroders, to shape Product Development, define Digital & Product Strategy, speed up time to market and scale products for FS, FinTech’s and early-stage startups.\n\nHe’s led and shaped the product strategy and development of digital banks, PFM apps, lending platforms, and more. He also shares his Product + Fintech insights in his fortnightly newsletter."
     },
@@ -923,16 +949,16 @@ const speakersFullData = [
         img: img_gwera_kiwana,
         pic: img_gwera_kiwana,
         name: "Gwera Kiwana",
-        tags: ["fintech"],
-        credentials: "Vice President",
-        company: "Blockchain Payments Onafriq",
+        tags: ["web3"],
+        credentials: "VP Blockchain",
+        company: "Onafriq",
         courses: [
             {
-                title: "The importance of Cyber Security in FinTech", 
-                date: "Wednesday 15 October 2024",
-                time: "11:00 - 11:55",
-                tags: ["fintech"],
-            },
+                title: "Web3 and Financial Services", 
+                date: "Wednesday 09, October 2024",
+                time: "11:50 AM",
+                tags: ["web3"],
+            }
             
         ],
         bio: "is an expert with interest in the intersection of Fintech and Web3.  She has spent the last few years building and scaling global fintech's and currently serves as the first crypto hire at Africa’s largest payment gateway, Onafriq (formerly MFS Africa).\n\nIn addition to leveraging crypto to unlock the next generation of Africa’s growth, Gwera also serves as a member of Launch Africa Ventures' Fund II Investment Committee, guiding investment strategies in innovative African startups."
@@ -942,15 +968,15 @@ const speakersFullData = [
         img: img_alessandro_hatami,
         pic: img_alessandro_hatami,
         name: "Alessandro Hatami",
-        tags: ["fintech"],
+        tags: ["strategy-&-markets"],
         credentials: "Founder & Managing Partner",
         company: "Pacemakers.io",
         courses: [
             {
-                title: "The importance of Cyber Security in FinTech", 
-                date: "Wednesday 15 October 2024",
-                time: "11:00 - 11:55",
-                tags: ["fintech"],
+                title: "Reflections from Innovators on the Future of Banking", 
+                date: "Tuesday 08, October 2024",
+                time: "9:50 AM",
+                tags: ["strategy-&-markets"],
             },
             
         ],
@@ -961,17 +987,16 @@ const speakersFullData = [
         img: img_paul_sweeney,
         pic: img_paul_sweeney,
         name: "Paul Sweeney",
-        tags: ["fintech"],
+        tags: ["financial-technology"],
         credentials: "Senior Solution Architect",
         company: "Engine by Starling Bank",
         courses: [
             {
-                title: "The importance of Cyber Security in FinTech", 
-                date: "Wednesday 15 October 2024",
-                time: "11:00 - 11:55",
-                tags: ["fintech"],
-            },
-            
+                title: "Reimagining the Engine that Powers Digital", 
+                date: "Wednesday 09, October 2024",
+                time: "1:20 PM",
+                tags: ["financial-technology"],
+            }
         ],
         bio: "is a Senior Solution Architect at Engine, Starling Bank's Software-as-a-Service arm. Working closely with clients, Paul ensures the design and delivery of secure, resilient and robust implementations, tailored to specific customer requirements.\n\nPaul came to Engine with over 20 years’ experience in Financial Services and Manufacturing, having worked at AIB and KBC Bank, and has delivered programmes across the full information and change lifecycle."
     },
@@ -980,16 +1005,16 @@ const speakersFullData = [
         img: img_natasha_kyprianidou_,
         pic: img_natasha_kyprianidou_,
         name: "Natasa Kyprianidou",
-        tags: ["artificial-intelligence"],
+        tags: ["artificial-intelligence", "financial-technology"],
         credentials: "Senior Director",
         company: "Alvarez & Marsal",
         courses: [
             {
-                title: "The importance of Cyber Security in FinTech", 
-                date: "Wednesday 15 October 2024",
-                time: "11:00 - 11:55",
-                tags: ["fintech"],
-            },
+                title: "AI's Competitive Edge: Shaping the Future of Financial Products", 
+                date: "Wednesday 09, October 2024",
+                time: "9:45 AM",
+                tags: ["artificial-intelligence", "financial-technology"],
+            }
             
         ],
         bio: "is a Senior Director at Alvarez & Marsal’s Financial Services - Digital practice in London, bringing over 24 years of experience in the financial services sector across Europe and the UK. She specializes in building digital banks, transforming financial institutions, and launching large-scale products. Natasa partners with senior executives to integrate emerging technologies into consumer and commercial banking, aiming to enhance digital experiences and improve operational efficiency.\n\nPrior to joining A&M, Natasa was a Senior Director at Publicis Sapient, where she led global product development in financial services. At Barclays, she played a pivotal role in launching innovative digital lending solutions, including Instalments by Barclays on Amazon UK. Earlier in her career, Natasa served as Head of Omni-channel and Customer Experience at Hellenic Bank in Cyprus, where she successfully launched a digital challenger bank and led award-winning Open Banking initiatives."
@@ -998,17 +1023,17 @@ const speakersFullData = [
         id: 21,
         img: img_lesley_anne_mcClean,
         pic: img_lesley_anne_mcClean,
-        name: "Lesley Anne McClean",
-        tags: ["fintech"],
+        name: "Lesley-Ann McClean",
+        tags: ["artificial-intelligence", "financial-technology"],
         credentials: "AI and Financial Inclusion Expert",
         company: "ex M-PESA",
         courses: [
             {
-                title: "The importance of Cyber Security in FinTech", 
-                date: "Wednesday 15 October 2024",
-                time: "11:00 - 11:55",
-                tags: ["fintech"],
-            },
+                title: "Humans and AI: Leading the Future Through Collaboration", 
+                date: "Wednesday 09, October 2024",
+                time: "10:50 AM",
+                tags: ["artificial-intelligence", "financial-technology"],
+            }
             
         ],
         bio: "began her career as a software engineer at an innovation consultancy before shifting focus to digital financial service innovation in emerging markets in 2005. She is one of the creators of Vodafone's M-PESA money transfer service and is named on the patent. Lesley later became Chief Product Officer, building a fintech platform for emerging markets (backed by Naspers MIH), and now consults independently, providing interim product management leadership, product operations setup, and related services including discovery research, design, information architecture, and agile coaching.\n\nHer consultancy clients include major telco networks, the Bill and Melinda Gates Foundation, CGAP, IFC, Microsoft, Mastercard, Accion, and fintech startups like M-KOPA Solar, Segovia, and TrustStamp.\n\nLesley is skilled in fostering cross-functional collaboration using design thinking, lean product management, and process automation, while promoting a flow-based delivery culture focused on continuous learning and early value delivery. Her domain expertise spans retail banking, mobile money, alternative payments, API-driven ecosystems, agent network management, business architecture, risk management, and digital operating models."
@@ -1018,17 +1043,16 @@ const speakersFullData = [
         img: img_frankie_woodhead,
         pic: img_frankie_woodhead,
         name: "Frankie Woodhead",
-        tags: ["fintech"],
+        tags: ["artificial-intelligence", "financial-technology"],
         credentials: "Group Chief Product Officer",
         company: "Bank of London",
         courses: [
             {
-                title: "The importance of Cyber Security in FinTech", 
-                date: "Wednesday 15 October 2024",
-                time: "11:00 - 11:55",
-                tags: ["fintech"],
+                title: "AI's Competitive Edge: Shaping the Future of Financial Products", 
+                date: "Wednesday 09, October 2024",
+                time: "9:45 AM",
+                tags: ["artificial-intelligence", "financial-technology"],
             },
-            
         ],
         bio: "is a visionary leader committed to creating exceptional banking experiences and innovative products through highly engaged teams and cutting-edge technology. With over 15 years of experience in financial services, including 10 years at a Tier 1 FTSE 100 firm, Frankie has a proven track record in scaling businesses from zero to one and navigating Series A to D funding.\n\nCurrently serving as Chief Product Officer at The Bank of London, Frankie continues to shape the future of banking at one of the UK’s six principal clearing banks."
     },
@@ -1037,15 +1061,15 @@ const speakersFullData = [
         img: img_barry_sullivan,
         pic: img_barry_sullivan,
         name: "Barry O'Sullivan",
-        tags: ["fintech"],
+        tags: ["strategy-&-markets"],
         credentials: "Head of Banking & Payments",
         company: "OpenPayd",
         courses: [
             {
-                title: "The importance of Cyber Security in FinTech", 
-                date: "Wednesday 15 October 2024",
-                time: "11:00 - 11:55",
-                tags: ["fintech"],
+                title: "Reflections from Innovators on the Future of Banking", 
+                date: "Tuesday 08, October 2024",
+                time: "9:50 AM",
+                tags: ["strategy-&-markets"],
             },
             
         ],
@@ -1056,15 +1080,15 @@ const speakersFullData = [
         img: img_jp_fabri,
         pic: img_jp_fabri,
         name: "JP Fabri",
-        tags: ["fintech"],
+        tags: ["artificial-intelligence", "financial-technology"],
         credentials: "Co-founder",
         company: "myUbuntu",
         courses: [
             {
-                title: "The importance of Cyber Security in FinTech", 
-                date: "Wednesday 15 October 2024",
-                time: "11:00 - 11:55",
-                tags: ["fintech"],
+                title: "AI's Competitive Edge: Shaping the Future of Financial Products", 
+                date: "Wednesday 09, October 2024",
+                time: "9:45 AM",
+                tags: ["artificial-intelligence", "financial-technology"],
             },
             
         ],
@@ -1072,18 +1096,18 @@ const speakersFullData = [
     },
     {
         id: 25,
-        img: img_speaker_1,
-        pic: img_speaker_1,
+        img: img_nadav_mordechai,
+        pic: img_nadav_mordechai,
         name: "Nadav Mordechai",
-        tags: ["fintech"],
+        tags: ["customer-experience", "financial-technology", "artificial-intelligence"],
         credentials: "Product and Strategy Director",
         company: "Elsewhen",
         courses: [
             {
-                title: "The importance of Cyber Security in FinTech", 
-                date: "Wednesday 15 October 2024",
-                time: "11:00 - 11:55",
-                tags: ["fintech"],
+                title: "Redefining CX through Open Finance, AI and Technologies", 
+                date: "Tuesday 08, October 2024",
+                time: "2:55 PM",
+                tags: ["customer-experience", "financial-technology", "artificial-intelligence"],
             },
             
         ],
@@ -1091,18 +1115,18 @@ const speakersFullData = [
     },
     {
         id: 26,
-        img: img_speaker_3,
-        pic: img_speaker_3,
+        img: img_royston_da_costa,
+        pic: img_royston_da_costa,
         name: "Royston Da Costa",
-        tags: ["fintech"],
+        tags: ["artificial-intelligence", "financial-technology"],
         credentials: "Assistant Treasurer, CTP",
         company: "AffilACT",
         courses: [
             {
-                title: "The importance of Cyber Security in FinTech", 
-                date: "Wednesday 15 October 2024",
-                time: "11:00 - 11:55",
-                tags: ["fintech"],
+                title: "Leveraging AI to Create Value", 
+                date: "Wednesday 09, October 2024",
+                time: "1:35 PM",
+                tags: ["artificial-intelligence", "financial-technology"],
             },
             
         ],
@@ -1110,39 +1134,89 @@ const speakersFullData = [
     },
     {
         id: 27,
-        img: img_speaker_1,
-        pic: img_speaker_1,
+        img: img_gerald_chappell,
+        pic: img_gerald_chappell,
         name: "Gerald Chappell",
-        tags: ["fintech"],
+        tags: ["artificial-intelligence", "financial-technology"],
         credentials: "CEO and Co-Founder",
         company: "Abound",
         courses: [
             {
-                title: "The importance of Cyber Security in FinTech", 
-                date: "Wednesday 15 October 2024",
-                time: "11:00 - 11:55",
-                tags: ["fintech"],
+                title: "AI's Competitive Edge: Shaping the Future of Financial Products", 
+                date: "Wednesday 09, October 2024",
+                time: "10:25 AM",
+                tags: ["artificial-intelligence", "financial-technology"],
             },
             
         ],
         bio: "is the CEO and Co-Founder of Abound, a company dedicated to transforming consumer finance with a radically improved approach to personal lending. Prior to founding Abound, Gerald was a Partner at McKinsey & Company, where he served as Global Head of Digital Lending and Global Head of Credit Analytics. Throughout his career, Gerald has advised a diverse range of financial services clients across the UK, Europe, North America, and Asia on lending, credit risk, and capital strategies. His extensive expertise has helped shape innovative solutions in the financial sector."
     },
     {
+        id: 28,
+        img: img_phil_watson,
+        pic: img_phil_watson,
+        name: "Phil Watson",
+        tags: ["strategy-&-markets", "wealth-management", "artificial-intelligence", "financial-technology"],
+        credentials: "CEO",
+        company: "Lightbox Wealth",
+        courses: [
+            {
+                title: "The Future of WealthTech", 
+                date: "Tuesday 08, October 2024",
+                time: "2:15 PM",
+                tags: ["strategy-&-markets", "wealth-management"],
+            },
+            {
+                title: "Leveraging AI to Create Value", 
+                date: "Wednesday 09, October 2024",
+                time: "1:35 PM",
+                tags: ["artificial-intelligence", "financial-technology"],
+            },
+            
+        ],
+        bio: "is a recognised as a Wealth Management visionary, and leader who has expertly navigated the intersection of investments and technology. With over 25 years financial experience, Phil has played a pivotal role shaping global investment strategies for ultra-high-net-worth investors. His experience spans several MD leadership roles at a Fortune 50 company.\n\nToday, Phil serves as Chief Investment Officer for a family office, managing the end-to-end investment process, from platform & strategy development to client engagement.  And as Founder and CEO of Lightbox Wealth, he continues to push the boundaries of wealth management, offering smarter, more efficient solutions tailored to family office needs.\n\nHis pioneering use of technology and big data has established him as a forward-thinking leader and he was named Best Global Digital Leader by Financial Times PWM in 2021."
+    },
+
+    {
+        id: 29,
+        img: img_michael_anyfantakis,
+        pic: img_michael_anyfantakis,
+        name: "Michael Anyfantakis",
+        tags: ["artificial-intelligence", "financial-technology"],
+        credentials: "Digital & Innovation Expert",
+        company: "Ex Capital One & Lloyds",
+        courses: [
+            {
+                title: "The Future of WealthTech", 
+                date: "Tuesday 08, October 2024",
+                time: "2:15 PM",
+                tags: ["strategy-&-markets", "wealth-management"],
+            },
+            {
+                title: "Leveraging AI to Create Value", 
+                date: "Wednesday 09, October 2024",
+                time: "1:35 PM",
+                tags: ["artificial-intelligence", "financial-technology"],
+            },
+            
+        ],
+        bio: "is a seasoned product leader specializing in digital product innovation and the strategic use of emerging technologies like Generative AI. With extensive experience in the banking and FinTech sectors, he has held senior roles, including Chief Architect & Head of Product at Capital One UK, Chief Product Owner at FIBR by Amsterdam Trade Bank and Head of Innovation Design for Lloyd’s Bank.\n\nMichael is passionate about leveraging GenAI to shape the future of financial products, driving transformative change in customer experience, risk management, and operational efficiency."
+    },
+    {
         id: 7,
         img: img_meaghan,
         pic: img_meaghan,
         name: "Meaghan Johnson",
-        tags: ["artificial-intelligence"],
+        tags: ["customer-experience", "financial-technology", "artificial-intelligence"],
         credentials: "Convener/ED",
         company: "FFS",
         courses: [
             {
-                title: "Insights From The Artificial Intelligence TL", 
-                date: "Wednesday 15 October 2024",
-                time: "11:00 - 11:55",
-                tags: ["artificial-intelligence"],
+                title: "Redefining CX through Open Finance, AI and Technologies", 
+                date: "Tuesday 08, October 2024",
+                time: "2:55 PM",
+                tags: ["customer-experience", "financial-technology", "artificial-intelligence"],
             },
-            
         ],
         bio: "is the CEO of FFS and the convener of the Future of Financial Services Summit. She is also an independent consultant to banks, fintechs, and regulators on digital transformation and customer experience.\n\nWith over 10 years in digital banking and fintech, she founded Digital Magss, advising on product development and strategic partnerships.\n\nMeaghan is a Senior Lecturer at CFTE, a Subject Matter Expert at Manchester Business School, and a Fintech Contributor at Forbes. Her extensive experience includes roles at 11:FS, Mapa Research, and advisory positions at various fintech startups."
     },
@@ -1153,12 +1227,12 @@ const agendaData = [
     {
         id: 1,
         date: "Tue, 08 Oct",
-        startTime: "8:00AM",
-        endTime: "9:00AM",
+        startTime: "8:00 AM",
+        endTime: "9:00 AM",
         dateCode: "Tue",
         duration: "60",
         topic: "",
-        theme: ["general"],
+        theme: [],
         type: ["break"],
         description: "Breakfast Networking",
         speaker: null
@@ -1166,12 +1240,12 @@ const agendaData = [
     {
         id: 2,
         date: "Tue, 08 Oct",
-        startTime: "9:05AM",
+        startTime: "9:05 AM",
         endTime: "9:15AM",
         dateCode: "Tue",
         duration: "15",
         topic: "",
-        theme: ["general"],
+        theme: [],
         type: ["remarks"],
         description: "Welcome Address",
         speaker: [
@@ -1183,18 +1257,17 @@ const agendaData = [
                 company: "FFS",
                 tags: ["general"],
             }
-           
         ]
     },
     {
         id: 3,
         date: "Tue, 08 Oct",
-        startTime: "9:15AM",
+        startTime: "9:15 AM",
         endTime: "9:45AM",
         dateCode: "Tue",
         duration: "30",
         topic: "The Future of Banking",
-        theme:  ["strategy-&-market"],
+        theme:  ["strategy-&-markets"],
         type: ["keynote"],
         description: "Keynote Presentation",
         speaker: [
@@ -1204,7 +1277,7 @@ const agendaData = [
                 name: "Abubakar Suleiman",
                 credentials: "CEO",
                 company: "Sterling Bank",
-                tags: ["strategy-&-market"]
+                tags: ["strategy-&-markets"]
             }
            
         ]
@@ -1212,12 +1285,12 @@ const agendaData = [
     {
         id: 4,
         date: "Tue, 08 Oct",
-        startTime: "9:50AM",
-        endTime: "10:40AM",
+        startTime: "9:50 AM",
+        endTime: "10:40 AM",
         dateCode: "Tue",
         duration: "50",
         topic: "Reflections from Innovators on the Future of Banking",
-        theme:  ["strategy-&-market"],
+        theme:  ["strategy-&-markets"],
         type: ["panel"],
         description: "Panel Session",
         speaker: [
@@ -1227,7 +1300,7 @@ const agendaData = [
                 name: "Abubakar Suleiman",
                 credentials: "CEO",
                 company: "Sterling Bank",
-                tags: ["strategy-&-market"]
+                tags: ["strategy-&-markets"]
             },
             {
                 img: img_sabrina,
@@ -1235,7 +1308,7 @@ const agendaData = [
                 name: "Sabrina Del Prete",
                 credentials: "Founder",
                 company: "KORE",
-                tags: ["strategy-&-market"]
+                tags: ["strategy-&-markets"]
             },
             {
                 img: img_barry_sullivan,
@@ -1243,7 +1316,7 @@ const agendaData = [
                 name: "Barry O'Sullivan",
                 credentials: "Head of Banking & Payments",
                 company: "OpenPayd",
-                tags: ["strategy-&-market"]
+                tags: ["strategy-&-markets"]
             },
             {
                 img: img_alessandro_hatami,
@@ -1259,7 +1332,7 @@ const agendaData = [
                 name: "Elizabeth Lumley",
                 credentials: "Deputy Editor",
                 company: "The Banker",
-                tags: ["strategy-&-market"]
+                tags: ["strategy-&-markets"]
             }
            
         ]
@@ -1267,46 +1340,31 @@ const agendaData = [
     {
         id: 5,
         date: "Tue, 08 Oct",
-        startTime: "10:50AM",
-        endTime: "9:45AM",
+        startTime: "10:50 AM",
+        endTime: "9:45 AM",
         dateCode: "Tue",
         duration: "30",
         topic: "Baas and Embedded Finance",
-        theme:  ["strategy-&-market"],
+        theme:  ["strategy-&-markets"],
         type: ["keynote"],
         description: "Keynote Presentation",
         speaker: null
     },
-    /*
-    {
-        id: 5,
-        date: "Tue, 08 Oct",
-        startTime: "10:40AM",
-        endTime: "10:50AM",
-        dateCode: "Tue",
-        duration: "10",
-        topic: "",
-        theme: ["general"],
-        type: ["break"],
-        description: "Tea Break 01",
-        speaker: null
-    },
-    */
     {
         id: 6,
         date: "Tue, 08 Oct",
-        startTime: "11:20AM",
-        endTime: "12:00PM",
+        startTime: "11:20 AM",
+        endTime: "12:00 PM",
         dateCode: "Tue",
         duration: "50",
-        topic: "Product Demo, Peerless (SaaS Core Banking)",
-        theme: ["fintech"],
+        topic: "Product Demo, Peerless",
+        theme: ["financial-technology"],
         type: ["demo"],
         description: "Product Demo",
         speaker: null,
         product: [
             {
-                name: "Peerless(Saas Core Banking)",
+                name: "Peerless",
                 img: partnersPeerless,
                 company: "Peerless",
                 tags: ["fintech"],
@@ -1317,12 +1375,12 @@ const agendaData = [
     {
         id: 7,
         date: "Tue, 08 Oct",
-        startTime: "11:35AM",
+        startTime: "11:35 AM",
         endTime: "11:35AM",
         dateCode: "Tue",
         duration: "30",
         topic: "Building the Future Together: Strategic Parterships in Financial Services",
-        theme: ["strategy-&-market"],
+        theme: ["strategy-&-markets"],
         type: ["keynote"],
         description: "Keynote Presentation",
         speaker: [
@@ -1332,7 +1390,7 @@ const agendaData = [
                 pic: img_boye,
                 credentials: "Founder/CEO",
                 company: "Bazara",
-                tags: ["fintech", "strategy-&-market"], 
+                tags: ["fintech", "strategy-&-markets"], 
             }
            
         ]
@@ -1340,14 +1398,14 @@ const agendaData = [
     {
         id: 8,
         date: "Tue, 08 Oct",
-        startTime: "1:05PM",
+        startTime: "1:05 PM",
         endTime: "2:20PM",
         dateCode: "Tue",
         duration: "80",
         topic: "The Future of Insurance",
-        theme: ["curated-session"],
-        type: ["board-room-session"],
-        description: "Board Room Session",
+        theme: ["strategy-&-markets", "insurance"],
+        type: ["roundtables"],
+        description: "Roundtable",
         speaker: [
             {
                 img: img_user_placeholder,
@@ -1355,7 +1413,7 @@ const agendaData = [
                 name: "Bode Pedro",
                 credentials: "Founder/CEO",
                 company: "Casava",
-                tags: ["strategy-&-market"],
+                tags: ["strategy-&-markets"],
             }
            
         ]
@@ -1363,12 +1421,12 @@ const agendaData = [
     {
         id: 9,
         date: "Tue, 08 Oct",
-        startTime: "1:05PM",
+        startTime: "1:05 PM",
         endTime: "11:00AM",
         dateCode: "Tue",
         duration: "10",
         topic: "Product Demo, Skaleet",
-        theme: ["fintech"],
+        theme: ["financial-technology"],
         type: ["demo"],
         description: "Product Demo",
         speaker: null,
@@ -1377,7 +1435,7 @@ const agendaData = [
                 name: "Skaleet",
                 img: img_skaleet_logo,
                 company: "Skaleet",
-                tags: ["fintech"],
+                tags: ["financial-technology"],
             }
            
         ]
@@ -1385,12 +1443,12 @@ const agendaData = [
     {
         id: 10,
         date: "Tue, 08 Oct",
-        startTime: "1:20PM",
+        startTime: "1:20 PM",
         endTime: "2:25PM",
         dateCode: "Tue",
         duration: "50",
         topic: "Reimagining the Engine that Powers Digital",
-        theme: ["fintech"],
+        theme: ["financial-technology"],
         type: ["panel"],
         description: "Panel Session",
         speaker: [
@@ -1400,13 +1458,13 @@ const agendaData = [
                 name: "Yinka Oni",
                 credentials: "ED",
                 company: "Sterling Financial Holding",
-                tags: ["fintech"]
+                tags: ["financial-technology"]
             },
             {
-                img: img_matt,
-                pic: img_matt,
-                name: "Matt Breadon",
-                credentials: "Chief Commercial Officer",
+                img: img_paul_payne,
+                pic: img_paul_payne,
+                name: "Paul Payne",
+                credentials: "CTO",
                 company: "SaaScada",
                 tags: ["fintech"]
             },
@@ -1439,33 +1497,42 @@ const agendaData = [
     {
         id: 11,
         date: "Tue, 08 Oct",
-        startTime: "2:15PM",
+        startTime: "2:15 PM",
         endTime: "1:30PM",
         dateCode: "Tue",
         duration: "30",
-        topic: "The Future of Wealth Tech",
-        theme: ["strategy-&-market"],
+        topic: "The Future of WealthTech",
+        theme: ["strategy-&-markets", "wealth-management"],
         type: ["keynote"],
         description: "Keynote Presentation",
-        speaker: null
+        speaker: [
+            {
+                img: img_phil_watson,
+                pic: img_phil_watson,
+                name: "Phil Watson",
+                credentials: "CEO",
+                company: "Lightbox Wealth",
+                tags: ["wealth-management"]
+            }
+        ]
     },
     {
         id: 12,
         date: "Tue, 08 Oct",
-        startTime: "2:55PM",
+        startTime: "2:55 PM",
         endTime: "3:55PM",
         dateCode: "Tue",
         duration: "80",
         topic: "Funding the Next Wave of Financial Innovation",
-        theme: ["curated-session"],
-        type: ["board-room-session"],
+        theme: ["strategy-&-markets", "investment"],
+        type: ["roundtables"],
         description: "Board Room Session",
         speaker: [
             {
                 img: img_iyinoluwa,
                 pic: img_iyinoluwa,
                 name: "Iyinoluwa Aboyeji",
-                tags: ["digital-business-models", "fintech"],
+                tags: ["strategy-&-markets", "fintech"],
                 credentials: "Founding Partner",
                 company: "Future Africa",
             },
@@ -1482,12 +1549,12 @@ const agendaData = [
     {
         id: 13,
         date: "Tue, 08 Oct",
-        startTime: "2:55PM",
+        startTime: "2:55 PM",
         endTime: "2:25PM",
         dateCode: "Tue",
         duration: "50",
         topic: "Redefining CX through Open Finance, AI and Technologies",
-        theme: ["fintech"],
+        theme: ["customer-experience", "financial-technology", "artificial-intelligence"],
         type: ["panel"],
         description: "Panel Session",
         speaker: [
@@ -1508,8 +1575,8 @@ const agendaData = [
                 company: "Radiam",
             },
             {
-                img: img_user_placeholder,
-                pic: img_user_placeholder,
+                img: img_nadav_mordechai,
+                pic: img_nadav_mordechai,
                 name: "Nadav Mordechai",
                 tags: ["customer-experience"],
                 credentials: "Product and Strategy Director",
@@ -1520,8 +1587,8 @@ const agendaData = [
                 pic: img_jas_shah,
                 name: "Jas Shah",
                 tags: ["customer-experience"],
-                credentials: "Founder",
-                company: "Bitsyl",
+                credentials: "Fintech Consultant",
+                company: "Bitsul",
             },
             {
                 img: img_meaghan,
@@ -1537,12 +1604,12 @@ const agendaData = [
     {
         id: 14,
         date: "Wed, 09 Oct",
-        startTime: "8:00AM",
+        startTime: "8:00 AM",
         endTime: "9:00AM",
         dateCode: "Wed",
         duration: "60",
         topic: "",
-        theme: ["general"],
+        theme: null,
         type: ["break"],
         description: "Breakfast Networking",
         speaker: null
@@ -1550,12 +1617,12 @@ const agendaData = [
     {
         id: 15,
         date: "Wed, 09 Oct",
-        startTime: "9:0AM",
+        startTime: "9:0 AM",
         endTime: "9:15AM",
-        dateCode: "Tue",
+        dateCode: "Wed",
         duration: "15",
         topic: "",
-        theme: ["general"],
+        theme: null,
         type: ["remarks"],
         description: "Recap of Day 1",
         speaker: [
@@ -1573,12 +1640,12 @@ const agendaData = [
     {
         id: 16,
         date: "Wed, 09 Oct",
-        startTime: "9:10AM",
+        startTime: "9:10 AM",
         endTime: "9:30AM",
         dateCode: "Wed",
         duration: "30",
         topic: "Gen AI in Finacial Services",
-        theme: ["artificial-intelligence"],
+        theme: ["artificial-intelligence", "financial-technology"],
         type: ["keynote"],
         description: "Keynote Presentation",
         speaker: [
@@ -1596,12 +1663,12 @@ const agendaData = [
     {
         id: 17,
         date: "Wed, 09 Oct",
-        startTime: "9:45AM",
+        startTime: "9:45 AM",
         endTime: "10:25AM",
         dateCode: "Wed",
         duration: "50",
         topic: "AI's Competitive Edge: Shaping the Future of Financial Products",
-        theme: ["artificial-intelligence"],
+        theme: ["artificial-intelligence", "financial-technology"],
         type: ["panel"],
         description: "Panel Session",
         speaker: [
@@ -1615,16 +1682,16 @@ const agendaData = [
             },
             {
               
-                img: img_user_placeholder,
-                pic: img_user_placeholder,
+                img: img_gerald_chappell,
+                pic: img_gerald_chappell,
                 name: "Gerald Chappell",
                 credentials: "CEO and Co-Founder",
                 company: "Abound",
                 tags: ["artificial-intelligence"],
             },
             {
-                img: img_user_placeholder,
-                pic: img_user_placeholder,
+                img: img_jp_fabri,
+                pic: img_jp_fabri,
                 name: "JP Fabri",
                 tags: ["artificial-intelligence"],
                 credentials: "Founder",
@@ -1644,19 +1711,19 @@ const agendaData = [
     {
         id: 18,
         date: "Wed, 09 Oct",
-        startTime: "10:50AM",
+        startTime: "10:50 AM",
         endTime: "9:30AM",
         dateCode: "Wed",
         duration: "30",
         topic: "Humans and AI: Leading the Future Through Collaboration",
-        theme: ["artificial-intelligence"],
+        theme: ["artificial-intelligence", "financial-technology"],
         type: ["keynote"],
         description: "Keynote Presentation",
         speaker: [
             {
                 img: img_lesley_anne_mcClean,
                 pic: img_lesley_anne_mcClean,
-                name: "Lesley Anne McClean",
+                name: "Lesley-Ann McClean",
                 tags: ["fintech"],
                 credentials: "AI and Financial Inclusion Expert",
                 company: "ex M-PESA",
@@ -1667,12 +1734,12 @@ const agendaData = [
     {
         id: 19,
         date: "Wed, 09 Oct",
-        startTime: "11:20AM",
+        startTime: "11:20 AM",
         endTime: "9:30AM",
         dateCode: "Wed",
         duration: "30",
-        topic: "Digital Trannsformation in Banking",
-        theme: ["artificial-intelligence"],
+        topic: "Digital Transformation in Banking",
+        theme: ["financial-technology"],
         type: ["keynote"],
         description: "Keynote Presentation",
         speaker: [
@@ -1690,12 +1757,12 @@ const agendaData = [
     {
         id: 20,
         date: "Wed, 09 Oct",
-        startTime: "11:50AM",
+        startTime: "11:50 AM",
         endTime: "9:30AM",
         dateCode: "Wed",
         duration: "30",
         topic: "Web3 and Financial Services",
-        theme: ["artificial-intelligence"],
+        theme: ["web3"],
         type: ["keynote"],
         description: "Keynote Presentation",
         speaker: [
@@ -1703,8 +1770,8 @@ const agendaData = [
                 img: img_gwera_kiwana,
                 pic: img_gwera_kiwana,
                 name: "Gwera Kiwana",
-                credentials: "Vice President",
-                company: "Blockchain Payments Onafriq",
+                credentials: "VP Blockchain",
+                company: "Onafriq",
                 tags: ["fintech"],
             }
            
@@ -1713,18 +1780,18 @@ const agendaData = [
     {
         id: 21,
         date: "Wed, 09 Oct",
-        startTime: "1:20PM",
+        startTime: "1:20 PM",
         endTime: "2:30PM",
         dateCode: "Wed",
         duration: "80",
         topic: "Launching a Digital Bank",
-        theme: ["curated-session"],
-        type: ["board-room-session"],
-        description: "Board Room Session",
+        theme: ["strategy-&-markets"],
+        type: ["roundtables"],
+        description: "Roundtable",
         speaker: [
             {
-                img: img_user_placeholder,
-                pic: img_user_placeholder,
+                img: img_nadav_mordechai,
+                pic: img_nadav_mordechai,
                 name: "Nadav Mordechai",
                 tags: ["customer-experience"],
                 credentials: "Product and Strategy Director",
@@ -1735,8 +1802,8 @@ const agendaData = [
                 pic: img_jas_shah,
                 name: "Jas Shah",
                 tags: ["customer-experience"],
-                credentials: "Founder",
-                company: "Bitsyl",
+                credentials: "Fintech Consultant",
+                company: "Bitsul",
             }
            
         ]
@@ -1744,12 +1811,12 @@ const agendaData = [
     {
         id: 22,
         date: "Wed, 09 Oct",
-        startTime: "1:20PM",
+        startTime: "1:20 PM",
         endTime: "10:45AM",
         dateCode: "Wed",
         duration: "50",
         topic: "Product Demo, Intellibonds",
-        theme: ["artificial-intelligence"],
+        theme: ["artificial-intelligence", "financial-technology", "wealth-management"],
         type: ["demo"],
         description: "Product Demo",
         speaker: null,
@@ -1765,12 +1832,12 @@ const agendaData = [
     {
         id: 23,
         date: "Wed, 09 Oct",
-        startTime: "1:35PM",
+        startTime: "1:35 PM",
         endTime: "11:40AM",
         dateCode: "Wed",
         duration: "50",
         topic: "Leveraging AI to Create Value",
-        theme: ["artificial-intelligence"],
+        theme: ["artificial-intelligence", "financial-technology"],
         type: ["panel"],
         description: "Panel Session",
         speaker: [
@@ -1778,23 +1845,23 @@ const agendaData = [
                 img: img_tram_anh_nguyen,
                 pic: img_tram_anh_nguyen,
                 name: "Tram Anh Nguyen",
-                tags: ["artificial-intelligence"],
+                tags: ["artificial-intelligence", "financial-technology"],
                 credentials: "Co-founder",
                 company: "CFTE",
             },
             {
-                img: img_user_placeholder,
-                pic: img_user_placeholder,
+                img: img_phil_watson,
+                pic: img_phil_watson,
                 name: "Phil Watson",
-                credentials: "Founder",
+                credentials: "CEO",
                 company: "Lightbox Wealth",
-                tags: ["artificial-intelligence"],
+                tags: ["artificial-intelligence", "financial-technology"],
             },
             {
-                img: img_user_placeholder,
-                pic: img_user_placeholder,
+                img: img_royston_da_costa,
+                pic: img_royston_da_costa,
                 name: "Royston Da Costa",
-                tags: ["leadership"],
+                tags: ["artificial-intelligence", "financial-technology"],
                 credentials: "Assitant Treasurer",
                 company: "Ferguson"
             },
@@ -1802,7 +1869,7 @@ const agendaData = [
                 img: img_bayo,
                 pic: img_bayo,
                 name: "Bayo Adekanmbi",
-                tags: ["artificial-intelligence"],
+                tags: ["artificial-intelligence", "financial-technology"],
                 credentials: "Founder/CEO",
                 company: "DSN",
             },
@@ -1811,7 +1878,7 @@ const agendaData = [
                 img: img_user_placeholder,
                 pic: img_user_placeholder,
                 name: "Kimberly Long",
-                tags: ["leadership"],
+                tags: ["artificial-intelligence", "financial-technology"],
                 credentials: "Asia Editor",
                 company: "The Banker"
             }
@@ -1820,12 +1887,12 @@ const agendaData = [
     {
         id: 24,
         date: "Wed, 09 Oct",
-        startTime: "2:30PM",
+        startTime: "2:30 PM",
         endTime: "12:10PM",
         dateCode: "Wed",
         duration: "30",
         topic: "Building Business Agility and Cyber Resiliece",
-        theme: ["fintech"],
+        theme: ["cybersecurity", "risk"],
         type: ["keynote"],
         description: "Keynote Presentation",
         speaker: [
@@ -1843,33 +1910,33 @@ const agendaData = [
     {
         id: 26,
         date: "Wed, 09 Oct",
-        startTime: "3:10PM",
+        startTime: "3:10 PM",
         endTime: "2:30PM",
         dateCode: "Wed",
         duration: "80",
-        topic: "Redefining Wealth Management in a Digital World",
-        theme: ["curated-session"],
-        type: ["board-room-session"],
-        description: "Board Room Session",
+        topic: "Redefining Wealth Management in a Digital-First World",
+        theme: ["strategy-&-markets"],
+        type: ["roundtables"],
+        description: "Roundtable",
         speaker: null
     },
     {
         id: 27,
         date: "Wed, 09 Oct",
-        startTime: "3:10PM",
+        startTime: "3:10 PM",
         endTime: "2:00PM",
         dateCode: "Wed",
         duration: "20",
-        topic: "Fighting Financial Fraud: The Future of App Scams And Consumer Protection",
-        theme: ["fintech"],
+        topic: "Fighting Financial Fraud: The Future of APP Scams And Consumer Protection",
+        theme: ["cybersecurity", "risk"],
         type: ["fireside-chat"],
         description: "Fireside Chat",
         speaker: [
             {
                 img: img_nicky,
                 pic: img_nicky,
-                name: "Nicky Goumis",
-                tags: ["artificial-intelligence"],
+                name: "Nicky Goulimis",
+                tags: ["cybersecurity", "risk"],
                 credentials: "Founder",
                 company: "Tonic Pay"
             },
@@ -1886,12 +1953,12 @@ const agendaData = [
     {
         id: 28,
         date: "Wed, 09 Oct",
-        startTime: "3:35PM",
+        startTime: "3:35 PM",
         endTime: "1:40PM",
         dateCode: "Wed",
         duration: "30",
         topic: "The Growing Threat of Ransomware",
-        theme: ["fintech"],
+        theme: ["cybersecurity", "risk"],
         type: ["keynote"],
         description: "Keynote Presentation",
         speaker: null
@@ -1899,12 +1966,12 @@ const agendaData = [
     {
         id: 37,
         date: "Thur, 10 Oct",
-        startTime: "9:00AM",
+        startTime: "9:00 AM",
         endTime: "9:00AM",
         dateCode: "Thur",
         duration: "60",
         topic: "",
-        theme: ["general", "fintech", "artificial-intelligence"],
+        theme: ["financial-technology", "artificial-intelligence"],
         type: ["break"],
         description: "Invitation-only Workshops",
         speaker: null

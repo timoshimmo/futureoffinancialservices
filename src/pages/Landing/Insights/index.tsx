@@ -6,7 +6,7 @@ import Main from './Main';
 import CTA from '../Common/CTA';
 
 const index = () => {
-    document.title = "Future of Financial Services Summit | Insight";
+    document.title = "Future of Financial Services | Insight";
 
     window.onscroll = function () {
         scrollFunction();

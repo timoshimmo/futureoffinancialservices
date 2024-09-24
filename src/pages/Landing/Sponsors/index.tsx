@@ -5,7 +5,7 @@ import SponsorsForm from './SponsorsForm';
 import Footer from '../Common/footer';
 
 const index = () => {
-    document.title = "Future of Financial Services Summit | Sponsors";
+    document.title = "Future of Financial Services | Sponsors";
 
     window.onscroll = function () {
         scrollFunction();

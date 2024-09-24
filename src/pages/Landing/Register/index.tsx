@@ -5,7 +5,7 @@ import RegisterForm from './RegisterForm';
 import Footer from '../Common/footer';
 
 const index = () => {
-    document.title = "Future of Financial Services Summit | Register";
+    document.title = "Future of Financial Services | Register";
 
     window.onscroll = function () {
         scrollFunction();

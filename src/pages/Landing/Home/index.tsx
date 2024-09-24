@@ -11,7 +11,7 @@ import CTA from '../Common/CTA';
 import Footer from "../Common/footer";
 
 const index = () => {
-    document.title = "Future of Financial Services Summit | Home";
+    document.title = "Future of Financial Services | Home";
 
     window.onscroll = function () {
         scrollFunction();

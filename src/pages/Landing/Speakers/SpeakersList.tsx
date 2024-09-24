@@ -73,7 +73,7 @@ const SpeakersList = () => {
                                                 <img src={item.img} alt="" className="avatar-speaker-list"/>
                                                 <div className='w-100 mt-3'>
                                                     <h5 className="text-white fs-14" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>{item.name}</h5>
-                                                    <p className="text-white fs-11 fw-light">{item.credentials}, {item.company}</p>
+                                                    <p className="text-white fs-12 fw-light">{item.credentials}, {item.company}</p>
                                                 </div>
                                             </CardBody>
                                         </Card>
@@ -90,14 +90,11 @@ const SpeakersList = () => {
                                     </div>
                                     <h2 className='my-4 text-primary fs-20' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>Themes</h2>
                                     <Nav pills className="nav-pills filter-btns gap-2" role="tablist">
-                                        <NavItem role="presentation">
-                                            <NavLink type="button" onClick={() => setNav("All")} className={nav === "All" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>All</NavLink>
+                                    <NavItem role="presentation">
+                                            <NavLink type="button" onClick={() => setNav("strategy-&-markets")} className={nav === "strategy-&-markets" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>Strategy & Markets</NavLink>
                                         </NavItem>
                                         <NavItem role="presentation">
-                                            <NavLink type="button" onClick={() => setNav("digital-business-models")} className={nav === "digital-business-models" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>Digital Business Models</NavLink>
-                                        </NavItem>
-                                        <NavItem role="presentation">
-                                            <NavLink type="button" onClick={() => setNav("distribution-models")} className={nav === "distribution-models" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>Distribution Models</NavLink>
+                                            <NavLink type="button" onClick={() => setNav("cybersecurity")} className={nav === "cybersecurity" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>Cybersecurity</NavLink>
                                         </NavItem>
                                         <NavItem role="presentation">
                                             <NavLink type="button" onClick={() => setNav("customer-experience")} className={nav === "customer-experience" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>Customer Experience</NavLink>
@@ -106,8 +103,20 @@ const SpeakersList = () => {
                                             <NavLink type="button" onClick={() => setNav("artificial-intelligence")} className={nav === "artificial-intelligence" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>Artificial Intelligence</NavLink>
                                         </NavItem>
                                         <NavItem role="presentation">
-                                            <NavLink type="button" onClick={() => setNav("fintech")} className={nav === "fintech" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>FinTech</NavLink>
+                                            <NavLink type="button" onClick={() => setNav("financial-technology")} className={nav === "financial-technology" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>Financial Technology</NavLink>
                                         </NavItem>
+                                        <NavItem role="presentation">
+                                            <NavLink type="button" onClick={() => setNav("investment")} className={nav === "investment" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>Investment</NavLink>
+                                        </NavItem> 
+                                        <NavItem role="presentation">
+                                            <NavLink type="button" onClick={() => setNav("wealth-management")} className={nav === "wealth-management" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>Wealth Management</NavLink>
+                                        </NavItem> 
+                                        <NavItem role="presentation">
+                                            <NavLink type="button" onClick={() => setNav("insurance")} className={nav === "insurance" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>Insurance</NavLink>
+                                        </NavItem> 
+                                        <NavItem role="presentation">
+                                            <NavLink type="button" onClick={() => setNav("risk")} className={nav === "risk" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>Risk</NavLink>
+                                        </NavItem> 
                                     </Nav>
                                 </div>
                             </div>
@@ -155,11 +164,11 @@ const SpeakersList = () => {
                                             {
                                                 item.tags !== null ?
                                                 (item?.tags.map((row: string) => (
-                                                    <p className="fw-light fs-11 text-capitalize border border-white rounded-2 py-1 px-2">{row.replace(/-/g, ' ')}</p>
+                                                    <p className="fw-light fs-12 text-capitalize border border-white rounded-2 py-1 px-2">{row.replace(/-/g, ' ')}</p>
                                                 ))
                                                 )
                                                 :
-                                                <p className="fw-light fs-11 text-capitalize border border-white rounded-2 py-1 px-2">General Session</p>
+                                                <p className="fw-light fs-12 text-capitalize border border-white rounded-2 py-1 px-2">General Session</p>
                                             } 
                                         </div>
                                     </CardBody>
