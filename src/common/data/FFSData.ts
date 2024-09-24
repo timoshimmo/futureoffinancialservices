@@ -58,6 +58,7 @@ import img_jp_fabri from "../../assets/images/speakers/img_jp_fabri.png";
 import img_michael_anyfantakis from "../../assets/images/speakers/img_michael_anyfantakis.png";
 import img_phil_watson from "../../assets/images/speakers/img_phil_watson.png";
 import img_paul_payne from "../../assets/images/speakers/img_paul_payne.png";
+import img_bode_pedro from "../../assets/images/speakers/img_bode_pedro.png";
 
 import img_speaker_1 from "../../assets/images/speakers/speaker1.png";
 import img_speaker_3 from "../../assets/images/speakers/speaker3.png";
@@ -624,6 +625,11 @@ const speakersData = [
         img: img_michael_anyfantakis,
         name: "Michael Anyfantakis",
         credentials: "Digital & Innovation Expert, Ex Capital One & Lloyds",
+    },
+    {
+        img: img_bode_pedro,
+        name: "Bode Pedro",
+        credentials: "Founder and CEO, Casava",
     },
     {
         img: img_meaghan,
@@ -1203,6 +1209,25 @@ const speakersFullData = [
         bio: "is a seasoned product leader specializing in digital product innovation and the strategic use of emerging technologies like Generative AI. With extensive experience in the banking and FinTech sectors, he has held senior roles, including Chief Architect & Head of Product at Capital One UK, Chief Product Owner at FIBR by Amsterdam Trade Bank and Head of Innovation Design for Lloyd’s Bank.\n\nMichael is passionate about leveraging GenAI to shape the future of financial products, driving transformative change in customer experience, risk management, and operational efficiency."
     },
     {
+        id: 30,
+        img: img_bode_pedro,
+        pic: img_bode_pedro,
+        name: "Bode Pedro",
+        tags: ["artificial-intelligence", "financial-technology"],
+        credentials: "Founder and CEO",
+        company: "Casava",
+        courses: [
+            {
+                title: "The Future of Insurance", 
+                date: "Tuesday 08, October 2024",
+                time: "1:05 PM",
+                tags: ["strategy-&-markets", "insurance"],
+            }
+
+        ],
+        bio: "is a highly accomplished and dynamic Tech Entrepreneur, and visionary leader, known for tackling problems with innovative solutions, and transforming ideas into successful startups and businesses. He has a deep understanding of the technology and entrepreneurial landscape in Sub-Saharan Africa, and has a passion for digital innovation, investing in and advising high-growth ventures.\n\nAs a seasoned entrepreneur, he founded Casava, a licensed Insurtech solution and Micro Insurance Underwriter, developed on the notion that insurance should be an enjoyable experience to help people thrive and prosper at home, at work and in their communities. Casava is Nigeria’s first 100% digital insurance company. It recently raised $4m in venture funding, the largest pre-seed raise for an Insurtech company in Africa."
+    },
+    {
         id: 7,
         img: img_meaghan,
         pic: img_meaghan,
@@ -1408,8 +1433,8 @@ const agendaData = [
         description: "Roundtable",
         speaker: [
             {
-                img: img_user_placeholder,
-                pic: img_user_placeholder,
+                img: img_bode_pedro,
+                pic: img_bode_pedro,
                 name: "Bode Pedro",
                 credentials: "Founder/CEO",
                 company: "Casava",
