@@ -81,17 +81,31 @@ const RegisterForm = () => {
             workshops: Yup.array().max(2, "You can only select maximum of two workshops")
         }),
         onSubmit: (values) => {
-            //const eventList = workshopsData.filter(item => values.workshops.filter(data => data === "Funding the Next Wave of Financial Innovation"));
-            //
+           
             let yFilter = values.workshops.map(itemY => { return itemY });
             const eventList = workshopsData.filter(item => yFilter.some(data => data === item.event_name));
-          
+
+           
+
+            const valuesObj = {...values} as Partial<any>;
+            delete valuesObj?.workshops;
+
+            let trimObj = eventList.map(data => {
+                const objVal = {...data} as Partial<any>;
+
+                delete objVal?.date;
+                delete objVal?.time;
+                delete objVal?.host;
+
+                return objVal;
+            });
+
             const obj = {
-                ...values,
-                event: eventList
+                ...valuesObj,
+                event: trimObj
             }
-         //   console.log("FORM VALUES", eventList);
-           // console.log("FORM OBJ", obj);
+
+            console.log("VALUESOBJ", obj);
 
             handleClick(obj);
             //resetForm();
@@ -116,8 +130,8 @@ const RegisterForm = () => {
         })
         .catch((error) => {
             if (error.response) {
-                console.log(error.response.data.message);
-                setErrorMsg(error.response.data.message);
+                console.log(error.response.data.error);
+                setErrorMsg(error.response.data.error);
                 setCloseAlert(true);
                 console.log("server error");
             } else if (error.request) {
@@ -320,9 +334,9 @@ const RegisterForm = () => {
                                                     {loading ? 'Loading...' : 'Send'}
                                                 </button>
                                             </Col>
-                                           {/* } <Col lg={12} sm={12} className='px-2 mt-3'>
+                                            <Col lg={12} sm={12} className='px-2 mt-3'>
                                                 {errorMsg && errorMsg !== '' ? (<Alert color="danger" isOpen={closeAlert} toggle={onDismiss}> {errorMsg} </Alert>) : null}
-                                                </Col> */}
+                                            </Col>
                                         </Row>
                                     </Form>
                                     </CardBody>
