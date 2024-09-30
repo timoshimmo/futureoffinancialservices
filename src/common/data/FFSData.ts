@@ -60,6 +60,17 @@ import img_phil_watson from "../../assets/images/speakers/img_phil_watson.png";
 import img_paul_payne from "../../assets/images/speakers/img_paul_payne.png";
 import img_bode_pedro from "../../assets/images/speakers/img_bode_pedro.png";
 
+import img_andy from "../../assets/images/speakers/img_andy.png";
+import img_yinka_oni from "../../assets/images/speakers/img_yinka_oni.png";
+import img_tayo_bamiduro from "../../assets/images/speakers/img_tayo_bamiduro.png";
+import img_ali_paterson from "../../assets/images/speakers/img_ali_paterson.png";
+import img_kimberly_long from "../../assets/images/speakers/img_kimberly_long.png";
+import img_mathias_canales from "../../assets/images/speakers/img_mathias_canales.png";
+import img_shaul_david from "../../assets/images/speakers/img_shaul_david.png";
+import img_alex_menage from "../../assets/images/speakers/img_alex_menage.png";
+import img_sophie_guibaud from "../../assets/images/speakers/img_sophie_guibaud.png";
+import img_tunji_odumuboni from "../../assets/images/speakers/img_tunji_odumuboni.png";
+
 import img_speaker_1 from "../../assets/images/speakers/speaker1.png";
 import img_speaker_3 from "../../assets/images/speakers/speaker3.png";
 import img_speaker_5 from "../../assets/images/speakers/speaker5.png";
@@ -630,6 +641,31 @@ const speakersData = [
         img: img_bode_pedro,
         name: "Bode Pedro",
         credentials: "Founder and CEO, Casava",
+    },
+    {
+        img: img_andy,
+        name: "Andy Jenkinson",
+        credentials: "Group Chief Executive Officer, Cybersec Innovation Partners"
+    },
+    {
+        img: img_sophie_guibaud,
+        name: "Sophie Guibaud",
+        credentials: "Co-Founder & CEO, Fiat Republic & Co-Author, The Embedded Finance Book"
+    },
+    {
+        img: img_mathias_canales,
+        name: "Mathias Canales",
+        credentials: "Customer Engineer, Google Cloud"
+    },
+    {
+        img: img_shaul_david,
+        name: "Shaul David",
+        credentials: "Fintech Advisor"
+    },
+    {
+        img: img_alex_menage,
+        name: "Alex Menage",
+        credentials: "Managing Director of EMEA and Global Head of Sales at Thought Machine"
     },
     {
         img: img_meaghan,
@@ -1228,6 +1264,98 @@ const speakersFullData = [
         bio: "is a highly accomplished and dynamic Tech Entrepreneur, and visionary leader, known for tackling problems with innovative solutions, and transforming ideas into successful startups and businesses. He has a deep understanding of the technology and entrepreneurial landscape in Sub-Saharan Africa, and has a passion for digital innovation, investing in and advising high-growth ventures.\n\nAs a seasoned entrepreneur, he founded Casava, a licensed Insurtech solution and Micro Insurance Underwriter, developed on the notion that insurance should be an enjoyable experience to help people thrive and prosper at home, at work and in their communities. Casava is Nigeria’s first 100% digital insurance company. It recently raised $4m in venture funding, the largest pre-seed raise for an Insurtech company in Africa."
     },
     {
+        id: 31,
+        img: img_andy,
+        pic: img_andy,
+        name: "Andy Jenkinson",
+        tags: ["artificial-intelligence", "financial-technology"],
+        credentials: "Group Chief Executive Officer",
+        company: "Cybersec Innovation Partners",
+        courses: [
+            {
+                title: "The Future of Insurance", 
+                date: "Tuesday 08, October 2024",
+                time: "1:05 PM",
+                tags: ["strategy-&-markets", "insurance"],
+            }
+
+        ],
+        bio: "is a senior and seasoned innovative Executive with over 30 years' experience as a hands-on lateral thinking CEO, coach, and leader. A 'big deal' business accelerator, and inspirational, lateral thinker, Andy has crafted, created, and been responsible for delivering 100’s £millions of projects within the Cyber, Technical, Risk and Compliance markets for some of the world's largest, leading organisations.\n\nAndy has a demonstrable track record of large-scale technical delivery and management within many sectors including the Professional, Managed, and Financial Services. Andy has now authoured four books: Stuxnet to Sunburst, Ransomware & CyberCrime, Digital Blood on Their Hands, and the latest, Surveillance, The Blueprint for Cybercrime due to be published in 2024 and authored some 2000 reports on the subject. Andy’s articles over the last 12 months attracted some 2.6 million unique readers."
+    },
+    {
+        id: 32,
+        img: img_sophie_guibaud,
+        pic: img_sophie_guibaud,
+        name: "Sophie Guibaud",
+        tags: ["strategy-&-markets"],
+        credentials: "Co-Founder and CEO",
+        company: "Fiat Republic & Co-Author, The Embedded Finance Book",
+        courses: [
+            {
+                title: "Baas and Embedded Finance", 
+                date: "Tuesday 08, October 2024",
+                time: "10:50 AM",
+                tags: ["strategy-&-markets"]
+            }
+        ],
+        bio: "is the co-founder of Fiat Republic, a company whose vision is to propel crypto into the mainstream. They’re achieving this by facilitating fiat payments for users, all thanks to their network of crypto-friendly banks and their instant settlement network, Eaglenet.\n\nSophie’s journey over the past 15 years has been dotted with building fintech companies across Europe and the UK.  She was part of the Hello Fresh founding team in the UK in 2012, and led the launch of Fidor Bank, a digital bank in the UK in 2015, She co-authored a book published by Wiley, Embedded Finance: when payments become an experience, that shines a spotlight on the bountiful prospects of embedded finance for tech platforms and consumer brands. She’s mentoring budding talents at Oxford University Creative Destruction Lab and Level39, and and sits on the advisory board of several fintechs."
+    },
+
+    {
+        id: 33,
+        img: img_mathias_canales,
+        pic: img_mathias_canales,
+        name: "Mathias Canales",
+        tags: ["strategy-&-markets"],
+        credentials: "Customer Engineer",
+        company: "Google Cloud",
+        courses: [
+            {
+                title: "Gen AI in Financial Services", 
+                date: "Wednesday 09, October 2024",
+                time: "9:10 AM",
+                tags: ["artificial-intelligence", "financial-technology"]
+            }
+        ],
+        bio: "is a Customer Engineer at Google Cloud, specializing in Generative AI applications for the Fintech industry."
+    },
+    {
+        id: 34,
+        img: img_shaul_david,
+        pic: img_shaul_david,
+        name: "Shaul David",
+        tags: ["strategy-&-markets"],
+        credentials: "Customer Engineer",
+        company: "Google Cloud",
+        courses: [
+            {
+                title: "Baas and Embedded Finance", 
+                date: "Tuesday 08, October 2024",
+                time: "10:50 AM",
+                tags: ["strategy-&-markets"]
+            }
+        ],
+        bio: "is a London-based Fintech advisor with a global outlook on Embedded Finance, Banking as a Service and payments infrastructure. Shaul works with startups, financial institutions and governments to accelerate innovation across industry verticals, launch new product propositions and enter new markets. Previously, Shaul was Head of Banking, Growth at Railsbank where he led international expansion to the US and Australia.\n\nPrior to Railsbank, Shaul was the UK Government's first Fintech Advisor reporting to HM Treasury where he played a role building the UK Fintech ecosystem, cementing its global leadership position. Earlier in his career, Shaul held various roles within retail banking technology and finance. He is also a basketball junkie."
+    },
+    {
+        id: 35,
+        img: img_alex_menage,
+        pic: img_alex_menage,
+        name: "Alex Menage",
+        tags: ["strategy-&-markets"],
+        credentials: "Managing Director of EMEA and Global Head of Sales",
+        company: "Thought Machine",
+        courses: [
+            {
+                title: "Baas and Embedded Finance", 
+                date: "Tuesday 08, October 2024",
+                time: "10:50 AM",
+                tags: ["strategy-&-markets"]
+            }
+        ],
+        bio: "is Managing Director of EMEA and Global Head of Sales at Thought Machine, a leading cloud-native core banking and payments technology company with a presence in over 25 countries and a client list of over a dozen Tier 1 banks.\n\nEngaging directly with banks, fintechs, and neo-banks, Alex informs the market on how next-generation cloud-native technology revolutionises financial services, enabling hyper-personalised products and giving banks a single, powerful platform to become market leaders.\n\nAlex has a twenty-year track record of delivering technology solutions for financial institutions, having previously held senior leadership roles at Temenos, Oracle, and Thomson Reuters."
+    },
+    {
         id: 7,
         img: img_meaghan,
         pic: img_meaghan,
@@ -1320,6 +1448,14 @@ const agendaData = [
         description: "Panel Session",
         speaker: [
             {
+                img: img_lumley,
+                pic: img_lumley,
+                name: "Elizabeth Lumley",
+                credentials: "Deputy Editor",
+                company: "The Banker",
+                tags: ["strategy-&-markets"]
+            },
+            {
                 img: img_abu_suleiman,
                 pic: img_abu_suleiman,
                 name: "Abubakar Suleiman",
@@ -1350,14 +1486,6 @@ const agendaData = [
                 credentials: "Founder & Managing Partner",
                 company: "Pacemakers.io",
                 tags: ["artificial-intelligence"],
-            },
-            {
-                img: img_lumley,
-                pic: img_lumley,
-                name: "Elizabeth Lumley",
-                credentials: "Deputy Editor",
-                company: "The Banker",
-                tags: ["strategy-&-markets"]
             }
            
         ]
@@ -1371,14 +1499,22 @@ const agendaData = [
         duration: "30",
         topic: "Baas and Embedded Finance",
         theme:  ["strategy-&-markets"],
-        type: ["keynote"],
-        description: "Keynote Presentation",
+        type: ["fireside-chat"],
+        description: "Fireside Chat",
         speaker: [
             {
                 name: "Sophie Guibaud",
-                img: img_user_placeholder,
-                pic: img_user_placeholder,
-                credentials: "-",
+                img: img_sophie_guibaud,
+                pic: img_sophie_guibaud,
+                credentials: "Co-Founder and CEO",
+                company: "Fiat Republic & Co-Author, The Embedded Finance Book",
+                tags: ["strategy-&-markets"], 
+            },
+            {
+                name: "Shaul David",
+                img: img_shaul_david,
+                pic: img_shaul_david,
+                credentials: "Fintech Advisor",
                 company: "-",
                 tags: ["strategy-&-markets"], 
             }
@@ -1488,8 +1624,16 @@ const agendaData = [
         description: "Panel Session",
         speaker: [
             {
-                img: img_user_placeholder,
-                pic: img_user_placeholder,
+                img: img_tunji_odumuboni,
+                pic: img_tunji_odumuboni,
+                name: "Tunji Odumuboni",
+                credentials: "Co-Founder/CPTO",
+                company: "Bazara",
+                tags: ["fintech"]
+            },
+            {
+                img: img_yinka_oni,
+                pic: img_yinka_oni,
                 name: "Yinka Oni",
                 credentials: "ED",
                 company: "Sterling Financial Holding",
@@ -1517,14 +1661,6 @@ const agendaData = [
                 name: "Paul Sweeney",
                 credentials: "Senior Solution Architect",
                 company: "Engine by Starling Bank",
-                tags: ["fintech"]
-            },
-            {
-                img: img_user_placeholder,
-                pic: img_user_placeholder,
-                name: "Tunji Odumuboni",
-                credentials: "Co-Founder/CPTO",
-                company: "Bazara",
                 tags: ["fintech"]
             }
         ]
@@ -1561,7 +1697,7 @@ const agendaData = [
         topic: "Funding the Next Wave of Financial Innovation",
         theme: ["strategy-&-markets", "investment"],
         type: ["roundtables"],
-        description: "Board Room Session",
+        description: "Roundtable",
         speaker: [
             {
                 img: img_iyinoluwa,
@@ -1572,8 +1708,8 @@ const agendaData = [
                 company: "Future Africa",
             },
             {
-                img: img_user_placeholder,
-                pic: img_user_placeholder,
+                img: img_tayo_bamiduro,
+                pic: img_tayo_bamiduro,
                 name: "Tayo Bamiduro",
                 credentials: "Founder/CEO",
                 company: "Max",
@@ -1593,6 +1729,14 @@ const agendaData = [
         type: ["panel"],
         description: "Panel Session",
         speaker: [
+            {
+                img: img_meaghan,
+                pic: img_meaghan,
+                name: "Meaghan Johnson",
+                credentials: "Convener/ED",
+                company: "FFS",
+                tags: ["customer-experience", "financial-technology", "artificial-intelligence"],
+            },
             {
                 img: img_abdullo,
                 pic: img_abdullo,
@@ -1624,14 +1768,6 @@ const agendaData = [
                 tags: ["customer-experience"],
                 credentials: "Fintech Consultant",
                 company: "Bitsul",
-            },
-            {
-                img: img_meaghan,
-                pic: img_meaghan,
-                name: "Meaghan Johnson",
-                credentials: "Convener/ED",
-                company: "FFS",
-                tags: ["general"],
             }
             
         ]
@@ -1679,14 +1815,14 @@ const agendaData = [
         endTime: "9:30AM",
         dateCode: "Wed",
         duration: "30",
-        topic: "Gen AI in Finacial Services",
+        topic: "Gen AI in Financial Services",
         theme: ["artificial-intelligence", "financial-technology"],
         type: ["keynote"],
         description: "Keynote Presentation",
         speaker: [
             {
-                img: img_user_placeholder,
-                pic: img_user_placeholder,
+                img: img_mathias_canales,
+                pic: img_mathias_canales,
                 name: "Mathias Canales",
                 credentials: "Customer Engineer AI/ML",
                 company: "Google",
@@ -1790,6 +1926,36 @@ const agendaData = [
         ]
     },
     {
+        id: 26,
+        date: "Wed, 09 Oct",
+        startTime: "11:20 AM",
+        endTime: "2:30PM",
+        dateCode: "Wed",
+        duration: "80",
+        topic: "Redefining Wealth Management in a Digital-First World",
+        theme: ["wealth-management"],
+        type: ["roundtables"],
+        description: "Roundtable",
+        speaker: [
+            {
+                img: img_user_placeholder,
+                pic: img_user_placeholder,
+                name: "Natalie Well",
+                tags: ["wealth-management"],
+                credentials: "-",
+                company: "-"
+            },
+            {
+                img: img_user_placeholder,
+                pic: img_user_placeholder,
+                name: "Stacy Body",
+                tags: ["wealth-management"],
+                credentials: "-",
+                company: "-"
+            }
+        ]
+    },
+    {
         id: 20,
         date: "Wed, 09 Oct",
         startTime: "11:50 AM",
@@ -1876,6 +2042,15 @@ const agendaData = [
         type: ["panel"],
         description: "Panel Session",
         speaker: [
+            
+            {
+                img: img_kimberly_long,
+                pic: img_kimberly_long,
+                name: "Kimberly Long",
+                tags: ["artificial-intelligence", "financial-technology"],
+                credentials: "Asia Editor",
+                company: "The Banker"
+            },
             {
                 img: img_tram_anh_nguyen,
                 pic: img_tram_anh_nguyen,
@@ -1907,15 +2082,6 @@ const agendaData = [
                 tags: ["artificial-intelligence", "financial-technology"],
                 credentials: "Founder/CEO",
                 company: "DSN",
-            },
-           
-            {
-                img: img_user_placeholder,
-                pic: img_user_placeholder,
-                name: "Kimberly Long",
-                tags: ["artificial-intelligence", "financial-technology"],
-                credentials: "Asia Editor",
-                company: "The Banker"
             }
         ]
     },
@@ -1943,19 +2109,6 @@ const agendaData = [
         ]
     },
     {
-        id: 26,
-        date: "Wed, 09 Oct",
-        startTime: "3:10 PM",
-        endTime: "2:30PM",
-        dateCode: "Wed",
-        duration: "80",
-        topic: "Redefining Wealth Management in a Digital-First World",
-        theme: ["strategy-&-markets"],
-        type: ["roundtables"],
-        description: "Roundtable",
-        speaker: null
-    },
-    {
         id: 27,
         date: "Wed, 09 Oct",
         startTime: "3:10 PM",
@@ -1968,20 +2121,20 @@ const agendaData = [
         description: "Fireside Chat",
         speaker: [
             {
+                img: img_ali_paterson,
+                pic: img_ali_paterson,
+                name: "Ali Paterson",
+                tags: ["artificial-intelligence"],
+                credentials: "Founder/CEO Editor in Chief",
+                company: "FF News Fintech/Finance"
+            },
+            {
                 img: img_nicky,
                 pic: img_nicky,
                 name: "Nicky Goulimis",
                 tags: ["cybersecurity", "risk"],
                 credentials: "Founder",
                 company: "Tonic Pay"
-            },
-            {
-                img: img_user_placeholder,
-                pic: img_user_placeholder,
-                name: "Ali Paterson",
-                tags: ["artificial-intelligence"],
-                credentials: "Founder/CEO Editor in Chief",
-                company: "FF News Fintech/Finance"
             }
         ]
     },
@@ -2105,5 +2258,40 @@ const whatWeDoData = [
     },
 ]
 
+const workshopsData = [
+    {
+        event_name: "The Future of Insurance",
+        date: "Tue, Oct 8th 2024",
+        time: "1:05 PM",
+        host: "Bode Pedro, Casava",
+        room_number: "101",
+        approvalStatus: "PENDING"
+    },
+    {
+        event_name: "Funding the Next Wave of Financial Innovation",
+        date: "Tue, Oct 8th 2024",
+        time: "2:55 PM",
+        host: "Iyin Aboyeji, Future Africa and Tayo Bamiduro, Max",
+        room_number: "102",
+        approvalStatus: "PENDING"
+    },
+    {
+        event_name: "The Future of Wealth",
+        date: " Wed, Oct 9th 2024",
+        time: "11:20 AM",
+        host: " Natalie Weil, Old Street VC and Stacey Body, Aventur",
+        room_number: "103",
+        approvalStatus: "PENDING"
+    },
+    {
+        event_name: "Launching a Digital Bank",
+        date: "Wed, Oct 9th 2024",
+        time: "3:10 PM",
+        host: "Nadav Mordechai, Elsewhen; Jas Shah, Bitsul and Alex Menage, Thought Machine",
+        room_number: "104",
+        approvalStatus: "PENDING"
+    }
+]
 
-export {connectData, speakersData, whatIsData, numbersData, partnerImgsData, latestData, faqData, faqFullData, speakersFullData, agendaData, whatWeDoData, whyChooseData, joinContactsData, insightsData }
+
+export {connectData, speakersData, whatIsData, numbersData, partnerImgsData, latestData, faqData, faqFullData, speakersFullData, agendaData, whatWeDoData, whyChooseData, joinContactsData, insightsData, workshopsData }

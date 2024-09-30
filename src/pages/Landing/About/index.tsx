@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 //import Navbar from './Navbar';
 import Navbar from '../Common/Navbar';
 import About from "./About";
@@ -36,6 +37,9 @@ const index = () => {
     return (
         <React.Fragment>
             <div className="layout-wrapper landing body-bg-dark">
+                <Helmet>
+                    <meta name="description" content="Future of Financial Services | About" />
+                </Helmet>
                 <Navbar />
                 <About />
                 <MissionVision />

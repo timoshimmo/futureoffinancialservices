@@ -1,21 +1,37 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Row, Col, Card, CardBody, Label, Input, Form, Button, Alert } from 'reactstrap';
+import { Container, Row, Col, Card, CardBody, Label, Input, Form, FormGroup, Button, Alert, CardTitle } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import * as Yup from "yup";
 import { useFormik } from "formik";
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
+import { workshopsData } from '../../../common/data';
 import success_check from "../../../assets/images/gif/success_check.gif";
 import successful_form_submission from "../../../assets/images/gif/successful_form_submission.gif";
 
+
+interface EventProps{ 
+    event_name: string,
+    date: string,
+    time: string,
+    host: string,
+    room_number: string,
+    approvalStatus: string
+  }
+
 const RegisterForm = () => {
+
+    //const checkboxRef = useRef<HTMLInputElement | null>(null);
 
     const [successful, setSuccessful] = useState(false);
     const [loading, setLoading] = useState(false);
 
     const [errorMsg, setErrorMsg] = useState('');
     const [closeAlert, setCloseAlert] = useState(false);
+    const [onHoverCard, setOnHoverCard] = useState(false);
+
+    const [isChecked, setIsChecked] = useState(false)
     //const [value, setValue] = useState('');
 
    /* useEffect(() => {
@@ -46,25 +62,38 @@ const RegisterForm = () => {
         enableReinitialize: true,
 
         initialValues: {
-            firstname: '',
-            lastname: '',
+            first_name: '',
+            last_name: '',
             email: '',
             company_name: '',
             title: '',
-            phone: ''
+            phonenumber: '',
+            workshops: []
         },
         validationSchema: Yup.object({
-            firstname: Yup.string().required("Please Enter Your First Name"),
-            lastname: Yup.string().required("Please Enter Your Last Name"),
+            first_name: Yup.string().required("Please Enter Your First Name"),
+            last_name: Yup.string().required("Please Enter Your Last Name"),
             email: Yup.string().email('Invalid email').required("Please Enter Your Email")
             .matches(/@[^.]*\./, "Invalid email format"),
             company_name: Yup.string().required("Please Company Name is Required"),
             title: Yup.string().required("Please Enter Your Position in the Company"),
-            phone: Yup.string().required("Please Your Phone Number is Required"),
+            phonenumber: Yup.string().required("Please Your Phone Number is Required"),
+            workshops: Yup.array().max(2, "You can only select maximum of two workshops")
         }),
         onSubmit: (values) => {
-            //console.log("FORM VALUES", values);
-            handleClick(values);
+            //const eventList = workshopsData.filter(item => values.workshops.filter(data => data === "Funding the Next Wave of Financial Innovation"));
+            //
+            let yFilter = values.workshops.map(itemY => { return itemY });
+            const eventList = workshopsData.filter(item => yFilter.some(data => data === item.event_name));
+          
+            const obj = {
+                ...values,
+                event: eventList
+            }
+         //   console.log("FORM VALUES", eventList);
+           // console.log("FORM OBJ", obj);
+
+            handleClick(obj);
             //resetForm();
         }
     });
@@ -76,7 +105,9 @@ const RegisterForm = () => {
             setLoading(false);
         }, 5000); */
 
-        axios.post('https://api.futureoffinancialservices.org/api/user-register', obj)
+        //https://api.futureoffinancialservices.org/api/user-register
+
+        axios.post('https://dev-api.futureoffinancialservices.org/api/v1/register', obj)
         .then(response => {
             console.log(response);
             setSuccessful(true);
@@ -134,16 +165,16 @@ const RegisterForm = () => {
                                                 <Label className="fs-13 form-label mb-0">First Name</Label>
                                                 <div className="w-100 vstack p-2 rounded-2 form-box">
                                                     <Input 
-                                                        id="firstname"
-                                                        name="firstname"
+                                                        id="first_name"
+                                                        name="first_name"
                                                         type="text" 
                                                         placeholder="Enter First Name" 
                                                         className="border-0 fs-14 px-2 form-inputs-custom"  
                                                         onChange={validation.handleChange}
                                                         onBlur={validation.handleBlur}
-                                                        value={validation.values.firstname || ""}
+                                                        value={validation.values.first_name || ""}
                                                         invalid={
-                                                            validation.touched.firstname && validation.errors.firstname ? true : false
+                                                            validation.touched.first_name && validation.errors.first_name ? true : false
                                                         }
                                                         style={{ color: '#303030', backgroundColor: 'transparent', boxShadow: 'none' }} 
                                                     />
@@ -153,16 +184,16 @@ const RegisterForm = () => {
                                                 <Label className="fs-13 form-label mb-0">Last Name</Label>
                                                 <div className="w-100 vstack p-2 rounded-2 form-box">
                                                     <Input 
-                                                        id="lastname"
-                                                        name="lastname"
+                                                        id="last_name"
+                                                        name="last_name"
                                                         type="text" 
                                                         placeholder="Enter Last Name" 
                                                         className="border-0 fs-14 px-2"  
                                                         onChange={validation.handleChange}
                                                         onBlur={validation.handleBlur}
-                                                        value={validation.values.lastname || ""}
+                                                        value={validation.values.last_name || ""}
                                                         invalid={
-                                                            validation.touched.lastname && validation.errors.lastname ? true : false
+                                                            validation.touched.last_name && validation.errors.last_name ? true : false
                                                         }
                                                         style={{ color: '#303030', backgroundColor: 'transparent', boxShadow: 'none' }} 
                                                     />
@@ -234,8 +265,8 @@ const RegisterForm = () => {
                                                 <PhoneInput
                                                     country={'gb'}
                                                     placeholder="Enter Phone Number" 
-                                                    onChange={value => validation.setFieldValue("phone", value)}
-                                                    value={validation.values.phone || ""}
+                                                    onChange={value => validation.setFieldValue("phonenumber", value)}
+                                                    value={validation.values.phonenumber || ""}
                                                     containerClass="w-100 vstack p-2 rounded-2 form-box"
                                                     inputClass='fs-14'
                                                     inputStyle={{ width: '100%', color: '#303030', borderColor: 'transparent', boxShadow: 'none', fontFamily: 'Montserrat, IBM Plex Sans, sans-serif' }} 
@@ -243,16 +274,55 @@ const RegisterForm = () => {
                                                     buttonStyle={{ borderColor: 'transparent', backgroundColor: 'transparent', boxShadow: 'none' }}
                                                 />
                                             </Col>
+                                            <Col lg={12} sm={12} className='px-2 mt-4'>
+                                                <h6 className="fs-13 mb-2" style={{ color: '#b8bdc0', fontWeight: '500' }}>Select Workshops you'll like to attend</h6>
+                                                <Row>
+                                                    {
+                                                        workshopsData.map((item, index) => (
+                                                            <Col lg={6} sm={12}>
+                                                                <FormGroup
+                                                                    check
+                                                                    inline
+                                                                    style={{ paddingLeft: '0px', width: '100%'}}
+                                                                    key={index}>
+                                                                         
+                                                                    <Label check className='w-100'>
+                                                                        <Card key={`card-${index}`} className="border border-primary w-100 wordshops-card">
+                                                                            <CardBody>
+                                                                                <input 
+                                                                                    type="checkbox" 
+                                                                                    name="workshops"
+                                                                                    value={item.event_name}
+                                                                                    onChange={validation.handleChange}
+                                                                                
+                                                                                />
+                                                                                <CardTitle className='fs-15 mb-0' style={{ color: '#303030' }}>
+                                                                                {item.event_name}
+                                                                                </CardTitle>
+                                                                                <div>
+                                                                                    <span className='fs-11' style={{ color: '#303030' }}>{item.date} {item.time}</span>
+                                                                                    <p className='fs-11 mt-3 text-muted'>Host: {item.host}</p>
+                                                                                </div>
+                                                                            </CardBody>
+                                                                        </Card>
+                                                                    </Label>
+                                                                </FormGroup>
+                                                                
+                                                            </Col>
+                                                        ))
+                                                    }  
+                                                    <p className='fs-11 text-danger'>{validation.values.workshops.length > 2 ? "You are allowed only a maximum of two workshops" : ""}</p> 
+                                                </Row>
+                                            </Col>
                                             <Col lg={12} sm={12} className='px-2 mt-5'>
                                                 <button className="w-100 btn btn-primary rounded-5 py-2 fs-16" type="submit" disabled={loading? true : false}>
                                                     {loading && <span className="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span> }
                                                     {loading ? 'Loading...' : 'Send'}
                                                 </button>
                                             </Col>
-                                            <Col lg={12} sm={12} className='px-2 mt-3'>
+                                           {/* } <Col lg={12} sm={12} className='px-2 mt-3'>
                                                 {errorMsg && errorMsg !== '' ? (<Alert color="danger" isOpen={closeAlert} toggle={onDismiss}> {errorMsg} </Alert>) : null}
-                                            </Col>
-                                            
+                                                </Col> */}
                                         </Row>
                                     </Form>
                                     </CardBody>
