@@ -39,7 +39,7 @@ const AgendaList = () => {
     };
 
     const passData = (item: any) => {
-        console.log("ITEM: ", item)
+       // console.log("ITEM: ", item)
         
         setCurrentData(item);
         setOpen(!open);

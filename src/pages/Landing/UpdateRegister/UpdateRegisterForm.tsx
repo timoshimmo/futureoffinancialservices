@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Row, Col, Card, CardBody, Label, Input, Form, FormGroup, Button, Alert, CardTitle } from 'reactstrap';
+import { Container, Row, Col, Card, CardBody, Label, Input, Form, Button, Alert, Modal, ModalBody } from 'reactstrap';
 import { Link, useParams  } from 'react-router-dom';
 import axios from 'axios';
 import * as Yup from "yup";
@@ -7,7 +7,7 @@ import { useFormik } from "formik";
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import { workshopsData } from '../../../common/data';
-import success_check from "../../../assets/images/gif/success_check.gif";
+import EventCards from '../Common/EventsCards';
 import successful_form_submission from "../../../assets/images/gif/successful_form_submission.gif";
 
 
@@ -28,6 +28,7 @@ const UpdateRegisterForm = () => {
     const [loading, setLoading] = useState(false);
     const [errorMsg, setErrorMsg] = useState('');
     const [closeAlert, setCloseAlert] = useState(false);
+    const [modal_successMessage, setmodal_successMessage] = useState(false);
     const [userData, setUserData] = useState<EventProps>({
         id: '',
         first_name: '',
@@ -68,7 +69,7 @@ const UpdateRegisterForm = () => {
             company_name: Yup.string().required("Please Company Name is Required"),
             title: Yup.string().required("Please Enter Your Position in the Company"),
             phonenumber: Yup.string().required("Please Your Phone Number is Required"),
-            workshops: Yup.array().max(2, "You can only select maximum of two workshops")
+            workshops: Yup.array().min(1, "Please you are required to select at least one roundtable session to attend").max(2, "You can only select maximum of two roundtable sessions")
         }),
         onSubmit: (values) => {
            
@@ -85,6 +86,8 @@ const UpdateRegisterForm = () => {
                 delete objVal?.date;
                 delete objVal?.time;
                 delete objVal?.host;
+                delete objVal?.id;
+                delete objVal?.details;
 
                 return objVal;
             });
@@ -114,6 +117,7 @@ const UpdateRegisterForm = () => {
             })
             .catch((error) => {
                 if (error.response) {
+                    console.log(error.response);
                     console.log(error.response.data.message);
                     setErrorMsg(error.response.data.message);
                     setCloseAlert(true);
@@ -168,6 +172,17 @@ const UpdateRegisterForm = () => {
         setCloseAlert(false);
     }
 
+    const tog_successMessage = () => {
+        setmodal_successMessage(false);
+
+       validation.setFieldValue('workshops', []);
+       validation.setFieldTouched('workshops', false, false);
+    }
+
+    const openModal = () => {
+        setmodal_successMessage(true);
+    }
+
     return (
         <React.Fragment>
             <section className="section form-container">
@@ -189,7 +204,6 @@ const UpdateRegisterForm = () => {
                                             className="needs-validation" action="#">
                                             <Row>
                                                 <Col lg={12} sm={12} className='px-2 mt-4'>
-                                                    <p>{userData.id}</p>
                                                     <Label className="fs-13 form-label mb-0">First Name</Label>
                                                     <div className="w-100 vstack p-2 rounded-2 form-box">
                                                         <Input 
@@ -303,43 +317,16 @@ const UpdateRegisterForm = () => {
                                                     />
                                                 </Col>
                                                 <Col lg={12} sm={12} className='px-2 mt-4'>
-                                                <h6 className="fs-13 mb-2" style={{ color: '#b8bdc0', fontWeight: '500' }}>Select Workshops you'll like to attend</h6>
+                                                    <h6 className="fs-13 mb-2" style={{ color: '#b8bdc0', fontWeight: '500' }}>Choose any two of our exclusive roundtable sessions, each designed to facilitate focused discussions on key industry challenges and opportunities. Each session lasts 60 minutes and is limited to just 15 participants to ensure meaningful engagement.</h6>
+                                                    <h6 className="fs-13 mb-4" style={{ color: '#b8bdc0', fontWeight: '500' }}>Please indicate which roundtable sessions you would like to join</h6>
                                                     <Row>
                                                         {
                                                             workshopsData.map((item, index) => (
-                                                                <Col lg={6} sm={12}>
-                                                                    <FormGroup
-                                                                        check
-                                                                        inline
-                                                                        style={{ paddingLeft: '0px', width: '100%'}}
-                                                                        key={index}>
-                                                                            
-                                                                        <Label check className='w-100'>
-                                                                            <Card key={`card-${index}`} className="border border-primary w-100 wordshops-card">
-                                                                                <CardBody>
-                                                                                    <input 
-                                                                                        type="checkbox" 
-                                                                                        name="workshops"
-                                                                                        value={item.event_name}
-                                                                                        onChange={validation.handleChange}
-                                                                                    
-                                                                                    />
-                                                                                    <CardTitle className='fs-15 mb-0' style={{ color: '#303030' }}>
-                                                                                    {item.event_name}
-                                                                                    </CardTitle>
-                                                                                    <div>
-                                                                                        <span className='fs-11' style={{ color: '#303030' }}>{item.date} {item.time}</span>
-                                                                                        <p className='fs-11 mt-3 text-muted'>Host: {item.host}</p>
-                                                                                    </div>
-                                                                                </CardBody>
-                                                                            </Card>
-                                                                        </Label>
-                                                                    </FormGroup>
-                                                                    
+                                                                <Col lg={12} sm={12}>
+                                                                    <EventCards key={item.id} workshop={item} handleChange={validation.handleChange} errors={validation} successMessage={openModal}/>
                                                                 </Col>
                                                             ))
-                                                        }  
-                                                        <p className='fs-11 text-danger'>{validation.values.workshops.length > 2 ? "You are allowed only a maximum of two workshops" : ""}</p> 
+                                                        }   
                                                     </Row>
                                                 </Col>
                                                 <Col lg={12} sm={12} className='px-2 mt-5'>
@@ -375,7 +362,7 @@ const UpdateRegisterForm = () => {
                                     <CardBody className="px-2 pb-5 pt-0">
                                         <Row className='justify-content-center'>
                                             <Col lg={12}>
-                                                <div className='d-flex justify-content-end pb-4'>
+                                                <div className='d-flex justify-content-end pb-4 mt-2 me-2'>
                                                     <Button onClick={()=>setSuccessful(false)} className='bg-transparent border-0 p-0 text-muted'><i className="mdi mdi-close display-6"></i></Button>
                                                 </div>
                                             </Col>
@@ -384,7 +371,7 @@ const UpdateRegisterForm = () => {
                                                     <img src={successful_form_submission} height={100}/>
                                                 </div>
                                                 <h2 className='text-primary my-3 text-center fw-bold' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>Your Registration Was Successful</h2>
-                                                <p className='text-dark fs-14 text-center fw-medium px-4 mb-4' style={{ color: '#303030' }}>Your request will be processed and we will revert shortly"</p>
+                                                <p className='text-dark fs-14 text-center fw-medium px-4 mb-4' style={{ color: '#303030' }}>Your request will be processed and we will revert shortly</p>
                                                 <div className="hstack justify-content-center">
                                                     <Link to="/" className="fs-14 fw-medium link-style"><i className="mdi mdi-arrow-left"></i><u>Back to Home</u></Link>
                                                 </div>
@@ -397,6 +384,21 @@ const UpdateRegisterForm = () => {
                     </Row>
                 </Container>
             </section>
+            <Modal tabIndex={1} isOpen={validation.errors.hasOwnProperty('workshops')} toggle={() => { tog_successMessage(); }} centered>
+                <ModalBody className='text-center p-5'>
+                    <div className="text-end">
+                        <button type="button" onClick={() => { tog_successMessage(); }} className="btn-close text-end" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div className="mt-2">
+                        <i className="ri-error-warning-line display-2 text-warning"></i>
+                        <h4 className="mb-3 mt-4">Sorry, Not Allowed!</h4>
+                        <p className="text-muted fs-15 mb-4">{validation.errors.workshops}. Please make the selection again and pick your top two choices.</p>
+                        <div className="hstack justify-content-center">
+                            <button className="btn" onClick={() => { tog_successMessage(); }}>Close</button>
+                        </div>
+                    </div>
+                </ModalBody>
+            </Modal>
         </React.Fragment>
     );
 }

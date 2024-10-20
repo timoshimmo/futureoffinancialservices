@@ -19,7 +19,7 @@ import UpdateRegisterForm from "pages/Landing/UpdateRegister";
 
 const publicRoutes : any= [
   //FFS Routes
-  { path: "/", component: <Home /> },
+  { path: "/", component: <Insights /> },
   { path: "/about", component: <About /> },
   { path: "/register", component: <Register /> },
   { path: "/exhibitors", component: <Exhibitor /> },

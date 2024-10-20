@@ -79,8 +79,6 @@ const Navbar = () => {
         }
     }, [windowSize]);
 
-    /* onMouseEnter={toggleInvolved} onMouseLeave={closeInvolved}  */
-
     return (
         <React.Fragment>
             <nav className={"navbar navbar-expand-lg navbar-landing fixed-top " + navClass} id="navbar">
@@ -115,15 +113,34 @@ const Navbar = () => {
                             <li className="nav-item px-4 web-navbar">
                                 <NavLink className="nav-link fs-14 text-white" to="/" activeClassName="active" tag={RRNavLink}>Home</NavLink>
                             </li>
-                             <li className="nav-item px-4 web-navbar">
-                                <NavLink className="nav-link fs-14 text-white" to="/agenda" activeClassName="active" tag={RRNavLink}>Agenda</NavLink>
-                            </li>
-                        
                             <li className="nav-item px-4 web-navbar">
-                                <NavLink className="nav-link fs-14 text-white" to="/speakers" activeClassName="active" tag={RRNavLink}>Speakers</NavLink>
+                                <Dropdown isOpen={openEvents} toggle={toggleEvents}>
+                                    <DropdownToggle caret tag="button" className="nav-link fs-14">
+                                        FFS Summit 2024
+                                    </DropdownToggle>
+                                    <DropdownMenu className='px-2'>
+                                        <DropdownItem href='/speakers' className="fs-14 fw-light" style={{ color: '#E1E7EC' }}>2024 Speakers</DropdownItem>
+                                        <DropdownItem divider style={{ borderColor: '#E1E7EC' }}/>
+                                        <DropdownItem href='/agenda' className="fs-14 fw-light" style={{ color: '#E1E7EC' }}>2024 Agenda</DropdownItem>
+                                    </DropdownMenu>
+                                </Dropdown>
                             </li>
                             <li className="nav-item px-4 web-navbar">
                                 <NavLink className="nav-link fs-14 text-white" to="/about" activeClassName="active" tag={RRNavLink}>About</NavLink>
+                            </li>
+                            <li className="nav-item px-4 web-navbar">
+                                <Dropdown isOpen={openInvolved} toggle={toggleInvolved}>
+                                    <DropdownToggle caret tag="button" className="nav-link fs-14">
+                                        Get Involved 
+                                    </DropdownToggle>
+                                    <DropdownMenu className='px-2'>
+                                        <DropdownItem href='/sponsors' className="fs-14 fw-light" style={{ color: '#E1E7EC' }}>Be a Sponsor</DropdownItem>
+                                        <DropdownItem divider style={{ borderColor: '#E1E7EC' }}/>
+                                        {/* <DropdownItem href="/exhibitors" className="fs-14 fw-light" style={{ color: '#E1E7EC' }}>Be an Exhibitor</DropdownItem>
+                                        <DropdownItem divider style={{ borderColor: '#E1E7EC' }}/> */}
+                                        <DropdownItem href='/partners' className="fs-14 fw-light" style={{ color: '#E1E7EC' }}>Partner with us</DropdownItem>
+                                    </DropdownMenu>
+                                </Dropdown>
                             </li>
                           
                             {/* Mobile Navbar  */}
@@ -158,20 +175,7 @@ const Navbar = () => {
                                     </DropdownMenu>
                                 </UncontrolledDropdown>
                             </li>
-                            <li className="nav-item px-4 web-navbar">
-                                <Dropdown isOpen={openInvolved} toggle={toggleInvolved}>
-                                    <DropdownToggle caret tag="button" className="nav-link fs-14">
-                                        Get Involved
-                                    </DropdownToggle>
-                                    <DropdownMenu className='px-2'>
-                                        <DropdownItem href='/sponsors' className="fs-14 fw-light" style={{ color: '#E1E7EC' }}>Be a Sponsor</DropdownItem>
-                                        <DropdownItem divider style={{ borderColor: '#E1E7EC' }}/>
-                                        {/* <DropdownItem href="/exhibitors" className="fs-14 fw-light" style={{ color: '#E1E7EC' }}>Be an Exhibitor</DropdownItem>
-                                        <DropdownItem divider style={{ borderColor: '#E1E7EC' }}/> */}
-                                        <DropdownItem href='/partners' className="fs-14 fw-light" style={{ color: '#E1E7EC' }}>Partner with us</DropdownItem>
-                                    </DropdownMenu>
-                                </Dropdown>
-                            </li>
+                           
                         </Scrollspy>
                         <div className='ms-4 mobile-nav-button'>
                             <Link to="/register" className="btn btn-success btn-banner">Register </Link>

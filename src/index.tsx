@@ -16,7 +16,9 @@ root.render(
   <Provider store={store}>
     <React.Fragment>
       <BrowserRouter basename={process.env.PUBLIC_URL}>
-        <App />
+        
+          <App />
+       
       </BrowserRouter>
     </React.Fragment>
   </Provider>

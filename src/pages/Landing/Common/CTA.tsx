@@ -44,7 +44,7 @@ const CTA = () => {
         if(!validation.errors.email) {
             setLoading(true);
 
-            axios.post('https://api.futureoffinancialservices.org/api/subscribe-email', obj)
+            axios.post('https://dev-api.futureoffinancialservices.org/api/v1/subscribe', obj)
             .then(response => {
                 console.log(response);
                 setSuccessful(true);
@@ -91,7 +91,7 @@ const CTA = () => {
                                         id="email"
                                         name="email"
                                         placeholder="Enter email address"
-                                        className="border-0 fs-15 px-3 w-100"  
+                                        className="border-0 fs-15 px-3 w-100 text-center cta-email"  
                                         type="email"
                                         onChange={validation.handleChange}
                                         onBlur={validation.handleBlur}

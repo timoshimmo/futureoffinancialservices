@@ -73,7 +73,7 @@ const Banner = () => {
                             />
                         </Col>
                     </Row>
-                    <div className="placeholder-insight-space"></div>
+                    {/*<div className="placeholder-insight-space"></div> */}
                 </Container>
             </section>
         </React.Fragment>

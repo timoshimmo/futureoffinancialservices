@@ -477,18 +477,18 @@
 }
 
 .partners-img-style {
-    width: 250px;
+    height: 40px;
 }
 
 @media (max-width: 767.98px) { 
     .partners-img-style {
-        width: 120px;
+        height: 35px;
     }
   }
 
   @media (max-width: 767.98px) { 
     .partners-img-area {
-        margin-top: 60px
+        margin-top: 10px
     }
   }
 
@@ -1504,11 +1504,59 @@
     }
 }
 
-.wordshops-card {
-    height: 165px;
+.workshops-card {
     background-color: #FFFFFF;
 }
 
-.wordshops-card:hover {
+.workshops-card:hover {
     background-color:#d7dcdb;
 }
+
+.card-active {
+    background-color: #91ffda !important;
+}
+
+.card-active:hover {
+    background-color:#7bdebd !important;
+}
+
+
+.custom-check {
+    float: none !important;
+    margin-left: 0 !important;
+}
+
+
+.form-check-input {
+    background-color: #FFFFFF;
+}
+
+
+.cta-email::placeholder {
+             
+    /* Firefox, Chrome, Opera */
+    text-align: center;
+    padding-left: 120px;
+}
+
+.cta-email:-ms-input-placeholder {
+             
+    /* Internet Explorer 10-11 */
+    text-align: center;
+    padding-left: 120px;
+}
+
+/*
+.custom-control-input:checked ~ .custom-control-label::before {
+    background-color: green!important;
+  }
+.custom-checkbox .custom-control-input:checked:focus ~ .custom-control-label::before {
+    box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(0, 255, 0, 0.25)
+  }
+.custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(0, 0, 0, 0.25)
+  }
+.custom-control-input:active ~ .custom-control-label::before {
+    background-color: #C8FFC8; 
+  }
+*/

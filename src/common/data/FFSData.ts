@@ -71,6 +71,12 @@ import img_alex_menage from "../../assets/images/speakers/img_alex_menage.png";
 import img_sophie_guibaud from "../../assets/images/speakers/img_sophie_guibaud.png";
 import img_tunji_odumuboni from "../../assets/images/speakers/img_tunji_odumuboni.png";
 
+import img_stacey_body from "../../assets/images/speakers/img_stacey_body.png";
+import img_nathalie_weil from "../../assets/images/speakers/img_nathalie_weil.png";
+import img_nina_mohanty from "../../assets/images/speakers/img_nina_mohanty.png";
+import img_jennifer_stirrup from "../../assets/images/speakers/img_jennifer_stirrup.png";
+
+
 import img_speaker_1 from "../../assets/images/speakers/speaker1.png";
 import img_speaker_3 from "../../assets/images/speakers/speaker3.png";
 import img_speaker_5 from "../../assets/images/speakers/speaker5.png";
@@ -86,6 +92,10 @@ import partnersPeerless from "../../assets/images/brands/peerless_logo_light.svg
 import img_skaleet_logo from "../../assets/images/brands/skaleet_logo@2x.png";
 import img_intellibonds_logo from "../../assets/images/brands/Intellibonds_icon_logo.png";
 import img_applied_blockchain_logo from "../../assets/images/brands/img_applied_blockchain_logo.png";
+import sterling_logo_new from "../../assets/images/brands/sterling_logo_new.png";
+import SeaBaas_logo_white from "../../assets/images/brands/SeaBaas_logo_white.png";
+
+
 
 //Insights
 import insights1 from "../../assets/images/insights/insight1.png";
@@ -456,41 +466,39 @@ const whatIsData = [
 
 const numbersData = [
     {
-        value: "300",
+        value: "200",
         caption: "Participants",
         color: "#FF0000",
     },
     {
-        value: "62",
+        value: "24",
         caption: "Sessions",
         color: "#990001",
     },
     {
-        value: "20",
+        value: "30",
         caption: "Speakers",
         color: "#66FFCC",
     },
     {
-        value: "20",
+        value: "10",
         caption: "Countries",
         color: "#34CC33",
     },
 ];
 
-  /* {
-        img: partner1,
-    },
-    {
-        img: partner4,
-    },
-    */
-
 const partnerImgsData = [
+    {
+        img: SeaBaas_logo_white
+    },
     {
         img: partnerBazara,
     },
     {
-        img: partnersPeerless,
+        img: sterling_logo_new,
+    },
+    {
+        img: img_skaleet_logo,
     },
 
 ]
@@ -563,6 +571,11 @@ const speakersData = [
         credentials: "CEO, Pionen and Co-founder, CxB",
     },
     {
+        img: img_yinka_oni,
+        name: "Olayinka Oni",
+        credentials: "ED, Sterling Financial Holdings Company",
+    },
+    {
         img: img_tram_anh_nguyen,
         name: "Tram Anh Nguyen",
         credentials: "Co-Founder, CFTE",
@@ -582,20 +595,17 @@ const speakersData = [
         name: "Alessandro Hatami",
         credentials: "Founder & Managing Partner, Pacemakers.io",
     },
+    /*
     {
         img: img_paul_sweeney,
         name: "Paul Sweeney",
         credentials: "Senior Director, Alvarez & Marsal",
     },
+    */
     {
         img: img_natasha_kyprianidou_,
         name: "Natasa Kyprianidou",
         credentials: "Senior Director, Alvarez & Marsal",
-    },
-    {
-        img: img_lesley_anne_mcClean,
-        name: "Lesley-Ann McClean",
-        credentials: "AI and Financial Inclusion Expert, ex M-PESA",
     },
     {
         img: img_frankie_woodhead,
@@ -660,12 +670,32 @@ const speakersData = [
     {
         img: img_shaul_david,
         name: "Shaul David",
-        credentials: "Fintech Advisor"
+        credentials: "Fintech & Board Advisor"
     },
     {
         img: img_alex_menage,
         name: "Alex Menage",
         credentials: "Managing Director of EMEA and Global Head of Sales at Thought Machine"
+    },
+    {
+        img: img_nathalie_weil,
+        name: "Nathalie Weil",
+        credentials: "Co-founder, Old Street Ventures",
+    },
+    {
+        img: img_jennifer_stirrup,
+        name: "Jennifer Stirrup",
+        credentials: "Thought Leader in Business Intelligence and AI, Data Relish",
+    },
+    {
+        img: img_stacey_body,
+        name: "Stacey Body",
+        credentials: "Co-founder & CEO , Aventur",
+    },
+    {
+        img: img_nina_mohanty,
+        name: "Nina Mohanty",
+        credentials: "CEO, Bloom Money",
     },
     {
         img: img_meaghan,
@@ -693,7 +723,7 @@ const speakersFullData = [
             },
             
         ],
-        bio: "is a business transformation expert, digital strategist, and fintech entrepreneur with over 30 years of experience in international financial services. As the Founder and CEO of Kore Labs, she drives innovation by digitizing financial product data through a cloud-enabled platform. \n\nSabrina has held senior roles at JP Morgan Chase, Barclays, and RBS Group, where she served as Chief Digital Transformation Officer. She sits on the Board of Governors of the London Foundation of Banking and Finance and has received multiple innovation awards, including the EISA Entrepreneur of the Year in 2023. \n\nSabrina holds a Master's in Finance from London Business School and a degree in Business and Economics from the University of Turin. "
+        bio: "is a business transformation expert, digital strategist, and fintech entrepreneur with over 30 years of experience in international financial services. As the Founder and CEO of Kore Labs, she drives innovation by digitizing financial product data through a cloud-enabled platform. \n\nSabrina has held senior roles at JP Morgan Chase, Barclays, and RBS Group, where she served as Chief Digital Transformation Officer. She sits on the Board of Governors of the London Foundation of Banking and Finance and has received multiple innovation awards, including the EISA Entrepreneur of the Year in 2023. \n\nSabrina holds a Master's in Finance from London Business School and a degree in Business and Economics from the University of Turin."
     },
     {
         id: 4,
@@ -789,7 +819,7 @@ const speakersFullData = [
         company: "Bazara",
         courses: [
             {
-                title: "Building the Future Together: Strategic Parterships in Financial Services", 
+                title: "Building the Future Together: Strategic Partnerships in Financial Services", 
                 date: "Tuesday 08, October 2024",
                 time: "11:35 AM",
                 tags: ["strategy-&-markets"],
@@ -798,26 +828,6 @@ const speakersFullData = [
         ],
         bio: "is the Founder/CEO of Bazara Technologies Inc., a software engineering & systems integration firm carving a niche for taking on audacious innovation projects in the B2B space. Bazara is reimagining and re-engineering systems that power financial services leveraging UI/UX, Microservices, APIs, AI & the Cloud.\n\nPrior to Bazara, Boye was Partner and Head of Digital Transformation at KPMG in Africa, where he led digital strategy, AI implementation and cloud transformation projects for large corporates.\n\nHe served on KPMG’s Global Digital Transformation Leadership, Global Fintech Leadership and is an adviser to banks, Fintechs, FS players and regulators on the future of financial services."
     },
-    {
-        id: 5,
-        img: img_bayo,
-        pic: img_bayo,
-        name: "Bayo Adekanmbi",
-        tags: ["artificial-intelligence", "financial-technology"],
-        credentials: "Founder/CEO",
-        company: "DSN",
-        courses: [
-            {
-                title: "Leveraging AI to Create Value", 
-                date: "Wednesday 09, October 2024",
-                time: "1:35PM",
-                tags: ["artificial-intelligence", "financial-technology"],
-            },
-            
-        ],
-        bio: "is an award-winning executive with over 22 years of experience in AI, Data Science, and Digital Innovation across 30 African markets.\n\nHe won the Bill and Melinda Gates Global Grand Challenge for AI-enabled financial tools and led five UNESCO/IRCAI Top 100 AI products. A top-ranking data scientist and prolific researcher, he has advanced education from prestigious institutions and a PhD from City, University of London.\n\nBayo also founded Data Scientist Network, training over 500,000 students and authored Africa's first AI book for kids."
-    },
-
     {
         id: 9,
         img: img_nicky,
@@ -941,7 +951,24 @@ const speakersFullData = [
         ],
         bio: "is CEO of cyber security assurance firm Pionen, which works with government, critical national infrastructure and financial services. She is also Vice Chair of Trustees at the UK Cyber Security Council, and a co-founder of CxB (Cyber Governance for Boards), a non-profit supporting non-executive director to improve board oversight of cybersecurity.\n\nAs a strategist specializing in cyber security, digital trust and the role of tech in civil society, Jessica has advised the UK government on technology and policy issues relating to cyber security and online safety.\n\nShe is a sought-after speaker and commentator and was named one of Computer Weekly's Most Influential Women in UK Tech (2023, 2022 and 2021) and a Women in IT Awards finalist (2022)."
     },
-
+    {
+        id: 38,
+        img: img_yinka_oni,
+        pic: img_yinka_oni,
+        name: "Olayinka Oni",
+        tags: ["strategy-&-markets"],
+        credentials: "Executive Director",
+        company: "Sterling Financial Holdings Company",
+        courses: [
+            {
+                title: "Reimagining the Engine that Powers Digital", 
+                date: "Tuesday 08, October 2024",
+                time: "1:20 PM",
+                tags: ["financial-technology"]
+            }
+        ],
+        bio: "is a seasoned leader in digital transformation and technology innovation, with a proven track record in the financial services sector. As the former Chief Digital Officer at Sterling Bank, he drove the bank's digital strategy, leading groundbreaking advancements in digital banking.\n\nHe has held key roles at Accenture, Wema Bank, and Microsoft Nigeria, where he led national ICT policy initiatives. Yinka is also the Chairman of the CIO Forum of Banks in Nigeria and co-convener of the CIO Nexus. He holds executive education from Harvard, Oxford, INSEAD, and MIT."
+    },
     {
         id: 15,
         img: img_tram_anh_nguyen,
@@ -961,7 +988,6 @@ const speakersFullData = [
         ],
         bio: "is the co-founder of CFTE, a global platform for education in Fintech and financial services, with a mission to upskill finance professionals and promote inclusivity in the industry.\n\nShe is an Entrepreneurship Expert at Saïd Business School, Oxford, and an Industry Fellow at Imperial College. Recognized among the Top 10 Asian Pioneers in Tech UK 2023, Tram Anh advocates for women in Fintech and has spearheaded initiatives like the Fintech Job Report. Her diverse background spans 18 years in finance, with experience at major institutions like Standard Chartered and UBS."
     },
-
     {
         id: 16,
         img: img_jas_shah,
@@ -1024,6 +1050,7 @@ const speakersFullData = [
         ],
         bio: "is the founder and managing partner of Pacemakers.io, an advisory firm that helps organizations manage digital transformation in payments, financial services, and banking. With extensive experience in digital innovation, he has held executive roles at companies like Lloyds Banking Group, PayPal, GE Capital, and PayPoint, gaining valuable insights into the industry's evolving landscape.\n\nIn addition to his executive roles, Alessandro has served as a Non-Executive Director at Zempler Bank and as a Board Advisor at MTS Group. He actively mentors fintech startups through leading accelerators and invests in innovative startups within the industry.\n\nAlessandro is also a recognized writer and public speaker on digital innovation. His book, Reinventing Banking and Finance, was honoured as the Best Book on Banking of 2022 by Investopedia and has been published in three languages."
     },
+    /*
     {
         id: 19,
         img: img_paul_sweeney,
@@ -1042,6 +1069,7 @@ const speakersFullData = [
         ],
         bio: "is a Senior Solution Architect at Engine, Starling Bank's Software-as-a-Service arm. Working closely with clients, Paul ensures the design and delivery of secure, resilient and robust implementations, tailored to specific customer requirements.\n\nPaul came to Engine with over 20 years’ experience in Financial Services and Manufacturing, having worked at AIB and KBC Bank, and has delivered programmes across the full information and change lifecycle."
     },
+    */
     {
         id: 20,
         img: img_natasha_kyprianidou_,
@@ -1060,25 +1088,6 @@ const speakersFullData = [
             
         ],
         bio: "is a Senior Director at Alvarez & Marsal’s Financial Services - Digital practice in London, bringing over 24 years of experience in the financial services sector across Europe and the UK. She specializes in building digital banks, transforming financial institutions, and launching large-scale products. Natasa partners with senior executives to integrate emerging technologies into consumer and commercial banking, aiming to enhance digital experiences and improve operational efficiency.\n\nPrior to joining A&M, Natasa was a Senior Director at Publicis Sapient, where she led global product development in financial services. At Barclays, she played a pivotal role in launching innovative digital lending solutions, including Instalments by Barclays on Amazon UK. Earlier in her career, Natasa served as Head of Omni-channel and Customer Experience at Hellenic Bank in Cyprus, where she successfully launched a digital challenger bank and led award-winning Open Banking initiatives."
-    },
-    {
-        id: 21,
-        img: img_lesley_anne_mcClean,
-        pic: img_lesley_anne_mcClean,
-        name: "Lesley-Ann McClean",
-        tags: ["artificial-intelligence", "financial-technology"],
-        credentials: "AI and Financial Inclusion Expert",
-        company: "ex M-PESA",
-        courses: [
-            {
-                title: "Humans and AI: Leading the Future Through Collaboration", 
-                date: "Wednesday 09, October 2024",
-                time: "10:50 AM",
-                tags: ["artificial-intelligence", "financial-technology"],
-            }
-            
-        ],
-        bio: "began her career as a software engineer at an innovation consultancy before shifting focus to digital financial service innovation in emerging markets in 2005. She is one of the creators of Vodafone's M-PESA money transfer service and is named on the patent. Lesley later became Chief Product Officer, building a fintech platform for emerging markets (backed by Naspers MIH), and now consults independently, providing interim product management leadership, product operations setup, and related services including discovery research, design, information architecture, and agile coaching.\n\nHer consultancy clients include major telco networks, the Bill and Melinda Gates Foundation, CGAP, IFC, Microsoft, Mastercard, Accion, and fintech startups like M-KOPA Solar, Segovia, and TrustStamp.\n\nLesley is skilled in fostering cross-functional collaboration using design thinking, lean product management, and process automation, while promoting a flow-based delivery culture focused on continuous learning and early value delivery. Her domain expertise spans retail banking, mobile money, alternative payments, API-driven ecosystems, agent network management, business architecture, risk management, and digital operating models."
     },
     {
         id: 22,
@@ -1300,7 +1309,6 @@ const speakersFullData = [
         ],
         bio: "is the co-founder of Fiat Republic, a company whose vision is to propel crypto into the mainstream. They’re achieving this by facilitating fiat payments for users, all thanks to their network of crypto-friendly banks and their instant settlement network, Eaglenet.\n\nSophie’s journey over the past 15 years has been dotted with building fintech companies across Europe and the UK.  She was part of the Hello Fresh founding team in the UK in 2012, and led the launch of Fidor Bank, a digital bank in the UK in 2015, She co-authored a book published by Wiley, Embedded Finance: when payments become an experience, that shines a spotlight on the bountiful prospects of embedded finance for tech platforms and consumer brands. She’s mentoring budding talents at Oxford University Creative Destruction Lab and Level39, and and sits on the advisory board of several fintechs."
     },
-
     {
         id: 33,
         img: img_mathias_canales,
@@ -1325,8 +1333,8 @@ const speakersFullData = [
         pic: img_shaul_david,
         name: "Shaul David",
         tags: ["strategy-&-markets"],
-        credentials: "Customer Engineer",
-        company: "Google Cloud",
+        credentials: "Fintech & Board Advisor",
+        company: "",
         courses: [
             {
                 title: "Baas and Embedded Finance", 
@@ -1347,13 +1355,100 @@ const speakersFullData = [
         company: "Thought Machine",
         courses: [
             {
+                title: "Launching a Digital Bank", 
+                date: "Wednesday 09, October 2024",
+                time: "1:20 PM",
+                tags: ["strategy-&-markets"],
+            }
+        ],
+        bio: "is Managing Director of EMEA and Global Head of Sales at Thought Machine, a leading cloud-native core banking and payments technology company with a presence in over 25 countries and a client list of over a dozen Tier 1 banks.\n\nEngaging directly with banks, fintechs, and neo-banks, Alex informs the market on how next-generation cloud-native technology revolutionises financial services, enabling hyper-personalised products and giving banks a single, powerful platform to become market leaders.\n\nAlex has a twenty-year track record of delivering technology solutions for financial institutions, having previously held senior leadership roles at Temenos, Oracle, and Thomson Reuters."
+    },
+    {
+        id: 36,
+        img: img_nathalie_weil,
+        pic: img_nathalie_weil,
+        name: "Nathalie Weil",
+        tags: ["strategy-&-markets"],
+        credentials: "Co-founder",
+        company: "Old Street Ventures",
+        courses: [
+            {
                 title: "Baas and Embedded Finance", 
                 date: "Tuesday 08, October 2024",
                 time: "10:50 AM",
                 tags: ["strategy-&-markets"]
             }
         ],
-        bio: "is Managing Director of EMEA and Global Head of Sales at Thought Machine, a leading cloud-native core banking and payments technology company with a presence in over 25 countries and a client list of over a dozen Tier 1 banks.\n\nEngaging directly with banks, fintechs, and neo-banks, Alex informs the market on how next-generation cloud-native technology revolutionises financial services, enabling hyper-personalised products and giving banks a single, powerful platform to become market leaders.\n\nAlex has a twenty-year track record of delivering technology solutions for financial institutions, having previously held senior leadership roles at Temenos, Oracle, and Thomson Reuters."
+        bio: "is the co-founder of Old Street Ventures, a fintech company building a platform to allow mass market retail investors access to VC via fund of funds style products.\n\nHer background is in marketing, strategic partnerships and product management. She has successfully launched VC-backed start-ups, helped build out the marketing function of businesses, managed multi-million-pound campaigns, and developed impactful brand strategies."
+    },
+    
+    {
+        id: 37,
+        img: img_jennifer_stirrup,
+        pic: img_jennifer_stirrup,
+        name: "Jennifer Stirrup",
+        tags: ["artificial-intelligence", "financial-technology"],
+        credentials: "Thought Leader in Business Intelligence and AI",
+        company: "Data Relish",
+        courses: [
+            {
+                title: "Humans and AI: Leading the Future Through Collaboration", 
+                date: "Wednesday 09, October 2024",
+                time: "10:50 AM",
+                tags: ["artificial-intelligence", "financial-technology"]
+            }
+        ],
+        bio: "is a UK-based AI and Business Intelligence thought leader who helps organisations to make their AI and data work for the business. Jen is a recognized leading authority in AI and Business Intelligence Leadership, a Fortune 100 global speaker, and has been named as one of the Top 50 Global Data Visionaries, one of the Top Data Scientists to follow on Twitter and one of the most influential Top 50 Women in Technology worldwide.\n\nIn her MBA, Jennifer’s thesis focused on making AI and Ethics practical for businesses, based on her experience of designing, delivering and implementing business-focused solutions.  Jennifer has authored 4 books in data and artificial intelligence has been featured on CBS Interactive and the BBC as well as other well-known podcasts, such as Digital Disrupted and Run As Radio."
+    },
+    {
+        id: 38,
+        img: img_stacey_body,
+        pic: img_stacey_body,
+        name: "Stacey Body",
+        tags: ["artificial-intelligence", "financial-technology"],
+        credentials: "Co-founder & CEO",
+        company: "Aventur",
+        courses: [
+            {
+                title: "Humans and AI: Leading the Future Through Collaboration", 
+                date: "Wednesday 09, October 2024",
+                time: "10:50 AM",
+                tags: ["artificial-intelligence", "financial-technology"]
+            }
+        ],
+        bio: ", at the helm of Aventur, leads an exceptional team that drives transformative change in the fintech realm of personal finance management. Their multi-award-winning journey, which began in early 2021, has been marked by ground-breaking achievements, including facilitating over £165m in client investments and solidifying our position as a leading force in the UK's FinTech landscape.\n\nWith a diverse portfolio of experiences, he serves as a trusted advisor and Non-Executive Director to several esteemed companies, offering invaluable insights and strategic guidance. Whether nurturing fledgling startups or empowering seasoned CEOs, Stacey brings a wealth of experience as a mentor and through his own successful ventures."
+    },
+
+    {
+        id: 39,
+        img: img_nina_mohanty,
+        pic: img_nina_mohanty,
+        name: "Nina Mohanty",
+        tags: ["artificial-intelligence", "financial-technology"],
+        credentials: "CEO",
+        company: "Bloom Money",
+        courses: null,
+        bio: "is the CEO of Bloom Money, an app that builds tools for diaspora communities to build generational wealth. Before Bloom Money, Nina worked at Klarna making payments smooth. She has also worked at Open Banking start up Bud, Starling Bank, and Mastercard.\n\nShe has been recognised for four years by Innovate Finance on the Women in FinTech Power List, most recently as a Standout in the Senior Leaders category. She is recognised on the Forbes 30 under 30 Europe list under the Finance category. In her free time she volunteers her time with charitable organisations on their financial access strategy for their refugee candidates and is an advisor for Talent Beyond Boundaries, who place highly skilled refugees in industries facing labour-shortages."
+    },
+    
+    {
+        id: 5,
+        img: img_bayo,
+        pic: img_bayo,
+        name: "Bayo Adekanmbi",
+        tags: ["artificial-intelligence", "financial-technology"],
+        credentials: "Founder/CEO",
+        company: "DSN",
+        courses: [
+            {
+                title: "Leveraging AI to Create Value", 
+                date: "Wednesday 09, October 2024",
+                time: "1:35PM",
+                tags: ["artificial-intelligence", "financial-technology"],
+            },
+            
+        ],
+        bio: "is an award-winning executive with over 22 years of experience in AI, Data Science, and Digital Innovation across 30 African markets.\n\nHe won the Bill and Melinda Gates Global Grand Challenge for AI-enabled financial tools and led five UNESCO/IRCAI Top 100 AI products. A top-ranking data scientist and prolific researcher, he has advanced education from prestigious institutions and a PhD from City, University of London.\n\nBayo also founded Data Scientist Network, training over 500,000 students and authored Africa's first AI book for kids."
     },
     {
         id: 7,
@@ -1485,7 +1580,7 @@ const agendaData = [
                 name: "Alessandro Hatami",
                 credentials: "Founder & Managing Partner",
                 company: "Pacemakers.io",
-                tags: ["artificial-intelligence"],
+                tags: ["strategy-&-markets"],
             }
            
         ]
@@ -1514,8 +1609,8 @@ const agendaData = [
                 name: "Shaul David",
                 img: img_shaul_david,
                 pic: img_shaul_david,
-                credentials: "Fintech Advisor",
-                company: "-",
+                credentials: "Fintech & Board Advisor",
+                company: "",
                 tags: ["strategy-&-markets"], 
             }
            
@@ -1550,7 +1645,7 @@ const agendaData = [
         endTime: "11:35AM",
         dateCode: "Tue",
         duration: "30",
-        topic: "Building the Future Together: Strategic Parterships in Financial Services",
+        topic: "Building the Future Together: Strategic Partnerships in Financial Services",
         theme: ["strategy-&-markets"],
         type: ["keynote"],
         description: "Keynote Presentation",
@@ -1653,14 +1748,6 @@ const agendaData = [
                 name: "Lanre Bamisebi",
                 credentials: "ED IT & Digitalization",
                 company: "Access Holdings",
-                tags: ["fintech"]
-            },
-            {
-                img: img_paul_sweeney,
-                pic: img_paul_sweeney,
-                name: "Paul Sweeney",
-                credentials: "Senior Solution Architect",
-                company: "Engine by Starling Bank",
                 tags: ["fintech"]
             }
         ]
@@ -1788,7 +1875,7 @@ const agendaData = [
     {
         id: 15,
         date: "Wed, 09 Oct",
-        startTime: "9:0 AM",
+        startTime: "9:00 AM",
         endTime: "9:15AM",
         dateCode: "Wed",
         duration: "15",
@@ -1798,11 +1885,11 @@ const agendaData = [
         description: "Recap of Day 1",
         speaker: [
             {
-                img: img_user_placeholder,
-                pic: img_user_placeholder,
+                img: img_nina_mohanty,
+                pic: img_nina_mohanty,
                 name: "Nina Mohanty",
-                credentials: "-",
-                company: "-",
+                credentials: "CEO",
+                company: "Bloom Money",
                 tags: ["general"],
             }
            
@@ -1889,17 +1976,46 @@ const agendaData = [
         topic: "Humans and AI: Leading the Future Through Collaboration",
         theme: ["artificial-intelligence", "financial-technology"],
         type: ["keynote"],
-        description: "Keynote Presentation",
+        description: "Keynote Presentation", 
         speaker: [
             {
-                img: img_lesley_anne_mcClean,
-                pic: img_lesley_anne_mcClean,
-                name: "Lesley-Ann McClean",
-                tags: ["fintech"],
-                credentials: "AI and Financial Inclusion Expert",
-                company: "ex M-PESA",
+                img: img_jennifer_stirrup,
+                pic: img_jennifer_stirrup,
+                name: "Jennifer Stirrup",
+                tags: ["artificial-intelligence", "financial-technology"],
+                credentials: "Thought Leader in Business Intelligence and AI",
+                company: "Data Relish",
+            } 
+        ] 
+    },
+    {
+        id: 26,
+        date: "Wed, 09 Oct",
+        startTime: "11:20 AM",
+        endTime: "2:30PM",
+        dateCode: "Wed",
+        duration: "80",
+        topic: "Redefining Wealth Management in a Digital-First World",
+        theme: ["wealth-management"],
+        type: ["roundtables"],
+        description: "Roundtable",
+        speaker: [
+            {
+                img: img_nathalie_weil,
+                pic: img_nathalie_weil,
+                name: "Nathalie Weil",
+                tags: ["wealth-management"],
+                credentials: "Co-founder",
+                company: "Old Street Ventures"
+            },
+            {
+                img: img_stacey_body,
+                pic: img_stacey_body,
+                name: "Stacey Body",
+                tags: ["wealth-management"],
+                credentials: "Co-founder & CEO",
+                company: "Aventur"
             }
-           
         ]
     },
     {
@@ -1926,36 +2042,6 @@ const agendaData = [
         ]
     },
     {
-        id: 26,
-        date: "Wed, 09 Oct",
-        startTime: "11:20 AM",
-        endTime: "2:30PM",
-        dateCode: "Wed",
-        duration: "80",
-        topic: "Redefining Wealth Management in a Digital-First World",
-        theme: ["wealth-management"],
-        type: ["roundtables"],
-        description: "Roundtable",
-        speaker: [
-            {
-                img: img_user_placeholder,
-                pic: img_user_placeholder,
-                name: "Natalie Well",
-                tags: ["wealth-management"],
-                credentials: "-",
-                company: "-"
-            },
-            {
-                img: img_user_placeholder,
-                pic: img_user_placeholder,
-                name: "Stacy Body",
-                tags: ["wealth-management"],
-                credentials: "-",
-                company: "-"
-            }
-        ]
-    },
-    {
         id: 20,
         date: "Wed, 09 Oct",
         startTime: "11:50 AM",
@@ -1974,37 +2060,6 @@ const agendaData = [
                 credentials: "VP Blockchain",
                 company: "Onafriq",
                 tags: ["fintech"],
-            }
-           
-        ]
-    },
-    {
-        id: 21,
-        date: "Wed, 09 Oct",
-        startTime: "1:20 PM",
-        endTime: "2:30PM",
-        dateCode: "Wed",
-        duration: "80",
-        topic: "Launching a Digital Bank",
-        theme: ["strategy-&-markets"],
-        type: ["roundtables"],
-        description: "Roundtable",
-        speaker: [
-            {
-                img: img_nadav_mordechai,
-                pic: img_nadav_mordechai,
-                name: "Nadav Mordechai",
-                tags: ["customer-experience"],
-                credentials: "Product and Strategy Director",
-                company: "Elsewhen",
-            },
-            {
-                img: img_jas_shah,
-                pic: img_jas_shah,
-                name: "Jas Shah",
-                tags: ["customer-experience"],
-                credentials: "Fintech Consultant",
-                company: "Bitsul",
             }
            
         ]
@@ -2076,12 +2131,12 @@ const agendaData = [
                 company: "Ferguson"
             },
             {
-                img: img_bayo,
-                pic: img_bayo,
-                name: "Bayo Adekanmbi",
-                tags: ["artificial-intelligence", "financial-technology"],
+                img: img_bode_pedro,
+                pic: img_bode_pedro,
+                name: "Bode Pedro",
                 credentials: "Founder/CEO",
-                company: "DSN",
+                company: "Casava",
+                tags: ["strategy-&-markets"],
             }
         ]
     },
@@ -2104,6 +2159,45 @@ const agendaData = [
                 tags: ["cybersecurity"],
                 credentials: "Chief Executive, Pionen and Co-founder",
                 company: "CxB (Cyber Governance for Boards)",
+            }
+           
+        ]
+    },
+    {
+        id: 21,
+        date: "Wed, 09 Oct",
+        startTime: "3:10 PM",
+        endTime: "2:30PM",
+        dateCode: "Wed",
+        duration: "80",
+        topic: "Launching a Digital Bank",
+        theme: ["strategy-&-markets"],
+        type: ["roundtables"],
+        description: "Roundtable",
+        speaker: [
+            {
+                img: img_nadav_mordechai,
+                pic: img_nadav_mordechai,
+                name: "Nadav Mordechai",
+                tags: ["customer-experience"],
+                credentials: "Product and Strategy Director",
+                company: "Elsewhen",
+            },
+            {
+                img: img_jas_shah,
+                pic: img_jas_shah,
+                name: "Jas Shah",
+                tags: ["customer-experience"],
+                credentials: "Fintech Consultant",
+                company: "Bitsul",
+            },
+            {
+                img: img_alex_menage,
+                pic: img_alex_menage,
+                name: "Alex Menage",
+                tags: ["strategy-&-markets"],
+                credentials: "Managing Director of EMEA and Global Head of Sales",
+                company: "Thought Machine",
             }
            
         ]
@@ -2149,7 +2243,16 @@ const agendaData = [
         theme: ["cybersecurity", "risk"],
         type: ["keynote"],
         description: "Keynote Presentation",
-        speaker: null
+        speaker: [
+            {
+                img: img_andy,
+                pic: img_andy,
+                name: "Andy Jenkinson",
+                tags: ["artificial-intelligence", "financial-technology"],
+                credentials: "Group Chief Executive Officer",
+                company: "Cybersec Innovation Partners",
+            }
+        ]
     },
     {
         id: 37,
@@ -2260,36 +2363,44 @@ const whatWeDoData = [
 
 const workshopsData = [
     {
+        id: 11,
         event_name: "The Future of Insurance",
         date: "Tue, Oct 8th 2024",
         time: "1:05 PM",
         host: "Bode Pedro, Casava",
         room_number: "101",
-        approvalStatus: "PENDING"
+        approvalStatus: "PENDING",
+        details: "Explore how digital transformation is reshaping the insurance industry. From AI-driven risk assessments to personalized policies and real-time claims processing, we’ll discuss the innovations that are driving the next era of insurance."
     },
     {
+        id: 12,
         event_name: "Funding the Next Wave of Financial Innovation",
         date: "Tue, Oct 8th 2024",
         time: "2:55 PM",
-        host: "Iyin Aboyeji, Future Africa and Tayo Bamiduro, Max",
+        host: "Iyin Aboyeji, Future Africa",
         room_number: "102",
-        approvalStatus: "PENDING"
+        approvalStatus: "PENDING",
+        details: "As venture capital and alternative funding models evolve, what’s next for fintechs and digital startups? This session will explore trends in funding, and explore best practices for fintechs and investors."
     },
     {
+        id: 13,
         event_name: "The Future of Wealth",
         date: " Wed, Oct 9th 2024",
         time: "11:20 AM",
         host: " Natalie Weil, Old Street VC and Stacey Body, Aventur",
         room_number: "103",
-        approvalStatus: "PENDING"
+        approvalStatus: "PENDING",
+        details: "Wealth management is being transformed by digital tools and platforms, giving rise to new ways of investing, advising, and managing assets. This workshop will explore the latest trends in robo-advisors, AI-powered portfolio management, and the evolving role of human advisors in this digital age."
     },
     {
+        id: 14,
         event_name: "Launching a Digital Bank",
         date: "Wed, Oct 9th 2024",
         time: "3:10 PM",
         host: "Nadav Mordechai, Elsewhen; Jas Shah, Bitsul and Alex Menage, Thought Machine",
         room_number: "104",
-        approvalStatus: "PENDING"
+        approvalStatus: "PENDING",
+        details: "Building a digital bank, whether as a neobank or as a greenfield, comes with its unique challenges. We’ll delve into key strategies, from regulatory hurdles to core technology decisions, all while keeping customer-centricity and innovation at the forefront of the conversation."
     }
 ]
 

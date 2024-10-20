@@ -19,24 +19,24 @@ const SponsorsForm = () => {
         enableReinitialize: true,
 
         initialValues: {
-            firstname: '',
-            lastname: '',
+            first_name: '',
+            last_name: '',
             email: '',
             company_name: '',
             title: '',
-            phone: '',
-            company_website: '',
-            additional_info: ''
+            phonenumber: '',
+            website_url: '',
+            additional_information: ''
         },
         validationSchema: Yup.object({
-            firstname: Yup.string().required("Please Enter Your First Name"),
-            lastname: Yup.string().required("Please Enter Your Last Name"),
+            first_name: Yup.string().required("Please Enter Your First Name"),
+            last_name: Yup.string().required("Please Enter Your Last Name"),
             email: Yup.string().required("Please Enter Your Email"),
             company_name: Yup.string().required("Please Company Name is Required"),
             title: Yup.string().required("Please Enter Your Position in the Company"),
-            phone: Yup.string().required("Please Your Phone Number is Required"),
-            company_website: Yup.string(),
-            additional_info: Yup.string(),
+            phonenumber: Yup.string().required("Please Your Phone Number is Required"),
+            website_url: Yup.string(),
+            additional_information: Yup.string(),
         }),
         onSubmit: (values, { resetForm }) => {
             /*dispatch(registerUser(values));
@@ -56,7 +56,7 @@ const SponsorsForm = () => {
 
         */
 
-        axios.post('https://api.futureoffinancialservices.org/api/sponsor-register', obj)
+        axios.post('https://dev-api.futureoffinancialservices.org/api/v1/sponsor', obj)
         .then(response => {
             console.log(response);
             setSuccessful(true);
@@ -104,16 +104,16 @@ const SponsorsForm = () => {
                                                 <Label className="fs-13 form-label mb-0">First Name</Label>
                                                     <div className="w-100 vstack p-2 rounded-2 form-box">
                                                         <Input 
-                                                            id="firstname"
-                                                            name="firstname"
+                                                            id="first_name"
+                                                            name="first_name"
                                                             type="text" 
                                                             placeholder="Enter First Name" 
                                                             className="border-0 fs-14 px-2 form-inputs-custom"  
                                                             onChange={validation.handleChange}
                                                             onBlur={validation.handleBlur}
-                                                            value={validation.values.firstname || ""}
+                                                            value={validation.values.first_name || ""}
                                                             invalid={
-                                                                validation.touched.firstname && validation.errors.firstname ? true : false
+                                                                validation.touched.first_name && validation.errors.first_name ? true : false
                                                             }
                                                             style={{ color: '#303030', backgroundColor: 'transparent', boxShadow: 'none' }} 
                                                         />  
@@ -123,16 +123,16 @@ const SponsorsForm = () => {
                                                 <Label className="fs-13 form-label mb-0">Last Name</Label>
                                                 <div className="w-100 vstack p-2 rounded-2 form-box">
                                                     <Input 
-                                                        id="lastname"
-                                                        name="lastname"
+                                                        id="last_name"
+                                                        name="last_name"
                                                         type="text" 
                                                         placeholder="Enter Last Name" 
                                                         className="border-0 fs-14 px-2"  
                                                         onChange={validation.handleChange}
                                                         onBlur={validation.handleBlur}
-                                                        value={validation.values.lastname || ""}
+                                                        value={validation.values.last_name || ""}
                                                         invalid={
-                                                            validation.touched.lastname && validation.errors.lastname ? true : false
+                                                            validation.touched.last_name && validation.errors.last_name ? true : false
                                                         }
                                                         style={{ color: '#303030', backgroundColor: 'transparent', boxShadow: 'none' }} 
                                                     />
@@ -198,12 +198,11 @@ const SponsorsForm = () => {
                                             </Col>
                                             <Col lg={12} sm={12} className='px-2 mt-4'>
                                                 <Label className="fs-13 form-label mb-0">Phone Number</Label>
-                                                <div className="w-100 vstack p-2 rounded-2 form-box">
                                                 <PhoneInput
                                                     country={'gb'}
                                                     placeholder="Enter Phone Number" 
-                                                    onChange={value => validation.setFieldValue("phone", value)}
-                                                    value={validation.values.phone || ""}
+                                                    onChange={value => validation.setFieldValue("phonenumber", value)}
+                                                    value={validation.values.phonenumber || ""}
                                                     containerClass="w-100 vstack p-2 rounded-2 form-box"
                                                     inputClass='fs-14'
                                                     inputStyle={{ width: '100%', color: '#303030', borderColor: 'transparent', boxShadow: 'none', fontFamily: 'Montserrat, IBM Plex Sans, sans-serif' }} 
@@ -228,42 +227,42 @@ const SponsorsForm = () => {
                                                     />
                                                 
                                                     */} 
-                                                </div>
+                                                
                                             </Col>
                                             <Col lg={12} sm={12} className='px-2 mt-4'>
-                                                <Label className="fs-13 form-label mb-0">Company Website</Label>
+                                                <p className="fs-13 mb-0" style={{ color: '#b8bdc0' }}>Company Website</p>
                                                 <div className="w-100 vstack p-2 rounded-2 form-box">
                                                     <Input 
-                                                        id="company_website"
-                                                        name="company_website"
+                                                        id="website_url"
+                                                        name="website_url"
                                                         type="text" 
                                                         placeholder="Enter Company's Website URL" 
                                                         className="border-0 fs-14 px-2"  
                                                         onChange={validation.handleChange}
                                                         onBlur={validation.handleBlur}
-                                                        value={validation.values.company_website || ""}
+                                                        value={validation.values.website_url || ""}
                                                         invalid={
-                                                            validation.touched.company_website && validation.errors.company_website ? true : false
+                                                            validation.touched.website_url && validation.errors.website_url ? true : false
                                                         }
                                                         style={{ color: '#303030', backgroundColor: 'transparent', boxShadow: 'none' }} 
                                                     />
                                                 </div>
                                             </Col>
                                             <Col lg={12} sm={12} className='px-2 mt-4'>
-                                                <Label className="fs-13 form-label mb-0">Additional Information</Label>
+                                            <p className="fs-13 mb-0" style={{ color: '#b8bdc0' }}>Additional Information</p>
                                                 <div className="w-100 vstack p-2 rounded-2 form-box">
                                                     <Input 
-                                                        id="additional_info"
-                                                        name="additional_info"
+                                                        id="additional_information"
+                                                        name="additional_information"
                                                         type="textarea"
                                                         rows="4" 
                                                         placeholder="Enter Your Message here" 
                                                         className="border-0 fs-14 px-2"  
                                                         onChange={validation.handleChange}
                                                         onBlur={validation.handleBlur}
-                                                        value={validation.values.additional_info || ""}
+                                                        value={validation.values.additional_information || ""}
                                                         invalid={
-                                                            validation.touched.additional_info && validation.errors.additional_info ? true : false
+                                                            validation.touched.additional_information && validation.errors.additional_information ? true : false
                                                         }
                                                         style={{ color: '#303030', backgroundColor: 'transparent', boxShadow: 'none' }} 
                                                     />

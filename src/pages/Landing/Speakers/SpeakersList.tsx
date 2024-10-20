@@ -58,7 +58,7 @@ const SpeakersList = () => {
                                                 <img src={item.img} alt="" className="avatar-speaker-list"/>
                                                 <div className='w-100 mt-2'>
                                                     <h5 className="text-white fs-14" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>{item.name}</h5>
-                                                    <p className="text-white fs-11 fw-light">{item.credentials}, {item.company}</p>
+                                                    <p className="text-white fs-11 fw-light">{item.credentials}{item.company !== "" ? `, ${item.company}` : ""}</p>
                                                 </div>
                                             </CardBody>
                                         </Card>

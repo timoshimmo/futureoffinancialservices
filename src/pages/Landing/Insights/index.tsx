@@ -4,6 +4,7 @@ import Footer from '../Common/footer';
 import Banner from './Banner';
 import Main from './Main';
 import CTA from '../Common/CTA';
+import Faq from './Faq';
 
 const index = () => {
     document.title = "Future of Financial Services | Insight";
@@ -29,6 +30,7 @@ const index = () => {
                 <Navbar />
                 <Banner />
                 <Main />
+                <Faq />
                 <CTA />
                 <Footer />
             </div>

@@ -17,7 +17,7 @@ const Banner = () => {
                 <Container>
                     <Row className='px-4 mb-5 justify-content-center'>
                         <Col lg={12} sm={12} className='d-flex justify-conntent-center'>
-                            <h2 className='w-100 display-4 mb-5 text-center fw-bold lh-base text-primary' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif', display: 'inline-block', width: 'auto' }}>Insights</h2>
+                            <h2 className='w-100 display-4 mb-5 text-center fw-bold lh-base text-primary' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif', display: 'inline-block', width: 'auto' }}>Future of Financial Services</h2>
                         </Col>
                     </Row>
                     <Row className='px-4'>
