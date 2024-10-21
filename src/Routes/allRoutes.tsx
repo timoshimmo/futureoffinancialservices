@@ -30,6 +30,7 @@ const publicRoutes : any= [
   { path: "/agenda", component: <Agenda /> },
   { path: "/insights", component: <Insights />},
   { path: "/privacy", component: <PrivacyPolicy />},
+  { path: "/summit", component: <Home />},
   {path: "/booking/:token", component: <UpdateRegisterForm />},
   
   

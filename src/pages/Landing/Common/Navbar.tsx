@@ -126,6 +126,20 @@ const Navbar = () => {
                                         Events
                                     </DropdownToggle>
                                     <DropdownMenu className='px-2'>
+                                        <DropdownItem href='/summit' className="fs-14 fw-light" style={{ color: '#E1E7EC' }}>FFS Summit 2024</DropdownItem>
+                                        <DropdownItem divider style={{ borderColor: '#E1E7EC' }}/>
+                                        <DropdownItem href='/speakers' className="fs-14 fw-light" style={{ color: '#E1E7EC' }}>2024 Speakers</DropdownItem>
+                                        <DropdownItem divider style={{ borderColor: '#E1E7EC' }}/>
+                                        <DropdownItem href='/agenda' className="fs-14 fw-light" style={{ color: '#E1E7EC' }}>2024 Agenda</DropdownItem>
+                                    </DropdownMenu>
+                                </Dropdown>
+                            </li>
+                            {/*<li className="nav-item px-4 web-navbar">
+                                <Dropdown isOpen={openEvents} toggle={toggleEvents}>
+                                    <DropdownToggle caret tag="button" className="nav-link fs-14">
+                                        Events
+                                    </DropdownToggle>
+                                    <DropdownMenu className='px-2'>
                                         <ButtonDropdown className="fs-14 fw-light" style={{ color: '#E1E7EC' }}>
                                             <Dropdown isOpen={openFFS2024} toggle={toggleFFS2024}>
                                                 <DropdownToggle caret tag="button" className="nav-link fs-14">
@@ -138,14 +152,10 @@ const Navbar = () => {
                                                 </DropdownMenu>
                                             </Dropdown>
                                         </ButtonDropdown>
-                                       {/*   
-                                            <DropdownItem href='/speakers' className="fs-14 fw-light" style={{ color: '#E1E7EC' }}>2024 Speakers</DropdownItem>
-                                            <DropdownItem divider style={{ borderColor: '#E1E7EC' }}/>
-                                            <DropdownItem href='/agenda' className="fs-14 fw-light" style={{ color: '#E1E7EC' }}>2024 Agenda</DropdownItem>
-                                       */} 
+                                       
                                     </DropdownMenu>
                                 </Dropdown>
-                            </li>
+                        </li> */}
                             <li className="nav-item px-4 web-navbar">
                                 <Dropdown isOpen={openInvolved} toggle={toggleInvolved}>
                                     <DropdownToggle caret tag="button" className="nav-link fs-14">
@@ -168,8 +178,25 @@ const Navbar = () => {
                             <li className="nav-item mobile-navbar">
                                     <NavLink className="nav-link fs-14 text-white d-flex justify-content-end" to="/about" activeClassName="active" tag={RRNavLink}>About</NavLink>
                             </li>
-
                             <li className="mobile-navbar">
+                                <UncontrolledDropdown inNavbar nav>
+                                    <DropdownToggle caret nav className="nav-link nav-item-mobile fs-14 d-flex justify-content-end">
+                                        Events
+                                    </DropdownToggle>
+                                    <DropdownMenu right>
+                                        <DropdownItem href='/summit' className="fs-14 fw-light text-end" style={{ color: '#E1E7EC' }}>FFS Summit 2024</DropdownItem>
+                                        <DropdownItem divider style={{ borderColor: '#E1E7EC' }}/>
+                                        <DropdownItem href='/speakers' className="fs-14 fw-light text-end" style={{ color: '#E1E7EC' }}>2024 Speakers</DropdownItem>
+                                        <DropdownItem divider style={{ borderColor: '#E1E7EC' }}/>
+                                        {/* <DropdownItem href="/exhibitors" className="fs-14 fw-light text-end" style={{ color: '#E1E7EC' }}>Be an Exhibitor</DropdownItem>
+                                        <DropdownItem divider style={{ borderColor: '#E1E7EC' }}/> */}
+                                        <DropdownItem href='/agenda' className="fs-14 fw-light text-end" style={{ color: '#E1E7EC' }}>2024 Agenda</DropdownItem>
+                                        <DropdownItem divider style={{ borderColor: '#E1E7EC' }}/>
+                                    </DropdownMenu>
+                                </UncontrolledDropdown>
+                            </li>
+
+                            {/* <li className="mobile-navbar">
                                 <UncontrolledDropdown inNavbar nav>
                                     <DropdownToggle caret nav className="nav-link nav-item-mobile fs-14 d-flex justify-content-end">
                                         Events
@@ -181,10 +208,11 @@ const Navbar = () => {
                                                 FFS Summit 2024
                                             </DropdownToggle>
                                             <DropdownMenu right>
+                                                <DropdownItem href='/summit' className="fs-14 fw-light text-end" style={{ color: '#E1E7EC' }}> FFS Summit 2024</DropdownItem>
+                                                <DropdownItem divider style={{ borderColor: '#E1E7EC' }}/>
                                                 <DropdownItem href='/speakers' className="fs-14 fw-light text-end" style={{ color: '#E1E7EC' }}>2024 Speakers</DropdownItem>
                                                 <DropdownItem divider style={{ borderColor: '#E1E7EC' }}/>
-                                                {/* <DropdownItem href="/exhibitors" className="fs-14 fw-light text-end" style={{ color: '#E1E7EC' }}>Be an Exhibitor</DropdownItem>
-                                                <DropdownItem divider style={{ borderColor: '#E1E7EC' }}/> */}
+
                                                 <DropdownItem href='/agenda' className="fs-14 fw-light text-end" style={{ color: '#E1E7EC' }}>2024 Agenda</DropdownItem>
                                                 <DropdownItem divider style={{ borderColor: '#E1E7EC' }}/>
                                             </DropdownMenu>
@@ -192,7 +220,7 @@ const Navbar = () => {
                                         </ButtonDropdown>
                                     </DropdownMenu>
                                 </UncontrolledDropdown>
-                            </li>
+                                    </li> */}
 
                             {/* Mobile Navbar  */}
                             <li className="mobile-navbar">

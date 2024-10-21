@@ -17,7 +17,7 @@ const Footer = () => {
                         <Col lg={5} className="mt-5">
                             <div>
                                 <div className='mb-5'>
-                                <Link to="/" className="d-block" target='_blank'>
+                                <Link to="/" className="d-block">
                                     <img src={ffsLogoLight1} alt="logo light" className="footer-logo" />
                                  </Link>   
                                     
@@ -77,6 +77,7 @@ const Footer = () => {
                                     <h5 className="text-primary mb-0" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>Events</h5>
                                     <div className="text-white  mt-3">
                                         <ul className="list-unstyled ff-secondary footer-list">
+                                            <li><Link to="/summit" className="text-white fs-14">FFS Summit 2024</Link></li>
                                             <li><Link to="/speakers" className="text-white fs-14">2024 Speakers</Link></li>
                                             {/* <span className="text-white fs-14">Events</span> */}
                                              <li><Link to="/agenda" className="text-white fs-14">2024 Agenda</Link></li> 
