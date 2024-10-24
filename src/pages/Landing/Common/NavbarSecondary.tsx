@@ -241,7 +241,7 @@ const NavbarSecondary = () => {
                            
                         </Scrollspy>
                         <div className='ms-4 mobile-nav-button'>
-                            <Link to="/register" className="btn btn-success btn-banner">Register </Link>
+                            <Link to="/register" className="btn btn-success btn-banner">Contact Us </Link>
                         </div>       
                     </Collapse>
 
@@ -300,7 +300,7 @@ const NavbarSecondary = () => {
                
             </nav>
             <div className="bg-overlay bg-overlay-pattern"></div>
-            <nav className="navbar pb-0">
+            <nav className="navbar pb-0 web-navbar">
 
                 <div className="w-100" style={{ height: '50px', marginTop: '4rem', backgroundColor: '#1b1b1b' }}>
                

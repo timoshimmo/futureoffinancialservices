@@ -401,6 +401,162 @@ const insightsData = [
     },
 ];
 
+const mainBlogData = [
+    {
+        id: 5,
+        date: "17 May 2024",
+        topic: "How Fintech is Driving Financial Inclusion",
+        tags: ["Research"],
+        event: "FinTech",
+        image: insights4,
+        type: 1,
+        writer: [
+            {
+                name: "Adeniyi Jones",
+                img: blogger1,
+                credentials: "Convener, Future of Financial Services Conference"
+            }
+           
+        ]
+    },
+    {
+        id: 6,
+        date: "05 May 2024",
+        topic: "Sustainability in Financial Services: Trends and ...",
+        tags: ["Research"],
+        event: "FFS 2024",
+        image: insights5,
+        type: 1,
+        writer: [
+            {
+                name: "Helen Paul",
+                img: blogger2,
+                credentials: "Convener, Future of Financial Services Conference"
+            }
+           
+        ]
+    },
+    {
+        id: 7,
+        date: "30 Apr 2024",
+        topic: "Spotlight on Women Leaders in Financial Services",
+        tags: ["Research"],
+        event: "FinTech",
+        image: insights6,
+        type: 1,
+        writer: [
+            {
+                name: "Paula White",
+                img: blogger2,
+                credentials: "Convener, Future of Financial Services Conference"
+            }
+           
+        ]
+    },
+    {
+        id: 8,
+        date: "24 Apr 2024",
+        topic: "The Importance of Networking in the Financial Services ...",
+        tags: ["Research"],
+        event: "Summit",
+        image: insights7,
+        type: 1, 
+        writer: [
+            {
+                name: "Jane Jackson",
+                img: blogger2,
+                credentials: "Convener, Future of Financial Services Conference"
+            }
+           
+        ]
+    },
+    {
+        id: 9,
+        date: "18 Apr 2024",
+        topic: "Navigating Regulatory Changes in Financial Services",
+        tags: ["Research"],
+        event: "Blog",
+        image: insights8,
+        type: 1,
+        writer: [
+            {
+                name: "Jimmy Francis",
+                img: blogger1,
+                credentials: "Convener, Future of Financial Services Conference"
+            }
+           
+        ]
+    },
+    {
+        id: 10,
+        date: "10 Apr 2024",
+        topic: "The Role of AI in Shaping the Future of Financial Services",
+        tags: ["Research"],
+        event: "Events & News",
+        image: insights9,
+        type: 1,
+        writer: [
+            {
+                name: "Tems Tiwa",
+                img: blogger2,
+                credentials: "Convener, Future of Financial Services Conference"
+            }
+           
+        ]
+    },
+    {
+        id: 11,
+        date: "08 Apr 2024",
+        topic: "The Importance of Networking in the Financial Services Industry",
+        tags: ["Research"],
+        event: "Summit",
+        image: insights7,
+        type: 1, 
+        writer: [
+            {
+                name: "Jane Jackson",
+                img: blogger2,
+                credentials: "Convener, Future of Financial Services Conference"
+            }
+        
+        ]
+    },
+    {
+        id: 12,
+        date: "07 Apr 2024",
+        topic: "Navigating Regulatory Changes in Financial Services",
+        tags: ["Research"],
+        event: "Blog",
+        image: insights8,
+        type: 1,
+        writer: [
+            {
+                name: "Jimmy Francis",
+                img: blogger1,
+                credentials: "Convener, Future of Financial Services Conference"
+            }
+        
+        ]
+    },
+    {
+        id: 13,
+        date: "03 Apr 2024",
+        topic: "The Role of AI in Shaping the Future of Financial Services",
+        tags: ["Research"],
+        event: "Events & News",
+        image: insights9,
+        type: 1,
+        writer: [
+            {
+                name: "Tems Tiwa",
+                img: blogger2,
+                credentials: "Convener, Future of Financial Services Conference"
+            }
+        
+        ]
+    },
+];
+
 const latestData = [
     {
         img: expert_presentations,
@@ -2422,4 +2578,4 @@ const workshopsData = [
 ]
 
 
-export {connectData, speakersData, whatIsData, numbersData, partnerImgsData, latestData, faqData, faqFullData, speakersFullData, agendaData, whatWeDoData, whyChooseData, joinContactsData, insightsData, workshopsData }
+export {connectData, speakersData, whatIsData, numbersData, partnerImgsData, latestData, faqData, faqFullData, speakersFullData, agendaData, whatWeDoData, whyChooseData, joinContactsData, insightsData, workshopsData, mainBlogData }

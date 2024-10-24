@@ -5,6 +5,8 @@ import { Container, Row, Col } from 'reactstrap';
 import ic_up_right_arrow from "../../../assets/images/icons/ic_up_righ_arrow.png";
 
 import { insightsData } from '../../../common/data';
+import { mainBlogData } from '../../../common/data';
+
 
 import Pagination from 'Components/Common/Pagination';
 
@@ -14,6 +16,8 @@ const Banner = () => {
     const [newsState, setNewsState] = useState([]);
     const [currentState, setCurrentState] = useState(0);
     const [pageState, setPageState] = useState(0);
+
+    const [mainInsights, setMainInsights] = useState([]);
 
     const [currentPage, setCurrentPage] = useState(1);
 
@@ -25,9 +29,9 @@ const Banner = () => {
 
 
 
-   /* useEffect(() => {
-        setNewsState(insightsData);
-        setPageState(Math.ceil(insightsData.length / pageSize));
+  /*  useEffect(() => {
+       const insights = insightsData.filter(data => data.type === 1);
+       setMainInsights(insights);
       }, []); */
 
     return (
@@ -66,7 +70,7 @@ const Banner = () => {
                     <Row>
                         <Col lg={12} className='mt-5 side-spacing-pagination'>
                             <Pagination
-                                data={insightsData}
+                                data={mainBlogData}
                                 currentPage={currentPage}
                                 setCurrentPage={setCurrentPage}
                                 perPageData={pageSize}
