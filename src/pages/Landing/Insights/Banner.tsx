@@ -45,7 +45,7 @@ useEffect(() => {
                                 </div>
                             </div>
                         </Col> */}
-                        <Col lg={7} sm={12}>
+                        <Col lg={8} sm={12}>
                             <video
                                 style={{ maxWidth: "100%", width: "800px", margin: "0 auto", borderRadius: '20px' }}
                                 playsInline
@@ -55,13 +55,22 @@ useEffect(() => {
                                 ref={videoEl}
                             />
                         </Col>
-                        <Col lg={5} sm={12} className=' d-flex flex-column'>
+                        <Col lg={4} sm={12} className=' d-flex flex-column'>
                             {insightsData.filter(data => data.type === 0).map((item, key) => (
                                 <Row className='insight-small-mb' key={key}>
-                                    <Col lg={6}>
-                                        <img src={item.image} className='w-100 rounded-3 insight-img-right'/>  
+                                    <Col lg={12}>
+                                        <div className='insight-img-right w-100 rounded-3 d-flex align-items-end' style={{ backgroundImage: `url(${item.image})`, position: 'relative', backgroundSize: 'cover', backgroundRepeat:'no-repeat',  }}>
+                                            {/* <img src={item.image} className='w-100 '/> */}
+
+                                            <div className="w-100 h-100 d-block" style={{ backgroundColor: '#000', opacity: '0.4', position: 'absolute' }}></div>
+                                            <div className='px-3 mb-2' style={{ zIndex: '100' }}>
+                                                <p className='fs-14 text-primary mb-2 fw-semibold title-top-spacing'>{item.writer[0].name} <span>.</span> {item.date}</p>
+                                                <Link to="#" className='h5 fw-bold insight-title-link' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>{item.topic}</Link> 
+                                                {/* <p className='fs-14 text-white mb-2 fw-semibold title-top-spacing'>{item.topic}</p> */}
+                                            </div>
+                                        </div>
                                     </Col>
-                                    <Col lg={6}>
+                                    {/* <Col lg={6}>
                                         <div className='w-100'>
                                             <p className='fs-14 text-primary mb-2 fw-semibold title-top-spacing'>{item.writer[0].name} <span>.</span> {item.date}</p>
                                             <div className='d-flex justify-content-between mb-2'>      
@@ -76,15 +85,10 @@ useEffect(() => {
                                                 <p className='fs-10 text-center border border-primary text-primary py-2 px-4 rounded-pill small-tags-insight'>{item.event}</p>
                                                 <p className='fs-10 text-center border border-secondary text-secondary py-2 px-4 rounded-pill small-tags-insight'>{item.tags[0]}</p>
                                             </div>
-                                            {/*
-                                                <Row className='d-flex justify-content-between align-items-center gap-2 mt-4 w-100'>
-                                                    <p className='fs-10 border border-primary text-primary py-2 px-4 rounded-pill'>{item.tags[0]}</p>
-                                                    <p className='fs-10 border border-secondary text-secondary py-2 px-4 rounded-pill'>{item.event}</p>
-                                                </Row>
-                                            */}
+                                            
                                             
                                         </div>
-                                    </Col>
+                            </Col> */}
                                 </Row>
                             ))}
                         </Col>
