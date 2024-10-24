@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import Navbar from '../Common/Navbar';
+import NavbarSecondary from '../Common/NavbarSecondary';
 import Banner from "./Banner";
 import AgendaList from './AgendaList';
 import Footer from '../Common/footer';
@@ -35,7 +36,7 @@ const index = () => {
                 <Helmet>
                     <meta name="description" content="Future of Financial Services | Agenda" />
                 </Helmet>
-                <Navbar />
+                <NavbarSecondary />
                 <Banner /> 
                 <AgendaList />
                 <Footer />

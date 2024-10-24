@@ -62,17 +62,17 @@ useEffect(() => {
                             
 
                             <iframe
-                            src='https://www.youtube.com/embed/K6ckNHTy2r4'
+                            src='https://www.youtube.com/embed/K6ckNHTy2r4?autoplay=1&mute=1'
                             frameBorder='0'
-                            allow='autoplay; encrypted-media'
+                            allow='accelerometer; autoplay; encrypted-media; '
                             allowFullScreen
                             title='video'
                             className='w-100 h-100 rounded-4'
                             />
                         </Col>
                         <Col lg={4} sm={12} className='d-flex flex-column justify-content-between'>
-                            {insightsData.filter(data => data.type === 0).map((item, key) => (
-                                <Row className='mb-2' key={key}>
+                            {insightsData.filter(data => data.type === 0).map((item, idx) => (
+                                <Row className={idx === 0 ?  "mb-3" : "mb-0"} key={idx}>
                                     <Col lg={12}>
                                         <div className='insight-img-right w-100 rounded-4 d-flex align-items-end' style={{ backgroundImage: `url(${item.image})`, position: 'relative', backgroundSize: 'cover', backgroundRepeat:'no-repeat', backgroundPosition: 'center center'  }}>
                                             {/* <img src={item.image} className='w-100 '/> */}
