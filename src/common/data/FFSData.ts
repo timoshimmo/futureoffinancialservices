@@ -185,7 +185,7 @@ const insightsData = [
         tags: ["Future of Financial Services Summit"],
         event: "FFS 2024",
         image: insights1,
-        type: 9,
+        type: 0,
         writer: [
             {
                 name: "Lanre Akomolafe",
@@ -197,23 +197,6 @@ const insightsData = [
     },
     {
         id: 2,
-        date: "12 JUN 2024",
-        topic: "Success Stories: Innovations from Past Conferences",
-        tags: ["Research"],
-        event: "FFS 2024",
-        image: insights2,
-        type: 0,
-        writer: [
-            {
-                name: "Jide Kolapo",
-                img: blogger1,
-                credentials: "Convener, Future of Financial Services Conference"
-            }
-           
-        ]
-    },
-    {
-        id: 3,
         date: "10 JUN 2024",
         topic: "Post-Conference Recap: Key Takeaways and Insights",
         tags: ["Research"],
@@ -230,7 +213,41 @@ const insightsData = [
         ]
     },
     {
+        id: 3,
+        date: "12 JUN 2024",
+        topic: "Success Stories: Innovations from Past Conferences",
+        tags: ["Research"],
+        event: "FFS 2024",
+        image: insights5,
+        type: 0,
+        writer: [
+            {
+                name: "Jide Kolapo",
+                img: blogger1,
+                credentials: "Convener, Future of Financial Services Conference"
+            }
+           
+        ]
+    },
+    {
         id: 4,
+        date: "12 JUN 2024",
+        topic: "Success Stories: Innovations from Past Conferences",
+        tags: ["Research"],
+        event: "FFS 2024",
+        image: insights6,
+        type: 0,
+        writer: [
+            {
+                name: "Adeniyi Jones",
+                img: blogger1,
+                credentials: "Convener, Future of Financial Services Conference"
+            }
+           
+        ]
+    },
+    {
+        id: 5,
         date: "17 May 2024",
         topic: "How Fintech is Driving Financial Inclusion",
         tags: ["Research"],
@@ -247,7 +264,7 @@ const insightsData = [
         ]
     },
     {
-        id: 5,
+        id: 6,
         date: "05 May 2024",
         topic: "Sustainability in Financial Services: Trends and ...",
         tags: ["Research"],
@@ -264,7 +281,7 @@ const insightsData = [
         ]
     },
     {
-        id: 6,
+        id: 7,
         date: "30 Apr 2024",
         topic: "Spotlight on Women Leaders in Financial Services",
         tags: ["Research"],
@@ -281,7 +298,7 @@ const insightsData = [
         ]
     },
     {
-        id: 7,
+        id: 8,
         date: "24 Apr 2024",
         topic: "The Importance of Networking in the Financial Services ...",
         tags: ["Research"],
@@ -298,7 +315,7 @@ const insightsData = [
         ]
     },
     {
-        id: 8,
+        id: 9,
         date: "18 Apr 2024",
         topic: "Navigating Regulatory Changes in Financial Services",
         tags: ["Research"],
@@ -315,7 +332,7 @@ const insightsData = [
         ]
     },
     {
-        id: 9,
+        id: 10,
         date: "10 Apr 2024",
         topic: "The Role of AI in Shaping the Future of Financial Services",
         tags: ["Research"],
@@ -332,7 +349,7 @@ const insightsData = [
         ]
     },
     {
-        id: 10,
+        id: 11,
         date: "08 Apr 2024",
         topic: "The Importance of Networking in the Financial Services Industry",
         tags: ["Research"],
@@ -349,7 +366,7 @@ const insightsData = [
         ]
     },
     {
-        id: 11,
+        id: 12,
         date: "07 Apr 2024",
         topic: "Navigating Regulatory Changes in Financial Services",
         tags: ["Research"],
@@ -366,7 +383,7 @@ const insightsData = [
         ]
     },
     {
-        id: 12,
+        id: 13,
         date: "03 Apr 2024",
         topic: "The Role of AI in Shaping the Future of Financial Services",
         tags: ["Research"],

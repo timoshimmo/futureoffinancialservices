@@ -31,16 +31,12 @@ useEffect(() => {
         <React.Fragment>
             <section className="section insight-banner">
                 <Container>
-                    {/*
-                    
-                       <Row className='px-4 mb-5 justify-content-center'>
+                    {/* <Row className='px-4 mb-5 justify-content-center'>
                         <Col lg={12} sm={12} className='d-flex justify-conntent-center'>
                             <h2 className='w-100 display-4 mb-5 text-center fw-bold text-white' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif', display: 'inline-block', width: 'auto' }}>Future of <br />Financial Services</h2>
                         </Col>
-                    </Row>
-                
-                    */}
-                    <Row>
+    </Row> */}
+                    <Row className='px-4'>
                         <Col lg={5} sm={12} className=' d-flex flex-column'>
                             <div>
                                 <h2 className='w-100 display-4 mb-5 fw-bold text-white' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif', display: 'inline-block', width: 'auto' }}>Future of Financial Services</h2>
@@ -64,6 +60,8 @@ useEffect(() => {
                         
                         */}
                         <Col lg={7} sm={12}>
+                            
+
                             <iframe
                             src='https://www.youtube.com/embed/K6ckNHTy2r4?autoplay=1&mute=1'
                             frameBorder='0'
@@ -73,6 +71,7 @@ useEffect(() => {
                             className='w-100 h-100 rounded-4'
                             />
                         </Col>
+                        
                     </Row>
                     {/* <div className="placeholder-insight-space"></div> */}
                 </Container>

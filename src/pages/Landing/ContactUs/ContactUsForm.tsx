@@ -49,7 +49,7 @@ const ContactUsForm = () => {
 
         setLoading(true);
         
-        axios.post('http://localhost:4005/api/v1/contact', obj)
+        axios.post('https://dev-api.futureoffinancialservices.org/api/v1/contact', obj)
         .then(response => {
             console.log(response);
             setSuccessful(true);
