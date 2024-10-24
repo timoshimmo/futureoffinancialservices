@@ -300,9 +300,9 @@ const NavbarSecondary = () => {
                
             </nav>
             <div className="bg-overlay bg-overlay-pattern"></div>
-            <nav className="navbar">
+            <nav className="navbar pb-0">
 
-                <Container className="mt-5" style={{ height: '70px' }}>
+                <div className="w-100" style={{ height: '50px', marginTop: '4rem', backgroundColor: '#1b1b1b' }}>
                
                         <Scrollspy
                             offset={-18}
@@ -314,7 +314,7 @@ const NavbarSecondary = () => {
                             className="navbar-nav mx-auto mt-2 mt-lg-0"
                             id="navbar-secondary"
                         >
-                            <div className='d-flex'>
+                            <div className='d-flex justify-content-center align-items-center'>
                                 <li className="nav-item px-4">
                                     <NavLink className="nav-link fs-14 text-white" to="/summit" activeClassName="active" tag={RRNavLink}>FFS 2024 Summit</NavLink>
                                 </li>
@@ -325,10 +325,8 @@ const NavbarSecondary = () => {
                                     <NavLink className="nav-link fs-14 text-white" to="/agenda" activeClassName="active" tag={RRNavLink}>Agenda</NavLink>
                                 </li>
                             </div>
-                           
                         </Scrollspy>    
-                    
-                </Container>
+                </div>
             </nav>
             
         </React.Fragment>
