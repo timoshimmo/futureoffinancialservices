@@ -23,6 +23,8 @@ useEffect(() => {
       videoEl.current?.play().catch(error => {
         console.error("Error attempting to play", error);
       });
+
+      //https://stream.mux.com/6fiGM5ChLz8T66ZZiuzk1KZuIKX8zJz00/medium.mp4
   };
 
     return (
@@ -44,9 +46,9 @@ useEffect(() => {
                                     </div>
                                 </div>
                             </div>
-                        </Col> */}
-                        <Col lg={8} sm={12}>
-                            <video
+                        </Col> 
+
+                        <video
                                 style={{ maxWidth: "100%", width: "800px", margin: "0 auto", borderRadius: '20px' }}
                                 playsInline
                                 loop
@@ -54,12 +56,25 @@ useEffect(() => {
                                 src="https://stream.mux.com/6fiGM5ChLz8T66ZZiuzk1KZuIKX8zJz00/medium.mp4"
                                 ref={videoEl}
                             />
+                        
+                        */}
+                        <Col lg={8} sm={12}>
+                            
+
+                            <iframe
+                            src='https://www.youtube.com/embed/K6ckNHTy2r4'
+                            frameBorder='0'
+                            allow='autoplay; encrypted-media'
+                            allowFullScreen
+                            title='video'
+                            className='w-100 h-100 rounded-4'
+                            />
                         </Col>
-                        <Col lg={4} sm={12} className=' d-flex flex-column'>
+                        <Col lg={4} sm={12} className='d-flex flex-column justify-content-between'>
                             {insightsData.filter(data => data.type === 0).map((item, key) => (
-                                <Row className='insight-small-mb' key={key}>
+                                <Row className='mb-2' key={key}>
                                     <Col lg={12}>
-                                        <div className='insight-img-right w-100 rounded-3 d-flex align-items-end' style={{ backgroundImage: `url(${item.image})`, position: 'relative', backgroundSize: 'cover', backgroundRepeat:'no-repeat',  }}>
+                                        <div className='insight-img-right w-100 rounded-4 d-flex align-items-end' style={{ backgroundImage: `url(${item.image})`, position: 'relative', backgroundSize: 'cover', backgroundRepeat:'no-repeat', backgroundPosition: 'center center'  }}>
                                             {/* <img src={item.image} className='w-100 '/> */}
 
                                             <div className="w-100 h-100 d-block" style={{ backgroundColor: '#000', opacity: '0.4', position: 'absolute' }}></div>

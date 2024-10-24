@@ -117,14 +117,14 @@ const NavbarSummit = () => {
                             <li className="nav-item px-4 web-navbar">
                                 <NavLink className="nav-link fs-14 text-white" to="/" activeClassName="active" tag={RRNavLink}>Home</NavLink>
                             </li>
-                            {/* <li className="nav-item px-4 web-navbar">
-                                <NavLink className="nav-link fs-14 text-white" to="/about" activeClassName="active" tag={RRNavLink}>About</NavLink>
-                        </li> */}
                             <li className="nav-item px-4 web-navbar">
-                                <NavLink className="nav-link fs-14 text-white" to="/about" activeClassName="active" tag={RRNavLink}>Speakers</NavLink>
+                                <NavLink className="nav-link fs-14 text-white" to="/about" activeClassName="active" tag={RRNavLink}>About</NavLink>
+                            </li> 
+                            <li className="nav-item px-4 web-navbar">
+                                <NavLink className="nav-link fs-14 text-white" to="/speakers" activeClassName="active" tag={RRNavLink}>Speakers</NavLink>
                             </li>
                             <li className="nav-item px-4 web-navbar">
-                                <NavLink className="nav-link fs-14 text-white" to="/about" activeClassName="active" tag={RRNavLink}>Agenda</NavLink>
+                                <NavLink className="nav-link fs-14 text-white" to="/agenda" activeClassName="active" tag={RRNavLink}>Agenda</NavLink>
                             </li>
                             {/*<li className="nav-item px-4 web-navbar">
                                 <Dropdown isOpen={openEvents} toggle={toggleEvents}>
@@ -191,13 +191,15 @@ const NavbarSummit = () => {
                                     </DropdownToggle>
                                     <DropdownMenu right>
                                         <DropdownItem href='/summit' className="fs-14 fw-light text-end" style={{ color: '#E1E7EC' }}>FFS Summit 2024</DropdownItem>
+                                       {/*
                                         <DropdownItem divider style={{ borderColor: '#E1E7EC' }}/>
                                         <DropdownItem href='/speakers' className="fs-14 fw-light text-end" style={{ color: '#E1E7EC' }}>2024 Speakers</DropdownItem>
                                         <DropdownItem divider style={{ borderColor: '#E1E7EC' }}/>
-                                        {/* <DropdownItem href="/exhibitors" className="fs-14 fw-light text-end" style={{ color: '#E1E7EC' }}>Be an Exhibitor</DropdownItem>
-                                        <DropdownItem divider style={{ borderColor: '#E1E7EC' }}/> */}
+                                        
                                         <DropdownItem href='/agenda' className="fs-14 fw-light text-end" style={{ color: '#E1E7EC' }}>2024 Agenda</DropdownItem>
                                         <DropdownItem divider style={{ borderColor: '#E1E7EC' }}/>
+                                    
+                                    */}
                                     </DropdownMenu>
                                 </UncontrolledDropdown>
                             </li>
