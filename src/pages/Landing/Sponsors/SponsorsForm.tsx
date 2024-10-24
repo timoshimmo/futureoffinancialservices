@@ -48,13 +48,11 @@ const SponsorsForm = () => {
     });
 
     const handleClick = (obj: any) => {
-       /* setLoading(true);
-        setTimeout(() => {
-            setSuccessful(true);
-            setLoading(false);
-        }, 6000);
-
+       /* 
+        https://dev-api.futureoffinancialservices.org
         */
+
+        setLoading(true);
 
         axios.post('https://dev-api.futureoffinancialservices.org/api/v1/sponsor', obj)
         .then(response => {
@@ -249,7 +247,7 @@ const SponsorsForm = () => {
                                                 </div>
                                             </Col>
                                             <Col lg={12} sm={12} className='px-2 mt-4'>
-                                            <p className="fs-13 mb-0" style={{ color: '#b8bdc0' }}>Additional Information</p>
+                                                <p className="fs-13 mb-0" style={{ color: '#b8bdc0' }}>Additional Information</p>
                                                 <div className="w-100 vstack p-2 rounded-2 form-box">
                                                     <Input 
                                                         id="additional_information"

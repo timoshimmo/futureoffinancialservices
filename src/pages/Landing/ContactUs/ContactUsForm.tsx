@@ -5,12 +5,15 @@ import * as Yup from "yup";
 import { useFormik } from "formik";
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
+import axios from 'axios';
 
 const ContactUsForm = () => {
 
     const [successful, setSuccessful] = useState(false);
     const [loading, setLoading] = useState(false);
-    const [value, setValue] = useState('');
+
+    const [errorMsg, setErrorMsg] = useState('');
+    const [closeAlert, setCloseAlert] = useState(false);
 
     const validation = useFormik({
         // enableReinitialize : use this flag when initial values needs to be changed
@@ -20,31 +23,53 @@ const ContactUsForm = () => {
             first_name: '',
             last_name: '',
             email: '',
-            phone_no: '',
-            additional_info: ''
+            phonenumber: '',
+            additional_information: ''
         },
         validationSchema: Yup.object({
             first_name: Yup.string().required("Please Enter Your First Name"),
             last_name: Yup.string().required("Please Enter Your Last Name"),
             email: Yup.string().required("Please Enter Your Email"),
-            phone_no: Yup.string().required("Please Your Phone Number is Required"),
-            additional_info: Yup.string(),
+            phonenumber: Yup.string().required("Please Your Phone Number is Required"),
+            additional_information: Yup.string(),
         }),
         onSubmit: (values) => {
             /*dispatch(registerUser(values));
             setLoader(true)
             */
-
-            handleClick();
+            handleClick(values);
         }
     });
 
-    const handleClick = () => {
-        setLoading(true);
-        setTimeout(() => {
+    const handleClick = (obj: any) => {
+        
+       /* setTimeout(() => {
             setSuccessful(true);
             setLoading(false);
-        }, 7000);
+        }, 7000); */
+
+        setLoading(true);
+        
+        axios.post('https://dev-api.futureoffinancialservices.org/api/v1/contact', obj)
+        .then(response => {
+            console.log(response);
+            setSuccessful(true);
+            setLoading(false);
+            validation.resetForm();
+        })
+        .catch((error) => {
+            if (error.response) {
+                console.log(error.response.data.message);
+                setErrorMsg(error.response.data.message);
+                setCloseAlert(true);
+                console.log("server error");
+            } else if (error.request) {
+                console.log("network error");
+            } else {
+                console.log(error);
+            }
+            setLoading(false);
+      })
     };
 
     return (
@@ -131,9 +156,9 @@ const ContactUsForm = () => {
                                             <Label className="fs-13 form-label mb-0">Phone Number</Label>
                                             <PhoneInput
                                                 country={'gb'}
-                                                value={value}
                                                 placeholder="Enter Phone Number" 
-                                                onChange={phone => setValue(phone)}
+                                                onChange={value => validation.setFieldValue("phonenumber", value)}
+                                                value={validation.values.phonenumber || ""}
                                                 containerClass="w-100 vstack p-2 rounded-2 form-box"
                                                 inputClass='fs-14 phone-input-style'
                                                 inputStyle={{ color: '#303030', borderColor: 'transparent', boxShadow: 'none', fontFamily: 'Montserrat, IBM Plex Sans, sans-serif' }} 
@@ -159,20 +184,20 @@ const ContactUsForm = () => {
                                             </div> */}
                                         </Col>
                                         <Col lg={12} sm={12} className='px-2 mt-4'>
-                                            <Label className="fs-13 form-label mb-0">Additional Information</Label>
+                                            <p className="fs-13 mb-0" style={{ color: '#b8bdc0' }}>Additional Information</p>
                                             <div className="w-100 vstack p-2 rounded-2 form-box">
                                                 <Input 
-                                                    id="additional_info"
-                                                    name="additional_info"
+                                                    id="additional_information"
+                                                    name="additional_information"
                                                     type="textarea"
                                                     rows="4" 
                                                     placeholder="Enter Your Message here" 
                                                     className="border-0 fs-14 px-2"  
                                                     onChange={validation.handleChange}
                                                     onBlur={validation.handleBlur}
-                                                    value={validation.values.additional_info || ""}
+                                                    value={validation.values.additional_information || ""}
                                                     invalid={
-                                                        validation.touched.additional_info && validation.errors.additional_info ? true : false
+                                                        validation.touched.additional_information && validation.errors.additional_information ? true : false
                                                     }
                                                     style={{ color: '#303030', backgroundColor: 'transparent', boxShadow: 'none' }} 
                                                 />

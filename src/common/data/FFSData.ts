@@ -434,15 +434,15 @@ const whyChooseData = [
 
 const joinContactsData = [
     {
-        img: avatar_male,
-        name: "Lanre Akomolafe",
-        email: "lanre@futureoffinancialservices.org",
-    },
-    {
         img: avatar_female,
         name: "Meaghan Johnson",
         email: "meaghan@futureoffinancialservices.org",
     },
+    {
+        img: avatar_male,
+        name: "Lanre Akomolafe",
+        email: "lanre@futureoffinancialservices.org",
+    }
 ]
 
 const whatIsData = [

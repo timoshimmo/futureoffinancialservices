@@ -78,9 +78,9 @@ const Footer = () => {
                                     <div className="text-white  mt-3">
                                         <ul className="list-unstyled ff-secondary footer-list">
                                             <li><Link to="/summit" className="text-white fs-14">FFS Summit 2024</Link></li>
-                                            <li><Link to="/speakers" className="text-white fs-14">2024 Speakers</Link></li>
-                                            {/* <span className="text-white fs-14">Events</span> */}
-                                             <li><Link to="/agenda" className="text-white fs-14">2024 Agenda</Link></li> 
+                                            {/* <li><Link to="/speakers" className="text-white fs-14">2024 Speakers</Link></li>
+                                           
+    <li><Link to="/agenda" className="text-white fs-14">2024 Agenda</Link></li> */}
                                         </ul>
                                     </div>
                                 </Col>
