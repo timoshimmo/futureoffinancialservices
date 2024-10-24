@@ -241,7 +241,7 @@ const Navbar = () => {
                            
                         </Scrollspy>
                         <div className='ms-4 mobile-nav-button'>
-                            <Link to="/register" className="btn btn-success btn-banner">Register </Link>
+                            <Link to="/contact-us" className="btn btn-success btn-banner">Contact Us</Link>
                         </div>       
                     </Collapse>
 
