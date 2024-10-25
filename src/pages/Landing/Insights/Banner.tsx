@@ -31,7 +31,7 @@ useEffect(() => {
 
     return (
         <React.Fragment>
-            <section className="section insight-banner home-banner-bg">
+            <section className="home-section-main insight-banner home-banner-bg">
                 <Container>
                     {/* <Row className='px-4 mb-5 justify-content-center'>
                         <Col lg={12} sm={12} className='d-flex justify-conntent-center'>
@@ -41,7 +41,7 @@ useEffect(() => {
                     <Row className='px-4'>
                         <Col lg={5} sm={12} className=' d-flex flex-column'>
                             <div className='py-5'>
-                                <h2 className='w-100 display-6 mb-4 fw-bold text-white' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif', display: 'inline-block', width: 'auto' }}>Future of <br /> Financial Services</h2>
+                                <h2 className='w-100 display-6 mb-4 fw-bold text-white home-title-mobile' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif', display: 'inline-block', width: 'auto' }}>Future of <br /> Financial Services</h2>
                                 {/* <h6 className="fw-bold text-white title" style={{ fontFamily: 'Georgia, Montserrat', fontSize: '35px' }}>Dedicated to driving the evolution and transformation of the financial services industry.</h6> */}
                                 <div className="w-100 btn-home-web">
                                     <div className="d-flex gap-3">
@@ -61,7 +61,7 @@ useEffect(() => {
                             />
                         
                         */}
-                        <Col lg={7} sm={12}>
+                        <Col lg={7} sm={12} xs={12} className='mob-width-vid'>
                             
 
                             <iframe

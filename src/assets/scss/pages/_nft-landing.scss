@@ -1349,6 +1349,11 @@
     object-fit: cover;
 }
 
+@media (max-width: 767.98px) {  
+    .insight-img-right {
+        margin-bottom: 40px;
+    }
+}
 
 .white-cover {
     height: 60px;
@@ -1561,6 +1566,22 @@
 .features-section {
     padding: 120px 0 0;
     position: relative;
+}
+
+.home-section-main {
+    padding: 100px 0 0;
+}
+
+
+@media (max-width: 767.98px) { 
+    .mob-width-vid {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .home-title-mobile {
+        text-align: center;
+    }
 }
 
 /*
