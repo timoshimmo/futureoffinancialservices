@@ -59,6 +59,7 @@ const Footer = () => {
                                             {/* home#banner */}
                                             {/* <li><Link to="/pages-gallery" className="text-white fs-14">Team</Link></li> */}
                                             <li><Link to="/contact-us" className="text-white fs-14">Contact Us</Link></li>
+                                            <li><Link to="/faq" className="text-white fs-14">FAQs</Link></li>
                                         </ul>
                                     </div>
                                 </Col>

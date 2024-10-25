@@ -316,7 +316,7 @@ const NavbarSecondary = () => {
                         >
                             <div className='d-flex justify-content-center align-items-center'>
                                 <li className="nav-item px-4">
-                                    <NavLink className="nav-link fs-14 text-white" to="/summit" activeClassName="active" tag={RRNavLink}>FFS 2024 Summit</NavLink>
+                                    <NavLink className="nav-link fs-14 text-white" to="/summit" activeClassName="active" tag={RRNavLink}>Overview</NavLink>
                                 </li>
                                 <li className="nav-item px-4">
                                     <NavLink className="nav-link fs-14 text-white" to="/speakers" activeClassName="active" tag={RRNavLink}>Speakers</NavLink>

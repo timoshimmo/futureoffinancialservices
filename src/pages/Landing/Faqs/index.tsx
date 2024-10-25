@@ -2,14 +2,10 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 //import Navbar from './Navbar';
 import Navbar from '../Common/Navbar';
-import About from "./About";
-import WhyChoose from './WhyChoose';
-import WhatWeDo from './WhatWeDo';
 import Faq from './Faq';
 import CTA from '../Common/CTA';
-import MissionVision from './MissionVision';
-import JoinUs from './JoinUs';
 import Footer from '../Common/footer';
+import Banner from './Banner';
 
 const index = () => {
     document.title = "Future of Financial Services | About";
@@ -41,11 +37,7 @@ const index = () => {
                     <meta name="description" content="Future of Financial Services | FAQs" />
                 </Helmet>
                 <Navbar />
-                <About />
-                <MissionVision />
-                <WhatWeDo />
-                <WhyChoose />
-                <JoinUs />
+                <Banner />
                 <Faq />
                 <CTA />
                 <Footer />

@@ -46,7 +46,7 @@ const index = () => {
                 <WhatWeDo />
                 <WhyChoose />
                 <JoinUs />
-                <Faq />
+                {/*<Faq />*/}
                 <CTA />
                 <Footer />
                 <button onClick={() => toTop()} className="btn btn-primary btn-icon landing-back-top" id="back-to-top">

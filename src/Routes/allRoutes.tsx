@@ -16,6 +16,7 @@ import Agenda from '../pages/Landing/Agenda';
 import Insights from '../pages/Landing/Insights';
 import PrivacyPolicy from '../pages/Landing/PrivacyPolicy';
 import UpdateRegisterForm from "pages/Landing/UpdateRegister";
+import Faq from "pages/Landing/Faqs";
 
 const publicRoutes : any= [
   //FFS Routes
@@ -31,6 +32,7 @@ const publicRoutes : any= [
   { path: "/insights", component: <Insights />},
   { path: "/privacy", component: <PrivacyPolicy />},
   { path: "/summit", component: <Home />},
+  { path: "/faq", component: <Faq />},
   {path: "/booking/:token", component: <UpdateRegisterForm />},
   
   

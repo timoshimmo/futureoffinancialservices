@@ -25,35 +25,18 @@ const Faq = () => {
     
     return (
         <React.Fragment>
-            <section className="section px-4 faq-full-body"> 
+            <section className="section px-4 faq-page-body"> 
             <Container>
-                <Row className="justify-content-center mt-5">
+                {/*<Row className="justify-content-center mt-5">
                     <Col lg={6}>
                         <div className="text-center mb-5">
                             <h2 className="mb-2 fw-semibold lh-base text-primary" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>FAQs</h2>
                             <p className="fs-13 text-white">Find answers to common questions about the conference, including registration details, schedule information, and more.</p>
                         </div>
                     </Col>
-                </Row>
+    </Row> */}
                 
                 <Row className='justify-content-center partners-row mx-auto'>
-                 
-                   {/* <Col lg={9} sm={12} xs={12} className='d-flex justify-content-center'>
-                         <div className='w-1/2 max-sm:w-full max-sm:mt-10 max-sm:order-2'>
-                            <div className='accordion' role='tablist'>
-                                {faqData.map((item, key) => (
-                                    <Panel
-                                        key={key}
-                                        {...item}
-                                        index={key}
-                                        activeTab={activeTab}
-                                        activateTab={()=> activateTab(key)}
-                                    />
-                                ))}
-
-                            </div>
-                        </div>
-                                </Col> */}
                     <Col lg={10} sm={12} xs={12}>
                         <Accordion id="default-accordion-example" flush open={openFlush} toggle={toggleFlush}>
                             {faqFullData.map((item, key) => (

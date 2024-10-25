@@ -62,9 +62,9 @@ useEffect(() => {
                         
                         */}
                         <Col lg={7} sm={12} xs={12} className='mob-width-vid'>
-                            
 
-                            <iframe
+                            {/*
+                              <iframe
                             src='https://www.youtube.com/embed/K6ckNHTy2r4?autoplay=1&mute=1'
                             frameBorder='0'
                             allow='accelerometer; autoplay; encrypted-media; '
@@ -72,18 +72,40 @@ useEffect(() => {
                             title='video'
                             className='w-100 h-100 rounded-4'
                             />
+
+                             <video
+                                style={{ maxWidth: "100%", width: "800px", margin: "0 auto", borderRadius: '20px' }}
+                                playsInline
+                                loop
+                                muted
+                                src="https://drive.google.com/uc?id=1BIJrJLGnpJrvCQ-yR_KKuZEoE7HJDkqf"
+                                ref={videoEl}
+                            />
+                        
+                    */}
+
+                            <iframe 
+                            src="https://drive.google.com/file/d/1BIJrJLGnpJrvCQ-yR_KKuZEoE7HJDkqf/preview" 
+                            allow='autoplay'
+                            allowFullScreen
+                            title='video'
+                            className='w-100 h-100 rounded-4 border border-dark'
+                            />
                         </Col>
                         
                     </Row>
-                    {/* <div className="placeholder-insight-space"></div> */}
+                    {/* <div className="placeholder-insight-space"></div> ?autoplay=1*/}
                 </Container>
                 <div className="features-section mobile-section">
                     <Container>
-                        <Row className='px-4 mb-5'>
-                            <Col lg={4} sm={12}>
-                                <h2 className='insight-title mb-2 fw-semibold lh-base text-primary' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif', display: 'inline-block', width: 'auto' }}>Featured Updates</h2>
-                            </Col>
-                        </Row>
+                        {/*
+                            <Row className='px-4 mb-5'>
+                                <Col lg={4} sm={12}>
+                                    <h2 className='insight-title mb-2 fw-semibold lh-base text-primary' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif', display: 'inline-block', width: 'auto' }}>Featured Updates</h2>
+                                </Col>
+                            </Row>
+                        */}
+                       
                         <Row className='px-4 mb-3'>  
                             {insightsData.filter(data => data.type === 0).map((item, idx) => ( 
                                 <Col lg={3}>
@@ -100,7 +122,6 @@ useEffect(() => {
                     </Container>
                 </div>
             </section>
-           
         </React.Fragment>
     );
 

@@ -831,6 +831,14 @@
     height: 1250px;
 }
 
+.join-full-body {
+    height: 1000px;
+}
+
+.faq-page-body {
+    height: 1150px;
+}
+
 .mobile-cta-home {
     display: none;
 }
@@ -846,6 +854,14 @@
 
     .faq-full-body {
         height: 1000px;
+    }
+
+    .join-full-body {
+        height: 800px;
+    }
+
+    .faq-page-body {
+        height: 950px;
     }
 }
 
@@ -1560,6 +1576,18 @@
     /* Internet Explorer 10-11 */
     text-align: center;
     padding-left: 120px;
+}
+
+.cta-email-mobile::placeholder {
+             
+    /* Firefox, Chrome, Opera */
+    text-align: center;
+}
+
+.cta-email-mobile:-ms-input-placeholder {
+             
+    /* Internet Explorer 10-11 */
+    text-align: center;
 }
 
 

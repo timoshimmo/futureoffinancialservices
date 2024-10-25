@@ -8,7 +8,7 @@ const JoinUs = () => {
     
     return (
         <React.Fragment>
-            <section className="section px-4" style={{ backgroundColor: "#141413" }}>
+            <section className="section join-full-body px-4" style={{ backgroundColor: "#141413" }}>
                 <Container>
                     <Row className="justify-content-center">
                         <Col lg={7}>
