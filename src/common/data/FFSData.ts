@@ -825,11 +825,11 @@ const speakersData = [
         name: "Bode Pedro",
         credentials: "Founder and CEO, Casava",
     },
-    {
+   /* {
         img: img_andy,
         name: "Andy Jenkinson",
         credentials: "Group Chief Executive Officer, Cybersec Innovation Partners"
-    },
+    }, */
     {
         img: img_sophie_guibaud,
         name: "Sophie Guibaud",
@@ -1445,7 +1445,7 @@ const speakersFullData = [
         ],
         bio: "is a highly accomplished and dynamic Tech Entrepreneur, and visionary leader, known for tackling problems with innovative solutions, and transforming ideas into successful startups and businesses. He has a deep understanding of the technology and entrepreneurial landscape in Sub-Saharan Africa, and has a passion for digital innovation, investing in and advising high-growth ventures.\n\nAs a seasoned entrepreneur, he founded Casava, a licensed Insurtech solution and Micro Insurance Underwriter, developed on the notion that insurance should be an enjoyable experience to help people thrive and prosper at home, at work and in their communities. Casava is Nigeria’s first 100% digital insurance company. It recently raised $4m in venture funding, the largest pre-seed raise for an Insurtech company in Africa."
     },
-    {
+    /*{
         id: 31,
         img: img_andy,
         pic: img_andy,
@@ -1463,7 +1463,7 @@ const speakersFullData = [
 
         ],
         bio: "is a senior and seasoned innovative Executive with over 30 years' experience as a hands-on lateral thinking CEO, coach, and leader. A 'big deal' business accelerator, and inspirational, lateral thinker, Andy has crafted, created, and been responsible for delivering 100’s £millions of projects within the Cyber, Technical, Risk and Compliance markets for some of the world's largest, leading organisations.\n\nAndy has a demonstrable track record of large-scale technical delivery and management within many sectors including the Professional, Managed, and Financial Services. Andy has now authoured four books: Stuxnet to Sunburst, Ransomware & CyberCrime, Digital Blood on Their Hands, and the latest, Surveillance, The Blueprint for Cybercrime due to be published in 2024 and authored some 2000 reports on the subject. Andy’s articles over the last 12 months attracted some 2.6 million unique readers."
-    },
+    },*/
     {
         id: 32,
         img: img_sophie_guibaud,
@@ -2416,7 +2416,8 @@ const agendaData = [
         theme: ["cybersecurity", "risk"],
         type: ["keynote"],
         description: "Keynote Presentation",
-        speaker: [
+        speaker: null
+        /*speaker: [
             {
                 img: img_andy,
                 pic: img_andy,
@@ -2425,7 +2426,7 @@ const agendaData = [
                 credentials: "Group Chief Executive Officer",
                 company: "Cybersec Innovation Partners",
             }
-        ]
+        ]*/
     },
     {
         id: 37,
