@@ -289,6 +289,15 @@
     }
 }
 
+
+.home-banner-bg {
+    background-image: url('../../images/banners/home_top_banner3.png');
+   /* background-size: contain; */
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 100% 90%;
+}
+
 .title-top-spacing {
     margin-top: 0px;
 }
@@ -1312,9 +1321,11 @@
 
 }
 
+/*  border-bottom: 1px solid #FFB615;  */
+
 .insight-title {
     padding-bottom: 10px;
-    border-bottom: 1px solid #FFB615;
+    border-bottom: 1px solid #FFFFFF;
 }
 
 .insight-title-link {
@@ -1544,6 +1555,12 @@
     /* Internet Explorer 10-11 */
     text-align: center;
     padding-left: 120px;
+}
+
+
+.features-section {
+    padding: 120px 0 0;
+    position: relative;
 }
 
 /*
