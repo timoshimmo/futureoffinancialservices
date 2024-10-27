@@ -39,7 +39,7 @@ useEffect(() => {
                         </Col>
     </Row> */}
                     <Row className='px-4'>
-                        <Col lg={5} sm={12} className=' d-flex flex-column'>
+                        <Col lg={5} sm={12} className=' d-flex flex-column justify-content-center'>
                             <div className='py-5'>
                                 <h2 className='w-100 display-6 mb-4 fw-bold text-white home-title-mobile' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif', display: 'inline-block', width: 'auto' }}>Future of <br /> Financial Services</h2>
                                 {/* <h6 className="fw-bold text-white title" style={{ fontFamily: 'Georgia, Montserrat', fontSize: '35px' }}>Dedicated to driving the evolution and transformation of the financial services industry.</h6> */}
@@ -84,13 +84,27 @@ useEffect(() => {
                         
                     */}
 
-                            <iframe 
+                            <video
+                                style={{ maxWidth: "100%", width: "100%", margin: "0 auto"}}
+                                className='rounded-4 border border-dark'
+                                playsInline
+                                loop
+                                muted
+                                src="https://res.cloudinary.com/westpaybankit/video/upload/v1730055056/FFS/FFS_Summit_Summary.mp4"
+                                ref={videoEl}
+                            />
+
+{/*
+
+ <iframe 
                             src="https://drive.google.com/file/d/1BIJrJLGnpJrvCQ-yR_KKuZEoE7HJDkqf/preview" 
                             allow='autoplay'
                             allowFullScreen
                             title='video'
                             className='w-100 h-100 rounded-4 border border-dark'
                             />
+                */}
+                           
                         </Col>
                         
                     </Row>

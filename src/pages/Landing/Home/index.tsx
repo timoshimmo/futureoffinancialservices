@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import Navbar from "../Common/Navbar";
-import NavbarSummit from '../Common/NavbarSummit';
 import NavbarSecondary from '../Common/NavbarSecondary';
 import Banner from "./Banner";
 import Connect from './Connect';
@@ -12,6 +11,7 @@ import Latest from './Latest';
 import Faq from './Faq';
 import CTA from '../Common/CTA';
 import Footer from "../Common/footer";
+import FooterSummit from '../Common/footerSummit';
 
 const index = () => {
     document.title = "Future of Financial Services | Home";
@@ -63,7 +63,7 @@ const index = () => {
                 <Latest />
                 <Faq />
                 <CTA />
-                <Footer />
+                <FooterSummit />
                 <button onClick={() => toTop()} className="btn btn-primary btn-icon landing-back-top" id="back-to-top">
                     <i className="ri-arrow-up-line"></i>
                 </button>

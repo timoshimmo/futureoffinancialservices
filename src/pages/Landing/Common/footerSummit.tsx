@@ -3,11 +3,9 @@ import { Link } from 'react-router-dom';
 import { Col, Container, Row } from 'reactstrap';
 
 // Import Images
-//import logolight from "../../../assets/images/ffs_top_logo_light.png";
-//import ffsLogoDark from "../../../assets/images/ffs_top_logo_dark.png";
 import ffsLogoLight1 from "../../../assets/images/ffs_top_logo_light2.png";
 
-const Footer = () => {
+const FooterSummit = () => {
     return (
         <React.Fragment>
             <footer className="bg-dark pb-5 position-relative footer-style">
@@ -78,10 +76,9 @@ const Footer = () => {
                                     <h5 className="text-primary mb-0" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>Events</h5>
                                     <div className="text-white  mt-3">
                                         <ul className="list-unstyled ff-secondary footer-list">
-                                            <li><Link to="/summit" className="text-white fs-14">FFS Summit 2024</Link></li>
-                                            {/* <li><Link to="/speakers" className="text-white fs-14">2024 Speakers</Link></li>
-                                           
-    <li><Link to="/agenda" className="text-white fs-14">2024 Agenda</Link></li> */}
+                                            {/* <li><Link to="/summit" className="text-white fs-14">FFS Summit 2024</Link></li> */}
+                                            <li><Link to="/speakers" className="text-white fs-14">Speakers</Link></li>
+                                            <li><Link to="/agenda" className="text-white fs-14">Agenda</Link></li>
                                         </ul>
                                     </div>
                                 </Col>
@@ -125,4 +122,4 @@ const Footer = () => {
     );
 };
 
-export default Footer;
+export default FooterSummit;

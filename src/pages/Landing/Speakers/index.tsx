@@ -1,10 +1,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import Navbar from '../Common/Navbar';
+//import Navbar from '../Common/Navbar';
 import NavbarSecondary from '../Common/NavbarSecondary';
 import Banner from "./Banner";
 import SpeakersList from './SpeakersList';
-import Footer from '../Common/footer';
+//import Footer from '../Common/footer';
+import FooterSummit from '../Common/footerSummit';
 
 const index = () => {
     document.title = "Future of Financial Services | Speakers";
@@ -24,12 +25,6 @@ const index = () => {
         }
     };
 
-    const toTop = () => {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-    };
-
-
     return (
         <React.Fragment>
             <div className="layout-wrapper landing body-bg-dark">
@@ -39,7 +34,7 @@ const index = () => {
                 <NavbarSecondary />
                 <Banner />
                 <SpeakersList />
-                <Footer />
+                <FooterSummit />
             </div>
         </React.Fragment>
     );
