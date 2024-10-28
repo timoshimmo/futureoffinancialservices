@@ -1,19 +1,13 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { Container, Row, Col, Card, CardBody, Nav, NavItem, NavLink } from 'reactstrap';
-import insights1 from "../../../assets/images/insights/insight1.png";
-import insights2 from "../../../assets/images/insights/insight2.png";
-import insights3 from "../../../assets/images/insights/insight3.png";
-import home_top_banner from "../../../assets/images/banners/home_top_banner.png";
-
-
-import ic_up_right_arrow from "../../../assets/images/icons/ic_up_righ_arrow.png";
-
+import { Container, Row, Col, NavLink, Button } from 'reactstrap';
 import { insightsData } from '../../../common/data';
+import VideoModal from 'Components/Common/VideoModal';
 
 const Banner = () => {
 
 const videoEl = useRef<HTMLVideoElement>(null);
+const [videoModal, setVideoModal] = useState<boolean>(false);
 
 useEffect(() => {
     attemptPlay();
@@ -28,6 +22,11 @@ useEffect(() => {
 
       //https://stream.mux.com/6fiGM5ChLz8T66ZZiuzk1KZuIKX8zJz00/medium.mp4
   };
+
+  const onClickFull = () => {
+    setVideoModal(true);
+  };
+  
 
     return (
         <React.Fragment>
@@ -61,7 +60,7 @@ useEffect(() => {
                             />
                         
                         */}
-                        <Col lg={7} sm={12} xs={12} className='mob-width-vid'>
+                        <Col lg={7} sm={12} xs={12} className='mob-width-vid position-relative'>
 
                             {/*
                               <iframe
@@ -81,9 +80,18 @@ useEffect(() => {
                                 src="https://drive.google.com/uc?id=1BIJrJLGnpJrvCQ-yR_KKuZEoE7HJDkqf"
                                 ref={videoEl}
                             />
+
+                               <iframe 
+                            src="https://drive.google.com/file/d/1BIJrJLGnpJrvCQ-yR_KKuZEoE7HJDkqf/preview" 
+                            allow='autoplay'
+                            allowFullScreen
+                            title='video'
+                            className='w-100 h-100 rounded-4 border border-dark'
+                            />
                         
                     */}
 
+                            
                             <video
                                 style={{ maxWidth: "100%", width: "100%", margin: "0 auto"}}
                                 className='rounded-4 border border-dark'
@@ -94,17 +102,12 @@ useEffect(() => {
                                 ref={videoEl}
                             />
 
-{/*
-
- <iframe 
-                            src="https://drive.google.com/file/d/1BIJrJLGnpJrvCQ-yR_KKuZEoE7HJDkqf/preview" 
-                            allow='autoplay'
-                            allowFullScreen
-                            title='video'
-                            className='w-100 h-100 rounded-4 border border-dark'
-                            />
-                */}
-                           
+                            
+                            <div className="d-flex position-absolute bottom-0 start-0 ps-4 pb-4">
+                                <Button onClick={onClickFull} className="btn border-0 px-4 py-2 fs-14 font-semibold text-white opacity-100" style={{ background: "rgba(255,255,255,0.15)" }}><span className='me-2'>Watch Full Video</span><i className="ri-external-link-fill"></i></Button>
+                            </div>  
+                            
+                            
                         </Col>
                         
                     </Row>
@@ -136,6 +139,10 @@ useEffect(() => {
                     </Container>
                 </div>
             </section>
+            <VideoModal
+                show={videoModal}
+                onCloseClick={() => setVideoModal(false)}
+            />
         </React.Fragment>
     );
 
