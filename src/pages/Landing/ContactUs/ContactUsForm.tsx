@@ -9,7 +9,7 @@ import axios from 'axios';
 
 const ContactUsForm = () => {
 
-    const [successful, setSuccessful] = useState(true);
+    const [successful, setSuccessful] = useState(false);
     const [loading, setLoading] = useState(false);
 
     const [errorMsg, setErrorMsg] = useState('');

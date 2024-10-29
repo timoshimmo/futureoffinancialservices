@@ -15,6 +15,7 @@ import Speakers from '../pages/Landing/Speakers';
 import Agenda from '../pages/Landing/Agenda';
 import Insights from '../pages/Landing/Insights';
 import PrivacyPolicy from '../pages/Landing/PrivacyPolicy';
+import TermsConditions from '../pages/Landing/TermsConditions';
 import UpdateRegisterForm from "pages/Landing/UpdateRegister";
 import Faq from "pages/Landing/Faqs";
 
@@ -31,6 +32,7 @@ const publicRoutes : any= [
   { path: "/agenda", component: <Agenda /> },
   { path: "/insights", component: <Insights />},
   { path: "/privacy", component: <PrivacyPolicy />},
+  { path: "/terms", component: <TermsConditions />},
   { path: "/summit", component: <Home />},
   { path: "/faq", component: <Faq />},
   {path: "/booking/:token", component: <UpdateRegisterForm />},

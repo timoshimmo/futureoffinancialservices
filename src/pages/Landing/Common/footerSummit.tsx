@@ -98,9 +98,9 @@ const FooterSummit = () => {
                             <div className="text-sm-end mobile-copyright-area">
                                 <ul className="list-inline mb-0 footer-social-link">
                                     <li className="list-inline-item px-2">
-                                        {/* <Link to="#" className="d-block"> */}
+                                        <Link to="/terms" className="d-block">
                                             <span className="text-muted fs-14">Terms</span>
-                                        {/* </Link> */}
+                                        </Link> 
                                     </li>
                                     <li className="list-inline-item px-2">
                                          <Link to="/privacy" className="d-block"> 
