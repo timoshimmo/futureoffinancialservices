@@ -12,8 +12,8 @@ const Contact = () => {
                     <Row className="inner-contact-body">
                         <Col lg={4} sm={12} className='mobile-bottom-padding'>
                             <div>
-                                <h2 className="mb-2 fw-bold lh-base text-white">Need More Assistance?</h2>
-                                <p className="fs-14 text-white">We are here to assist you with any requires you may have.</p>
+                                <h2 className="mb-2 fw-bold lh-base text-white">Need Assistance? We're Here to Help!</h2>
+                                <p className="fs-14 text-white">Fill out the form above, and one of our team members will reach out to you shortly.</p>
                             </div>
                         </Col>
                         {/*
