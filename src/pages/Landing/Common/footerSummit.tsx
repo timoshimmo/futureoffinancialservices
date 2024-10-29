@@ -108,9 +108,9 @@ const FooterSummit = () => {
                                          </Link>
                                     </li>
                                     <li className="list-inline-item px-2">
-                                        {/* <Link to="#" className="d-block"> */}
+                                        <Link to="/cookie-policy" className="d-block">
                                             <span className="text-muted fs-14">Cookies</span>
-                                        {/* </Link> */}
+                                        </Link>
                                     </li> 
                                 </ul>
                             </div>
