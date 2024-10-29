@@ -5,6 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { configureStore } from "@reduxjs/toolkit";
+import ScrollToTop from 'Layouts/ScrollToTop';
 import rootReducer from "./slices";
 
 const store = configureStore({ reducer: rootReducer, devTools: true });
@@ -16,9 +17,9 @@ root.render(
   <Provider store={store}>
     <React.Fragment>
       <BrowserRouter basename={process.env.PUBLIC_URL}>
-        
+        <ScrollToTop>
           <App />
-       
+        </ScrollToTop>
       </BrowserRouter>
     </React.Fragment>
   </Provider>

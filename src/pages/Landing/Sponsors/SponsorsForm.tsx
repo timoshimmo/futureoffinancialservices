@@ -63,8 +63,9 @@ const SponsorsForm = () => {
         })
         .catch((error) => {
             if (error.response) {
-                console.log(error.response.data.message);
-                setErrorMsg(error.response.data.message);
+                console.log(error.response);
+                setErrorMsg(error.response.data.error);
+                setCloseAlert(true);
                 console.log("server error");
             } else if (error.request) {
                 console.log("network error");
@@ -77,7 +78,6 @@ const SponsorsForm = () => {
 
     const onDismiss = () => {
         setCloseAlert(false);
-
     }
 
 

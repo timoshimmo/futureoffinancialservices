@@ -1,6 +1,5 @@
 import React, { useState, useEffect }  from 'react';
-import { Container, Row, Col, Input, Form } from 'reactstrap';
-import { Link } from 'react-router-dom';
+import { Container, Row, Col, Input, Form, Alert } from 'reactstrap';
 import axios from 'axios';
 import * as Yup from "yup";
 import { useFormik } from "formik";
@@ -10,6 +9,8 @@ const CTA = () => {
 
     const [successful, setSuccessful] = useState(false);
     const [loading, setLoading] = useState(false);
+    const [errorMsg, setErrorMsg] = useState('');
+    const [closeAlert, setCloseAlert] = useState(false);
 
     useEffect(() => {
         setTimeout(() => {
@@ -35,7 +36,7 @@ const CTA = () => {
             setLoader(true)
             */
             handleClick(values);
-            resetForm();
+            //resetForm();
         }
     });
 
@@ -49,20 +50,27 @@ const CTA = () => {
                 console.log(response);
                 setSuccessful(true);
                 setLoading(false);
+                validation.resetForm();
             })
             .catch((error) => {
                 if (error.response) {
-                console.log(error.response);
-                console.log("server error");
+                    console.log("server error");
+                    console.log(error.response.data.error);
+                    setErrorMsg(error.response.data.error);
+                    setCloseAlert(true);
                 } else if (error.request) {
-                console.log("network error");
+                    console.log("network error");
                 } else {
-                console.log(error);
+                    console.log(error);
                 }
                 setLoading(false);
           })
         }
     };
+
+    const onDismiss = () => {
+        setCloseAlert(false);
+    }
 
     return (
         <React.Fragment>
@@ -116,8 +124,11 @@ const CTA = () => {
                                     {/* End Constant Contact Inline Form Code */}
                                 
                             </Form>
-                            
+                            <div className='w-100 px-2 mt-3'>
+                                {errorMsg && errorMsg !== '' ? (<Alert color="danger" isOpen={closeAlert} toggle={onDismiss}> {errorMsg} </Alert>) : null}
+                            </div>
                         </Col>
+                       
                     </Row>
                     :
                     <Row className="justify-content-center align-items-center gy-4">
