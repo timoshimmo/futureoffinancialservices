@@ -1460,6 +1460,20 @@
     "@ckeditor/ckeditor5-utils" "40.2.0"
     lodash-es "4.17.21"
 
+"@contentful/rich-text-react-renderer@^16.0.0":
+  version "16.0.0"
+  resolved "https://registry.yarnpkg.com/@contentful/rich-text-react-renderer/-/rich-text-react-renderer-16.0.0.tgz#6d3f7d594bb9149acf88f9c1b2190475603b0967"
+  integrity sha512-0jVuTe9f+DvQjNfhta7zYYUwtRBPz01nS2kS1CzGSi/EjAy9CFFQ+M0G1OHAzNNvFyAtDs5/4rndHuVzsedV5g==
+  dependencies:
+    "@contentful/rich-text-types" "^17.0.0"
+
+"@contentful/rich-text-types@^17.0.0":
+  version "17.0.0"
+  resolved "https://registry.yarnpkg.com/@contentful/rich-text-types/-/rich-text-types-17.0.0.tgz#f58badfe01fa10860e065c02fd584f428a70ecc6"
+  integrity sha512-x50t6sILzFHBdFpAo0foJRnH8fHWyidheWhAv3uwt9aOnNqTh893gxyoc3Q0RVEZxXfHpTi+O9gmakHcdlRdTA==
+  dependencies:
+    is-plain-obj "^3.0.0"
+
 "@csstools/normalize.css@*":
   version "12.1.1"
   resolved "https://registry.npmjs.org/@csstools/normalize.css/-/normalize.css-12.1.1.tgz"
@@ -9782,6 +9796,11 @@ react-is@^18.0.0:
   version "18.3.1"
   resolved "https://registry.npmjs.org/react-is/-/react-is-18.3.1.tgz"
   integrity sha512-/LLMVyas0ljjAtoYiPqYiL8VWXzUUdThrmU5+n20DZv+a+ClRoevUzw5JxU+Ieh5/c87ytoTBV9G1FiKfNJdmg==
+
+react-loading-skeleton@^3.5.0:
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/react-loading-skeleton/-/react-loading-skeleton-3.5.0.tgz#da2090355b4dedcad5c53cb3f0ed364e3a76d6ca"
+  integrity sha512-gxxSyLbrEAdXTKgfbpBEFZCO/P153DnqSCQau2+o6lNy1jgMRr2MmRmOzMmyrwSaSYLRB8g7b0waYPmUjz7IhQ==
 
 react-masonry-component@^6.3.0:
   version "6.3.0"

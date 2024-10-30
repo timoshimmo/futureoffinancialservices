@@ -1612,6 +1612,35 @@
     }
 }
 
+.content-p {
+    color: #FFFFFF;
+    font-size: 1rem;
+    line-height: 1.7rem;
+
+}
+
+.content-h1 {
+    color: #33CC99;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+
+.content-h4 {
+    color: #33CC99;
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+
+.content-h6 {
+    color: #FFB615;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.white-divider {
+    border-top: 1px solid white;
+}
 /*
 .custom-control-input:checked ~ .custom-control-label::before {
     background-color: green!important;

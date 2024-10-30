@@ -19,6 +19,7 @@ import TermsConditions from '../pages/Landing/TermsConditions';
 import CookiePolicy from '../pages/Landing/CookiesPolicy';
 import UpdateRegisterForm from "pages/Landing/UpdateRegister";
 import Faq from "pages/Landing/Faqs";
+import BlogDetails from "pages/Landing/BlogDetails";
 
 const publicRoutes : any= [
   //FFS Routes
@@ -38,8 +39,8 @@ const publicRoutes : any= [
   { path: "/summit", component: <Home />},
   { path: "/faq", component: <Faq />},
   {path: "/booking/:token", component: <UpdateRegisterForm />},
-  
-  
+  { path: "/blog/:slug", component: <BlogDetails />},
+
   /*
   {
     path: "/",
