@@ -24,17 +24,10 @@ interface IArticles {
     slug: string 
 }
 
-const Banner = () => {
+const Main = () => {
 
     const pageSize = 6;
-    const [newsState, setNewsState] = useState([]);
-    const [currentState, setCurrentState] = useState(0);
-    const [pageState, setPageState] = useState(0);
-
-    const [mainInsights, setMainInsights] = useState([]);
-
     const [articlesData, setArticlesData] = useState<IArticles[] | []>([]);
-
     const [currentPage, setCurrentPage] = useState(1);
 
 
@@ -85,6 +78,10 @@ const Banner = () => {
     
     }, []);
 
+    const featuredListData = useMemo(() => {
+        return articlesData.filter(data => data.blogType === true);
+      }, [articlesData]);
+
     
     const currentListData = useMemo(() => {
         const firstPageIndex = (currentPage - 1) * pageSize;
@@ -94,85 +91,137 @@ const Banner = () => {
 
     return (
         <React.Fragment>
-            <section className="section mobile-section">
+            <section className="features-section mobile-section">
                 <Container>
-                    <Row className='px-4 mb-5'>
-                        <Col lg={4} sm={12}>
-                            <h2 className='insight-title mb-2 fw-semibold lh-base text-primary' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif', display: 'inline-block', width: 'auto' }}>News & Updates</h2>
-                        </Col>
-                    </Row>
-                    <Row className='px-4 mb-3'>
-                        {currentListData.length > 0 ?
-                        
-                            currentListData.map((item, key) => (
-                                <Col lg={4}>
-                                    <div className='w-100 news-bottom-margin' key={key}>
-                                        <img src={item.blogImage.file.url} className='w-100 rounded-4'/>
-                                        <div className='w-100 title-small-top-spacing-news'>
-                                            <p className='fs-15 text-primary mb-2 fw-semibold'>{item.author.data.fields.name} <span>.</span> {moment(item.publishedDate).format("DD MMM YYYY")}</p>
-                                            <div className='d-flex justify-content-between'>    
-                                                <div style={{ width: '90%' }}>
-                                                    <Link to={`/blog/${item.slug}`} state={JSON.stringify(item)} className='h5 fw-bold insight-title-link' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif', overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>{item.title}</Link> 
-                                                </div>
-                            
-                                                <div className='d-flex justify-content-end mt-1' style={{ width: '10%' }}>
-                                                    <img src={ic_up_right_arrow} height={10}/>
-                                                </div>
-                                            </div>
-                                            <div className='d-flex align-items-center gap-2 mt-3'>
-                                            {
-                                                item.tags.map((row: any) => (
-                                                    <p className='fs-12 border border-secondary text-secondary py-2 px-4 rounded-pill'>{row}</p>
-                                                ))
-                                            
-                                            }
-                                                
-                                                {/* <p className='fs-12 border border-secondary text-secondary py-2 px-4 rounded-pill'>{item.tags[0]}</p> */}
+                    <Row className='px-4 mb-3'> 
+                        {featuredListData.length > 0 ?
+                                featuredListData.map((item) => ( 
+                                    <Col lg={3}>
+                                        <div className='insight-img-right w-100 rounded-4 d-flex align-items-end' style={{ backgroundImage: `url(${item.blogImage.file.url})`, position: 'relative', backgroundSize: 'cover', backgroundRepeat:'no-repeat', backgroundPosition: 'center center'  }}>
+                                            <div className="w-100 h-100 d-block" style={{ backgroundColor: '#000', opacity: '0.4', position: 'absolute' }}></div>
+                                            <div className='px-3 mb-2' style={{ zIndex: '100' }}>
+                                                <p className='fs-14 text-primary mb-2 fw-semibold title-top-spacing'>{item.author.data.fields.name} <span>.</span> {moment(item.publishedDate).format("DD MMM YYYY")}</p>
+                                                <Link to={`/blog/${item.slug}`} state={JSON.stringify(item)} className='h5 fw-bold insight-title-link' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>{item.title}</Link> 
                                             </div>
                                         </div>
-                                    </div>
+                                    </Col>
+                                ))
+                                :
+                                <>
+                                    <Col lg={3}>
+                                        <SkeletonTheme baseColor="#202020" highlightColor="#444">
+                                            <p>
+                                                <Skeleton count={1} height={320} className='rounded-4'/>
+                                            </p>
+                                        </SkeletonTheme>
+                                    </Col>
+                                    <Col lg={3}>
+                                        <SkeletonTheme baseColor="#202020" highlightColor="#444">
+                                            <p>
+                                                <Skeleton count={1} height={320} className='rounded-4'/>
+                                            </p>
+                                        </SkeletonTheme>
+                                    </Col>
+                                    <Col lg={3}>
+                                        <SkeletonTheme baseColor="#202020" highlightColor="#444">
+                                            <p>
+                                                <Skeleton count={1} height={320} className='rounded-4'/>
+                                            </p>
+                                        </SkeletonTheme>
+                                    </Col>
+                                    <Col lg={3}>
+                                        <SkeletonTheme baseColor="#202020" highlightColor="#444">
+                                            <p>
+                                                <Skeleton count={1} height={320} className='rounded-4'/>
+                                            </p>
+                                        </SkeletonTheme>
+                                    </Col>
+                                </>
+                        
+                        } 
+                            
+                    </Row>
+                    <div className='section px-4'>
+                        <Row className='px-2 mb-5'>
+                            <Col lg={4} sm={12}>
+                                <h2 className='insight-title mb-2 fw-semibold lh-base text-primary' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif', display: 'inline-block', width: 'auto' }}>News & Updates</h2>
+                            </Col>
+                        </Row>
+                        <Row className='px-2 mb-3'>
+                            {currentListData.length > 0 ?
+                            
+                                currentListData.map((item, key) => (
+                                    <Col lg={4}>
+                                        <div className='w-100 news-bottom-margin' key={key}>
+                                            <img src={item.blogImage.file.url} className='w-100 rounded-4'/>
+                                            <div className='w-100 title-small-top-spacing-news'>
+                                                <p className='fs-15 text-primary mb-2 fw-semibold'>{item.author.data.fields.name} <span>.</span> {moment(item.publishedDate).format("DD MMM YYYY")}</p>
+                                                <div className='d-flex justify-content-between'>    
+                                                    <div style={{ width: '90%' }}>
+                                                        <Link to={`/blog/${item.slug}`} state={JSON.stringify(item)} className='h5 fw-bold insight-title-link' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif', overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>{item.title}</Link> 
+                                                    </div>
+                                
+                                                    <div className='d-flex justify-content-end mt-1' style={{ width: '10%' }}>
+                                                        <img src={ic_up_right_arrow} height={10}/>
+                                                    </div>
+                                                </div>
+                                                <div className='d-flex align-items-center gap-2 mt-3'>
+                                                {
+                                                    item.tags.map((row: any) => (
+                                                        <p className='fs-12 border border-secondary text-secondary py-2 px-4 rounded-pill'>{row}</p>
+                                                    ))
+                                                
+                                                }
+                                                    
+                                                    {/* <p className='fs-12 border border-secondary text-secondary py-2 px-4 rounded-pill'>{item.tags[0]}</p> */}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </Col>
+                                ))
+                                :
+                                <>
+                                <Col lg={4}>
+                                    <SkeletonTheme baseColor="#202020" highlightColor="#444">
+                                        <p>
+                                            <Skeleton count={1} height={200} className='rounded-4 mb-3'/>
+                                            <Skeleton count={3} className='rounded-4'/>
+                                        </p>
+                                    </SkeletonTheme>
                                 </Col>
-                            ))
-                            :
-                            <>
-                            <Col lg={4}>
-                                <SkeletonTheme baseColor="#202020" highlightColor="#444">
-                                    <p>
-                                        <Skeleton count={1} height={200} className='rounded-4 mb-3'/>
-                                        <Skeleton count={3} className='rounded-4'/>
-                                    </p>
-                                </SkeletonTheme>
+                                <Col lg={4}>
+                                    <SkeletonTheme baseColor="#202020" highlightColor="#444">
+                                        <p>
+                                            <Skeleton count={1} height={200} className='rounded-4 mb-3'/>
+                                            <Skeleton count={3} className='rounded-4'/>
+                                        </p>
+                                    </SkeletonTheme>
+                                </Col>
+                                <Col lg={4}>
+                                    <SkeletonTheme baseColor="#202020" highlightColor="#444">
+                                        <p>
+                                            <Skeleton count={1} height={200} className='rounded-4 mb-3'/>
+                                            <Skeleton count={3} className='rounded-4'/>
+                                        </p>
+                                    </SkeletonTheme>
+                                </Col>
+                            </>
+                        
+                        }
+                        </Row>
+                        <Row>
+                            <Col lg={12} className='mt-5 side-spacing-pagination'>
+                                <Pagination
+                                    data={articlesData.filter(data => data.blogType === false)}
+                                    currentPage={currentPage}
+                                    setCurrentPage={setCurrentPage}
+                                    perPageData={pageSize}
+                                />
                             </Col>
-                            <Col lg={4}>
-                                <SkeletonTheme baseColor="#202020" highlightColor="#444">
-                                    <p>
-                                        <Skeleton count={1} height={200} className='rounded-4 mb-3'/>
-                                        <Skeleton count={3} className='rounded-4'/>
-                                    </p>
-                                </SkeletonTheme>
-                            </Col>
-                            <Col lg={4}>
-                                <SkeletonTheme baseColor="#202020" highlightColor="#444">
-                                    <p>
-                                        <Skeleton count={1} height={200} className='rounded-4 mb-3'/>
-                                        <Skeleton count={3} className='rounded-4'/>
-                                    </p>
-                                </SkeletonTheme>
-                            </Col>
-                        </>
+                        </Row>
+
+                    </div>
                     
-                    }
-                    </Row>
-                    <Row>
-                        <Col lg={12} className='mt-5 side-spacing-pagination'>
-                            <Pagination
-                                data={articlesData.filter(data => data.blogType === false)}
-                                currentPage={currentPage}
-                                setCurrentPage={setCurrentPage}
-                                perPageData={pageSize}
-                            />
-                        </Col>
-                    </Row>
                     {/*<div className="placeholder-insight-space"></div> */}
                 </Container>
             </section>
@@ -180,4 +229,4 @@ const Banner = () => {
     );
 }
 
-export default Banner;
+export default Main;

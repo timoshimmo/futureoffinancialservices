@@ -4,33 +4,16 @@ import { Container, Row, Col, NavLink, Button } from 'reactstrap';
 //import { insightsData } from '../../../common/data';
 import VideoModal from 'Components/Common/VideoModal';
 import axios from 'axios';
-import moment from 'moment';
-import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
-import 'react-loading-skeleton/dist/skeleton.css';
-
-interface IArticles {
-    blogImage: any,
-    title: string,
-    tags: any,
-    publishedDate: string,
-    author: any,
-    blogType: boolean,
-    contentText: string,
-    slug: string 
-}
 
 const Banner = () => {
 
 const videoEl = useRef<HTMLVideoElement>(null);
 const [videoModal, setVideoModal] = useState<boolean>(false);
-const navigate = useNavigate();
 
 const [title, setTitle] = useState("");
 const [btnText, setBtnText] = useState("");
 const [btnUrl, setBtnUrl] = useState("");
 const [videoUrl, setVideoUrl] = useState("");
-
-const [articlesData, setArticlesData] = useState<IArticles[] | []>([]);
 
 useEffect(() => {
     attemptPlay();
@@ -45,44 +28,6 @@ useEffect(() => {
         setBtnText(response.data.fields.titleButtonText);
         setBtnUrl(response.data.fields.titleButtonUrl);
         setVideoUrl(response.data.fields.introVideoUrl);
-
-        let arr_articles: any= [];
-                
-        //await response.data.fields.agendas.forEach((item: any) => {
-        for (let item of response.data.fields.articles) { 
-
-            const idVal = item.sys.id;
-            const objLinks = `https://cdn.contentful.com/spaces/8kgt6jcufmb2/environments/master/entries/${idVal}?access_token=0i1vMSW9uEuEaMKBV_cMWva-FkSU11BTHazrVRUxUW4`;
-            
-
-            let compose = await axios.get(objLinks).then(async results => {
-
-                const articleItem = results.data.fields;
-
-               // console.log(`ARTICLE ITEMS ${JSON.stringify(articleItem.author.sys.id)}`);
-
-                const blogImgAssetLink = `https://cdn.contentful.com/spaces/8kgt6jcufmb2/environments/master/assets/${articleItem.mainImage.sys.id}?access_token=0i1vMSW9uEuEaMKBV_cMWva-FkSU11BTHazrVRUxUW4`;
-                const authorEntryLink = `https://cdn.contentful.com/spaces/8kgt6jcufmb2/environments/master/entries/${articleItem.author.sys.id}?access_token=0i1vMSW9uEuEaMKBV_cMWva-FkSU11BTHazrVRUxUW4`;
-
-                let blogImgAsset = await axios.get(blogImgAssetLink);
-                let authorEntry = await axios.get(authorEntryLink);
-
-                delete articleItem?.mainImage;
-                delete articleItem?.author;
-
-                const res_result = {
-                    ...articleItem,
-                    blogImage: blogImgAsset.data.fields,
-                    author: authorEntry
-                };
-
-                return res_result;
-
-            });
-
-            arr_articles.push(compose);
-        }
-        setArticlesData(arr_articles);
 
     });
 
@@ -146,58 +91,6 @@ useEffect(() => {
                         </Col>
                     </Row>
                 </Container>
-                <div className="features-section mobile-section">
-                    <Container>
-                        <Row className='px-4 mb-3'> 
-                        {articlesData.length > 0 ?
-                                articlesData.filter(data => data.blogType === true).map((item, idx) => ( 
-                                    <Col lg={3}>
-                                        <div className='insight-img-right w-100 rounded-4 d-flex align-items-end' style={{ backgroundImage: `url(${item.blogImage.file.url})`, position: 'relative', backgroundSize: 'cover', backgroundRepeat:'no-repeat', backgroundPosition: 'center center'  }}>
-                                            <div className="w-100 h-100 d-block" style={{ backgroundColor: '#000', opacity: '0.4', position: 'absolute' }}></div>
-                                            <div className='px-3 mb-2' style={{ zIndex: '100' }}>
-                                                <p className='fs-14 text-primary mb-2 fw-semibold title-top-spacing'>{item.author.data.fields.name} <span>.</span> {moment(item.publishedDate).format("DD MMM YYYY")}</p>
-                                                <Link to={`/blog/${item.slug}`} state={JSON.stringify(item)} className='h5 fw-bold insight-title-link' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>{item.title}</Link> 
-                                            </div>
-                                        </div>
-                                    </Col>
-                                ))
-                                :
-                                <>
-                                    <Col lg={3}>
-                                        <SkeletonTheme baseColor="#202020" highlightColor="#444">
-                                            <p>
-                                                <Skeleton count={1} height={320} className='rounded-4'/>
-                                            </p>
-                                        </SkeletonTheme>
-                                    </Col>
-                                    <Col lg={3}>
-                                        <SkeletonTheme baseColor="#202020" highlightColor="#444">
-                                            <p>
-                                                <Skeleton count={1} height={320} className='rounded-4'/>
-                                            </p>
-                                        </SkeletonTheme>
-                                    </Col>
-                                    <Col lg={3}>
-                                        <SkeletonTheme baseColor="#202020" highlightColor="#444">
-                                            <p>
-                                                <Skeleton count={1} height={320} className='rounded-4'/>
-                                            </p>
-                                        </SkeletonTheme>
-                                    </Col>
-                                    <Col lg={3}>
-                                        <SkeletonTheme baseColor="#202020" highlightColor="#444">
-                                            <p>
-                                                <Skeleton count={1} height={320} className='rounded-4'/>
-                                            </p>
-                                        </SkeletonTheme>
-                                    </Col>
-                                </>
-                        
-                        } 
-                            
-                        </Row>
-                    </Container>
-                </div>
             </section>
             <VideoModal
                 show={videoModal}
