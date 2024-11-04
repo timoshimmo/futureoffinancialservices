@@ -55,7 +55,7 @@ useEffect(() => {
   
     return (
         <React.Fragment>
-            <section className="home-section-main insight-banner home-banner-bg">
+            <section className="home-section-main insight-banner" style={{ backgroundColor: '#000000' }}>
                 <Container>
                     {/* <Row className='px-4 mb-5 justify-content-center'>
                         <Col lg={12} sm={12} className='d-flex justify-conntent-center'>

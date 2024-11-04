@@ -14,7 +14,7 @@ import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 
 interface IArticles {
-    blogImage: any,
+    image: any,
     title: string,
     tags: any,
     publishedDate: string,
@@ -33,7 +33,43 @@ const Main = () => {
 
       useEffect(() => {
 
-        axios.get("https://cdn.contentful.com/spaces/8kgt6jcufmb2/environments/master/entries/7fm3rMLrgGBBxHrrT6yKN5?access_token=0i1vMSW9uEuEaMKBV_cMWva-FkSU11BTHazrVRUxUW4")
+        axios.get("https://cdn.contentful.com/spaces/8kgt6jcufmb2/environments/master/entries/?access_token=0i1vMSW9uEuEaMKBV_cMWva-FkSU11BTHazrVRUxUW4&include=2&content_type=blogModel")
+        .then(async result => {
+    
+           // console.log("INCLUDES:", result.data);
+    
+            let arr_obj: any[] = [];
+    
+            //const entryData = result.data.filter(row => row.data.sys.contentType.sys.id === "footerLinks" && row.data.fields.column === "About Us");
+            await result.data.items.forEach((item: any) => {
+                const entryData = result.data.includes.Entry.filter((row: any) => row.sys.id === item.fields.author.sys.id);
+                const assetData = result.data.includes.Asset.filter((row: any) => row.sys.id === item.fields.mainImage.sys.id);
+                const author = entryData[0].fields;
+                const image = assetData[0].fields;
+    
+                delete item.fields?.mainImage;
+                const mydata = {
+                    ...item.fields,
+                    author,
+                    image
+                };
+                arr_obj.push(mydata);
+                /*if(item.sys.id === result.data.items[idx].fields.author.sys.id) {
+    
+                } */
+            });
+    
+            console.log("BLOGS:", arr_obj);
+            setArticlesData(arr_obj);
+    
+           /* const mydata = {
+                ...result.data.fields,
+    
+            } */
+    
+        }); 
+
+      /*  axios.get("https://cdn.contentful.com/spaces/8kgt6jcufmb2/environments/master/entries/7fm3rMLrgGBBxHrrT6yKN5?access_token=0i1vMSW9uEuEaMKBV_cMWva-FkSU11BTHazrVRUxUW4")
         .then(async response => {
     
             let arr_articles: any= [];
@@ -53,15 +89,14 @@ const Main = () => {
                     const authorEntryLink = `https://cdn.contentful.com/spaces/8kgt6jcufmb2/environments/master/entries/${articleItem.author.sys.id}?access_token=0i1vMSW9uEuEaMKBV_cMWva-FkSU11BTHazrVRUxUW4`;
     
                     let blogImgAsset = await axios.get(blogImgAssetLink);
-                    let authorEntry = await axios.get(authorEntryLink);
+                    //let authorEntry = await axios.get(authorEntryLink);
     
                     delete articleItem?.mainImage;
-                    delete articleItem?.author;
+                    //delete articleItem?.author;
     
                     const res_result = {
                         ...articleItem,
-                        blogImage: blogImgAsset.data.fields,
-                        author: authorEntry
+                        blogImage: blogImgAsset.data.fields
                     };
     
                     return res_result;
@@ -74,7 +109,7 @@ const Main = () => {
            // console.log(`NEW HOME BANNER: ${JSON.stringify(arr_articles)}`);
             setArticlesData(arr_articles);
     
-        });
+        }); */
     
     }, []);
 
@@ -91,16 +126,16 @@ const Main = () => {
 
     return (
         <React.Fragment>
-            <section className="features-section mobile-section">
+            <section className="features-section mobile-section home-banner-bg">
                 <Container>
                     <Row className='px-4 mb-3'> 
                         {featuredListData.length > 0 ?
                                 featuredListData.map((item) => ( 
                                     <Col lg={3}>
-                                        <div className='insight-img-right w-100 rounded-4 d-flex align-items-end' style={{ backgroundImage: `url(${item.blogImage.file.url})`, position: 'relative', backgroundSize: 'cover', backgroundRepeat:'no-repeat', backgroundPosition: 'center center'  }}>
+                                        <div className='insight-img-right w-100 rounded-4 d-flex align-items-end' style={{ backgroundImage: `url(${item.image.file.url})`, position: 'relative', backgroundSize: 'cover', backgroundRepeat:'no-repeat', backgroundPosition: 'center center'  }}>
                                             <div className="w-100 h-100 d-block" style={{ backgroundColor: '#000', opacity: '0.4', position: 'absolute' }}></div>
                                             <div className='px-3 mb-2' style={{ zIndex: '100' }}>
-                                                <p className='fs-14 text-primary mb-2 fw-semibold title-top-spacing'>{item.author.data.fields.name} <span>.</span> {moment(item.publishedDate).format("DD MMM YYYY")}</p>
+                                                <p className='fs-14 text-primary mb-2 fw-semibold title-top-spacing'>{item.author.name} <span>.</span> {moment(item.publishedDate).format("DD MMM YYYY")}</p>
                                                 <Link to={`/blog/${item.slug}`} state={JSON.stringify(item)} className='h5 fw-bold insight-title-link' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>{item.title}</Link> 
                                             </div>
                                         </div>
@@ -153,9 +188,9 @@ const Main = () => {
                                 currentListData.map((item, key) => (
                                     <Col lg={4}>
                                         <div className='w-100 news-bottom-margin' key={key}>
-                                            <img src={item.blogImage.file.url} className='w-100 rounded-4'/>
+                                            <img src={item.image.file.url} className='w-100 rounded-4'/>
                                             <div className='w-100 title-small-top-spacing-news'>
-                                                <p className='fs-15 text-primary mb-2 fw-semibold'>{item.author.data.fields.name} <span>.</span> {moment(item.publishedDate).format("DD MMM YYYY")}</p>
+                                                <p className='fs-15 text-primary mb-2 fw-semibold'>{item.author.name} <span>.</span> {moment(item.publishedDate).format("DD MMM YYYY")}</p>
                                                 <div className='d-flex justify-content-between'>    
                                                     <div style={{ width: '90%' }}>
                                                         <Link to={`/blog/${item.slug}`} state={JSON.stringify(item)} className='h5 fw-bold insight-title-link' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif', overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>{item.title}</Link> 
