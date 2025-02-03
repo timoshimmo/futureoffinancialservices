@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
 import Navbar from "../Common/Navbar";
 import NavbarSecondary from '../Common/NavbarSecondary';
 import Banner from "./Banner";
@@ -10,7 +9,7 @@ import Sponsor from './Sponsor';
 import Latest from './Latest';
 import Faq from './Faq';
 import CTA from '../Common/CTA';
-import Footer from "../Common/footer";
+//import Footer from "../Common/footer";
 import FooterSummit from '../Common/footerSummit';
 
 const index = () => {
@@ -49,9 +48,6 @@ const index = () => {
     return (
         <React.Fragment>
             <div className="layout-wrapper landing body-bg-dark">
-                <Helmet>
-                    <meta name="description" content="Future of Financial Services | Home" />
-                </Helmet>
                 {/* <NavbarSummit /> */}
                 {/* <Navbar /> */}
                 <NavbarSecondary />

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate  } from "react-router-dom";
 import { Container, Row, Col, Card, CardBody } from 'reactstrap';
 import { speakersData } from '../../../common/data';
 
@@ -89,7 +89,7 @@ const Speakers = () => {
                             loop={true}
                             centeredSlides={true}
                             freeMode={true}
-                            allowTouchMove={true}
+                            allowTouchMove={false}
                             speed={10000}
                             autoplay={{
                                 delay: 0,
@@ -103,17 +103,15 @@ const Speakers = () => {
                             modules={[Autoplay, Pagination, Navigation]}
                         >
                             {speakersData.map((item, key) => (
-                                <SwiperSlide key={key} className='mb-5'>    
+                                <SwiperSlide key={key} className='mb-5'>
                                     <img src={item.img} alt="" className="avatar-speaker"/>
                                     <div className='w-100 px-2 mt-3' >
                                         <h5 className="text-white text-center fs-14 mb-0" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>{item.name}</h5>
-                                        <p className="text-white text-center fs-11 fw-light" onClick={redirect}>{item.credentials}</p>
-                                        
+                                        <p className="text-white text-center fs-11 fw-light">{item.credentials}</p>
                                     </div>
                                 </SwiperSlide>
                             ))}
                         </Swiper>
-                        <Link to="/speakers">Go to Speakers</Link>
                     </Col>
                 </Row>        
             </Container>

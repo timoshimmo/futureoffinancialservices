@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, 
     Row, 
     Col, 
@@ -11,6 +11,7 @@ import { Container,
     Offcanvas,
     OffcanvasBody } from 'reactstrap';
 import { speakersFullData } from '../../../common/data';
+import axios from 'axios';
 import ic_search from '../../../assets/images/icons/ic_search.png';
 
 interface IProfile {
@@ -25,11 +26,131 @@ interface IProfile {
     bio: string
   }
 
+  interface IData {
+    name: string,
+    company: string,
+    credentials: string,
+    theme: any,
+    speakers: any,
+    img: any,
+    tags: any,
+    biography: string
+
+}
+
 const SpeakersList = () => {
 
     const [nav, setNav] = useState("All");
     const [open, setOpen] = useState(false);
-    const [currentData, setCurrentData] = useState<IProfile>();
+    const [currentData, setCurrentData] = useState<IData>();
+
+    const [themes, setThemes] = useState([]);
+    const [speakersData, setSpeakersData] = useState<IData[] | []>([]);
+
+    useEffect(() => {
+
+        let endpoints = [
+            'https://cdn.contentful.com/spaces/8kgt6jcufmb2/environments/master/entries/6DOmE5oJJmNC5Z5VP16PPB?access_token=0i1vMSW9uEuEaMKBV_cMWva-FkSU11BTHazrVRUxUW4',
+            'https://cdn.contentful.com/spaces/8kgt6jcufmb2/environments/master/entries/?access_token=0i1vMSW9uEuEaMKBV_cMWva-FkSU11BTHazrVRUxUW4&include=2&content_type=speakerModel'
+        ];
+
+        Promise.all(endpoints.map((endpoint) => axios.get(endpoint))).then(async([{data: fields}, {data: items}] )=> {
+            //console.log(`Fields: ${JSON.stringify(fields.fields)}`);
+            //console.log(`Items: ${JSON.stringify(items.items[0])}`);
+            //console.log(`Includes: ${JSON.stringify(items.includes)}`);
+
+            setThemes(fields.fields.themes);
+
+            let arr_obj: any[] = [];
+
+            await items.items.forEach((item: any) => {
+
+                console.log(`ITEM: ${JSON.stringify(item)}`);
+
+                const assetData = items.includes.Asset.filter((row: any) => row.sys.id === item.fields.image.sys.id);
+
+                delete item.fields?.image;
+
+                const spkdata = {
+                    ...item.fields,
+                    updatedAt: item.sys.updatedAt,
+                    img: assetData[0].fields.file,
+                    pic: assetData[0].fields.file,
+                }; 
+
+                //console.log("OBJ SPEAKERS:", spkdata);
+                arr_obj.push(spkdata);
+
+            });
+
+            
+            const sortedSpeakers = arr_obj.sort(function(a: any, b: any) {
+                console.log("SPEAKERS DATA", a);
+                let c = new Date(a.updatedAt) as any;
+                var d = new Date(b.updatedAt) as any;
+                return c-d;
+            });
+            setSpeakersData(sortedSpeakers);
+
+
+        })
+        .catch((error) => {
+            console.log("Error: ", error);
+            /*if (error.response) {
+                console.log(error.response);
+                console.log("server error");
+            } else if (error.request) {
+                console.log("network error");
+            } else {
+                console.log(error);
+            } */
+        });
+
+
+       /* axios.get("https://cdn.contentful.com/spaces/8kgt6jcufmb2/environments/master/entries/6DOmE5oJJmNC5Z5VP16PPB?access_token=0i1vMSW9uEuEaMKBV_cMWva-FkSU11BTHazrVRUxUW4")
+        .then(async response => {
+            //setThemes(response.data.fields.themes);
+
+           // console.log("SPEAKERS DATA:", response.data.fields.speakers);
+            const dataSpeakers =  response.data.fields.speakers;
+            let arr_speakers: any[] = [];
+
+            for(let speakerVal of dataSpeakers) {
+
+                const speaker_id = speakerVal.sys.id;
+                const speakerData = `https://cdn.contentful.com/spaces/8kgt6jcufmb2/environments/master/entries/${speaker_id}?access_token=0i1vMSW9uEuEaMKBV_cMWva-FkSU11BTHazrVRUxUW4`;
+               
+                await axios.get(speakerData).then(async res => {
+
+                    const dataSpeaker: any = res.data.fields;
+
+                    const speakerAsset = `https://cdn.contentful.com/spaces/8kgt6jcufmb2/environments/master/assets/${res.data.fields.image.sys.id}?access_token=0i1vMSW9uEuEaMKBV_cMWva-FkSU11BTHazrVRUxUW4`;
+
+                    let response1 = await axios.get(speakerAsset);
+                    
+                    //const res_result = response1.data.fields;
+
+                    const res_result = {
+                        ...dataSpeaker,
+                        imgs: response1.data.fields
+                    };
+
+                    delete res_result?.image;
+
+                    console.log("SPEAKERS 1", res_result);
+                    
+                    arr_speakers.push(res_result);
+                    
+                }); 
+            
+            }
+
+            //console.log("SPEAKERS DATA", arr_speakers);
+            setSpeakersData(arr_speakers);
+
+        }); */
+
+    }, []);
 
     const toggleLeftCanvas = () => {
         setOpen(!open);
@@ -51,14 +172,14 @@ const SpeakersList = () => {
                         <Col lg={7} sm={12}>
                             <div className='w-100 sticky-top py-3 speakers-web-row' style={{ backgroundColor: '#141413', top: '60px' }}></div>
                             <Row className='speakers-web-row'>
-                                {speakersFullData.filter(data => data.tags.includes(nav) || nav === 'All').map((item) => (
-                                    <Col key={item.id} lg={6} sm={12}>
+                                {speakersData.filter(data => data.tags.includes(nav) || nav === 'All').map((item, idx) => (
+                                    <Col key={idx} lg={6} sm={12}>
                                         <Card onClick={()=>passData(item)} className="shadow-none rounded-0 speakers-card mb-2 text-white" style={{ cursor: "pointer" }}>
                                             <CardBody className='p-0'>
-                                                <img src={item.img} alt="" className="avatar-speaker-list"/>
+                                                <img src={item.img.url} alt="" className="avatar-speaker-list"/>
                                                 <div className='w-100 mt-2'>
                                                     <h5 className="text-white fs-14" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>{item.name}</h5>
-                                                    <p className="text-white fs-11 fw-light">{item.credentials}{item.company !== "" ? `, ${item.company}` : ""}</p>
+                                                    <p className="text-white fs-11 fw-light">{item.credentials}, {item.company}</p>
                                                 </div>
                                             </CardBody>
                                         </Card>
@@ -66,14 +187,14 @@ const SpeakersList = () => {
                                 ))}
                             </Row>
                             <Row className='speakers-mobile-row'>
-                                {speakersFullData.filter(data => data.tags.includes(nav) || nav === 'All').map((item) => (
-                                    <Col key={item.id} lg={6} sm={12}>
+                                {speakersData.filter(data => data.tags.includes(nav) || nav === 'All').map((item, idx) => (
+                                    <Col key={idx} lg={6} sm={12}>
                                         <Card onClick={()=>passData(item)} className="shadow-none rounded-0 speakers-card mb-5 text-white" style={{ cursor: "pointer" }}>
                                             <CardBody className='p-0'>
-                                                <img src={item.img} alt="" className="avatar-speaker-list"/>
+                                                <img src={item.img.url} alt="" className="avatar-speaker-list"/>
                                                 <div className='w-100 mt-3'>
                                                     <h5 className="text-white fs-14" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>{item.name}</h5>
-                                                    <p className="text-white fs-12 fw-light">{item.credentials}, {item.company}</p>
+                                                    <p className="text-white fs-11 fw-light">{item.credentials}, {item.company}</p>
                                                 </div>
                                             </CardBody>
                                         </Card>
@@ -90,33 +211,36 @@ const SpeakersList = () => {
                                     </div>
                                     <h2 className='my-4 text-primary fs-20' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>Themes</h2>
                                     <Nav pills className="nav-pills filter-btns gap-2" role="tablist">
-                                    <NavItem role="presentation">
-                                            <NavLink type="button" onClick={() => setNav("strategy-&-markets")} className={nav === "strategy-&-markets" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>Strategy & Markets</NavLink>
-                                        </NavItem>
-                                        <NavItem role="presentation">
-                                            <NavLink type="button" onClick={() => setNav("cybersecurity")} className={nav === "cybersecurity" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>Cybersecurity</NavLink>
-                                        </NavItem>
-                                        <NavItem role="presentation">
-                                            <NavLink type="button" onClick={() => setNav("customer-experience")} className={nav === "customer-experience" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>Customer Experience</NavLink>
-                                        </NavItem>
-                                        <NavItem role="presentation">
-                                            <NavLink type="button" onClick={() => setNav("artificial-intelligence")} className={nav === "artificial-intelligence" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>Artificial Intelligence</NavLink>
-                                        </NavItem>
-                                        <NavItem role="presentation">
-                                            <NavLink type="button" onClick={() => setNav("financial-technology")} className={nav === "financial-technology" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>Financial Technology</NavLink>
-                                        </NavItem>
-                                        <NavItem role="presentation">
-                                            <NavLink type="button" onClick={() => setNav("investment")} className={nav === "investment" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>Investment</NavLink>
-                                        </NavItem> 
-                                        <NavItem role="presentation">
-                                            <NavLink type="button" onClick={() => setNav("wealth-management")} className={nav === "wealth-management" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>Wealth Management</NavLink>
-                                        </NavItem> 
-                                        <NavItem role="presentation">
-                                            <NavLink type="button" onClick={() => setNav("insurance")} className={nav === "insurance" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>Insurance</NavLink>
-                                        </NavItem> 
-                                        <NavItem role="presentation">
-                                            <NavLink type="button" onClick={() => setNav("risk")} className={nav === "risk" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>Risk</NavLink>
-                                        </NavItem> 
+                                        {
+                                            themes.map((item: any) => (
+                                                <NavItem role="presentation">
+                                                    <NavLink type="button" onClick={() => { setNav(item.replace(/ +/g, '-').toLowerCase())}} className={nav === item.replace(/ +/g, '-').toLowerCase() ? " fw-medium fs-11 active" : "fw-medium fs-11 border border-white rounded-2"}>{item}</NavLink>
+                                                </NavItem>
+                                            ))
+                                        }
+
+                                        {/*
+
+                                                <NavItem role="presentation">
+                                                    <NavLink type="button" onClick={() => setNav("All")} className={nav === "All" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>All</NavLink>
+                                                </NavItem>
+                                                <NavItem role="presentation">
+                                                    <NavLink type="button" onClick={() => setNav("digital-business-models")} className={nav === "digital-business-models" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>Digital Business Models</NavLink>
+                                                </NavItem>
+                                                <NavItem role="presentation">
+                                                    <NavLink type="button" onClick={() => setNav("distribution-models")} className={nav === "distribution-models" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>Distribution Models</NavLink>
+                                                </NavItem>
+                                                <NavItem role="presentation">
+                                                    <NavLink type="button" onClick={() => setNav("customer-experience")} className={nav === "customer-experience" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>Customer Experience</NavLink>
+                                                </NavItem>
+                                                <NavItem role="presentation">
+                                                    <NavLink type="button" onClick={() => setNav("artificial-intelligence")} className={nav === "artificial-intelligence" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>Artificial Intelligence</NavLink>
+                                                </NavItem>
+                                                <NavItem role="presentation">
+                                                    <NavLink type="button" onClick={() => setNav("fintech")} className={nav === "fintech" ? " fw-medium fs-12 active" : "fw-medium fs-12 border border-white rounded-2"}>FinTech</NavLink>
+                                                </NavItem>
+                                        */}
+                                        
                                     </Nav>
                                 </div>
                             </div>
@@ -126,7 +250,7 @@ const SpeakersList = () => {
             </section>
             <div>
                 {/* profile-modal profile-modal */}
-                <Offcanvas isOpen={open} toggle={toggleLeftCanvas} direction="end" className="offcanvas-end border-0 canvas-style">
+                 <Offcanvas isOpen={open} toggle={toggleLeftCanvas} direction="end" className="offcanvas-end border-0 canvas-style">
                     <OffcanvasBody className="p-0 canvas-body">
                         <div className='w-100 speakers-pop-up-body'>
                             <div className='pt-2 pb-4 top-profile-close-mobile'>
@@ -134,57 +258,19 @@ const SpeakersList = () => {
                             </div>
                             <Row>
                                 <Col lg={5}>
-                                    <img src={currentData?.pic} className='w-100 border-0 rounded-3'/>
+                                    <img src={currentData?.img.url} className='w-100 border-0 rounded-3'/>
                                 </Col>
                                 <Col lg={7} className='vstack justify-content-center align-items-center'>
-                                    <div className='w-100 mt-3'>
+                                    <div className='w-100'>
                                         <p className='text-primary h3 fw-bold mb-2 lh-sm'>{currentData?.name}</p>
                                         <p className="text-white fs-15 fw-light mb-0">{currentData?.credentials}</p>
                                         <p className="text-white fs-13 fw-light">{currentData?.company}</p>
-                                        {/*<span className='text-white fs-14 fw-light'>will be speaking on</span>*/}
                                     </div>
                                 </Col>
                             </Row>
                             <div className='w-100 mt-4 p-4 border border-primary rounded-3'>
-                               {/*  <p className='text-primary fs-18 fw-semibold lhbase'>{currentData?.courses[0].title}</p>
-                                <p className='text-secondary fs-13'>{currentData?.courses[0].date}, {currentData?.courses[0].time}</p> */}
-                                <p className='text-white fs-13 bio-style'><span className='text-primary fw-semibold'>{currentData?.name}</span> {currentData?.bio}</p>
+                                <p className='text-white fs-13 bio-style'><span className='text-primary fw-semibold'>{currentData?.name}</span> {currentData?.biography}</p>
                             </div>
-                            {/*<p className='my-4 text-white fs-17 fw-bold'>Will be Speaking On</p>
-                            {currentData?.courses.map((item: any) => (
-                                <Card className="shadow-none border border-white rounded-3 mb-4 p-4 text-white">
-                                    <CardBody className='p-0'>
-                                        <div className='gap-2 align-items-center mb-3 speakers-agenda-bottom-web'><span className='text-white fs-14'>{item.date}</span> | <span className='text-white fs-14'>{item.time}</span></div>
-                                        <div className='mb-3 speakers-agenda-bottom-mobile'>
-                                            <p className='text-white fs-14 mb-1'>{item.date}</p>
-                                            <p className='text-white fs-14'>{item.time}</p>
-                                        </div>
-                                        <h6 className='text-primary fw-semibold fs-20 mb-2'>{item.title}</h6>
-                                        <div className='d-flex gap-2'>
-                                            {
-                                                item.tags !== null ?
-                                                (item?.tags.map((row: string) => (
-                                                    <p className="fw-light fs-12 text-capitalize border border-white rounded-2 py-1 px-2">{row.replace(/-/g, ' ')}</p>
-                                                ))
-                                                )
-                                                :
-                                                <p className="fw-light fs-12 text-capitalize border border-white rounded-2 py-1 px-2">General Session</p>
-                                            } 
-                                        </div>
-                                    </CardBody>
-                                </Card>
-                            ))}
-                            <h2 className='my-4 text-primary fs-20' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>Topics</h2>
-                            <Nav pills className="nav-pills filter-btns gap-2" role="tablist">
-                                {
-                                    currentData?.tags.map((row: string) => (
-                                        <NavItem role="presentation">
-                                            <NavLink type="button" onClick={() => setNav(row)} className={nav === row ? " fw-medium text-capitalize fs-12 active" : "fw-medium fs-12 text-capitalize border border-white rounded-2"}>{row.replace(/-/g, ' ')}</NavLink>
-                                        </NavItem>
-                                
-                                    ))
-                                }
-                            </Nav> */}
                        </div>
                        
                     </OffcanvasBody>

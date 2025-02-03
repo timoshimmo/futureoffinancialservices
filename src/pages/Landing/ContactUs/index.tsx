@@ -24,12 +24,6 @@ const index = () => {
         }
     };
 
-    const toTop = () => {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-    };
-
-
     return (
         <React.Fragment>
             <div className="layout-wrapper landing body-bg-dark">

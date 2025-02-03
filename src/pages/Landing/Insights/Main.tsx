@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Container, Row, Col } from 'reactstrap';
 
 import ic_up_right_arrow from "../../../assets/images/icons/ic_up_righ_arrow.png";
@@ -26,6 +26,7 @@ interface IArticles {
 
 const Main = () => {
 
+    const navigate = useNavigate();
     const pageSize = 6;
     const [articlesData, setArticlesData] = useState<IArticles[] | []>([]);
     const [currentPage, setCurrentPage] = useState(1);
@@ -124,15 +125,22 @@ const Main = () => {
         return articlesData.filter(data => data.blogType === false).slice(firstPageIndex, lastPageIndex);
       }, [articlesData, currentPage]);
 
+
+    const handleRedirect = (route: string, data:any) => {
+        navigate(route ,{state: data});
+    } 
+
+
     return (
         <React.Fragment>
             <section className="features-section mobile-section home-banner-bg">
                 <Container>
                     <Row className='px-4 mb-3'> 
                         {featuredListData.length > 0 ?
-                                featuredListData.map((item) => ( 
+                                featuredListData.map((item, idx) => ( 
+                                    idx < 4 ?
                                     <Col lg={3}>
-                                        <div className='insight-img-right w-100 rounded-4 d-flex align-items-end' style={{ backgroundImage: `url(${item.image.file.url})`, position: 'relative', backgroundSize: 'cover', backgroundRepeat:'no-repeat', backgroundPosition: 'center center'  }}>
+                                        <div onClick={()=>handleRedirect(`/blog/${item.slug}`, JSON.stringify(item))} className='insight-img-right w-100 rounded-4 d-flex align-items-end' style={{ backgroundImage: `url(${item.image.file.url})`, position: 'relative', backgroundSize: 'cover', backgroundRepeat:'no-repeat', backgroundPosition: 'center center', cursor: "pointer"  }}>
                                             <div className="w-100 h-100 d-block" style={{ backgroundColor: '#000', opacity: '0.4', position: 'absolute' }}></div>
                                             <div className='px-3 mb-2' style={{ zIndex: '100' }}>
                                                 <p className='fs-14 text-primary mb-2 fw-semibold title-top-spacing'>{item.author.name} <span>.</span> {moment(item.publishedDate).format("DD MMM YYYY")}</p>
@@ -140,6 +148,8 @@ const Main = () => {
                                             </div>
                                         </div>
                                     </Col>
+                                    :
+                                    null
                                 ))
                                 :
                                 <>
@@ -188,7 +198,9 @@ const Main = () => {
                                 currentListData.map((item, key) => (
                                     <Col lg={4}>
                                         <div className='w-100 news-bottom-margin' key={key}>
-                                            <img src={item.image.file.url} className='w-100 rounded-4'/>
+                                            <div className='w-100' onClick={()=>handleRedirect(`/blog/${item.slug}`, JSON.stringify(item))} style={{ cursor: 'pointer' }}>
+                                                <img src={item.image.file.url} className='w-100 rounded-4 img-blog-gen-style' />
+                                            </div>
                                             <div className='w-100 title-small-top-spacing-news'>
                                                 <p className='fs-15 text-primary mb-2 fw-semibold'>{item.author.name} <span>.</span> {moment(item.publishedDate).format("DD MMM YYYY")}</p>
                                                 <div className='d-flex justify-content-between'>    

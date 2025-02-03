@@ -1,6 +1,7 @@
-import React, { useEffect, useRef }  from 'react';
+import React, { useState, useEffect, useRef }  from 'react';
 import { Container, Row, Col, NavLink } from 'reactstrap';
 import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import { speakersData } from '../../../common/data';
 
 // Import Swiper React components
@@ -18,15 +19,62 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import ic_slide_left_arrow from "../../../assets/images/icons/ic_slide_left_arrow.png";
 import ic_slide_right_arrow from "../../../assets/images/icons/ic_slide_right_arrow.png";
 
+interface IBanner {
+    bannerTitle: string;
+    caption: string;
+    mobileCaption: string;
+    button1: string;
+    button2: string;
+    speakerImages: any;
+    seoFields: any;
+}
+
+interface ISpeakers {
+    fields: {
+        title: '',
+        description: '',
+        file: any
+    };
+}
+
+const initBanner = {
+    bannerTitle: '',
+    caption: '',
+    mobileCaption: '',
+    button1: '',
+    button2: '',
+    speakerImages: [],
+    seoFields: {}
+};
+
+
 const Banner = () => {
 
     let navigate = useNavigate();
-    //const sliderRef = useRef();
     const swiperRef = useRef<SwiperRef>(null);
+    const [dataEntry, setDataEntry] = useState<IBanner>(initBanner);
+    const [speakersList, setSpeakersList] = useState<ISpeakers[] | []>([]);
 
-   /* useEffect(() => {
-        //swiperRef.current?.in;
-    }, []);*/
+    useEffect(() => {
+        let endpoints = [
+            'https://cdn.contentful.com/spaces/8kgt6jcufmb2/environments/master/entries/3vrx9Ezv34q2B8pY0kjP25?access_token=0i1vMSW9uEuEaMKBV_cMWva-FkSU11BTHazrVRUxUW4',
+            'https://cdn.contentful.com/spaces/8kgt6jcufmb2/environments/master/assets?access_token=0i1vMSW9uEuEaMKBV_cMWva-FkSU11BTHazrVRUxUW4&metadata.tags.sys.id[all]=speakersImage'
+        ];
+
+        Promise.all(endpoints.map((endpoint) => axios.get(endpoint))).then(([{data: fields}, {data: items}] )=> {
+            //console.log(`Fields: ${JSON.stringify(fields.fields)}`);
+            //console.log(`Items: ${JSON.stringify(items.items[0].sys)}`);
+           // const sortedSpeakers = items.items.sort((a: any,b: any) => Date.parse(b.sys.createdAt) - Date.parse(a.sys.createdAt));
+            const sortedSpeakers = items.items.sort(function(a: any, b: any) {
+                let c = new Date(a.sys.updatedAt) as any;
+                var d = new Date(b.sys.updatedAt) as any;
+                return c-d;
+            });
+            console.log(`Sorted: ${JSON.stringify(sortedSpeakers)}`);
+            setDataEntry(fields.fields);
+            setSpeakersList(sortedSpeakers);
+        });
+    }, []);
 
     const redirect =() => {
         navigate('/speakers');
@@ -40,9 +88,9 @@ const Banner = () => {
                 <Row className='justify-content-center'>
                     <Col lg={7} sm={12} className='px-3'>
                         <div className="text-center">
-                            <h1 className="display-3 fw-bold text-white title" style={{ fontFamily: 'Georgia, Montserrat' }}>Future of Financial Services Summit</h1>
-                            <p className="h5 text-primary mb-4 py-2 caption-web" style={{ fontWeight: 600 }}>October 8 - 10, 2024 | Level 39, Canary Wharf, London</p>
-                            <p className="h5 text-primary mb-4 py-2 caption-mobile" style={{ fontWeight: 600 }}>October 8 - 10, 2024 | Canary Wharf, London</p>
+                            <h1 className="display-3 fw-bold text-white title" style={{ fontFamily: 'Georgia, Montserrat' }}>{dataEntry.bannerTitle}</h1>
+                            <p className="h5 text-primary mb-4 py-2 caption-web" style={{ fontWeight: 600 }}>{dataEntry.caption}</p>
+                            <p className="h5 text-primary mb-4 py-2 caption-mobile" style={{ fontWeight: 600 }}>{dataEntry.mobileCaption}</p>
                             {/*<p className="h4 text-white mb-4 py-2 caption">Innovating the Next Generation of Finance</p> */}
 
                         </div>
@@ -67,12 +115,12 @@ const Banner = () => {
                             ref={swiperRef}
                             className="position-relative mySwiper"
                         >
-                            {speakersData.map((item, key) => (
+                            {speakersList.map((item, key) => (
                                 <SwiperSlide key={key} className='swiper-slide-web' onClick={redirect} style={{ cursor: 'pointer' }}>
-                                    <img src={item.img} alt="" className="avatar-speaker"/>
+                                    <img src={item.fields.file.url} alt="" className="avatar-speaker"/>
                                     <div className='w-100 mt-3' >
-                                        <h5 className="text-white fs-14 mb-0" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>{item.name}</h5>
-                                        <p className="text-white fs-11 fw-light">{item.credentials}</p>
+                                        <h5 className="text-white fs-14 mb-0" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>{item.fields.title}</h5>
+                                        <p className="text-white fs-11 fw-light">{item.fields.description}</p>
                                     </div>
                                 </SwiperSlide>
                             ))}
@@ -107,12 +155,12 @@ const Banner = () => {
                             modules={[Autoplay]}
                             className="mySwiper positio-relative"
                         >
-                            {speakersData.map((item, key) => (
-                                <SwiperSlide key={key} onClick={redirect}>
-                                    <img src={item.img} alt="" className="avatar-speaker"/>
+                            {speakersList.map((item, key) => (
+                                <SwiperSlide key={key}>
+                                    <img src={item.fields.file.url} alt="" className="avatar-speaker"/>
                                     <div className='w-100 mt-3'>
-                                        <h5 className="text-white fs-14 mb-0" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>{item.name}</h5>
-                                        <p className="text-white fs-11 fw-light">{item.credentials}</p>
+                                        <h5 className="text-white fs-14 mb-0" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>{item.fields.title}</h5>
+                                        <p className="text-white fs-11 fw-light">{item.fields.description}</p>
                                     </div>
                                 </SwiperSlide>
                             ))}

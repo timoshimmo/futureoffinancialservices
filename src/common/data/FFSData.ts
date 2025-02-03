@@ -60,7 +60,7 @@ import img_phil_watson from "../../assets/images/speakers/img_phil_watson.png";
 import img_paul_payne from "../../assets/images/speakers/img_paul_payne.png";
 import img_bode_pedro from "../../assets/images/speakers/img_bode_pedro.png";
 
-//import img_andy from "../../assets/images/speakers/img_andy.png";
+import img_andy from "../../assets/images/speakers/img_andy.png";
 import img_yinka_oni from "../../assets/images/speakers/img_yinka_oni.png";
 import img_tayo_bamiduro from "../../assets/images/speakers/img_tayo_bamiduro.png";
 import img_ali_paterson from "../../assets/images/speakers/img_ali_paterson.png";

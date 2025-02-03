@@ -65,8 +65,8 @@ const PartnerForm = () => {
         })
         .catch((error) => {
             if (error.response) {
-                console.log(error.response);
-                setErrorMsg(error.response.data.error);
+                console.log(error.response.data.message);
+                setErrorMsg(error.response.data.message);
                 setCloseAlert(true);
                 console.log("server error");
             } else if (error.request) {
@@ -318,7 +318,7 @@ const PartnerForm = () => {
                                                     <img src={successful_form_submission} height={100}/>
                                                 </div>
                                                 <h2 className='text-primary my-3 text-center fw-bold' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>Your Entry Was Successful</h2>
-                                                <p className='text-dark fs-14 text-center fw-medium px-4 mb-4' style={{ color: '#303030' }}>We have received your request to form a partnership, your request would be reviewed and we would revert accordingly where necessary."</p>
+                                                <p className='text-dark fs-14 text-center fw-medium px-4 mb-4' style={{ color: '#303030' }}>We have received your request to form a partnership, your request would be reviewed and we would revert accordingly where necessary.</p>
                                                 <div className="hstack justify-content-center">
                                                     <Link to="/" className="text-muted fs-12">Back to Home</Link>
                                                 </div>

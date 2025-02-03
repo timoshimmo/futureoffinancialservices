@@ -1,14 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Card, CardBody } from 'reactstrap';
-import { Link } from 'react-router-dom';
-import Panel from 'Components/Common/Panel';
 import { Accordion, AccordionBody, AccordionHeader, AccordionItem } from 'reactstrap';
-import { faqData } from '../../../common/data';
+//import { faqData } from '../../../common/data';
+import axios from 'axios';
+
+
+interface IFAQ {
+    id: string,
+    question: string,
+    answer: string
+    
+}
 
 const Faq = () => {
 
 
-    const [activeTab, setActiveTab] = useState<number | undefined>(0);
+    const [title, setTitle] = useState('');
+    const [subTitle, setSubtitle] = useState('');
+    const [faqs, setFaqs] = useState<IFAQ[] | []>([]);
+    //const [activeTab, setActiveTab] = useState<number | undefined>(0);
     const [openFlush, setOpenFlush] = useState('0');
     const toggleFlush = (id: any) => {
         if (openFlush !== id) {
@@ -19,9 +29,36 @@ const Faq = () => {
         }
     };
 
+    useEffect(() => {
+
+        axios.get("https://cdn.contentful.com/spaces/8kgt6jcufmb2/environments/master/entries/4YJ32HF5mHMEQYpmFmkNpp?access_token=0i1vMSW9uEuEaMKBV_cMWva-FkSU11BTHazrVRUxUW4")
+        .then(async response => {
+               
+            //console.log(`FAQS: ${JSON.stringify(response.data.fields)}`);
+            setTitle(response.data.fields.title);
+            setSubtitle(response.data.fields.subtitle);
+            setFaqs(response.data.fields.questions);
+            
+        })
+        .catch((error) => {
+            if (error.response) {
+                console.log(error.response);
+                console.log("server error");
+            } else if (error.request) {
+                console.log("network error");
+            } else {
+                console.log(error);
+            }
+        });
+
+    }, []);
+
+    /*
     const activateTab = (index: number | undefined) => {
         setActiveTab((prevState: number | undefined) => ( prevState === index ? -1 : index));
       }
+
+      */
     
     return (
         <React.Fragment>
@@ -30,8 +67,8 @@ const Faq = () => {
                 <Row className="justify-content-center">
                     <Col lg={7}>
                         <div className="text-center mb-5">
-                            <h2 className="mb-2 fw-semibold lh-base text-primary" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>FAQs</h2>
-                            <p className="fs-13 text-white">Find answers to common questions about the conference, including registration details, schedule information, and more.</p>
+                            <h2 className="mb-2 fw-semibold lh-base text-primary" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>{title}</h2>
+                            <p className="fs-13 text-white">{subTitle}</p>
                         </div>
                     </Col>
                 </Row>
@@ -56,11 +93,11 @@ const Faq = () => {
                                 </Col> */}
                     <Col lg={10} sm={12} xs={12}>
                         <Accordion id="default-accordion-example" flush open={openFlush} toggle={toggleFlush}>
-                            {faqData.map((item, key) => (
+                            {faqs.map((item, key) => (
                                 <AccordionItem key={key} className='shadow-none border-0 py-3'>
-                                    <AccordionHeader targetId={item.id} className='text-white'>{item.label}</AccordionHeader>
+                                    <AccordionHeader targetId={item.id} className='text-white'>{item.question}</AccordionHeader>
                                     <AccordionBody accordionId={item.id} className='text-muted fs-14'>
-                                        {item.content}
+                                        {item.answer}
                                     </AccordionBody>
                                 </AccordionItem>
                             ))}

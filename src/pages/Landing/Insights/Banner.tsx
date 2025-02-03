@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
 import { Container, Row, Col, NavLink, Button } from 'reactstrap';
 //import { insightsData } from '../../../common/data';
 import VideoModal from 'Components/Common/VideoModal';
@@ -14,6 +13,8 @@ const [title, setTitle] = useState("");
 const [btnText, setBtnText] = useState("");
 const [btnUrl, setBtnUrl] = useState("");
 const [videoUrl, setVideoUrl] = useState("");
+const [title1, setTitle1] = useState("");
+const [title2, setTitle2] = useState("");
 
 useEffect(() => {
     attemptPlay();
@@ -23,11 +24,14 @@ useEffect(() => {
 
     axios.get("https://cdn.contentful.com/spaces/8kgt6jcufmb2/environments/master/entries/7fm3rMLrgGBBxHrrT6yKN5?access_token=0i1vMSW9uEuEaMKBV_cMWva-FkSU11BTHazrVRUxUW4")
     .then(async response => {
+        let mainTitle = response.data.fields.title.split('of');
 
         setTitle(response.data.fields.title);
         setBtnText(response.data.fields.titleButtonText);
         setBtnUrl(response.data.fields.titleButtonUrl);
         setVideoUrl(response.data.fields.introVideoUrl);
+        setTitle1(mainTitle[0]);
+        setTitle2(mainTitle[1]);
 
     });
 
@@ -65,7 +69,7 @@ useEffect(() => {
                     <Row className='px-4'>
                         <Col lg={5} sm={12} className=' d-flex flex-column justify-content-center'>
                             <div className='py-5'>
-                                <h2 className='w-100 display-6 mb-4 fw-bold text-white home-title-mobile' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif', display: 'inline-block', width: 'auto' }}>Future of <br /> Financial Services</h2>
+                                <h2 className='w-100 display-6 mb-4 fw-bold text-white home-title-mobile' style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif', display: 'inline-block', width: 'auto' }}>{title1} of<br />{title2}</h2>
                                 {/* <h6 className="fw-bold text-white title" style={{ fontFamily: 'Georgia, Montserrat', fontSize: '35px' }}>Dedicated to driving the evolution and transformation of the financial services industry.</h6> */}
                                 <div className="w-100 btn-home-web">
                                     <div className="d-flex gap-3">

@@ -1688,17 +1688,7 @@
     }
 }
 
-/*
-.custom-control-input:checked ~ .custom-control-label::before {
-    background-color: green!important;
-  }
-.custom-checkbox .custom-control-input:checked:focus ~ .custom-control-label::before {
-    box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(0, 255, 0, 0.25)
-  }
-.custom-control-input:focus ~ .custom-control-label::before {
-    box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(0, 0, 0, 0.25)
-  }
-.custom-control-input:active ~ .custom-control-label::before {
-    background-color: #C8FFC8; 
-  }
-*/
+.img-blog-gen-style {
+    height: 200px;
+    object-fit: cover;
+}

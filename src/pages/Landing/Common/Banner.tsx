@@ -1,13 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Row, Col, Card, CardBody, Nav, NavItem, NavLink } from 'reactstrap';
-import insights1 from "../../../assets/images/insights/insight1.png";
-import insights2 from "../../../assets/images/insights/insight2.png";
-import insights3 from "../../../assets/images/insights/insight3.png";
-import home_top_banner from "../../../assets/images/banners/home_top_banner.png";
-
-
-import ic_up_right_arrow from "../../../assets/images/icons/ic_up_righ_arrow.png";
 
 import { insightsData } from '../../../common/data';
 

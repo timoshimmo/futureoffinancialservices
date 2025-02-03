@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Col, Container, Row } from 'reactstrap';
 
@@ -6,8 +6,90 @@ import { Col, Container, Row } from 'reactstrap';
 //import logolight from "../../../assets/images/ffs_top_logo_light.png";
 //import ffsLogoDark from "../../../assets/images/ffs_top_logo_dark.png";
 import ffsLogoLight1 from "../../../assets/images/ffs_top_logo_light2.png";
+import axios from 'axios';
+
+interface IFooter {
+    bottomLinks: any;
+    copyright: string;
+    links: any;
+    logo: any;
+}
+
+interface IData {
+    data: {
+        sys: {
+            contentType: any
+        },
+        fields: {
+            title: string,
+            link: string,
+            column: string,
+            position: number
+        }
+    };
+}
 
 const Footer = () => {
+
+
+    const [dataEntry, setDataEntry] = useState<IData[] | []>([]);
+    const [logoUrl, setLogoUrl] = useState("");
+    const [copyrightText, setCopyrightText] = useState("");
+
+    useEffect(() => {
+      /*  let endpoints = [
+            'https://cdn.contentful.com/spaces/8kgt6jcufmb2/environments/master/entries/6Y8B4V0hBV1mXShdplblcr?access_token=0i1vMSW9uEuEaMKBV_cMWva-FkSU11BTHazrVRUxUW4',
+            'https://cdn.contentful.com/spaces/8kgt6jcufmb2/environments/master/assets/7lccZCK89XAu6IdE3afQnF?access_token=0i1vMSW9uEuEaMKBV_cMWva-FkSU11BTHazrVRUxUW4'
+        ]; */
+
+      /*  Promise.all(endpoints.map((endpoint) => axios.get(endpoint))).then(([{data: fields}, {data: asset}] )=> {
+            console.log(`FOOTER DATA: ${JSON.stringify(fields.fields)}`);
+            console.log(`FOOTER LOGO: ${JSON.stringify(asset.fields)}`);
+           // const sortedSpeakers = items.items.sort((a: any,b: any) => Date.parse(b.sys.createdAt) - Date.parse(a.sys.createdAt));
+          
+           // console.log(`Sorted: ${JSON.stringify(sortedSpeakers)}`);
+           setLogoUrl(asset.fields.file.url);
+          
+            
+        }); */
+        
+        axios.get("https://cdn.contentful.com/spaces/8kgt6jcufmb2/environments/master/entries/6Y8B4V0hBV1mXShdplblcr?access_token=0i1vMSW9uEuEaMKBV_cMWva-FkSU11BTHazrVRUxUW4")
+        .then(async response => {
+
+            let arr_obj: any[] = [];
+
+            const logoAssetId = response.data.fields.logo.sys.id;
+
+            let logoData = await axios.get(`https://cdn.contentful.com/spaces/8kgt6jcufmb2/environments/master/assets/${logoAssetId}?access_token=0i1vMSW9uEuEaMKBV_cMWva-FkSU11BTHazrVRUxUW4`);
+
+            await response.data.fields.links.forEach((item: any) => {
+
+                const idVal = item.sys.id;
+                const entryLinks = `https://cdn.contentful.com/spaces/8kgt6jcufmb2/environments/master/entries/${idVal}?access_token=0i1vMSW9uEuEaMKBV_cMWva-FkSU11BTHazrVRUxUW4`;
+                arr_obj.push(entryLinks);
+
+            });
+
+            //console.log(`Copyright: ${JSON.stringify(response.data.fields.copyright)}`);
+
+            setLogoUrl(logoData.data.fields.file.url);
+            //setCopyrightText(response.data.fields.copyright);
+
+            Promise.all(arr_obj.map((endpoint) => axios.get(endpoint))).then(results => {
+                //console.log(`Fields: ${JSON.stringify(fields.fields)}`);
+               // console.log(`RESULTS: ${JSON.stringify(results)}`);
+                setDataEntry(results);
+               // const sortedSpeakers = items.items.sort((a: any,b: any) => Date.parse(b.sys.createdAt) - Date.parse(a.sys.createdAt));
+             
+            });
+
+           // console.log("FOOTER DATA", response.data);
+
+
+        }); 
+
+    }, []);
+
     return (
         <React.Fragment>
             <footer className="bg-dark pb-5 position-relative footer-style">
@@ -18,7 +100,7 @@ const Footer = () => {
                             <div>
                                 <div className='mb-5'>
                                 <Link to="/" className="d-block">
-                                    <img src={ffsLogoLight1} alt="logo light" className="footer-logo" />
+                                    <img src={logoUrl} alt="logo light" className="footer-logo" />
                                  </Link>   
                                     
                                 </div>
@@ -55,11 +137,17 @@ const Footer = () => {
                                     <h5 className="text-primary mb-0" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>About Us</h5>
                                     <div className="text-white mt-3">
                                         <ul className="list-unstyled ff-secondary footer-list">
-                                            <li><Link to="/about" className="text-white fs-14">About FFS</Link></li>
-                                            {/* home#banner */}
-                                            {/* <li><Link to="/pages-gallery" className="text-white fs-14">Team</Link></li> */}
-                                            <li><Link to="/contact-us" className="text-white fs-14">Contact Us</Link></li>
-                                            <li><Link to="/faq" className="text-white fs-14">FAQs</Link></li>
+                                            {dataEntry.filter(row => row.data.sys.contentType.sys.id === "footerLinks" && row.data.fields.column === "About Us").map((item, idx) => (
+                                            //dataEntry. .data.sys.contentType
+                                                <li><Link to={item.data.fields.link} className="text-white fs-14">{item.data.fields.title}</Link></li>
+                                            ))}
+                                            
+                                            {/* home#banner 
+                                                <li><Link to="/about" className="text-white fs-14">About FFS</Link></li>
+                                                <li><Link to="/contact-us" className="text-white fs-14">Contact Us</Link></li>
+                                                <li><Link to="/faq" className="text-white fs-14">FAQs</Link></li>
+                                            */}
+                                            
                                         </ul>
                                     </div>
                                 </Col>
@@ -67,10 +155,14 @@ const Footer = () => {
                                     <h5 className="text-primary mb-0" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>Get Involved</h5>
                                     <div className="text-white mt-3">
                                         <ul className="list-unstyled ff-secondary footer-list">
-                                            <li><Link to="/register" className="text-white fs-14">Register</Link></li>
-                                            <li><Link to="/sponsors" className="text-white fs-14">Be a Sponsor</Link></li>
-                                            {/* <li><Link to="/exhibitors" className="text-white fs-14">Be an Exhibitor</Link></li> */}
-                                            <li><Link to="/partners" className="text-white fs-14">Partner With Us</Link></li>
+                                            {dataEntry.filter(row => row.data.fields.column === "Get Involved").map((item, idx) => (
+                                                <li><Link to={item.data.fields.link} className="text-white fs-14">{item.data.fields.title}</Link></li>
+                                            ))}
+                                            {/* 
+                                                <li><Link to="/register" className="text-white fs-14">Register</Link></li>
+                                                <li><Link to="/sponsors" className="text-white fs-14">Be a Sponsor</Link></li>
+                                                <li><Link to="/partners" className="text-white fs-14">Partner With Us</Link></li>
+                                            */}
                                         </ul>
                                     </div>
                                 </Col>
@@ -78,10 +170,16 @@ const Footer = () => {
                                     <h5 className="text-primary mb-0" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}>Events</h5>
                                     <div className="text-white  mt-3">
                                         <ul className="list-unstyled ff-secondary footer-list">
-                                            <li><Link to="/summit" className="text-white fs-14">FFS Summit 2024</Link></li>
+                                            {dataEntry.filter(row => row.data.fields.column === "Events").map((item, idx) => (
+                                                <li><Link to={item.data.fields.link} className="text-white fs-14">{item.data.fields.title}</Link></li>
+                                            ))}
+                                            
                                             {/* <li><Link to="/speakers" className="text-white fs-14">2024 Speakers</Link></li>
                                            
-    <li><Link to="/agenda" className="text-white fs-14">2024 Agenda</Link></li> */}
+                                                <li><Link to="/agenda" className="text-white fs-14">2024 Agenda</Link></li> 
+                                                <li><Link to="/summit" className="text-white fs-14">FFS Summit 2024</Link></li>
+                                                
+                                                */}
                                         </ul>
                                     </div>
                                 </Col>
